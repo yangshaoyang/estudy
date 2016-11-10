@@ -1,0 +1,84 @@
+.personal_left{
+	width:200px;
+	float:left;
+	}
+.user{
+	width:200px;
+	height:246px;
+	background:#fff;
+	}
+.user img{
+	margin:25px;
+	margin-bottom:20px;
+	*margin-bottom:15px;
+	}
+.user p{
+	text-align:center;
+	}
+.user p a{
+	color:#eb9d3f;
+	font-size:12px;
+	line-height:24px;
+	}
+.left_nav{
+	width:200px;
+	margin-top:20px;
+	margin-bottom:50px;
+	}
+.left_nav li{
+	width:200px;
+	height:40px;
+	margin-top:10px;
+	background:#fff;
+	line-height:40px;
+	text-indent:2em;
+	}
+.left_nav li a{
+	display:block;
+	width:200px;
+	height:40px;
+	}
+.left_nav li a:hover{
+	color:#2f8abb;
+	text-decoration:none;
+	box-shadow:4px 4px 4px #E4E4E4;
+	}
+.person_nav:hover{
+	color:#2f8abb;
+	box-shadow:4px 4px 4px #E4E4E4;
+	}
+.left_nav .left_nav_now{
+	color:#2f8abb;
+	background:url(../images/left_navbg.gif) no-repeat;
+	text-decoration:none;
+	}
+.left_nav .left_nav_now a{
+	color:#2f8abb;
+	}
+.left_nav .left_nav_now ul li a{
+	color:#000000;
+	}
+.left_nav .left_nav_now ul li a:hover{
+	color:#2f8abb;
+	}
+.person_nav{
+	cursor:pointer;
+	}
+.person_nav:hover ul{display:block;}
+.left_nav li ul{
+	display:none;
+	margin-left:240px;
+	position:relative;
+	top:-40px;
+	left:-40px;
+	padding-left:10px;
+	}
+.left_nav li ul li{
+	margin-top:0px;
+	border:1px solid #F2F2F2;
+	border-bottom:0;
+	box-shadow:4px 4px 4px #E4E4E4;
+	}
+.left_nav li ul li a:hover{
+	box-shadow:none;
+	}
