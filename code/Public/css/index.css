@@ -241,6 +241,7 @@
 	position:absolute;
 	z-index:2;}
 .title{
+	font-weight:normal;
 	margin-bottom:20px;
 	text-indent:11px;
 	font-size:20px;
@@ -333,19 +334,22 @@
 	border-bottom:2px solid #2f8abb;
 	padding-bottom:5px;}
 .lp ul{
-	overflow:auto;}
+	height:35px;}
 .lp ul li{
 	margin-right:40px;
 	float:left;}
 .lp ul li a{
 	font-size:18px;
-	float:left;}
+	float:left;
+	line-height:35px;}
 .lpli{color:#2f8abb;}
 .lp ul li a:hover{
-	color:#f2bb64;}
+	text-decoration:none;
+	color:#f2bb64;
+	border-bottom:2px solid #f2bb64;}
 .lphover{
 	color:#f2bb64;
-	text-decoration:underline;}
+	border-bottom:2px solid #f2bb64;}
 .lpimg{
 	margin-top:20px;
 	overflow:auto;}

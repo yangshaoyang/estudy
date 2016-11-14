@@ -1,16 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/bidlist.css" rel="stylesheet" type="text/css" />
+<link href="/estudy/code/Public/css/public.css" rel="stylesheet" type="text/css" />
+<link href="/estudy/code/Public/css/head.css" rel="stylesheet" type="text/css" />
+<link href="/estudy/code/Public/css/bidlist.css" rel="stylesheet" type="text/css" />
 <title>比赛列表</title>
 </head>
 <body>
 <div class="header">
 	<div class="mybody">
-    	<div class="logo"><img src="__PUBLIC__/images/logo2.png" width="193" height="60" alt="logo" /></div>
+    	<div class="logo"><img src="/estudy/code/Public/images/logo2.png" width="193" height="60" alt="logo" /></div>
         <div class="place"><p>北京</p></div>
         <div class="nav">
         	<div class="navtop">
@@ -19,9 +19,9 @@
             <p>客服热线&nbsp;&nbsp;&nbsp;400&nbsp;-&nbsp;0000&nbsp;-&nbsp;000</p>
             </div>
             <div class="line"></div>
-            <a href="#" class="xz"><div class="xzimg"><img src="__PUBLIC__/images/gl2.png" width="21" height="21" alt="gl"/></div><p>比赛攻略</p></a>
-            <a href="#" class="xz xz2"><div class="xzimg"><img src="__PUBLIC__/images/gw2.png" width="21" height="21" alt="gl"/></div><p>比赛顾问</p></a>
-            <a href="#" class="xz xz2"><div class="xzimg"><img src="__PUBLIC__/images/jy2.png" width="21" height="21" alt="gl"/></div><p>比赛建议</p></a>
+            <a href="#" class="xz"><div class="xzimg"><img src="/estudy/code/Public/images/gl2.png" width="21" height="21" alt="gl"/></div><p>比赛攻略</p></a>
+            <a href="#" class="xz xz2"><div class="xzimg"><img src="/estudy/code/Public/images/gw2.png" width="21" height="21" alt="gl"/></div><p>比赛顾问</p></a>
+            <a href="#" class="xz xz2"><div class="xzimg"><img src="/estudy/code/Public/images/jy2.png" width="21" height="21" alt="gl"/></div><p>比赛建议</p></a>
 
         </div>
     </div>
@@ -44,7 +44,7 @@
             	<div class="listleft">
                 	<h1>某某杯&nbsp;创新创业大赛</h1>
                     <div class="time">
-               	    	<img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/>
+               	    	<img src="/estudy/code/Public/images/time.gif" width="13" height="16" alt="time"/>
                         <span class="sj">时间：2016-01-01</span>
                         <span class="qy">计算机</span>
                         <span class="qy xzl">软件</span>
@@ -84,7 +84,7 @@
 </div>
 <div class="footer">
 	<div class="mybody">
-	<div class="ewm"><img src="__PUBLIC__/images/ewm.jpg" width="110" height="110" alt="ewm"/><p>关注易学助手微信</p></div>
+	<div class="ewm"><img src="/estudy/code/Public/images/ewm.jpg" width="110" height="110" alt="ewm"/><p>关注易学助手微信</p></div>
     <div class="footermiddle">
     <ul>
     	<li><a href="#" class="footernav">关于我们</a></li>

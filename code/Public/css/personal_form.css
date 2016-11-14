@@ -52,6 +52,7 @@
 	margin-left:30px;
 	line-height:28px;
 	}
+textarea{resize: none;}
 .form1 textarea{
 	width:378px;
 	height:138px;
@@ -234,10 +235,85 @@
 	width:797px;
 	height:200px;
 	}
-
-
-	
-
+.form2 .tag{
+	text-align:left;
+	width:430px;
+	height:60px;
+	}
+.form2 .tag .tag1{
+	width:430px;
+	text-align:left;}
+.form2 .tag .tag2{
+	width:430px;
+	text-align:left;}
+.tag1 .ul1 li{
+	height:20px;
+	line-height:20px;
+	float:left;
+	border:1px solid #2f8abb;
+	display:inline;
+	padding:0px 0px  0px 12px;
+	margin-left:-5px;
+	background:#fff;
+	color:#2f8abb;
+	font-size:12px;
+	}
+.form2 .tag p{
+	float:left;
+	color:#000;
+	margin-right:30px;
+	margin-left:8px;
+	}
+.form2 .tag2 .tag2p{
+	margin-top:6px;
+	}
+.form2 .ul2 li a{
+	display:block;
+	height:20px;
+	line-height:20px;
+	border:1px solid #2f8abb;
+	padding:5px 12px;
+	background:#fff;
+	color:#2f8abb;
+	font-size:12px;
+	margin-left:-5px;
+	}
+.form2 .tag2 a:hover{
+	text-decoration:none;
+	border:1px solid #eb9d3f;
+	}
+.form2 .tag button{
+	width:10px;
+	height:10px;
+	background:url(../images/close.png);
+	position:relative;
+	top:-11px;
+	left:5px;
+	cursor:pointer;
+	}	
+.form2 .tag .tag_2{
+	padding:6px 4px;
+	width:232px;
+	float:left;
+	border:1px solid #eb9d3f;
+	position:absolute;
+	margin-left:-5px;
+	background:#fff;
+	display:none;
+	}
+.form2 .tag ul li:hover .tag_2{display:block;}
+.form2 .tag ul li:hover .tag_2 a{
+	display:block;
+	height:20px;
+	padding:0px 3px;
+	border:1px solid #fff;
+	margin:4px;
+	float:left;
+	}
+.form2 .tag ul li:hover .tag_2 a:hover{
+	border:1px solid #2f8abb;
+	}
+.form2 .tag .tag_3{margin-left:-173px;}
 
 
 
