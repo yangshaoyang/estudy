@@ -1,0 +1,32 @@
+#box1{
+    border:1px solid rgb(72,153,194);
+    position: fixed;
+    top: 300px;
+    width:600px;
+    height: 200px;
+    display: none;
+    background-color: white;
+    word-wrap: break-word;
+}
+#head{
+        padding:20px 25px;
+}
+#title{
+    float: left;
+    display: block;
+    width: 200px;
+    font-size:18px;
+    color: rgb(72,153,194);
+}
+#content{
+    color: rgb(109,109,109);
+    margin: 20px 30px;
+    line-height: 30px;
+}
+#time{
+    color: rgb(109,109,109);
+     float: right;
+}
+#time span{
+    color: rgb(109,109,109);
+}

@@ -297,6 +297,7 @@ textarea{resize: none;}
 	float:left;
 	border:1px solid #eb9d3f;
 	position:absolute;
+	z-index:1200;
 	margin-left:-5px;
 	background:#fff;
 	display:none;
@@ -315,6 +316,19 @@ textarea{resize: none;}
 	}
 .form2 .tag .tag_3{margin-left:-173px;}
 
+ #upload
+ {
+   opacity:0;
+   filter:alpha(opacity=0);
+   height: 140px;
+   width: 190px;
+   position: absolute;
+   top: 0;
+   left: 114px;
+   z-index: 9;
+   margin-left:820px;
+   margin-top:505px;
+}
 
 
 
