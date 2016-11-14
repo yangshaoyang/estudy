@@ -60,6 +60,11 @@
 .lphover{
 	color:#f2bb64;
 	border-bottom:2px solid #f2bb64;}
+.lpimg {
+    width: 240px;
+    height: 110px;
+    margin-left: 30px;
+}
 .proul{
 	margin-top:30px;}
 .proul li{
