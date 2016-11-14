@@ -1,0 +1,118 @@
+.content{
+	background-color:#f7f7f7;
+	}
+.bread{
+	height:50px;
+	line-height:50px;
+	}
+.bread a{font-size:12px;}
+
+.search{
+	width:524px;
+	margin:70px auto 130px;
+	border:1px solid #ccc;
+	box-shadow:5px 5px 5px #ccc;
+	overflow:hidden;
+	background:#fff;
+	padding-bottom:40px;
+	}
+.search1{
+	padding-top:40px;
+	}
+.search h1{
+	font-weight:normal;
+	width:300px;
+	margin:0 auto;
+	text-align:center;
+	font-size:14px;
+	color:#808080;
+	padding-bottom:24px;
+	}
+.search h2{
+	font-weight:normal;
+	width:300px;
+	margin:0 auto;
+	font-size:16px;
+	padding-bottom:24px;
+	color:#444;
+	}
+.search h2 span{
+	*margin-top:-18px;
+	float:right;
+	color:#808080;
+	font-size:10px;
+	line-height:20px;
+	}
+.search h1 span{color:#2f8abb;}
+.search h1 a{color:#808080;}
+.search h1 a:hover{
+	color:#2f8abb;
+	text-decoration:none;
+	}
+.search form{
+	width:300px;
+	color:#808080;
+	margin:0 auto;
+}
+.search select{
+	width:63px;
+	height:40px;
+	border:0;
+	background:url(../images/login_1.gif) no-repeat;
+	float:left;
+	color:#808080;
+	text-indent:6px;
+	}
+.tel{
+	width:237px;
+	height:40px;
+	line-height:40px;
+	border:0;
+	background:url(../images/login_2.gif) no-repeat;
+	float:left;
+	color:#808080;
+	text-indent:1em;
+	}
+.check{
+	width:219px;
+	height:40px;
+	line-height:40px;
+	border:0;
+	background:url(../images/login_3.gif) no-repeat;
+	float:left;
+	color:#808080;
+	text-indent:1em;
+	margin-top:20px;
+	}
+.addcheck{
+	width:81px;
+	height:40px;
+	border:0;
+	background:url(../images/login_4.gif) no-repeat;
+	float:left;
+	cursor:pointer;
+	color:#808080;
+	margin-top:20px;
+	}
+.login_button{
+	width:300px;
+	height:40px;
+	background:#2f8abb;
+	color:#fff;
+	font-size:16px;
+	cursor:pointer;
+	float:left;
+	margin-top:20px;
+	}
+.login_button:hover{background:#4d97be;}
+.search input[type=password]{
+	width:300px;
+	height:40px;
+	line-height:40px;
+	border:0;
+	background:url(../images/login_5.gif) no-repeat;
+	margin-top:20px;
+	text-indent:1em;
+	}
+.search form a{color:#2f8abb;}
+.search input[type=checkbox]{margin-top:14px;}

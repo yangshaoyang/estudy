@@ -1,19 +1,23 @@
 .content{
 	width:100%;
 	overflow:auto;
-	background-color:#f7f7f7;}
+	background-color:#f7f7f7;
+	padding-bottom:30px;}
 .bread{
 	height:50px;
 	line-height:50px;
 	}
 .bread a{font-size:12px;}
-.ss{
-	width:1200px;
-	margin:20px 0px 60px 0px;}
+.left{
+	float:left;
+	width:800px;
+	overflow:auto;
+	padding-bottom:40px;}
 .search{
 	margin:auto;
-	width:782px;
-	height:50px;}
+	width:800px;
+	height:50px;
+	margin-top:21px;}
 .searchtext{
 	text-indent:61px;
 	background-color:#FFF;
@@ -22,7 +26,7 @@
 	background-position:16px 14px;
 	display:block;
 	border:1px solid #4c6699;
-	width:656px;
+	width:678px;
 	height:48px;
 	color:#d9d9d9;
 	line-height:48px;
@@ -37,60 +41,62 @@
 	height:50px;
 	color:#FFF;
 	background-color:#2f8abb;}
-.contentul li{
-	padding:20px 0px;
-	background-color:#FFF;
-	width:1200px;
-	overflow:auto;
-	margin-bottom:10px;}
-.list{
-	width:1050px;
-	margin:auto;}
-.listleft{
-	overflow:auto;
+.lp{
+	margin-top:19px;}
+.lp ul{
+	height:35px;}
+.lp ul li{
+	margin-right:40px;
 	float:left;}
-.listleft h1{
-	font-weight:normal;
-	color:#2f8abb;
-	font-size:20px;}
+.lp ul li a{
+	font-size:14px;
+	float:left;
+	line-height:35px;}
+.lpli{color:#2f8abb;}
+.lp ul li a:hover{
+	text-decoration:none;
+	color:#f2bb64;
+	border-bottom:2px solid #f2bb64;}
+.lphover{
+	color:#f2bb64;
+	border-bottom:2px solid #f2bb64;}
+.proul{
+	margin-top:30px;}
+.proul li{
+	padding:20px;
+	background-color:#FFF;
+	width:760px;
+	overflow:auto;
+	margin-bottom:20px;}
+.litop{
+	margin-bottom:15px;
+	padding-bottom:18px;
+	border-bottom:1px solid #cccccc;
+	width:700px;
+	overflow:auto}
+.litop h1 a{
+	font-size:20px;
+	font-weight:normal;}
+.litop h1 a:hover{
+	text-decoration:none;
+	color:#2f8abb;}
+.litop h2{
+	margin-top:6px;
+	font-size:12px;
+	color:#808080;
+	font-weight:normal;}
+.proul p a{
+	font-size:16px;
+	line-height:30px;}
+.proul p{
+	margin-bottom:15px;}
 .time{
-	height:16px;
-	margin-top:6px;}
+	height:16px;}
 .sj{
+	color:#666666;
 	margin-left:5px;}
-.qy{
-	margin-left:15px;
-	color:#3a9137;}
-.xzl{
-	color:#dba136;}
-.qz{
-	color:#226a84;}
-.yusuan{
-	margin-top:36px;}
-.yusuan2{
-	margin-left:50px;}
-.listleft p{
-	margin-top:15px;}
-.listright{
-	margin-top:20px;
-	float:right;
-	overflow:auto;}
-.button1{
-	border-radius:5px;
-	display:block;
-	background-color:#efb052;
-	height:40px;
-	width:130px;
-	color:#FFF;
-	cursor:pointer;}
-.button2{
-	margin-top:23px;
-	background-color:#f7f7f7;
-	color:#444444;}
-.button3{
-	background-color:#cccccc;}
 .page{
-	margin:40px 0px 100px 450px;}
+	margin:40px 0px 40px 265px;}
 .page ul li{
 	float:left;
 	height:18px;

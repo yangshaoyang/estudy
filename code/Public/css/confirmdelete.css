@@ -1,0 +1,49 @@
+
+        #alertMsg {
+            display: none;
+            width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 1px 1px 10px gray;
+            padding: 10px;
+            font-size: 12px;
+            position: absolute;
+            top:300px;
+            text-align: center;
+            background: #fff;
+            z-index: 100000;
+            height:180px;
+        }
+
+        #alertMsg_info {
+            padding: 30px 15px 10px 15px;
+            line-height: 1.6em;
+            text-align: center;
+            font-size:15px;
+            color:rgb(127,127,127);
+            margin-top:20px;
+            margin-bottom:40px;
+        }
+
+        #alertMsg_btn1, #alertMsg_btn2 {
+            display: inline-block;
+            background:rgb(47,137,187);
+            padding-left: 3px;
+            color: #000000;
+            font-size: 15px;
+            text-decoration: none;
+            margin-right: 20px;
+            margin-left:20px;
+            cursor: pointer;
+        }
+
+        #alertMsg_btn1 cite, #alertMsg_btn2 cite {
+            line-height: 24px;
+            display: inline-block;
+            padding: 5px 30px 5px 30px;
+            background: rgb(47,137,187) no-repeat right top;
+            font-style: normal;
+        }
+        cite{
+          color：white;
+        }

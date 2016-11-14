@@ -1,0 +1,154 @@
+.content{
+	width:100%;
+	overflow:auto;
+	background-color:#f7f7f7;
+	padding-bottom:30px;}
+.bread{
+	height:50px;
+	line-height:50px;
+	}
+.bread a{font-size:12px;}
+.left{
+	float:left;
+	width:800px;
+	overflow:auto;
+	padding-bottom:40px;}
+.question{
+	padding:20px 30px;
+	background-color:#FFF;
+	width:740px;
+	overflow:auto;
+	margin-bottom:10px;}
+.qtop h1{
+	font-weight:normal;
+	font-size:20px;
+	float:left;}
+.sc{
+	float:right;
+	margin-left:}
+.qtop{
+	overflow:auto;}
+.sc span{
+	margin-left:10px;}
+.question h1 span{
+	font-size:20px;
+	color:#2f8abb;}
+.fl{
+	width:740px;
+	margin-top:14px;
+	overflow:auto;}
+.ssfl span{
+	color:#666666;}
+.ssfl{
+	float:left;}
+.ssfl2{
+	margin-left:50px;}
+.ssfl img{
+	margin-right:6px;
+	display:block;
+	float:left;
+	margin-top:2px;}
+.question h2{
+	font-weight:normal;}
+.question h2 span{
+	*margin-top:-20px;
+	float:right;
+	cursor:pointer;
+	color:#2f8abb;
+	background-image:url(../images/downarrow.gif);
+	width:80px;
+	background-repeat:no-repeat;
+	background-position:65px 4px;}
+.contentul li{
+	padding:30px;
+	background-color:#FFF;
+	width:740px;
+	overflow:auto;
+	margin-bottom:10px;}
+.lileft{
+	float:left}
+.liright{
+	float:left;
+	margin-left:20px;}
+.rtop{
+	margin-bottom:13px;
+	width:630px;
+	overflow:auto;}
+.rtop h3{
+	font-weight:normal;
+	font-size:20px;
+	float:left;}
+.rtop a{
+	float:left;
+	margin-top:5px;
+	font-size:12px;
+	color:#eb9d3f;
+	float:left;
+	border:1px solid #eb9d3f;
+	width:58px;
+	line-height:18px;
+	cursor:pointer;
+	text-align:center;
+	margin-left:20px;}
+.ssflul{
+	float:right;
+	margin-top:5px;}
+.hd{
+	overflow:auto;
+	float:left;}
+.hdp{
+	float:left;
+	width:570px;}
+.hdp p{
+	line-height:30px;
+	color:#666666;}
+.zwp p{
+	margin-top:2px;
+	font-size:18px;
+	color:#444444;}
+.hf{
+	*margin-top:-20px;
+	float:right;
+	cursor:pointer;
+	color:#2f8abb;
+	background-image:url(../images/downarrow.gif);
+	width:60px;
+	background-repeat:no-repeat;
+	background-position:45px 4px;}
+.page{
+	margin:40px 0px 100px 265px;}
+.page ul li{
+	float:left;
+	height:18px;
+	margin-left:8px;
+	font-size:12px;
+	text-align:center;
+	}
+.page ul li a{
+	height:16px;
+	line-height:16px;
+	display:block;
+	font-size:12px;
+	}
+.num a{
+	width:16px;
+	border:1px solid #8e8e8e;
+	}
+.num a:hover{
+	color:#fff;
+	border:1px solid #2f8abb;
+	background:#2f8abb;
+	text-decoration:none;
+	}
+.now{
+	color:#fff;
+	width:16px;
+	height:16px;
+	line-height:16px;
+	border:1px solid #2f8abb;
+	background:#2f8abb;
+	}
+.page .up a:hover{
+	color:#2f8abb;
+	text-decoration:none;
+	}
