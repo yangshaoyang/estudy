@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class NoteController extends Controller {
+class LoginController extends Controller {
     public function login(){
         $this->display();
     }
