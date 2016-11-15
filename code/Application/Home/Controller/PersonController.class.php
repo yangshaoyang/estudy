@@ -1,12 +1,11 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class IndexController extends Controller {
+class PersonController extends Controller {
     public function index(){
         $this->display();
     }
-}
-class PersonController extends Controller {
+
     public function homepage(){
         $this->display();
     }
