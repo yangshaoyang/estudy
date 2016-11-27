@@ -9,4 +9,13 @@ class PersonController extends Controller {
     public function homepage(){
         $this->display();
     }
+    public function message(){
+        $this->display();
+    }
+    public function permessage(){
+        $this->display();
+    }
+    public function repassword(){
+        $this->display();
+    }
 }
