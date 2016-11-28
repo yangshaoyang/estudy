@@ -53,11 +53,19 @@
 	margin-left:30px;
 	line-height:28px;
 	}
-textarea{resize: none;}
-.form1 textarea{
+.form1 input[type=text]{
 	width:378px;
-	height:138px;
+	height:28px;
 	border:1px solid #ccc;
+	margin-left:30px;
+	line-height:28px;
+	}
+textarea{resize: none;}
+.form1 #forms{
+	width:405px;
+	height:30px;
+	/*border:1px solid #ccc;*/
+	float: left;
 	}
 .form1 input[type="button"]{
 	width:120px;
