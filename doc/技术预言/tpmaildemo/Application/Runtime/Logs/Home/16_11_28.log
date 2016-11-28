@@ -1,0 +1,2433 @@
+[ 2016-11-28T14:05:23+08:00 ] 127.0.0.1 /demo/tp/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Index
+
+[ 2016-11-28T14:05:29+08:00 ] 127.0.0.1 /demo/tp/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.275015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.275015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.023002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.025002s ]
+
+[ 2016-11-28T14:05:43+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `t_user` WHERE `id` = 0  [ RunTime:0.0000s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('66','66','zykjinghuashuiyue@126.com','ecbd74a4ab0c2335e96f7859ef5bdc6d','1480399539','1480313139','0') [ RunTime:0.0010s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 51 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T14:07:40+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T14:07:42+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T14:07:42+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T14:07:42+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-28T14:07:49+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `id` = 0  [ RunTime:0.0000s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('cc','cc','zykjinghuashuiyue@126.com','9f4461740e58b59e176b5067230fcc4d','1480399669','1480313269','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 51 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T14:08:05+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=9f4461740e58b59e176b5067230fcc4d
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_user` WHERE ( status="0" and token="$verify" )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T14:10:01+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T14:10:09+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `id` = 0  [ RunTime:0.0000s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('44444','4','zykjinghuashuiyue@126.com','575cb7249e7c7eeb1a71299718cfdc87','1480399808','1480313408','0') [ RunTime:0.0010s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 51 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T14:10:16+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=575cb7249e7c7eeb1a71299718cfdc87
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE ( status="0" and token="$verify" )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-11-28T14:32:17+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T14:32:19+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T14:32:30+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `id` = 0  [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('666','666','zykjinghuashuiyue@126.com','975b46523990761868d023c798850af4','1480401147','1480314747','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T14:32:54+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=975b46523990761868d023c798850af4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE ( status="0" and token="$verify" )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T14:33:00+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=575cb7249e7c7eeb1a71299718cfdc87
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE ( status="0" and token="$verify" )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T14:34:37+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T14:35:01+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T14:35:10+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `id` = 0  [ RunTime:0.0000s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('1111','11','zykjinghuashuiyue@126.com','e4c7d29a028dc811cd83fad2faa7bb4b','1480401308','1480314908','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T14:35:33+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=e4c7d29a028dc811cd83fad2faa7bb4b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE ( status="0" and token="$verify" )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T14:43:47+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T14:43:49+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-28T14:44:09+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('1111','11','zykjinghuashuiyue@126.com','fb61e892dc96e55085f6a7b903eae89a','1480401847','1480315447','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T14:44:34+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=fb61e892dc96e55085f6a7b903eae89a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE ( status="0" and token="$verify" ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:00:01+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:02:10+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('000000','00','zykjinghuashuiyue@126.com','75ecfc7bb283e67e1e881c74eb3e19ef','1480402809','1480316409','0') [ RunTime:0.0010s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:03:56+08:00 ] 127.0.0.1 /demo/tp/index.php/home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Index
+
+[ 2016-11-28T15:03:59+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-28T15:04:28+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:04:28+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:04:28+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:04:28+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:04:28+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:04:28+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:04:46+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:04:46+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:04:47+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-28T15:04:47+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:04:53+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('mmm','mm','zykjinghuashuiyue@126.com','f848ff1130e48e9ad2a21c941adf54f7','1480403091','1480316691','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:05:09+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=f848ff1130e48e9ad2a21c941adf54f7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE ( status=0 and token="$verify" ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:07:20+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:07:32+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:07:40+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('00000000','00','zykjinghuashuiyue@126.com','43fd72e5e9038951a66db76587a66acc','1480403260','1480316860','0') [ RunTime:0.0010s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:08:05+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=43fd72e5e9038951a66db76587a66acc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+ERR: 1054:Unknown column '43fd72e5e9038951a66db76587a66acc' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `t_user` WHERE ( status=0 and token=43fd72e5e9038951a66db76587a66acc ) LIMIT 1  
+ERR: 1054:Unknown column '43fd72e5e9038951a66db76587a66acc' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `t_user` WHERE ( status=0 and token=43fd72e5e9038951a66db76587a66acc ) LIMIT 1  
+
+[ 2016-11-28T15:09:43+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:09:58+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-28T15:10:03+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('zzzz','zz','zykjinghuashuiyue@126.com','6b7bbf63615fec9c2ee7ff1dc5464edd','1480403403','1480317003','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:10:15+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=6b7bbf63615fec9c2ee7ff1dc5464edd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user` WHERE ( status=0 and token=".$verify." ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:13:22+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:13:41+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = '$username' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-11-28T15:16:14+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:16:14+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:16:19+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = '$username' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-11-28T15:16:25+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = '$username' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-11-28T15:16:58+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:16:59+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:16:59+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:16:59+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-28T15:17:07+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = '222' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('222','22','zykjinghuashuiyue@126.com','7470213af37b88a4f6b8297edacda198','1480403824','1480317424','0') [ RunTime:0.0010s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:17:41+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=7470213af37b88a4f6b8297edacda198
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:18:26+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:18:27+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:18:28+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:18:29+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-28T15:18:29+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:18:29+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:18:45+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:18:45+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:18:52+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = '22' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-11-28T15:19:02+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = '6666' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('6666','66','zykjinghuashuiyue@126.com','9c608814e9c6364234a9032e694e59bd','1480403941','1480317541','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:19:12+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=9c608814e9c6364234a9032e694e59bd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:21:34+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-28T15:21:44+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = 'yu' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('yu','hh','zykjinghuashuiyue@126.com','46adcf91be656e76bb83b907a855988e','1480404101','1480317701','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:21:54+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=46adcf91be656e76bb83b907a855988e
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `token` = '46adcf91be656e76bb83b907a855988e' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Model.class.php 第 267 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 372 行.
+NOTIC: [8] Undefined variable: set D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 387 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 387 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( id="$result[id]" )' at line 1
+ [ SQL语句 ] : UPDATE `t_user` SET  WHERE ( id="$result[id]" )
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( id="$result[id]" )' at line 1
+ [ SQL语句 ] : UPDATE `t_user` SET  WHERE ( id="$result[id]" )
+
+[ 2016-11-28T15:23:51+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:23:57+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = '3333333' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('3333333','33','zykjinghuashuiyue@126.com','b7ec7cad32a3ce31eb1ca8cf3a31d54f','1480404237','1480317837','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:24:05+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=b7ec7cad32a3ce31eb1ca8cf3a31d54f
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `token` = 'b7ec7cad32a3ce31eb1ca8cf3a31d54f' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-11-28T15:25:40+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:25:54+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:25:58+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:26:29+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:27:28+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:27:29+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:27:29+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:27:30+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:27:37+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:27:38+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-28T15:27:38+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:28:34+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:28:43+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = '2221' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('2221','11','zykjinghuashuiyue@126.com','988c1ca2ac62e3333d0b63c7547dc890','1480404522','1480318122','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:28:56+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=988c1ca2ac62e3333d0b63c7547dc890
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `token` = '988c1ca2ac62e3333d0b63c7547dc890' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 81 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Model.class.php 第 267 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 372 行.
+NOTIC: [8] Undefined variable: set D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 387 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 387 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( 72 )' at line 1
+ [ SQL语句 ] : UPDATE `t_user` SET  WHERE ( 72 )
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( 72 )' at line 1
+ [ SQL语句 ] : UPDATE `t_user` SET  WHERE ( 72 )
+
+[ 2016-11-28T15:32:12+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:32:20+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = '552' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('552','55','zykjinghuashuiyue@126.com','206f023b319ed3db54bb35161d8d96d5','1480404738','1480318338','0') [ RunTime:0.0010s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:32:27+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=206f023b319ed3db54bb35161d8d96d5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `token` = '206f023b319ed3db54bb35161d8d96d5' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Model.class.php 第 267 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 372 行.
+NOTIC: [8] Undefined variable: set D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 387 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 387 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( 73 )' at line 1
+ [ SQL语句 ] : UPDATE `t_user` SET  WHERE ( 73 )
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( 73 )' at line 1
+ [ SQL语句 ] : UPDATE `t_user` SET  WHERE ( 73 )
+
+[ 2016-11-28T15:34:40+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:34:45+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = 'asd' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('asd','zz','zykjinghuashuiyue@126.com','3863884e7df95b5a2d6118bb52161c02','1480404885','1480318485','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:34:52+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=3863884e7df95b5a2d6118bb52161c02
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `token` = '3863884e7df95b5a2d6118bb52161c02' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Model.class.php 第 267 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 372 行.
+NOTIC: [8] Undefined variable: set D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 387 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 387 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( 74 )' at line 1
+ [ SQL语句 ] : UPDATE `t_user` SET  WHERE ( 74 )
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( 74 )' at line 1
+ [ SQL语句 ] : UPDATE `t_user` SET  WHERE ( 74 )
+
+[ 2016-11-28T15:35:36+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:35:36+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:35:36+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:35:36+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:35:41+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = 'dsa' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('dsa','z','zykjinghuashuiyue@126.com','d95c468062abfd7c86ff29c4e78c1cd3','1480404941','1480318541','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:35:49+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=d95c468062abfd7c86ff29c4e78c1cd3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `token` = 'd95c468062abfd7c86ff29c4e78c1cd3' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Model.class.php 第 267 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 372 行.
+NOTIC: [8] Undefined variable: set D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 387 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\Think\Db\Driver.class.php 第 387 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `id` = 75' at line 1
+ [ SQL语句 ] : UPDATE `t_user` SET  WHERE `id` = 75
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `id` = 75' at line 1
+ [ SQL语句 ] : UPDATE `t_user` SET  WHERE `id` = 75
+
+[ 2016-11-28T15:37:19+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:37:19+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:37:19+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:37:25+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = 'cxz' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('cxz','zz','zykjinghuashuiyue@126.com','c77bf538f9c4dae0186ba958de3956fc','1480405043','1480318643','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:37:32+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=c77bf538f9c4dae0186ba958de3956fc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `token` = 'c77bf538f9c4dae0186ba958de3956fc' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `t_user` SET `status`='1' WHERE `id` = 76 [ RunTime:0.0760s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:40:33+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-28T15:40:34+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:41:10+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = 'asdf' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('asdf','ss','zykjinghuashuiyue@126.com','f53ea764e83a42ee65a13abd8dc11dcd','1480405238','1480318838','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:41:19+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=f53ea764e83a42ee65a13abd8dc11dcd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `token` = 'f53ea764e83a42ee65a13abd8dc11dcd' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `t_user` SET `status`='1' WHERE `id` = 77 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:44:00+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:44:00+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:44:00+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:44:37+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = 'qwer' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('qwer','aa','zykjinghuashuiyue@126.com','133bc9b2131a7a930b76a078d0ea3a52','1480405446','1480319046','0') [ RunTime:0.0010s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:44:54+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=133bc9b2131a7a930b76a078d0ea3a52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `token` = '133bc9b2131a7a930b76a078d0ea3a52' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `t_user` SET `status`='1' WHERE `id` = 78 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:48:26+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:48:26+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:48:26+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:49:00+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = 'tty' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('tty','rr','zykjinghuashuiyue@126.com','0b65a3a1da03da8d630568d61da4086a','1480405714','1480319314','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:49:36+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=0b65a3a1da03da8d630568d61da4086a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_user` WHERE `token` = '0b65a3a1da03da8d630568d61da4086a' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `t_user` SET `status`='1' WHERE `id` = 79 [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:49:50+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:50:35+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:50:35+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:51:05+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-28T15:51:06+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:51:06+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-28T15:51:06+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-28T15:53:15+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = '12365' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: password D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 29 行.
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('12365','250cf8b51c773f3f8dc8b4be867a9a02','zykjinghuashuiyue@126.com','9702f759b451f01d1052ac9685a3a86d','1480405873','1480319473','0') [ RunTime:0.0000s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:54:09+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-28T15:54:10+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-28T15:54:18+08:00 ] 127.0.0.1 /demo/tp/index.php/home/register/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `t_user` WHERE `username` = 'dfg' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: password D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 29 行.
+SQL: INSERT INTO `t_user` (`username`,`password`,`email`,`token`,`token_exptime`,`regtime`,`status`) VALUES ('dfg','3691308f2a4c2f6983f2880d32e29c84','zykjinghuashuiyue@126.com','fb7957902aa3a63a1df27db5a1a38fb9','1480406056','1480319656','0') [ RunTime:0.0010s ]
+NOTIC: [8] iconv(): Detected an illegal character in input string D:\wamp\wamp\www\demo\tp\Application\Home\Controller\RegisterController.class.php 第 52 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 44 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 254 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 262 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 263 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+NOTIC: [8192] Function ereg() is deprecated D:\wamp\wamp\www\demo\tp\ThinkPHP\Library\HomeClass\smtp.class.php 第 208 行.
+
+[ 2016-11-28T15:54:25+08:00 ] ::1 /demo/tp/index.php/home/register/active.html?verify=fb7957902aa3a63a1df27db5a1a38fb9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_user` WHERE `token` = 'fb7957902aa3a63a1df27db5a1a38fb9' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_user` SET `status`='1' WHERE `id` = 81 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
