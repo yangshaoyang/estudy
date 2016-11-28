@@ -14,12 +14,12 @@
         <div class="place"><p>北京</p></div>
         <div class="nav">
             <div class="navtop">
-            <a href="#" class="log">登录</a>
-            <a href="#" class="log sign">注册</a>
+            <a href="{:U('/home/login/login')}" class="log">登录</a>
+            <a href="{:U('/home/login/register')}" class="log sign">注册</a>
             <p>客服热线&nbsp;&nbsp;&nbsp;400&nbsp;-&nbsp;0000&nbsp;-&nbsp;000</p>
             </div>
             <div class="line"></div>
-            <a href="#" class="xz"><div class="xzimg"><img src="__PUBLIC__/images/gl2.png" width="21" height="21" alt="gl"/></div><p>考证攻略</p></a>
+            <a href="{:U('/home/certificate/certificatelist')}" class="xz"><div class="xzimg"><img src="__PUBLIC__/images/gl2.png" width="21" height="21" alt="gl"/></div><p>考证攻略</p></a>
             <a href="#" class="xz xz2"><div class="xzimg"><img src="__PUBLIC__/images/gw2.png" width="21" height="21" alt="gl"/></div><p>考证顾问</p></a>
             <a href="#" class="xz xz2"><div class="xzimg"><img src="__PUBLIC__/images/jy2.png" width="21" height="21" alt="gl"/></div><p>考证建议</p></a>
 
@@ -28,7 +28,7 @@
 </div>
 <div class="content">
 <div class="mybody">
-    <div class="bread"><span>易学助手</span> > <a href="#">考证列表</a></div>
+    <div class="bread"><span><a href="{:U('/home/index/index')}">易学助手</a></span> > <a href="{:U('/home/certificate/certificatelist')}">考证列表</a></div>
     <div class="ss">
     <div class="search">
         <form>
@@ -60,7 +60,7 @@
                 <div class="listright">
                     <form>
                         <input type="button" value="我要参加" class="button1">
-                        <input type="button" value="查看详情" class="button1 button2">
+                        <input type="button" value="查看详情" class="button1 button2" onclick="location.href='{:U('/home/certificate/content')}'">
                     </form>
                 </div>
             </div>
