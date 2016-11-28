@@ -1,0 +1,134 @@
+.content{
+	width:100%;
+	overflow:auto;
+	background-color:#f7f7f7;
+	padding-bottom:30px;}
+.bread{
+	height:50px;
+	line-height:50px;
+	}
+.bread a{font-size:12px;}
+.left{
+	float:left;
+	width:800px;
+	overflow:auto;
+	padding-bottom:40px;}
+.search{
+	margin:auto;
+	width:800px;
+	height:50px;
+	margin-top:21px;}
+.searchtext{
+	text-indent:61px;
+	background-color:#FFF;
+	background-image:url(../images/search.png);
+	background-repeat:no-repeat;
+	background-position:16px 14px;
+	display:block;
+	border:1px solid #4c6699;
+	width:678px;
+	height:48px;
+	color:#d9d9d9;
+	line-height:48px;
+	float:left;}
+.searchbutton{
+	font-size:18px;
+	cursor:pointer;
+	float:left;
+	display:block;
+	border-left:none;
+	width:120px;
+	height:50px;
+	color:#FFF;
+	background-color:#2f8abb;}
+.lp{
+	margin-top:19px;}
+.lp ul{
+	height:35px;}
+.lp ul li{
+	margin-right:40px;
+	float:left;}
+.lp ul li a{
+	font-size:14px;
+	float:left;
+	line-height:35px;}
+.lpli{color:#2f8abb;}
+.lp ul li a:hover{
+	text-decoration:none;
+	color:#f2bb64;
+	border-bottom:2px solid #f2bb64;}
+.lphover{
+	color:#f2bb64;
+	border-bottom:2px solid #f2bb64;}
+.proul{
+	margin-top:30px;}
+.proul li{
+	padding:20px;
+	background-color:#FFF;
+	width:760px;
+	overflow:auto;
+	margin-bottom:20px;}
+.litop{
+	margin-bottom:15px;
+	padding-bottom:18px;
+	border-bottom:1px solid #cccccc;
+	width:700px;
+	overflow:auto}
+.litop h1 a{
+	font-size:20px;
+	font-weight:normal;}
+.litop h1 a:hover{
+	text-decoration:none;
+	color:#2f8abb;}
+.litop h2{
+	margin-top:6px;
+	font-size:12px;
+	color:#808080;
+	font-weight:normal;}
+.proul p a{
+	font-size:16px;
+	line-height:30px;}
+.proul p{
+	margin-bottom:15px;}
+.time{
+	height:16px;}
+.sj{
+	color:#666666;
+	margin-left:5px;}
+.page{
+	margin:40px 0px 40px 265px;}
+.page ul li{
+	float:left;
+	height:18px;
+	margin-left:8px;
+	font-size:12px;
+	text-align:center;
+	}
+.page ul li a{
+	height:16px;
+	line-height:16px;
+	display:block;
+	font-size:12px;
+	}
+.num a{
+	width:16px;
+	border:1px solid #8e8e8e;
+	}
+.num a:hover{
+	color:#fff;
+	border:1px solid #2f8abb;
+	background:#2f8abb;
+	text-decoration:none;
+	}
+.now{
+	color:#fff;
+	width:16px;
+	height:16px;
+	line-height:16px;
+	border:1px solid #2f8abb;
+	background:#2f8abb;
+	}
+.page .up a:hover{
+	color:#2f8abb;
+	text-decoration:none;
+	}

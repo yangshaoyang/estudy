@@ -20,8 +20,8 @@
         <div class="place"><p>石家庄</p></div>
         <div class="nav">
         	<div class="navtop">
-        	<a href="#" class="log">登录</a>
-            <a href="#" class="log sign">注册</a>
+        	<a href="{:U('/home/login/login')}" class="log">登录</a>
+            <a href="{:U('/home/login/register')}" class="log sign">注册</a>
             <p>客服热线&nbsp;&nbsp;&nbsp;400&nbsp;-&nbsp;0000&nbsp;-&nbsp;000</p>
             </div>
             <div class="line"></div>
@@ -37,23 +37,18 @@
 <!--个人中心房源管理-->
 <div class="content">
 	<div class="mybody">
-    	<div class="bread"><span>易学助手</span> > <a href="#">个人中心</a></div>
+    	<div class="bread"><span>易学助手</span> > <a href="{:U('/home/person/homepage')}">个人中心</a></div>
 		<!--个人中心left-->
         <div class="personal_left">
         	<div class="user">
             	<a href="#"><img src="__PUBLIC__/images/user.gif" width="150" height="150" alt="user" /></a>
-                <p>欢迎您，XXX<br /><a href="#">申请成为易学助手学习达人</a></p>
+                <p>欢迎您，XXX</p>
             </div>
             <ul class="left_nav">
-                	<li class="left_nav_now"><a href="#">首页</a></li>
-                    <li ><a href="#">个人信息管理</a>                    	
-                    <!--<ul>
-                        	<li><a href="#">认证管理</a></li>
-                        	<li><a href="#">经验管理</a></li>
-                        	<li><a href="#">完善账户信息</a></li>
-                    	</ul>--></li>
-                    <li><a href="#">消息管理</a></li>
-                    <li><a href="#">密码管理</a></li>
+                	<li class="left_nav_now"><a href="{:U('/home/index/index')}">首页</a></li>
+                    <li ><a href="{:U('/home/person/permessage')}">个人信息管理</a></li>
+                    <li><a href="{:U('/home/person/message')}">消息管理</a></li>
+                    <li><a href="{:U('/home/person/repassword')}">密码管理</a></li>
                     <!--<li><a href="#">我的收藏</a></li>
                     <li><a href="#">我的足迹</a></li>-->
 			</ul>    	

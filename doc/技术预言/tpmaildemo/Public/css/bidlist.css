@@ -1,0 +1,128 @@
+.content{
+	width:100%;
+	overflow:auto;
+	background-color:#f7f7f7;}
+.bread{
+	height:50px;
+	line-height:50px;
+	}
+.bread a{font-size:12px;}
+.ss{
+	width:1200px;
+	margin:20px 0px 60px 0px;}
+.search{
+	margin:auto;
+	width:782px;
+	height:50px;}
+.searchtext{
+	text-indent:61px;
+	background-color:#FFF;
+	background-image:url(../images/search.png);
+	background-repeat:no-repeat;
+	background-position:16px 14px;
+	display:block;
+	border:1px solid #4c6699;
+	width:656px;
+	height:48px;
+	color:#d9d9d9;
+	line-height:48px;
+	float:left;}
+.searchbutton{
+	font-size:18px;
+	cursor:pointer;
+	float:left;
+	display:block;
+	border-left:none;
+	width:120px;
+	height:50px;
+	color:#FFF;
+	background-color:#2f8abb;}
+.contentul li{
+	padding:20px 0px;
+	background-color:#FFF;
+	width:1200px;
+	overflow:auto;
+	margin-bottom:10px;}
+.list{
+	width:1050px;
+	margin:auto;}
+.listleft{
+	overflow:auto;
+	float:left;}
+.listleft h1{
+	font-weight:normal;
+	color:#2f8abb;
+	font-size:20px;}
+.time{
+	height:16px;
+	margin-top:6px;}
+.sj{
+	margin-left:5px;}
+.qy{
+	margin-left:15px;
+	color:#3a9137;}
+.xzl{
+	color:#dba136;}
+.qz{
+	color:#226a84;}
+.yusuan{
+	margin-top:36px;}
+.yusuan2{
+	margin-left:50px;}
+.listleft p{
+	margin-top:15px;}
+.listright{
+	margin-top:20px;
+	float:right;
+	overflow:auto;}
+.button1{
+	border-radius:5px;
+	display:block;
+	background-color:#efb052;
+	height:40px;
+	width:130px;
+	color:#FFF;
+	cursor:pointer;}
+.button2{
+	margin-top:23px;
+	background-color:#f7f7f7;
+	color:#444444;}
+.button3{
+	background-color:#cccccc;}
+.page{
+	margin:40px 0px 100px 450px;}
+.page ul li{
+	float:left;
+	height:18px;
+	margin-left:8px;
+	font-size:12px;
+	text-align:center;
+	}
+.page ul li a{
+	height:16px;
+	line-height:16px;
+	display:block;
+	font-size:12px;
+	}
+.num a{
+	width:16px;
+	border:1px solid #8e8e8e;
+	}
+.num a:hover{
+	color:#fff;
+	border:1px solid #2f8abb;
+	background:#2f8abb;
+	text-decoration:none;
+	}
+.now{
+	color:#fff;
+	width:16px;
+	height:16px;
+	line-height:16px;
+	border:1px solid #2f8abb;
+	background:#2f8abb;
+	}
+.page .up a:hover{
+	color:#2f8abb;
+	text-decoration:none;
+	}

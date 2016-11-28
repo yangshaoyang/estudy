@@ -1,0 +1,292 @@
+.content{
+	background-color:#f7f7f7;
+	}
+.bread{
+	height:50px;
+	line-height:50px;
+	}
+.bread a{font-size:12px;}
+
+.personal_else{
+	width:970px;
+	margin-left:25px;
+	float:left;
+	margin-bottom:30px;
+	}
+.personal_else h1 span{color:#888;}
+.else_bg{
+	background:#fff;
+	}
+.else_text{
+	margin:10px 36px 40px;
+	}
+.else_text p{
+	color:#808080;
+	line-height:32px;
+	}
+.personal_else h1{
+	font-size:18px;
+	width:970px;
+	height:24px;
+	line-height:24px;
+	text-indent:1em;
+	font-weight:normal;
+	border-left:4px solid #2f8abb;
+	float:left;
+}
+.personal_else .h11{
+	margin:20px 0px 10px 20px;
+	width:200px;
+}
+.personal_else .h11 span{
+	color:#eb9d3f;
+	font-size:16px;
+	}
+.personal_else h2{
+	font-size:20px;
+	color:#2f8abb;
+	font-weight:normal;
+	margin:24px 36px;
+	}
+.table_bg{background:#fff;}
+.img{
+	width:970px;
+	height:150px;
+	margin:30px auto 15px;
+	text-align:center;
+	}
+.ID{
+	width:970px;
+	margin-top:30px;
+	margin-bottom:80px;
+	float:left;
+	}
+.idcard{
+	text-align:center;
+	width:480px;
+	float:left;
+	position: relative;
+
+	}
+.idcard p{
+	margin-top:50px;
+	}
+.slide{
+	width:50px;
+	height:180px;
+	float:left;
+	margin-top:40px;
+	}
+.slide img{
+	margin:75px 17px;
+	}
+.tip{
+	width:118px;
+	height:178px;
+	border:1px solid #ccc;
+	float:left;
+	margin-right:30px;
+	text-align:center;
+	margin-top:40px;
+	}
+.tip_right{
+	margin-right:0px;
+	}
+.tip img{
+	margin-top:30px;
+	margin-bottom:10px;
+	}
+.tip_right img{
+	margin-top:50px;
+	}
+.tip p{
+	font-size:16px;
+	line-height:40px;
+	margin-bottom: 35px;
+	}
+.tip h5{
+	font-size:12px;
+	color:#666;
+	font-weight:normal;
+	border-top:1px solid #ccc;
+	width:100px;
+	margin-left:9px;
+	line-height:30px;
+	}
+.personal_else .exper{
+	float:left;
+	margin:40px 0 60px 20px;
+	}
+.exper1{
+	margin:42px 16px;
+	width:400px;
+	height:300px;
+	float:left;
+	}
+.exper2{
+	width:506px;
+	}
+.exper1 ul{
+	float:left;
+	margin:0px 44px;
+	width:312px;
+	}
+.exper1 ul li{
+	line-height:32px;
+	}
+.exper1 ul .garyli{
+	margin-top:10px;
+	line-height:20px;
+	color:#808080;
+	}
+.exper1 ul li span{
+	float:right;
+	color:#808080;
+	*margin-top:-32px;
+	}
+.exper2 ul{
+	width:420px;
+	}
+.exper1 ul li a:hover{
+	color:#2f8abb;
+	text-decoration:none;
+	}
+.exper_button a{
+	margin:0px 16px;
+	display:block;
+	float:left;
+	background:#fff;
+	line-height:48px;
+	text-align:center;
+	width:182px;
+	height:48px;
+	border:1px solid #fff;
+	}
+.exper_button a:hover{
+	border:1px solid #2f8abb;
+	text-decoration:none;
+	}
+.collection{
+	float:left; 
+	margin-top:30px;
+	padding:20px 37px;
+	}
+.collect{
+	float:left;
+	margin:10px 12px;
+	}
+.collect h3{
+	font-weight:normal;
+	text-align:center;
+	margin-top:10px;
+	}
+.collect h3 a{
+	color:#808080;
+	}
+.collect p{
+	width:200px;
+	height:30px;
+	background:#333;
+	opacity:0.8;
+	margin-top:-30px;
+	line-height:30px;
+	text-align:center;
+	}
+.collect p a{color:#fff;}
+.else_licon{
+	float:left;
+	width:970px;
+	margin-top:30px;
+	}
+.else_li{
+	width:910px;
+	height:84px;
+	background:#fff;
+	padding:20px 30px;
+	margin-top:10px;
+	}
+.else_li_top{
+	height:104px;
+	width:910px;
+	background:#fff;
+	padding:20px 30px;
+	}
+.else_li_top h3 a{
+	line-height:28px;
+	font-size:20px;
+	color:#2f8abb;
+	font-weight:normal;
+	}
+.top_p1{
+	text-indent:20px;
+	background:url(../images/time.gif) no-repeat left;
+	line-height:40px;
+	}
+.green{color:#3a9137;}
+.yellow{color:#dba136;}
+.blue{color:#226a84;}
+.litop_right{
+	float:right;
+	*margin-top:-40px;
+	}
+.top_p2{
+	line-height:46px;
+	}
+.else_li h3 a{
+	line-height:28px;
+	font-size:16px;
+	color:#2f8abb;
+	font-weight:normal;
+	}
+.else_li h3 span{
+	*margin-top:-22px;
+	float:right;
+	font-weight:normal;
+	color:#666;
+	background:url(../images/time.gif) no-repeat left;
+	text-indent:20px;
+	}
+.else_li p{
+	color:#666;
+	line-height:24px;
+	margin-top:8px;
+	}
+/*#submit{
+	width:100px;
+	height:50px;
+	margin:20px 300px 0px 300px;
+}*/
+  #upload
+ {
+   opacity:0;
+   filter:alpha(opacity=0);
+   height: 160px;
+   width: 252px;
+   position: absolute;
+   top: 0;
+   left: 114px;
+   z-index: 9;
+}
+  #uploadid
+ {
+   opacity:0;
+   filter:alpha(opacity=0);
+   height: 160px;
+   width: 252px;
+   position: absolute;
+   top: 0;
+   left: 114px;
+   z-index: 9;
+}
+  #uploadcard
+ {
+   opacity:0;
+   filter:alpha(opacity=0);
+   height: 160px;
+   width: 252px;
+   position: absolute;
+   top: 0;
+   left: 114px;
+   z-index: 9;
+}
+

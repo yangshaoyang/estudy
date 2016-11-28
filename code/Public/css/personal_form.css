@@ -42,10 +42,11 @@
 .form1 form{
 	margin-left:170px;
 	}
+
 .form1 form table{
 	text-align:right;
 	}
-.form1 input[type=text]{
+.form1 input[type=password]{
 	width:378px;
 	height:28px;
 	border:1px solid #ccc;
