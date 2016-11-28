@@ -1,0 +1,96 @@
+.list1_2,.list1_3,.list1_4,.list1_5,.feilei2_userdiv,.feilei3_userdiv,.list2,.list3{
+	display: none;
+}
+.bigone{
+overflow:hidden;
+}
+.bigone .imgs{
+width:311px;height:169px;overflow:hidden;
+}
+.bigone .imgs .imgs1{
+width:77px;height:84px;border-bottom:1px solid #aaa;border-right:1px solid #aaa;
+float:left;
+}
+.bigone .close{
+position:absolute;font-size:40px;top:25px;right:10px;cursor:pointer;
+}
+.bigone .titleone{
+width:100%;height:29px;border-bottom:1px solid #aaa;
+}
+.bigone .titleone a{
+font-size:14px;line-height:29px;float:left;width:77px;height:30px;text-align:center;
+border-right:1px solid #aaa;color:#000;
+}
+.bigone .titleone .last{
+border:0;
+}
+.bigone .titleone a:hover{
+color:red;text-decoration:underline;
+}
+.bigone .con{
+width:311px;height:169px;
+}
+.bigone .con .list1{
+width:100%;height:135px;
+}
+.bigone .con .list1 .list1-con{
+width:250px;height:125px;margin-top:10px;margin-left:10px;
+}
+.bigone .con .list1 .list1-con .zi{
+text-align:right;
+}
+.bigone .con .list1 .list1-con .two input{
+border:0;background:red;color:#fff;cursor:pointer;
+}
+.bigone .con .list1 .list1-con .two span{
+color:#005EA7;
+}
+.bigone .con .list1 .list1-con .two span:hover{
+text-decoration:underline;
+}
+.bigone .con .list2{
+width:311px;height:135px;display:none;
+}
+.bigone .con .list2-title{
+width:100%;height:30px;border-bottom:1px solid #aaa;
+}
+.bigone .con .list2-title a{
+color:#005EAB;float:left;width:40px;line-height:30px;font-size:14px;margin-left:10px;
+}
+.bigone .con .list2-title a:hover{
+text-decoration:underline;color:red;
+}
+.bigone .con .list2-con{
+width:100%;height:105px;overflow:hidden;
+}
+.bigone .con .list2-con .list2-list{
+width:100%;height:100%;
+}
+.bigone .con .list3{
+width:100%;height:135px;display:none;
+}
+.bigone .con .list3 .list3-left{
+width:70px;height:70px;background:url(20111221D.png) no-repeat 0 0;margin-top:25px;
+float:left;margin-right:10px;
+}
+.bigone .con .list3 .list3-right{
+width:230px;height:135px;float:left;line-height:36px;
+}
+.bigone .con .list4{
+width:100%;height:135px;display:none;
+}
+.bigone .con .list4 .list4-title{
+height:30px;width:100%;
+}
+.bigone .con .list4 .list4-title a{
+color:#005EAB;float:left;width:40px;line-height:30px;font-size:14px;margin-left:10px;
+}
+.bigone .con .list4 .list4-title span{
+font-size:14px;float:left;line-height:30px;
+}
+.bigone .con .list4-con{
+height:107px;width:300px;margin-left:10px;overflow:hidden;
+}
+.bigone .con .list4-con .list4-list{
+height:107px;width:300px;
+}

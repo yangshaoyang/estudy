@@ -12,13 +12,13 @@
 <include file="Public/header.html" />
 <div class="content">
 <div class="mybody">
-	<div class="bread"><span>易学助手</span> > <a href="__PUBLIC__/#">动态</a> > <a href="__PUBLIC__/#">比赛详情</a></div>
+	<div class="bread"><span>易学助手</span> > <a href="../../matchlist">比赛列表</a> > <a href="__PUBLIC__/#">比赛详情</a></div>
     <div class="left">
     	<h1>{$mcontent.mname}</h1>
         <div class="fl">
-        	<div class="ssfl"><img src="__PUBLIC__/images/ssfl.gif" width="15" height="15" alt="ssfl" /><span>比赛详情</span></div>
+        	<div class="ssfl"><img src="__PUBLIC__/images/ssfl.gif" width="15" height="15" alt="ssfl" /><span>要求：{$mcontent.mrequest}</span></div>
             <div class="ssfl ssfl2"><img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" /><span>时间：{$mcontent.mtime} </span></div>
-            <div class="ssfl ssfl2"><img src="__PUBLIC__/images/zz.gif" width="15" height="15" alt="zz" /><span>报名费：宋媛</span></div>
+            <div class="ssfl ssfl2"><img src="__PUBLIC__/images/zz.gif" width="15" height="15" alt="zz" /><span>报名费：{$mcontent.mfee} 元</span></div>
           </div><p>{$mcontent.mcontent}</p></div>
     <div class="right">
     	<div class="righttop">
@@ -36,11 +36,14 @@
 
       <div class="righttop righttop2 righttop3">
         	<h1 class="title title2">比赛推荐<a href="__PUBLIC__/#" class="ckgd">更多&nbsp;>></a></h1>
-            <div class="lpimg1"><p><a href="__PUBLIC__/#">挑战杯</a><span>2016年</span></p><a href="__PUBLIC__/#"><img src="__PUBLIC__/images/lp1.png" width="277" height="201" alt="lp" /></a></div>
-      <div class="lpimg1 lpimg2"><p><a href="__PUBLIC__/#">某比赛</a><span>2016年11月14日</span></p><a href="__PUBLIC__/#"><img src="__PUBLIC__/images/lp2.png" width="277" height="201" alt="lp" /></a></div>
+            <volist name="tmatch" id="vo">
+            <div class="lpimg1 lpimg2"><p><a href="__PUBLIC__/#">{$vo.mname}</a><span>2016年</span></p><a href="__PUBLIC__/#"><img src="{$vo.mthumb}" width="277" height="201" alt="lp" /></a></div>
+        </volist>
+      <!-- <div class="lpimg1 lpimg2"><p><a href="__PUBLIC__/#">某比赛</a><span>2016年11月14日</span></p><a href="__PUBLIC__/#"><img src="__PUBLIC__/images/lp2.png" width="277" height="201" alt="lp" /></a></div>
       <div class="lpimg1 lpimg2"><p><a href="__PUBLIC__/#">某大赛</a><span>时间待定</span></p><a href="__PUBLIC__/#"><img src="__PUBLIC__/images/lp3.png" width="277" height="201" alt="lp" /></a></div>
-      </div>
+      </div> -->
     </div>
+</div>
 </div>
 </div>
 <include file="Public/footer.html" />

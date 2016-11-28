@@ -1,0 +1,22 @@
+.box1{
+    border:1px solid rgb(72,153,194);
+    position: fixed;
+    top: 300px;
+    width:600px;
+    height: 200px;
+    display: none;
+    background-color: white;
+    word-wrap: break-word;
+}
+.close{
+    background: url(../images/1.gif);
+    background-repeat: no-repeat;
+    width:40px;
+    height:40px;
+    float: right;
+    margin-top:10px;
+}
+.close:hover{
+    background: url(../images/1.1.gif);
+    background-repeat: no-repeat;
+}
