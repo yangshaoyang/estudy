@@ -2,9 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
     <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
     <link href="__PUBLIC__/css/bidlist.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/confirmdelete.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="__PUBLIC__/js/confirmdelete.js"></script>
     <title>比赛列表</title>
 </head>
 <body>
@@ -51,7 +54,7 @@
                             </div>
                             <div class="listright">
                                 <form>
-                                    <input type="button" value="我要参加" class="button1">
+                                    <input type="button" value="我要参加" onclick="return alertMsg('确定要参加吗？',1,'#');" class="button1">
                                     <input type="button" value="查看详情" class="button1 button2"  onclick="location.href='./content/mid/{$vo.mid}'"></form>
                             </div>
                         </div>
