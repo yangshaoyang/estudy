@@ -54,7 +54,7 @@
 	color:#808080;
 	margin:0 auto;
 }
-.search select{
+/*.search select{
 	width:63px;
 	height:40px;
 	border:0;
@@ -62,33 +62,55 @@
 	float:left;
 	color:#808080;
 	text-indent:6px;
-	}
-.tel{
-	width:237px;
+	}*/
+.email{
+	width:300px;
 	height:40px;
 	line-height:40px;
 	border:0;
-	background:url(../images/login_2.gif) no-repeat;
+	background:url(../images/login_5.gif) no-repeat;
 	float:left;
 	color:#808080;
 	text-indent:1em;
+	margin-top:20px;
+	}
+.username{
+	width:300px;
+	height:40px;
+	line-height:40px;
+	border:0;
+	background:url(../images/login_5.gif) no-repeat;
+	float:left;
+	color:#808080;
+	text-indent:1em;
+	margin-top:20px;
+	}
+.pwd{
+	width:300px;
+	height:40px;
+	line-height:40px;
+	border:0;
+	background:url(../images/login_5.gif) no-repeat;
+	float:left;
+	color:#808080;
+	text-indent:1em;
+	margin-top:20px;
 	}
 .check{
-	width:219px;
+	width:81px;
 	height:40px;
-	line-height:40px;
 	border:0;
-	background:url(../images/login_3.gif) no-repeat;
+	background:url(../images/login_5.gif) no-repeat;
 	float:left;
+	cursor:pointer;
 	color:#808080;
-	text-indent:1em;
 	margin-top:20px;
 	}
 .addcheck{
 	width:81px;
 	height:40px;
 	border:0;
-	background:url(../images/login_4.gif) no-repeat;
+	background:url(../images/login_5.gif) no-repeat;
 	float:left;
 	cursor:pointer;
 	color:#808080;
