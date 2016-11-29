@@ -14,27 +14,30 @@
 <!--登录页-->
 <div class="content">
 	<div class="mybody">
-    	<div class="bread"><span>选址中国</span> > <a href="#">用户登录</a></div>
+    	<div class="bread"><span><a href="{:U('/')}">易学助手</a></span> > <a href="../../login">用户登录</a></div>
 		<!--登陆-->
         	<div class="search">
-            	<div class="search1">
-                	<h1><a href="#">普通登录</a> 丨 <span>验证码登录</span></h1>
+              <div class="search1">
+                  <h1><span>普通登录</span></h1>
                     <form action="">
-                    	<select name=""><option value="">+86</option></select>
-                        <input type="text" value="手机号码" class="tel" />
-                        <input type="text" value="验证码" class="check" />
-                        <input type="button" value="获取验证码" class="addcheck" />
+                        <input type="text"  name="yourname" class="email" placeholder="用户名或邮箱">
+                    </form>
+                    <form action="" >
+                        <input type="password" name="yourpassword"  minlength="8" maxlength="16" class="pwd" placeholder="密码大于8位小于16位">
+                    </form>
+                    <form action="">
                         <div id="u1476" class="ax_default link_button">
                         <div id="u1476_div" class=""></div>
                         <!-- Unnamed () -->
                         <div id="u1477" class="text" style="visibility: visible;">
-                        <p><a href="#">没有账号？</a> <a href="#">忘记密码</a></p>
+                        <p><input type="checkbox" name="aihao" value="1"/>记住账号</p>
+                        <p><a href="../../register">没有账号？</a></p>
                         </div>
                         </div>
                         <input type="button" value="登  录" class="login_button" />       
                    </form>
-                </div>	
-                <!--第三方登录-->	
+                </div>  
+                <!--第三方登录-->  
                 <div class="search2">
                    <form>
                    <div id="u1549" class="text" style="visibility: visible;">
