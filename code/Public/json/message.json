@@ -1,0 +1,8 @@
+[
+    {"name":"消息推送", "children":[
+        {"id":"base-navtab", "name":"比赛消息", "target":"navtab", "url":"html/base/navtab.html"},
+        {"id":"base-navtab", "name":"考证消息", "target":"navtab", "url":"html/base/navtab.html"},
+        {"id":"base-navtab", "name":"论坛消息", "target":"navtab", "url":"html/base/navtab.html"},
+        {"id":"base-navtab", "name":"用户列表", "target":"navtab", "url":"html/base/navtab.html"}
+    ]}
+]

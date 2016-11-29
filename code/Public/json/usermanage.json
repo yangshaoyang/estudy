@@ -1,0 +1,5 @@
+[
+    {"name":"用户管理", "children":[
+        {"id":"base-navtab", "name":"用户列表", "target":"navtab", "url":"html/base/navtab.html"}
+    ]}
+]
