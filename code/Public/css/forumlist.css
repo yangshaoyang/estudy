@@ -95,11 +95,13 @@
 	line-height:30px;}
 .proul p{
 	margin-bottom:15px;}
-.time{
-	height:16px;}
-.sj{
+.forum-footer{
 	color:#666666;
+	height:16px;}
+.forum-time{
 	margin-left:5px;}
+.read-count{
+	float: right;}
 .page{
 	margin:40px 0px 40px 265px;}
 .page ul li{
