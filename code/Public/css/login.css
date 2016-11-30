@@ -116,6 +116,10 @@
 	color:#808080;
 	margin-top:20px;
 	}
+.accountnumber{
+	float: right;
+	margin-top:15px;
+}
 .login_button{
 	width:300px;
 	height:40px;
