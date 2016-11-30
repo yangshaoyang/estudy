@@ -45,8 +45,8 @@
                 <td> {$vo.mtime}</td>
                 <td><a href="{$vo.murl}">{$vo.murl}</a></td>
                 <td>
-                    <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'test_dialog7', url:'../home/match/matchlist.html', title:'最大化Dialog', max:true}">查看</button>&nbsp;
-                    <button type="button" class="btn-blue" onclick="dialog_edit();">修改</button>&nbsp;
+                    <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/match/content/mid/{$vo.mid}', title:'{$vo.mname}', max:true}">查看</button>&nbsp;
+                    <button type="button" class="btn-blue" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/match/editmatch/mid/{$vo.mid}', title:'修改比赛：{$vo.mname}', max:true}">修改</button>&nbsp;
                     <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){alert('删除成功！');}}">删除</button>
                 </td>
             </tr>
@@ -54,29 +54,3 @@
         </thead>
     </table>
 </div>
-<script type="text/javascript">
-function dialog_edit1() {
-    BJUI.dialog({
-        id:'test_dialog3',
-        url:'../../html/base/dialog-demo3.html',
-        title:'示例Dialog3'
-    })
-}
-function dialog_edit() {
-    BJUI.dialog({
-        id:'test_dialog4',
-        html:'<div style="margin:15px auto; padding:15px; width:300px; border:2px #ff6600 solid;"><h4 class="text-center">测试修改模块</h4></div>',
-        title:'修改比赛'
-    })
-}
-function dialog_test3() {
-    BJUI.dialog({
-        id:'test_dialog5',
-        width: 200,
-        height: 220,
-        html: '<div> 我是html</div>',
-        image:'../../../assets/ico/apple-touch-icon-precomposed.png.png',
-        title:'示例Dialog5'
-    })
-}
-</script>
