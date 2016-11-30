@@ -1,9 +1,11 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class HtmlController extends Controller {
+class MatchController extends Controller {
     public function index(){
-        $this->display();
+        $match = M("match")->select();
+	  $this->assign("match",$match);
+	  $this->display();
     }
     public function base(){
         $this->display();

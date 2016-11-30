@@ -1,0 +1,82 @@
+<div class="bjui-pageHeader" style="background-color:#fefefe; border-bottom:none;">
+<form data-toggle="ajaxsearch" data-options="{searchDatagrid:$.CurrentNavtab.find('#datagrid-test-filter')}">
+    <fieldset>
+        <legend style="font-weight:normal;">比赛搜索：</legend>
+        <div style="margin:0; padding:1px 5px 5px;">
+            <span>比赛ID：</span>
+            <input type="text" name="obj.code" class="form-control" size="15">
+                
+            <span>比赛名称：</span>
+            <input type="text" name="obj.name" class="form-control" size="15">
+                
+            <div class="btn-group">
+                <button type="submit" class="btn-green" data-icon="search">开始搜索！</button>
+                <button type="reset" class="btn-orange" data-icon="times">重置</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+</div>
+<div class="bjui-pageContent">
+    <table class="table table-bordered" id="datagrid-test-filter" data-toggle="datagrid" data-options="{
+        height: '100%',
+        showToolbar: true,
+        toolbarItem: 'add,edit,del',
+        jsonPrefix: 'obj',
+        editMode: {dialog:{width:'800',height:500,title:'编辑信息',mask:true}},
+        editUrl: '../../html/datagrid/datagrid-edit.html?code={code}',
+        paging: {pageSize:60},
+        showCheckboxcol: true,
+        linenumberAll: true,
+        exportOption: {type:'file', options:{url:'http://b-jui.com/demo/export', loadingmask:true}}
+    }">
+        <thead>
+            <tr>
+                <th align="center" width="90">比赛ID</th>
+                <th align="center">比赛名称</th>
+                <th align="center">比赛时间</th>
+                <th align="center">比赛官网</th>
+                <th align="center">操作</th>
+            </tr>
+            <volist name="match" id="vo">
+            <tr>
+                <td>{$vo.mid}</td>
+                <td>{$vo.mname}</td>
+                <td> {$vo.mtime}</td>
+                <td><a href="{$vo.murl}">{$vo.murl}</a></td>
+                <td>
+                    <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'test_dialog7', url:'../home/match/matchlist.html', title:'最大化Dialog', max:true}">查看</button>&nbsp;
+                    <button type="button" class="btn-blue" onclick="dialog_edit();">修改</button>&nbsp;
+                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){alert('删除成功！');}}">删除</button>
+                </td>
+            </tr>
+            </volist>
+        </thead>
+    </table>
+</div>
+<script type="text/javascript">
+function dialog_edit1() {
+    BJUI.dialog({
+        id:'test_dialog3',
+        url:'../../html/base/dialog-demo3.html',
+        title:'示例Dialog3'
+    })
+}
+function dialog_edit() {
+    BJUI.dialog({
+        id:'test_dialog4',
+        html:'<div style="margin:15px auto; padding:15px; width:300px; border:2px #ff6600 solid;"><h4 class="text-center">测试修改模块</h4></div>',
+        title:'修改比赛'
+    })
+}
+function dialog_test3() {
+    BJUI.dialog({
+        id:'test_dialog5',
+        width: 200,
+        height: 220,
+        html: '<div> 我是html</div>',
+        image:'../../../assets/ico/apple-touch-icon-precomposed.png.png',
+        title:'示例Dialog5'
+    })
+}
+</script>
