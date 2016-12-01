@@ -56,7 +56,7 @@
 	margin-top:2px;
 	float:left;}
 .xz2{
-	margin-left:15px;}
+	margin-left:0px;}
 .footer{
 	background-image:url(../images/footer.jpg);
 	background-position:top;
@@ -301,7 +301,8 @@
 .xzimg{
 	overflow:auto;}
 .xzimg img{
-	float:left;}
+	float:left;
+	margin-left:10px;}
 .xzimg2{
 	margin-left:25px;}
 .xzl ul{
