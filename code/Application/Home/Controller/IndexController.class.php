@@ -3,9 +3,9 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-		$match=M("match")->order("matchid desc")->limit(5)->select();
+		$match=M("match")->order("mid desc")->limit(5)->select();
 	    $this->assign("match",$match);
-	    $matchs=M("match")->order("matchid desc")->limit(2)->select();
+	    $matchs=M("match")->order("mid desc")->limit(2)->select();
 	    $this->assign("matchs",$matchs);
 
 		$textual=M("certificate")->order("cid desc")->limit(5)->select();
