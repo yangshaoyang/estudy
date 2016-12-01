@@ -122,13 +122,13 @@
     	<h1 class="title">考证政策<a href="#" class="ckgd ckgd2">查看更多&nbsp;>></a></h1>
         <div class="xzimg">
         <volist name="textuals" id="vo">
-   	    <a href="#"><img src="{$vo.thumb}" width="280" height="181" alt="xzzc" /> </a>
+   	    <a href="#"><img src="{$vo.cthumb}" width="280" height="181" alt="xzzc" /> </a>
         </volist>
         <!-- <a href="#"><img src="__PUBLIC__/images/xzzc.png" width="280" height="181" alt="xzzc" / class="xzimg2"></a> -->
         </div>
         <ul>
         	<volist name="textual" id="vo">
-            <li><a href="{:U('/home/certificate/contnet')}">{$vo.textualname}</a><span>{$vo.textualtime}</span></li>
+            <li><a href="{:U('/home/certificate/contnet')}">{$vo.cname}</a><span>{$vo.ctime}</span></li>
             </volist>
         </ul>
     </div>
@@ -142,7 +142,7 @@
         </div>
         <ul>
         	<volist name="match" id="vo">
-            <li><a href="{:U('/home/match/content')}">{$vo.matchname}</a><span>{$vo.matchtime}</span></li>
+            <li><a href="{:U('/home/match/content')}">{$vo.mname}</a><span>{$vo.mtime}</span></li>
             </volist>
         </ul>
     </div>
