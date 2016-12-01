@@ -55,7 +55,7 @@
 	font-size:20px;}
 .time{
 	height:16px;
-	margin-top:6px;}
+	margin-top:16px;}
 .sj{
 	margin-left:5px;}
 .qy{
@@ -66,13 +66,13 @@
 .qz{
 	color:#226a84;}
 .yusuan{
-	margin-top:36px;}
+	margin-top:26px;}
 .yusuan2{
 	margin-left:50px;}
 .listleft p{
 	margin-top:15px;}
 .listright{
-	margin-top:20px;
+	margin-top:10px;
 	float:right;
 	overflow:auto;}
 .button1{
