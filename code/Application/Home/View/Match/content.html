@@ -1,49 +1,120 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/dynamicdetails.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
-<title>{$mcontent.mname}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/dynamicdetails.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
+    <title>{$mcontent.mname}</title>
 </head>
 <body>
-<include file="Public/header.html" />
-<div class="content">
-<div class="mybody">
-	<div class="bread"><span><a href="{:U('/')}">易学助手</a></span> > <a href="../../matchlist">比赛列表</a> > <a href="#">比赛详情</a></div>
-    <div class="left">
-    	<h1>{$mcontent.mname}</h1>
-        <div class="fl">
-        	<div class="ssfl"><img src="__PUBLIC__/images/ssfl.gif" width="15" height="15" alt="ssfl" /><span>要求：{$mcontent.mrequest}</span></div>
-            <div class="ssfl ssfl2"><img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" /><span>时间：{$mcontent.mtime} </span></div>
-            <div class="ssfl ssfl2"><img src="__PUBLIC__/images/zz.gif" width="15" height="15" alt="zz" /><span>报名费：{$mcontent.mfee} 元</span></div>
-          </div><p>{$mcontent.mcontent}</p></div>
-    <div class="right">
-    	<div class="righttop">
-        	<h1 class="title">热门资讯<a href="__PUBLIC__/#" class="ckgd">更多&nbsp;>></a></h1>
-            <ul class="topul">
-        	<li><a href="__PUBLIC__/#">最中意的5类证件，你Get了吗？</a><span>01-01</span></li>
-            <li><a href="__PUBLIC__/#">如果选择创业，哪个行业值得考虑？</a><span>01-01</span></li>
-            <li><a href="__PUBLIC__/#">春风十里，不如带你逛逛那些比赛...</a><span>01-01</span></li>
-            <li><a href="__PUBLIC__/#">测试文字一定要很长的对对对</a><span>01-01</span></li>
-            <li><a href="__PUBLIC__/#">测试文字一定要很长的</a><span>01-01</span></li>
-            <li><a href="__PUBLIC__/#">测试文字一定要很长的...</a><span>01-01</span></li>
-            <li><a href="__PUBLIC__/#">测试文字一定要很长</a><span>01-01</span></li>
-        </ul>
-        </div>
+    <include file="Public/header.html" />
+    <div class="content">
+        <div class="mybody">
+            <div class="bread">
+                <span>
+                    <a href="{:U('/')}">易学助手</a>
+                </span>
+                >
+                <a href="../../matchlist">比赛列表</a>
+                >
+                <a href="#">比赛详情</a>
+            </div>
+            <div class="left">
+                <h1>{$mcontent.mname}</h1>
+                <div class="fl">
+                    <div class="ssfl">
+                        <img src="__PUBLIC__/images/ssfl.gif" width="15" height="15" alt="ssfl" />
+                        <span>要求：{$mcontent.mrequest}</span>
+                    </div>
+                    <div class="ssfl ssfl2">
+                        <img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" />
+                        <span>时间：{$mcontent.mtime}</span>
+                    </div>
+                    <div class="ssfl ssfl2">
+                        <img src="__PUBLIC__/images/zz.gif" width="15" height="15" alt="zz" />
+                        <span>报名费：{$mcontent.mfee} 元</span>
+                    </div>
+                </div>
+                <p>{$mcontent.mcontent}</p>
+            </div>
+            <div class="right">
+                <div class="righttop">
+                    <h1 class="title">
+                        热门资讯
+                        <a href="__PUBLIC__/#" class="ckgd">更多&nbsp;>></a>
+                    </h1>
+                    <ul class="topul">
+                        <li>
+                            <a href="__PUBLIC__/#">最中意的5类证件，你Get了吗？</a>
+                            <span>01-01</span>
+                        </li>
+                        <li>
+                            <a href="__PUBLIC__/#">如果选择创业，哪个行业值得考虑？</a>
+                            <span>01-01</span>
+                        </li>
+                        <li>
+                            <a href="__PUBLIC__/#">春风十里，不如带你逛逛那些比赛...</a>
+                            <span>01-01</span>
+                        </li>
+                        <li>
+                            <a href="__PUBLIC__/#">测试文字一定要很长的对对对</a>
+                            <span>01-01</span>
+                        </li>
+                        <li>
+                            <a href="__PUBLIC__/#">测试文字一定要很长的</a>
+                            <span>01-01</span>
+                        </li>
+                        <li>
+                            <a href="__PUBLIC__/#">测试文字一定要很长的...</a>
+                            <span>01-01</span>
+                        </li>
+                        <li>
+                            <a href="__PUBLIC__/#">测试文字一定要很长</a>
+                            <span>01-01</span>
+                        </li>
+                    </ul>
+                </div>
 
-      <div class="righttop righttop2 righttop3">
-        	<h1 class="title title2">比赛推荐<a href="__PUBLIC__/#" class="ckgd">更多&nbsp;>></a></h1>
-            <volist name="tmatch" id="vo">
-            <div class="lpimg1 lpimg2"><p><a href="__PUBLIC__/#">{$vo.mname}</a><span>{$vo.mtime}</span></p><a href="__PUBLIC__/#"><img src="{$vo.mthumb}" width="277" height="201" alt="lp" /></a></div>
-        </volist>
-      <!-- <div class="lpimg1 lpimg2"><p><a href="__PUBLIC__/#">某比赛</a><span>2016年11月14日</span></p><a href="__PUBLIC__/#"><img src="__PUBLIC__/images/lp2.png" width="277" height="201" alt="lp" /></a></div>
-      <div class="lpimg1 lpimg2"><p><a href="__PUBLIC__/#">某大赛</a><span>时间待定</span></p><a href="__PUBLIC__/#"><img src="__PUBLIC__/images/lp3.png" width="277" height="201" alt="lp" /></a></div>
-      </div> -->
+                <div class="righttop righttop2 righttop3">
+                    <h1 class="title title2">
+                        比赛推荐
+                        <a href="__PUBLIC__/#" class="ckgd">更多&nbsp;>></a>
+                    </h1>
+                    <volist name="tmatch" id="vo">
+                        <div class="lpimg1 lpimg2">
+                            <p>
+                                <a href="__PUBLIC__/#">{$vo.mname}</a>
+                                <span>{$vo.mtime}</span>
+                            </p>
+                            <a href="__PUBLIC__/#">
+                                <img src="{$vo.mthumb}" width="277" height="201" alt="lp" />
+                            </a>
+                        </div>
+                    </volist>
+                    <!-- <div class="lpimg1 lpimg2">
+                    <p>
+                        <a href="__PUBLIC__/#">某比赛</a>
+                        <span>2016年11月14日</span>
+                    </p>
+                    <a href="__PUBLIC__/#">
+                        <img src="__PUBLIC__/images/lp2.png" width="277" height="201" alt="lp" />
+                    </a>
+                </div>
+                <div class="lpimg1 lpimg2">
+                    <p>
+                        <a href="__PUBLIC__/#">某大赛</a>
+                        <span>时间待定</span>
+                    </p>
+                    <a href="__PUBLIC__/#">
+                        <img src="__PUBLIC__/images/lp3.png" width="277" height="201" alt="lp" />
+                    </a>
+                </div>
+            </div>
+            -->
+        </div>
     </div>
-</div>
 </div>
 </div>
 <include file="Public/footer.html" />
