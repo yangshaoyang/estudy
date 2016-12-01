@@ -1,7 +1,7 @@
 [
     {"name":"比赛管理", "children":[
-        {"id":"match", "name":"查看比赛", "target":"navtab", "url":"admin/html/navtab.html"},
-        {"id":"match", "name":"添加比赛", "target":"navtab", "url":"html/base/dialog.html"}
+        {"id":"match", "name":"查看比赛", "target":"navtab", "url":"admin/match/index.html"},
+        {"id":"matchadd", "name":"添加比赛", "target":"navtab", "url":"admin/match/addmatch.html"}
     ]},
     {"name":"考证管理", "children":[
         {"id":"base-navtab", "name":"查看考证", "target":"navtab", "url":"admin/html/navtab.html"},
