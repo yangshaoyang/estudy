@@ -12,8 +12,8 @@
         {"id":"base-dialog", "name":"添加资讯", "target":"navtab", "url":"html/base/dialog.html"}
     ]},
     {"name":"帖子管理", "children":[
-        {"id":"base-navtab", "name":"查看帖子", "target":"navtab", "url":"admin/html/navtab.html"},
-        {"id":"base-dialog", "name":"添加帖子", "target":"navtab", "url":"html/base/dialog.html"}
+        {"id":"base-navtab", "name":"查看帖子", "target":"navtab", "url":"admin/article/index.html"},
+        {"id":"base-dialog", "name":"添加帖子", "target":"navtab", "url":"admin/article/addarticle.html"}
     ]},
     {"name":"论坛管理", "children":[
         {"id":"base-navtab", "name":"论坛帖子", "target":"navtab", "url":"admin/html/navtab.html"},

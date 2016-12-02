@@ -7,7 +7,7 @@ class ArticleController extends Controller {
 	  $this->assign("article",$article);
 	  $this->display();
     }
-    public function content($articleid){
+    public function articledetails($articleid){
 	  $article=M("article")->find($articleid);
 	  $this->assign("articlecontent",$article);
 	  $this->display();
