@@ -48,6 +48,13 @@
 	display:block;
 	float:left;
 	margin-top:2px;}
+.qcontent{    
+	font-weight: normal;
+	margin-top: 14px;
+   }
+ .qcontent p{
+ 	 font-size: 18px;
+ }
 .question h2{
 	font-weight:normal;}
 .question h2 span{
