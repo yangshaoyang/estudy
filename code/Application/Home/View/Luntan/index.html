@@ -19,6 +19,7 @@
     	<form>
             <input type="text" value="请输入论坛名称或话题" class="searchtext">
             <input type="button" value="开始搜索" class="searchbutton">
+            <a href="#sub"><input type="button" value="我要发帖" class="postbutton"></a>
         </form>
    		</div>
         <div class="lp">
@@ -37,7 +38,7 @@
 	                	<h1><a href="/estudy/code/index.php/home/luntan/questions/forumid/{$vo.forumid}">{$vo.title}</a></h1>
 	                    <!--<h2>刚入学的小萌新求指导</h2>-->
 	                </div>
-	                <p><a href="/estudy/code/index.php/home/luntan/questions/forumid/{$vo.forumid}">&nbsp;&nbsp;{$vo.content}</a></p>
+	                <p><a href="/estudy/code/index.php/home/luntan/questions/forumid/{$vo.forumid}">{$vo.content}</a></p>
 	                <div class="forum-footer">
 	               	    	<img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/> 
 	                        <span class="forum-time">时间：{$vo.posttime}</span>
@@ -47,18 +48,113 @@
 	        </volist>
         </ul>
         <div class="page">{$pages}</div>
+        <div class="clear"></div>
+        <div class="post_forum">
+        	<a name="sub"></a>
+        	<div>
+        		<img src="__PUBLIC__/images/post_forum.png">
+        		<span>发表新帖</span>
+        	</div>
+        	<div>
+        		<input type="text" value="请填写标题" class="post_title">
+        	</div>
+        	<div class="row-input">
+
+            	<textarea name="mcontent" id="j_form_content" class="j-content" style="width: 700px;height: 30px;" data-toggle="kindeditor" data-minheight="150"></textarea>
+       		 </div>
+        	 <div>
+        		<input type="button" value="发表" class="post_button">
+        	</div>
+        	<!--<ul class="proul">
+        		<div id="tb_rich_poster_container" class="tb_rich_poster_container">
+    <div id="rich_ueditor_tpl">
+        <div id="tb_rich_poster" class="tb_rich_poster">
+            <div class="j_bubble_container"></div>
+
+            
+                        <div class="poster_head clearfix">
+                <div class="poster_head_text">
+                                            <a class="add_thread_btn post_head_btn cur" title="发表新贴" href="javascript:;"><span  class="post_head_btn_icon post_head_btn_icon_post"></span>发表新贴</a>
+
+                        
+
+                        
+                                                <a class="add_vote_btn post_head_btn" title="发起投票" target="_blank" href="/newvote/createvote?kw=%E5%91%A8%E5%86%AC%E9%9B%A8&ie=utf-8"><span  class="post_head_btn_icon post_head_btn_icon_vote"></span>发起投票</a>
+
+                        
+                    
+                </div>
+
+                                <div class="poster_head_surveillance j_surveillance">
+                    发贴请遵守 <a href="/tb/eula.html" target="_blank" onclick="$.stats.track('post_agreement', 'poster')">贴吧协议及“七条底线”</a>
+					<a href="javascript:;" id="frs_footer_tieba_report" class="btn_tousu fr post_head_tousu" data-checkun="un">贴吧投诉</a>                    <button type="button" class="poster_disable_float j_disable_float" title="停止浮动">停止浮动</button>
+                </div>
+            </div>
+            
+                        
+
+
+
+
+
+			<div class="poster_body editor_wrapper">
+                                <div class="poster_component title_container">
+                    <div class="poster_title">标&nbsp;&nbsp;题:</div>
+                    <div class="j_title_wrap">
+                        <input type="text" class="editor_textfield editor_title ui_textfield j_title j_topic_sug_input" name="title" autocomplete="off" />
+                        <span class="topic_add_btn j_topic_add_btn"></span>
+                    </div>
+                    <div class="poster_error j_error"></div>
+                </div>
+                
+                
+                                <div class="poster_component editor_content_wrapper ueditor_container">
+                    <div class="poster_reply">内&nbsp;&nbsp;容:</div>
+                    <div class="old_style_wrapper">
+                        <div id="ueditor_replace" style="width: 700px; height: 220px;"></div>
+                    </div>
+                    <div class="poster_error j_error"></div>
+                </div>
+
+                                <div class="j_poster_signature poster_signature">
+                    <label><input type="checkbox" class="j_use_signature"/> 使用签名档</label>&nbsp;
+                    <span class="j_signature_wrapper signature_wrapper">
+                        <select name="sign_id" class='j_sign_id'>
+
+                        </select>
+                        &nbsp;<a style="color:#0449BE" target="_blank" href="/i/sys/jump?type=signsetting">查看全部</a>
+                    </span>
+                </div>
+
+                
+                                <div class="poster_component editor_bottom_panel clearfix">
+                    <div class="j_floating">
+                        <button class="btn_default btn_middle j_submit poster_submit" title="Ctrl+Enter快捷发表">
+                            发 表
+                        </button>
+                      
+                    </div>
+                </div>
+
+            </div>
+
+
+            
+                                </div>
+    </div>
+</div>
+	        	
+        </ul>-->
+
+        </div>
     </div>
     <div class="right">
     	<div class="righttop">
-        	<h1 class="title">论坛热议榜<a href="{:U('/home/luntan/questions')}" class="ckgd">更多&nbsp;>></a></h1>
+        	<h1 class="title">论坛热议榜<a href="{:U('/home/luntan/')}" class="ckgd">更多&nbsp;>></a></h1>
             <ul class="topul">
-	        	<li><a href="{:U('/home/luntan/questions')}">大一新生应该怎样准备大学生活？</a><span>01-01</span></li>
-	            <li><a href="{:U('/home/luntan/questions')}">大一应该多参加什么类型的社团活动？</a><span>01-01</span></li>
-	            <li><a href="#">大一的生活应该怎么度过才算不荒废？</a><span>01-01</span></li>
-	            <li><a href="#">大一新生应该怎样准备大学生活？</a><span>01-01</span></li>
-	            <li><a href="#">大一应该多参加什么类型的社团活动？</a><span>01-01</span></li>
-	            <li><a href="#">大一的生活应该怎么度过才算不荒废？</a><span>01-01</span></li>
-	            <li><a href="#">大一时候可是考哪些专业证件考试？</a><span>01-01</span></li>
+            	<volist name="forum_hot" id="vo">
+	        		<li><a href="/estudy/code/index.php/home/luntan/questions/forumid/{$vo.forumid}">{$vo.title}</a><span>{$vo.posttime}</span></li>
+	            </volist>
         	</ul>
         </div>
        	<div class="righttop righttop2">
