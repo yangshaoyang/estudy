@@ -26,7 +26,7 @@
 	background-position:16px 14px;
 	display:block;
 	border:1px solid #4c6699;
-	width:678px;
+	width:550px;
 	height:48px;
 	color:#d9d9d9;
 	line-height:48px;
@@ -35,6 +35,16 @@
 	font-size:18px;
 	cursor:pointer;
 	float:left;
+	display:block;
+	border-left:none;
+	width:120px;
+	height:50px;
+	color:#FFF;
+	background-color:#2f8abb;}
+.postbutton{
+	font-size:18px;
+	cursor:pointer;
+	float:right;
 	display:block;
 	border-left:none;
 	width:120px;
@@ -117,6 +127,32 @@
 	display:block;
 	font-size:12px;
 	}
+.clear{
+	clear:both;}
+.post_forum{
+	margin-top:15px;
+	width:800px; 
+	background-color: #FFF;}
+.post_title{
+	text-indent:10px;
+	background-color:#FFF;
+	background-repeat:no-repeat;
+	background-position:16px 14px;
+	display:block;
+	border:1px solid #4c6699;
+	width:660px;
+	height:30px;
+	color:#d9d9d9;}
+.post_button{
+	font-size:18px;
+	cursor:pointer;
+	float:right;
+	display:block;
+	border-left:none;
+	width:100px;
+	height:40px;
+	color:#FFF;
+	background-color:#2f8abb;}
 .num a{
 	width:16px;
 	border:1px solid #8e8e8e;
