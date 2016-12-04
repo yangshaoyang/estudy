@@ -21,7 +21,7 @@
                 <p>欢迎你，XXX</p>
             </div>
             <ul class="left_nav">
-                	<li class="left_nav_now"><a href="{:U('/home/index/index')}">首页</a></li>
+                	<li class="left_nav_now"><a href="{:U('/home/person/homepage')}">个人首页</a></li>
                     <li ><a href="{:U('/home/person/permessage')}">个人信息管理</a></li>
                     <li><a href="{:U('/home/person/message')}">消息管理</a></li>
                     <li><a href="{:U('/home/person/repassword')}">密码管理</a></li>
@@ -41,21 +41,36 @@
                     	<td class="border_top">时间</td>
                         <td class="border_top">所属类别</td>
                         <td class="border_top">简介</td>
-                        <td class="border_top">操作</td>
                         <td class="border_top border_right">操作</td>
                     </tr>
+                    <volist name="user_certificate" id="vo">
                     <tr>
+                        <td class="border_top">{$vo.time}</td>
+                        <td class="border_top">{$vo.uctype}</td>
+                        <td class="border_top">{$vo.introduce}</td>
+                        <td class="border_top border_right"><a href="{:U('/home/certificate/certificatelist')}">{$vo.operate}</a></td>
+                    </tr>
+                    </volist>
+                     <volist name="user_match" id="vo1">
+                    <tr>
+                        <td class="border_top">{$vo1.time}</td>
+                        <td class="border_top">{$vo1.umtype}</td>
+                        <td class="border_top">{$vo1.introduce}</td>
+                        <td class="border_top border_right"><a href="{:U('/home/match/matchlist')}">{$vo1.operate}</a></td>
+                    </tr>
+                    </volist>
+
+
+                    <!-- <tr>
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
                     	<td>比赛提示</td>
                         <td>文字测试文字测试文字测试</td>
-                        <td ><a href="#">删除</a></td>
                         <td class="border_right"><a href="{:U('/home/match/matchlist')}">查看</a></td>
                     </tr>
                     <tr>
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
                     	<td>考证信息</td>
                         <td>文字测试文字测试文字测试</td>
-                        <td ><a href="#">删除</a></td>
                         <td class="border_right"><a href="{:U('/home/certificate/certificatelist')}">查看</a></td>
                     </tr>
                     
@@ -63,14 +78,12 @@
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
                     	<td>论坛消息</td>
                         <td>文字测试文字测试文字测试</td>
-                        <td ><a href="#">删除</a></td>
                         <td class="border_right"><a href="{:U('/home/luntan/index')}">查看</a></td>
                     </tr>
                     <tr>
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
                     	<td>论坛消息</td>
                         <td>文字测试文字测试文字测试</td>
-                        <td ><a href="#">删除</a></td>
                         <td class="border_right"><a href="{:U('/home/luntan/index')}">查看</a></td>
                     </tr>
                     
@@ -78,14 +91,12 @@
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
                     	<td>考证信息</td>
                         <td>文字测试文字测试文字测试</td>
-                        <td ><a href="#">删除</a></td>
                         <td class="border_right"><a href="{:U('/home/certificate/certificatelist')}">查看</a></td>
                     </tr>
                     <tr>
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
                     	<td>比赛提示</td>
                         <td>文字测试文字测试文字测试</td>
-                        <td ><a href="#">删除</a></td>
                         <td class="border_right"><a href="{:U('/home/match/matchlist')}">查看</a></td>
                     </tr>
                     
@@ -93,12 +104,12 @@
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
                     	<td>论坛消息</td>
                         <td>文字测试文字测试文字测试</td>
-                        <td ><a href="#">删除</a></td>
                         <td class="border_right"><a href="{:U('/home/luntan/index')}">查看</a></td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
              <div class="page">
+             <!-- {$pages} -->
             	<ul>
                 	<li class="up"><a href="#">上一页</a></li>
                     <li class="now">1</li>
