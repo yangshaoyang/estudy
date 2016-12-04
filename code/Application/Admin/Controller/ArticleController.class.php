@@ -13,8 +13,6 @@ class ArticleController extends Controller {
 	   $this->display();
 	 }
      public function edit($articleid){
-	   $article=M("article")->find($articleid);
-	   $this->assign("articlecontent",$article);
 	   $this->display();
 	 }
      public function addarticle(){
@@ -48,25 +46,4 @@ class ArticleController extends Controller {
 	   $this->assign("articlecontent",$article);
 	   $this->display();
 	 }
-
-
-// 	public function index(){
-//       $article = M("article")->select();
-// 	  $this->assign("article",$article);
-// 	  $this->display();
-//     }
-//     public function articledetails($articleid){
-// 	  $article=M("article")->find($articleid);
-// 	  $this->assign("articlecontent",$article);
-// 	  $this->display();
-// 	}
-//     public function edit($articleid){
-//         $this->display();
-//     }
-    
-//     public function editarticle($articleid){
-// 	  $article=M("article")->find($articleid);
-// 	  $this->assign("articlecontent",$article);
-// 	  $this->display();
-// 	}
-// }
+ }
