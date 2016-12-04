@@ -32,16 +32,18 @@
             <tr>
                 <th align="center" width="90">帖子ID</th>
                 <th align="center">帖子标题</th>
+                <th align="center">作者</th>
+                <th align="center">发布时间</th>
                 <th align="center">文章简介</th>
-                <th align="center">文章正文</th>
                 <th align="center">操作</th>
             </tr>
             <volist name="article" id="vo">
             <tr>
                 <td>{$vo.articleid}</td>
                 <td>{$vo.articletitle}</td>
+                <td> {$vo.articleauthor}</td>
+                <td> {$vo.articletime}</td>
                 <td> {$vo.articleintroduction}</td>
-                <td> {$vo.articlecontent}</td>
                 <td>
                     <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/article/articledetails/articleid/{$vo.articleid}', title:'{$vo.articletitle}', max:true}">查看</button>&nbsp;
                     <button type="button" class="btn-blue" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/article/editarticle/articleid/{$vo.articleid}', title:'修改文章：{$vo.articletitle}', max:true}">修改</button>&nbsp;
