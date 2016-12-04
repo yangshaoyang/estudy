@@ -28,7 +28,6 @@ select();
     			'murl'   =>I('post.murl'),
     			'mcontent'  =>I('post.mcontent')
     			);
-
         $Model=D("match");
         $Model->create();
         $num=$Model->add($data);
@@ -45,4 +44,10 @@ select();
 	  $this->assign("mcontent",$match);
 	  $this->display();
 	}
+    public function delete($mid){
+        $mid = $_GET['mid'];
+        if (M("match")->delete($mid)) {
+            $this->success("删除成功！");
+    }
+}
 }

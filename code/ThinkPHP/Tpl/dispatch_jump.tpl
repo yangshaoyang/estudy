@@ -12,7 +12,7 @@
 *{ padding: 0; margin: 0; }
 body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
 .system-message{ padding: 24px 48px; }
-.system-message h1{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+.system-message h1{ font-size: 60px; font-weight: normal; line-height: 80px; margin-bottom: 12px; }
 .system-message .jump{ padding-top: 10px}
 .system-message .jump a{ color: #333;}
 .system-message .success,.system-message .error{ line-height: 1.8em; font-size: 36px }
@@ -22,10 +22,10 @@ body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16p
 <body>
 <div class="system-message">
 <?php if(isset($message)) {?>
-<h1>:)</h1>
+<h1>eStudy提醒您</h1>
 <p class="success"><?php echo($message); ?></p>
 <?php }else{?>
-<h1>:(</h1>
+<h1>eStudy提醒您</h1>
 <p class="error"><?php echo($error); ?></p>
 <?php }?>
 <p class="detail"></p>
