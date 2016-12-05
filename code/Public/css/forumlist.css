@@ -130,8 +130,9 @@
 .clear{
 	clear:both;}
 .post_forum{
+	padding: 20px 0 20px 70px;
 	margin-top:15px;
-	width:800px; 
+	width:730px; 
 	background-color: #FFF;}
 .post_title{
 	text-indent:10px;
@@ -142,7 +143,12 @@
 	border:1px solid #4c6699;
 	width:660px;
 	height:30px;
-	color:#d9d9d9;}
+	color:#d9d9d9;
+	margin-top: 20px;
+}
+.post_text{
+	margin-top: 20px;
+}
 .post_button{
 	font-size:18px;
 	cursor:pointer;
@@ -152,7 +158,9 @@
 	width:100px;
 	height:40px;
 	color:#FFF;
-	background-color:#2f8abb;}
+	background-color:#2f8abb;
+	margin-top: 20px;
+}
 .num a{
 	width:16px;
 	border:1px solid #8e8e8e;

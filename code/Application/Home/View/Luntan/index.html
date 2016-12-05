@@ -6,6 +6,19 @@
 	<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
 	<link href="__PUBLIC__/css/forumlist.css" rel="stylesheet" type="text/css" />
 	<link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
+    <!-- 富文本框配置文件 -->
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/js/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/js/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/lang/zh-cn/zh-cn.js"></script>
+
+    <!--<style type="text/css">
+        div{
+            width:100%;
+        }
+    </style>-->
 	<title>论坛</title>
 </head>
 <body>
@@ -32,7 +45,7 @@
     	</ul>
         </div>
         <ul class="proul">
-        	<volist name="forum" id="vo">
+        	<volist name="forum2" id="vo">
 	        	<li>
 	            	<div class="litop">
 	                	<h1><a href="/estudy/code/index.php/home/luntan/questions/forumid/{$vo.forumid}">{$vo.title}</a></h1>
@@ -56,96 +69,135 @@
         		<span>发表新帖</span>
         	</div>
         	<div>
-        		<input type="text" value="请填写标题" class="post_title">
+        		<input type="text" placeholder="请填写标题" class="post_title">
         	</div>
-        	<div class="row-input">
-
-            	<textarea name="mcontent" id="j_form_content" class="j-content" style="width: 700px;height: 30px;" data-toggle="kindeditor" data-minheight="150"></textarea>
-       		 </div>
-        	 <div>
-        		<input type="button" value="发表" class="post_button">
-        	</div>
-        	<!--<ul class="proul">
-        		<div id="tb_rich_poster_container" class="tb_rich_poster_container">
-    <div id="rich_ueditor_tpl">
-        <div id="tb_rich_poster" class="tb_rich_poster">
-            <div class="j_bubble_container"></div>
-
-            
-                        <div class="poster_head clearfix">
-                <div class="poster_head_text">
-                                            <a class="add_thread_btn post_head_btn cur" title="发表新贴" href="javascript:;"><span  class="post_head_btn_icon post_head_btn_icon_post"></span>发表新贴</a>
-
-                        
-
-                        
-                                                <a class="add_vote_btn post_head_btn" title="发起投票" target="_blank" href="/newvote/createvote?kw=%E5%91%A8%E5%86%AC%E9%9B%A8&ie=utf-8"><span  class="post_head_btn_icon post_head_btn_icon_vote"></span>发起投票</a>
-
-                        
-                    
-                </div>
-
-                                <div class="poster_head_surveillance j_surveillance">
-                    发贴请遵守 <a href="/tb/eula.html" target="_blank" onclick="$.stats.track('post_agreement', 'poster')">贴吧协议及“七条底线”</a>
-					<a href="javascript:;" id="frs_footer_tieba_report" class="btn_tousu fr post_head_tousu" data-checkun="un">贴吧投诉</a>                    <button type="button" class="poster_disable_float j_disable_float" title="停止浮动">停止浮动</button>
-                </div>
+            <div id="editForm" class="post_text">
+                <form action="server.php" method="post">
+                    <!-- 加载编辑器的容器 -->
+                    <script id="editor" type="text/plain" style="width:660px;height:500px;">请在这里填写你的帖子内容</script>
+                    <input type="hidden" id="hidden"  />
+                </form>
             </div>
-            
-                        
-
-
-
-
-
-			<div class="poster_body editor_wrapper">
-                                <div class="poster_component title_container">
-                    <div class="poster_title">标&nbsp;&nbsp;题:</div>
-                    <div class="j_title_wrap">
-                        <input type="text" class="editor_textfield editor_title ui_textfield j_title j_topic_sug_input" name="title" autocomplete="off" />
-                        <span class="topic_add_btn j_topic_add_btn"></span>
-                    </div>
-                    <div class="poster_error j_error"></div>
-                </div>
-                
-                
-                                <div class="poster_component editor_content_wrapper ueditor_container">
-                    <div class="poster_reply">内&nbsp;&nbsp;容:</div>
-                    <div class="old_style_wrapper">
-                        <div id="ueditor_replace" style="width: 700px; height: 220px;"></div>
-                    </div>
-                    <div class="poster_error j_error"></div>
-                </div>
-
-                                <div class="j_poster_signature poster_signature">
-                    <label><input type="checkbox" class="j_use_signature"/> 使用签名档</label>&nbsp;
-                    <span class="j_signature_wrapper signature_wrapper">
-                        <select name="sign_id" class='j_sign_id'>
-
-                        </select>
-                        &nbsp;<a style="color:#0449BE" target="_blank" href="/i/sys/jump?type=signsetting">查看全部</a>
-                    </span>
-                </div>
-
-                
-                                <div class="poster_component editor_bottom_panel clearfix">
-                    <div class="j_floating">
-                        <button class="btn_default btn_middle j_submit poster_submit" title="Ctrl+Enter快捷发表">
-                            发 表
-                        </button>
-                      
-                    </div>
-                </div>
-
+            <div>
+                <button class="post_button" onclick="getContent()">发表</button>
             </div>
 
+<script type="text/javascript">
 
-            
-                                </div>
-    </div>
-</div>
-	        	
-        </ul>-->
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
 
+
+    function isFocus(e){
+        alert(UE.getEditor('editor').isFocus());
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function setblur(e){
+        UE.getEditor('editor').blur();
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function insertHtml() {
+        var value = prompt('插入html代码', '');
+        UE.getEditor('editor').execCommand('insertHtml', value)
+    }
+    function createEditor() {
+        enableBtn();
+        UE.getEditor('editor');
+    }
+    function getAllHtml() {
+        alert(UE.getEditor('editor').getAllHtml())
+    }
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        //定义变量
+       var content=UE.getEditor('editor').getContent();
+       document.getElementById("hidden").value=content;
+       arr.push(content);
+       alert(arr.join("\n"));
+    }
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+        UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+    function setDisabled() {
+        UE.getEditor('editor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UE.getEditor('editor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+        //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+        var range = UE.getEditor('editor').selection.getRange();
+        range.select();
+        var txt = UE.getEditor('editor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+        arr.push("编辑器的纯文本内容为：");
+        arr.push(UE.getEditor('editor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+    function hasContent() {
+        var arr = [];
+        arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+        arr.push("判断结果为：");
+        arr.push(UE.getEditor('editor').hasContents());
+        alert(arr.join("\n"));
+    }
+    function setFocus() {
+        UE.getEditor('editor').focus();
+    }
+    function deleteEditor() {
+        disableBtn();
+        UE.getEditor('editor').destroy();
+    }
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+
+    function getLocalData () {
+        alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+    }
+
+    function clearLocalData () {
+        UE.getEditor('editor').execCommand( "clearlocaldata" );
+        alert("已清空草稿箱")
+    }
+</script>
         </div>
     </div>
     <div class="right">

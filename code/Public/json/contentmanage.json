@@ -16,7 +16,7 @@
         {"id":"base-dialog", "name":"添加帖子", "target":"navtab", "url":"admin/article/addarticle.html"}
     ]},
     {"name":"论坛管理", "children":[
-        {"id":"base-navtab", "name":"论坛帖子", "target":"navtab", "url":"admin/html/navtab.html"},
+        {"id":"base-navtab", "name":"查看论坛", "target":"navtab", "url":"admin/forum/index.html"},
         {"id":"base-dialog", "name":"起个什么名字好", "target":"navtab", "url":"html/base/dialog.html"}
     ]},
     {"name":"举报管理", "children":[
