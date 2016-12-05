@@ -18,6 +18,7 @@ class ArticleController extends Controller {
      public function addarticle(){
          $this->display();
      }
+     //添加帖子
 	public function add(){
     	if(!IS_POST){
             exit("bad request");
@@ -41,9 +42,17 @@ class ArticleController extends Controller {
 
         $this->display();
     }
+    //修改帖子
      public function editarticle($articleid){
 	  $article=M("article")->find($articleid);
 	   $this->assign("articlecontent",$article);
 	   $this->display();
 	 }
+    //删除帖子
+      public function delete($articleid){
+        $articleid = $_GET['articleid'];
+        if (M("article")->delete($articleid)) {
+            $this->success("删除成功！");
+    }
+}
  }
