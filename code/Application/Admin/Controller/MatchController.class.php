@@ -47,7 +47,8 @@ select();
     public function delete($mid){
         $mid = $_GET['mid'];
         if (M("match")->delete($mid)) {
-            $this->success("删除成功！");
+            echo  'ok';
+           // $this->success("删除成功！");
     }
 }
 }
