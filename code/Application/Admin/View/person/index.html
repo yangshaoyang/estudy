@@ -1,0 +1,64 @@
+<div class="bjui-pageHeader" style="background-color:#fefefe; border-bottom:none;">
+<form data-toggle="ajaxsearch" data-options="{searchDatagrid:$.CurrentNavtab.find('#datagrid-test-filter')}">
+    <fieldset>
+        <legend style="font-weight:normal;">用户搜索：</legend>
+        <div style="margin:0; padding:1px 5px 5px;">
+            <span>用户ID：</span>
+            <input type="text" name="obj.code" class="form-control" size="15">
+                
+            <span>用户名：</span>
+            <input type="text" name="obj.name" class="form-control" size="15">
+                
+            <div class="btn-group">
+                <button type="submit" class="btn-green" data-icon="search">开始搜索！</button>
+                <button type="reset" class="btn-orange" data-icon="times">重置</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+</div>
+<div class="bjui-pageContent">
+    <table class="table table-bordered" id="datagrid-test-filter" data-toggle="datagrid" data-options="{
+        height: '100%',
+        showToolbar: true,
+        toolbarItem: 'add,edit,del',
+        jsonPrefix: 'obj',
+        editMode: {dialog:{width:'800',height:500,title:'编辑信息',mask:true}},
+        paging: {pageSize:60},
+        showCheckboxcol: true,
+        linenumberAll: true,
+    }">
+        <thead>
+            <tr>
+                <th align="center" width="90">用户ID</th>
+                <th align="center">用户名</th>
+                <th align="center">邮箱</th>
+                <th align="center">性别</th>
+                <th align="center">专业</th>
+                <th align="center">学校</th>
+                <th align="center">城市</th>
+                <th align="center">爱好</th>
+            </tr>
+            <volist name="users" id="vo">
+            <tr>
+                <td>{$vo.userid}</td>
+                <td>{$vo.username}</td>
+                <td>{$vo.email}</td>
+                <td>{$vo.sex}</td>
+                <td>{$vo.major}</td>
+                <td>{$vo.colleage}</td>
+                <td>{$vo.city}</td>
+                <td>{$vo.hobby}</td>
+                <td>
+                    <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/person/permessage/userid/{$vo.userid}', title:'{$vo.username}', max:true}">查看</button>&nbsp;
+                    <button type="button" class="btn-blue" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/person/editmessage/userid/{$vo.userid}', title:'修改用户：{$vo.username}', max:true}">修改</button>&nbsp;
+                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/person/delete/mid/{$vo.mid}');window.close();}}">删除</button>
+                </td>
+            </tr>
+            </volist>
+
+        </thead>
+    </table>
+        <div data-toggle="pagination" data-options="{total:1000, pageSize:1, callback:pagination_test_callback}">
+    </div>
+</div>
