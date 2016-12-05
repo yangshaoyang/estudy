@@ -1,3 +1,5 @@
+<br>
+<br>
 <div class="bjui-pageContent">
 
 <form action="__PUBLIC__/json/ajaxDone.json" id="j_custom_form" data-toggle="validate" data-alertmsg="false">
@@ -5,27 +7,28 @@
     <div class="bjui-row col-3">
         <label class="row-label">用户名</label>
         <div class="row-input required">
-            <input type="text" name="username" id="j_custom_name" value="" data-rule="required"></div>
+            <input type="text" name="username" id="j_custom_name" value="{$users.username}" data-rule="required">
+        </div>
         <br>
         <label class="row-label">邮箱</label>
         <div class="row-input required">
-            <input type="text" name="email" id="j_custom_name" value="" data-rule="required"></div>
+            <input type="text" name="email" id="j_custom_name" value="{$users.email}" data-rule="required"></div>
         <br>
         <label class="row-label">性别</label>
         <div class="row-input required">
-            <input type="text" name="sex" id="j_custom_name" value="" data-rule="required"></div>
+            <input type="text" name="sex" id="j_custom_name" value="{$users.sex}" data-rule="required"></div>
         <br>
         <label class="row-label">专业</label>
         <div class="row-input required">
-            <input type="text" name="major" id="j_custom_name" value="" data-rule="required"></div>
+            <input type="text" name="major" id="j_custom_name" value="{$users.major}" data-rule="required"></div>
         <br>
         <label class="row-label">学校</label>
         <div class="row-input required">
-            <input type="text" name="colleage" id="j_custom_name" value="" data-rule="required"></div>
+            <input type="text" name="colleage" id="j_custom_name" value="{$users.colleage}" data-rule="required"></div>
         <br>
         <label class="row-label">城市</label>
         <div class="row-input required">
-            <input type="text" name="city" id="j_custom_name" value="" data-rule="required"></div>
+            <input type="text" name="city" id="j_custom_name" value="{$users.city}" data-rule="required"></div>
         <br>
         <label class="row-label">爱好</label>
         <div class="row-label">
