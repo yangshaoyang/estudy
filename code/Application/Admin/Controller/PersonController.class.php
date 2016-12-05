@@ -16,18 +16,18 @@ class PersonController extends Controller {
         // $this->assign("user_match",$user_match);
         $this->display();
     }
-    public function message(){
-        //$this->display();
-          $user_certificate=M("user_certificate")->select();
-          $user_match=M("user_match")->select();
-          $this->assign("user_certificate",$user_certificate);
-          //$this->display();
-          
-          $this->assign("user_match",$user_match);
-          $this->display();
-    }
-    public function permessage(){
+    public function editmessage($userid){
+        $users=M("users")->find($userid);;
+        //dump($users);
+        $this->assign("users",$users);
         $this->display();
+    }
+    public function permessage($userid){
+      $users=M("users")->find($userid);;
+        //dump($users);
+        $this->assign("users",$users);
+        $this->display();
+     
     }
     public function repassword(){
         $this->display();
