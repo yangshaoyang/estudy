@@ -29,6 +29,7 @@ class RegisterController extends Controller {
 		$data['regtime']=$regtime;
 		$data['state']=0;
 		if($User->add($data)){//写入成功，发邮件
+<<<<<<< .mine
 			import("HomeClass.smtp");//引用发送邮件类
 			$smtpserver     =     "smtp.126.com";//SMTP服务器
 	             $smtpserverport =    25;//SMTP服务器端口
@@ -48,6 +49,33 @@ class RegisterController extends Controller {
 	             $datas = $smtp->sendmail($smtpemailto, $smtpusermail, $mailsubject, $mailbody, $mailtype);
 	             //$this->success("输出的提示信息",U('home/login/login'));
 	            $this->redirect('home/login/login');
+
+
+
+=======
+			import("HomeClass.smtp");//引用发送邮件类
+			$smtpserver     =     "smtp.126.com";//SMTP服务器
+	             $smtpserverport =    25;//SMTP服务器端口
+	             $smtpusermail     =     "zykjinghuashuiyue@126.com";//SMTP服务器的用户邮箱
+	             $smtpuser         =     "zykjinghuashuiyue@126.com";//SMTP服务器的用户帐号
+	             $smtppass         =     "zyk1350316";//SMTP服务器的用户密码
+
+      	             $smtpemailto     =     $data['email'];//发送给谁
+	         //dump($smtpemailto);
+	             $mailsubject     =     "用户帐号激活";//邮件主题
+	             $mailtime        =    date("Y-m-d H:i:s");
+	             $mailbody         =     "亲爱的".$data['username']."：<br/>请点击链接激活您的帐号。<br/><a href='http://localhost/project/thinkphp/index.php/home/register/active.html?verify=".$token."' target='_blank'>http://www.helloweba.com/demo/register/active.php?verify=".$token."</a><br/>如果以上链接无法点击，请将它复制到你的浏览器地址栏中进入访问，该链接24小时内有效。<br/>如果此次激活请求非你本人所发，请忽略本邮件。<br/><p style='text-align:right'></p>";//邮件内容
+
+	             $utfmailbody    =    iconv("GB2312","UTF-8",$mailbody);//转换邮件编码
+	             $mailtype         =     "HTML";//邮件格式（HTML/TXT）,TXT为文本邮件
+
+	             $smtp = new \smtp($smtpserver,$smtpserverport,true,$smtpuser,$smtppass);//这里面的一个true是表示使用身份验证,否则不使用身份验证.
+	             $smtp->debug = FALSE;//是否显示发送的调试信息 FALSE or TRUE
+
+	             $datas = $smtp->sendmail($smtpemailto, $smtpusermail, $mailsubject, $mailbody, $mailtype);
+	        //$this->success("输出的提示信息",U('home/login/login'));
+	            $this->redirect('home/login/login');
+>>>>>>> .theirs
 		}
 
     }
@@ -66,6 +94,13 @@ class RegisterController extends Controller {
 				if($nowtime>$result['token_exptime']){
 					$msg = '您的激活有效期已过，请登录您的帐号重新发送激活邮件.';
 				}else{
+<<<<<<< .mine
+
+
+=======
+				//$data[]
+
+>>>>>>> .theirs
 				if(!($User->where($condition)->save($data))) die(0);
 				$msg = '激活成功！';
 				}
