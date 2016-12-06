@@ -30,11 +30,10 @@
     }">
         <thead>
             <tr>
-                <th align="center" width="90">帖子ID</th>
-                <th align="center">帖子标题</th>
-                <th align="center">作者</th>
-                <th align="center">发布时间</th>
-                <th align="center">文章简介</th>
+                <th align="center" width="50">序号</th>
+                <th align="center" width="260">文章标题</th>
+                <th align="center" width="90">作者</th>
+                <th align="center" width="120">发布时间</th>
                 <th align="center">操作</th>
             </tr>
             <volist name="article" id="vo">
@@ -43,11 +42,10 @@
                 <td>{$vo.articletitle}</td>
                 <td> {$vo.articleauthor}</td>
                 <td> {$vo.articletime}</td>
-                <td> {$vo.articleintroduction}</td>
-                <td>
+                <td align="center" width="150">
                     <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/article/articledetails/articleid/{$vo.articleid}', title:'{$vo.articletitle}', max:true}">查看</button>&nbsp;
                     <button type="button" class="btn-blue" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/article/editarticle/articleid/{$vo.articleid}', title:'修改文章：{$vo.articletitle}', max:true}">修改</button>&nbsp;
-                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/article/delete/articleid/{$vo.articleid}');window.close();}}">删除</button>
+                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{id:'', url:'__MODULE__/article/articledetails/articleid/{$vo.articleid}',type:'confirm', msg:'你确定要删除吗？', }">删除</button>
                 </td>
             </tr>
             </volist>

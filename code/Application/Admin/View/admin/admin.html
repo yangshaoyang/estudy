@@ -1,0 +1,50 @@
+<div class="bjui-pageHeader" style="background-color:#fefefe; border-bottom:none;">
+<form data-toggle="ajaxsearch" data-options="{searchDatagrid:$.CurrentNavtab.find('#datagrid-test-filter')}">
+    <fieldset>
+        <legend style="font-weight:normal;">管理员搜索：</legend>
+        <div style="margin:0; padding:1px 5px 5px;">
+            <div class="btn-group">
+                <button type="submit" class="btn-green" data-icon="search">开始搜索！</button>
+                <button type="reset" class="btn-orange" data-icon="times">重置</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+</div>
+<div class="bjui-pageContent">
+    <table class="table table-bordered" id="datagrid-test-filter" data-toggle="datagrid" data-options="{
+        height: '100%',
+        showToolbar: true,
+        toolbarItem: 'add,edit,del',
+        jsonPrefix: 'obj',
+        editMode: {dialog:{width:'800',height:500,title:'编辑信息',mask:true}},
+        paging: {pageSize:60},
+        showCheckboxcol: true,
+        linenumberAll: true,
+    }">
+        <thead>
+            <tr>
+                <th align="center" width="50">管理员ID</th>
+                <th align="center">管理员名字</th>
+                <th align="center">管理员邮箱</th>
+                <th align="center">管理员联系方式</th>
+            </tr>
+            <volist name="admin" id="vo">
+            <tr>
+                <td>{$vo.adminid}</td>
+                <td>{$vo.adname}</td>
+                <td>{$vo.ademail}</td>
+                <td>{$vo.adphonenum}</td>
+                <td>
+                    <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/admin/adminmessage/adminid/{$vo.adminid}', title:'{$vo.adname}', max:true}">查看</button>&nbsp;
+                    <button type="button" class="btn-blue" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/admin/editadmin/adminid/{$vo.adminid}', title:'修改：{$vo.adname}', max:true}">修改</button>&nbsp;
+                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/admin/delete/adminid/{$vo.adminid}');window.close();}}">删除</button>
+                </td>
+            </tr>
+            </volist>
+
+        </thead>
+    </table>
+        <div data-toggle="pagination" data-options="{total:1000, pageSize:1, callback:pagination_test_callback}">
+    </div>
+</div>
