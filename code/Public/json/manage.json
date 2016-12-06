@@ -4,7 +4,7 @@
         {"id":"changepassword", "name":"修改密码", "target":"navtab", "url":"admin/changepassword/index.html"}
     ]},
     {"name":"管理员管理", "children":[
-        {"id":"admin", "name":"查看管理员", "target":"navtab", "url":"admin/admin/admin.html"},
+        {"id":"admin", "name":"查看管理员", "target":"navtab", "url":"admin/admin/index.html"},
         {"id":"addadmin", "name":"添加管理员", "target":"navtab", "url":"admin/admin/addadmin.html"}
     ]}
 ]

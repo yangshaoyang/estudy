@@ -1,0 +1,30 @@
+[
+    {"name":"比赛管理", "children":[
+        {"id":"match", "name":"查看比赛", "target":"navtab", "url":"admin/match/index.html"},
+        {"id":"matchadd", "name":"添加比赛", "target":"navtab", "url":"admin/match/addmatch.html"}
+    ]},
+    {"name":"考证管理", "children":[
+        {"id":"base-navtab", "name":"查看考证", "target":"navtab", "url":"admin/html/navtab.html"},
+        {"id":"base-dialog", "name":"添加考证", "target":"navtab", "url":"html/base/dialog.html"}
+    ]},
+    {"name":"资讯管理", "children":[
+        {"id":"base-navtab", "name":"查看资讯", "target":"navtab", "url":"admin/html/navtab.html"},
+        {"id":"base-dialog", "name":"添加资讯", "target":"navtab", "url":"html/base/dialog.html"}
+    ]},
+    {"name":"文章管理", "children":[
+        {"id":"base-navtab", "name":"查看文章", "target":"navtab", "url":"admin/article/index.html"},
+        {"id":"base-dialog", "name":"添加文章", "target":"navtab", "url":"admin/article/addarticle.html"}
+    ]},
+    {"name":"论坛管理", "children":[
+        {"id":"base-navtab", "name":"查看论坛", "target":"navtab", "url":"admin/forum/index.html"},
+        {"id":"base-dialog", "name":"起个什么名字好", "target":"navtab", "url":"html/base/dialog.html"}
+    ]},
+    {"name":"举报管理", "children":[
+        {"id":"base-navtab", "name":"查看举报", "target":"navtab", "url":"admin/html/navtab.html"},
+        {"id":"base-dialog", "name":"添加", "target":"navtab", "url":"html/base/dialog.html"}
+    ]},
+    {"name":"其他", "children":[
+        {"id":"base-navtab", "name":"查看", "target":"navtab", "url":"admin/html/navtab.html"},
+        {"id":"base-dialog", "name":"添加", "target":"navtab", "url":"html/base/dialog.html"}
+    ]}
+]
