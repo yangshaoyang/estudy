@@ -15,7 +15,7 @@
     }">
         <thead>
             <tr>
-                <th align="center">管理员ID</th>
+                <th align="center">序号</th>
                 <th align="center">管理员名字</th>
                 <th align="center">管理员邮箱</th>
                 <th align="center">管理员联系方式</th>
@@ -23,13 +23,13 @@
             </tr>
             <volist name="admessage" id="vo">
             <tr>
-                <td>{$vo.adminid}</td>
+                <td>{$i}</td>
                 <td>{$vo.adname}</td>
                 <td>{$vo.ademail}</td>
                 <td>{$vo.adphonenum}</td>
                 <td>
                     <button type="button" class="btn-blue" onclick="dialog_test1();">修改</button>&nbsp;
-                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/admin/delete/adminid/{$vo.adminid}');window.close();}}">删除</button>
+                    <button type="button" class="btn-red" data-toggle="alertmsg" target="ajaxTodo" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/admin/delete/adminid/{$vo.adminid}');window.close();}}">删除</button>
                 </td>
             </tr>
             </volist>
