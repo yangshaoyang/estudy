@@ -1,62 +1,68 @@
 <?php
+/*
+作者：李小雨
+日期：2016.12.6
+描述：论坛控制器
+*/
 namespace Home\Controller;
 use Think\Controller;
 use \Library\Page;
-class LuntanController extends Controller {
-	//论坛list页的控制器
-    public function index(){
+class ForumController extends Controller {
+	//论坛list页获取分类数据的方法
+    public function type($id){
     	/*选取分类1数据*/
-	    	$forum1=M("forum")->where("typeid=1");
+	    	$forum=M("forum")->where("typeid=$id");
 	    /*分页码*/
 		// 1. 获取记录总条数
-        $count =$forum1->count();
+        $count =$forum->count();
         // 2. 设置（获取）每一页显示的个数
         $pageSize =5;
         // 3. 创建分页类对象
         $page = new Page($count, $pageSize);
       //4.构造查询条件
         $condition=array();
-        $condition['typeid']=1;
+        $condition['typeid']=$id;
         // 5. 分页查询
-        $forum1 = $forum1->where($condition)->order('forumid desc')
+        $forum= $forum->where($condition)->order('forumid desc')
             ->limit($page->firstRow.','.$page->listRows)
             ->select();
         //6定义分页样式
         $page->setConfig('prev','上一页');
         $page->setConfig('next','下一页');
         // 7. 输出查询结果
-        $this->assign('forum', $forum1);
+        $this->assign('forum', $forum);
         $pages=$page->show();
         $this->assign('pages',$pages);
 
-        /*选取分类2数据*/
-            $forum2=M("forum")->where("typeid=2");
-        /*分页码*/
-        // 1. 获取记录总条数
-        $count =$forum2->count();
-        // 2. 设置（获取）每一页显示的个数
-        $pageSize =5;
-        // 3. 创建分页类对象
-        $page = new Page($count, $pageSize);
-      //4.构造查询条件
-        $condition=array();
-        $condition['typeid']=2;
-        // 5. 分页查询
-        $forum2 = $forum2->where($condition)->order('forumid desc')
-            ->limit($page->firstRow.','.$page->listRows)
-            ->select();
-        //6定义分页样式
-        $page->setConfig('prev','上一页');
-        $page->setConfig('next','下一页');
-        // 7. 输出查询结果
-        $this->assign('forum2', $forum2);
-        $pages=$page->show();
-        $this->assign('pages',$pages);
-
-         /*热议榜数据*/
+        /*热议榜数据*/
         $forum_hot=M("forum")->order('readcount desc')->limit(5)->select();
         $this->assign('forum_hot', $forum_hot);
-        $this->display();
+        //方便判断
+         $this->assign('id', $id);
+        $this->display('index');
+    }
+
+	//论坛list页的控制器
+    public function index(){
+    	$forumdata=new forumController();
+        /*提交数据*/
+        if(IS_POST){
+        	//1.I函数获取数据
+        	$data=array();
+        	$data=I('post.');
+        	$data['content']=$data['editorValue'];
+        	$data['userid']=5;
+        	$data['posttime']=2016-12-5;
+        	//dump($data);
+        	//2插入数据
+        	$editModel = M('forum');
+        	if($editModel->add($data)){
+        		//dump('su');
+        	}
+        }
+
+    	/*分类数据*/
+    	$forumdata->type(1);
     }
 
     //论坛内容页的控制器
@@ -89,4 +95,7 @@ class LuntanController extends Controller {
         //输出结果
         $this->display();
     }
+
+    
+
 }
