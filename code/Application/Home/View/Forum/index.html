@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+	<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+	<link href="__PUBLIC__/css/forumlist.css" rel="stylesheet" type="text/css" />
+	<link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
+	<script src="__PUBLIC__/js/jquery.js" ></script>
+    <!-- 富文本框配置文件 -->
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/js/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/js/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/lang/zh-cn/zh-cn.js"></script>
+    <script src="__PUBLIC__/js/forum.js"></script>
+    <!--<style type="text/css">
+        div{
+            width:100%;
+        }
+    </style>-->
+	<title>论坛</title>
+</head>
+<body>
+<!--首部导航栏-->
+<include file="Public/header.html"/>
+<div class="content">
+<div class="mybody">
+	<div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="{:U('/home/forum/')}">论坛</a></div>
+    <div class="left">
+    	<div class="search">
+    	<form>
+            <input type="text" placeholder="请输入论坛名称或话题" class="searchtext">
+            <input type="button" value="开始搜索" class="searchbutton">
+            <a href="#sub"><input type="button" value="我要发帖" class="postbutton"></a>
+        </form>
+   		</div>
+        <div class="lp">
+    	<ul>
+    		<switch name="id">
+        		<case value="1">
+        			<li><a href="{:U('/home/forum/type/id/1')}" class="lphover">考证</a></li>
+            		<li><a href="{:U('/home/forum/type/id/2')}" class="lpli">比赛</a></li>
+        			<li><a href="{:U('/home/forum/type/id/3')}" class="lpli">生活</a></li>
+        			<li><a href="{:U('/home/forum/type/id/4')}" class="lpli">大杂烩</a></li>
+        			<li><a href="#" class="lpli">意见反馈</a></li>
+        		</case>
+        		<case value="2">
+        			<li><a href="{:U('/home/forum/type/id/1')}" class="lpli">考证</a></li>
+            		<li><a href="{:U('/home/forum/type/id/2')}" class="lphover">比赛</a></li>
+        			<li><a href="{:U('/home/forum/type/id/3')}" class="lpli">生活</a></li>
+        			<li><a href="{:U('/home/forum/type/id/4')}" class="lpli">大杂烩</a></li>
+        			<li><a href="#" class="lpli">意见反馈</a></li>
+        		</case>
+        		<case value="3">
+        			<li><a href="{:U('/home/forum/type/id/1')}" class="lpli">考证</a></li>
+            		<li><a href="{:U('/home/forum/type/id/2')}" class="lpli">比赛</a></li>
+        			<li><a href="{:U('/home/forum/type/id/3')}" class="lphover">生活</a></li>
+        			<li><a href="{:U('/home/forum/type/id/4')}" class="lpli">大杂烩</a></li>
+        			<li><a href="#" class="lpli">意见反馈</a></li>
+        		</case>
+        		<case value="4">
+        			<li><a href="{:U('/home/forum/type/id/1')}" class="lpli">考证</a></li>
+            		<li><a href="{:U('/home/forum/type/id/2')}" class="lpli">比赛</a></li>
+        			<li><a href="{:U('/home/forum/type/id/3')}" class="lpli">生活</a></li>
+        			<li><a href="{:U('/home/forum/type/id/4')}" class="lphover">大杂烩</a></li>
+        			<li><a href="#" class="lpli">意见反馈</a></li>
+        		</case>
+        		<default />
+        			<li><a href="{:U('/home/forum/type/id/1')}" class="lpli">考证</a></li>
+            		<li><a href="{:U('/home/forum/type/id/2')}" class="lpli">比赛</a></li>
+        			<li><a href="{:U('/home/forum/type/id/3')}" class="lpli">生活</a></li>
+        			<li><a href="{:U('/home/forum/type/id/4')}" class="lpli">大杂烩</a></li>
+        			<li><a href="#" class="lphover">意见反馈</a></li>
+    		</switch>
+    		
+    	</ul>
+        </div>
+        <ul class="proul">
+        	<volist name="forum" id="vo">
+	        	<li>
+	            	<div class="litop">
+	                	<h1><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title}</a></h1>
+	                    <!--<h2>刚入学的小萌新求指导</h2>-->
+	                </div>
+	                <p><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.content}</a></p>
+	                <div class="forum-footer">
+	               	    	<img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/> 
+	                        <span class="forum-time">时间：{$vo.posttime}</span>
+	                        <span class="read-count">阅读量：{$vo.readcount}</span>
+	                </div>
+	            </li>
+	        </volist>
+        </ul>
+        <div class="page">{$pages}</div>
+        <div class="clear"></div>
+        <div class="post_forum">
+        	<a name="sub"></a>
+        	<form action="{:U('/home/forum')}" method="post">
+	        	<div>
+	        		<img src="__PUBLIC__/images/post_forum.png">
+	        		<span>发表新帖</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        		<span>新帖分类：</span>
+	        		<select class="forumsort" name="typeid">         
+	        			<option value="4">大杂烩</option>         
+	        			<option value="2">比赛</option>         
+	        			<option value="3">生活</option>         
+	        			<option value="1">考证</option>   
+	        		</select> 
+	        	</div>
+	        	<div>
+	        		<input type="text" name="title" placeholder="请填写标题" class="post_title">
+	        	</div>
+            	<div id="editForm" class="post_text">
+                    <!-- 加载编辑器的容器 -->
+                    <script id="editor" type="text/plain" style="width:660px;height:500px;"></script>
+                    
+		            <div>
+		            	 <input class="post_button" type="submit" onclick="getContent()"  value="发表" /> 
+		            </div>
+		        </div>
+            </form>
+         </div>
+    </div>
+    <div class="right">
+    	<div class="righttop">
+        	<h1 class="title">论坛热议榜<a href="{:U('/home/forum/')}" class="ckgd">更多&nbsp;>></a></h1>
+            <ul class="topul">
+            	<volist name="forum_hot" id="vo">
+	        		<li><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title}</a><span>{$vo.posttime}</span></li>
+	            </volist>
+        	</ul>
+        </div>
+       	<div class="righttop righttop2">
+        	<h1 class="title title2">公告板<a href="#" class="ckgd">更多&nbsp;>></a></h1>
+            <div class="lpimg"><a href="#"><img src="__PUBLIC__/images/commitment001.jpg" width="220" height="100" alt="lp" /></a></div>
+     		 <ul class="topul">
+	        	<li><a href="#">违规论坛举报反映通道</a><span>01-01</span></li>
+	            <li><a href="#">贴吧志愿者招募</a><span>01-01</span></li>
+        	</ul>
+      	</div>
+      	<div class="righttop righttop2 righttop3">
+      		<h1 class="title title2">论坛达人<a href="#" class="ckgd">更多&nbsp;>></a></h1>
+            <div class="xzdr">
+       	    	<img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <div class="xzright">
+                <div class="drname">
+                <h1>王子文</h1>
+                <a>和TA交流</a>
+                </div>
+                <h3>达人介绍</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。</p>
+                </div>
+            </div>
+            <div class="xzdr xzdr2">
+       	    	<img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <div class="xzright">
+                <div class="drname">
+                <h1>王子文</h1>
+                <a>和TA交流</a>
+                </div>
+                <h3>达人介绍</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。</p>
+                </div>
+            </div>
+             <div class="xzdr xzdr2">
+       	    	<img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <div class="xzright">
+                <div class="drname">
+                <h1>王子文</h1>
+                <a>和TA交流</a>
+                </div>
+                <h3>达人介绍</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。</p>
+                </div>
+            </div>
+            <div class="xzdr xzdr2">
+       	    	<img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <div class="xzright">
+                <div class="drname">
+                <h1>王子文</h1>
+                <a>和TA交流</a>
+                </div>
+                <h3>达人介绍</h3>
+               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。</p>
+                </div>
+            </div>
+      </div>
+    </div>
+</div>
+</div>
+
+<!--底部footer-->
+<include file="Public/footer.html" />
+</body>
+</html>
