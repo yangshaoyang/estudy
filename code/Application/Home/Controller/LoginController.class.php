@@ -12,7 +12,7 @@ class LoginController extends Controller {
     	$User = M('users');
         $email = $data['yourname'];
         $password = md5($data['yourpassword']);
-        dump($password);
+        //dump($password);
         $result = $User->getFieldByEmail($email,'password');
         dump($result);
         $username = $User->getFieldByEmail($email,'username');
