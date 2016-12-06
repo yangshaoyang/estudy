@@ -1,0 +1,9 @@
+[
+    {"name":"用户管理", "children":[
+        {"id":"person", "name":"查看用户信息", "target":"navtab", "url":"admin/person/index.html"}
+    ]},
+    {"name":"管理员管理", "children":[
+        {"id":"admin", "name":"查看管理员", "target":"navtab", "url":"admin/admin/index.html"},
+        {"id":"addadmin", "name":"添加管理员", "target":"navtab", "url":"admin/admin/addadmin.html"}
+    ]}
+]

@@ -4,8 +4,8 @@
         {"id":"matchadd", "name":"添加比赛", "target":"navtab", "url":"admin/match/addmatch.html"}
     ]},
     {"name":"考证管理", "children":[
-        {"id":"base-navtab", "name":"查看考证", "target":"navtab", "url":"admin/certificate/index.html"},
-        {"id":"base-dialog", "name":"添加考证", "target":"navtab", "url":"admin/certificate/addcertificate.html"}
+        {"id":"base-navtab", "name":"查看考证", "target":"navtab", "url":"admin/html/navtab.html"},
+        {"id":"base-dialog", "name":"添加考证", "target":"navtab", "url":"html/base/dialog.html"}
     ]},
     {"name":"资讯管理", "children":[
         {"id":"base-navtab", "name":"查看资讯", "target":"navtab", "url":"admin/html/navtab.html"},
@@ -21,7 +21,7 @@
     ]},
     {"name":"举报管理", "children":[
         {"id":"base-navtab", "name":"查看举报", "target":"navtab", "url":"admin/html/navtab.html"},
-        {"id":"base-dialog", "name":"添加帖子", "target":"navtab", "url":"html/base/dialog.html"}
+        {"id":"base-dialog", "name":"添加", "target":"navtab", "url":"html/base/dialog.html"}
     ]},
     {"name":"其他", "children":[
         {"id":"base-navtab", "name":"查看", "target":"navtab", "url":"admin/html/navtab.html"},

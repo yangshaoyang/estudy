@@ -1,6 +1,0 @@
-[
-    {"name":"用户管理", "children":[
-        {"id":"person", "name":"查看用户信息", "target":"navtab", "url":"admin/person/index.html"},
-        {"id":"changepassword", "name":"修改密码", "target":"navtab", "url":"admin/changepassword/index.html"}
-    ]}
-]

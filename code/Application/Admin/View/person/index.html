@@ -1,3 +1,4 @@
+<!-- 用户个人中心首页 -->
 <div class="bjui-pageHeader" style="background-color:#fefefe; border-bottom:none;">
 <form data-toggle="ajaxsearch" data-options="{searchDatagrid:$.CurrentNavtab.find('#datagrid-test-filter')}">
     <fieldset>
@@ -38,6 +39,7 @@
                 <th align="center">学校</th>
                 <th align="center">城市</th>
                 <th align="center">爱好</th>
+                <th align="center">操作</th>
             </tr>
             <volist name="users" id="vo">
             <tr>
@@ -52,7 +54,7 @@
                 <td>
                     <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/person/permessage/userid/{$vo.userid}', title:'查看用户：{$vo.username}', max:true}">查看</button>&nbsp;
                     <button type="button" class="btn-blue" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/person/editmessage/userid/{$vo.userid}', title:'修改用户：{$vo.username}', max:true}">修改</button>&nbsp;
-                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/person/delete/mid/{$vo.mid}');window.close();}}">删除</button>
+                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/person/delete/userid/{$vo.userid}');window.close();}}">删除</button>
                 </td>
             </tr>
             </volist>

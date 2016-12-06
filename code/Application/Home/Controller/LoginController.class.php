@@ -1,8 +1,6 @@
 <?php
 namespace Home\Controller;
-use Think\Session\Driver;
 use Think\Controller;
-
 class LoginController extends Controller {
     public function login(){
         $this->display();
@@ -14,7 +12,7 @@ class LoginController extends Controller {
         $password = md5($data['yourpassword']);
         //dump($password);
         $result = $User->getFieldByEmail($email,'password');
-        dump($result);
+        //dump($result);
         $username = $User->getFieldByEmail($email,'username');
         if ($result == $password) {
         	session('name',$username); 
@@ -23,5 +21,9 @@ class LoginController extends Controller {
         }else{
         	$this->error('用户名或密码不正确',U('home/login/login'));
         }
+    }
+    public function exits(){
+        session('name',null); 
+        $this->redirect('/');
     }
 }

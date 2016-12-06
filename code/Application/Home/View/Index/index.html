@@ -51,11 +51,11 @@
             <div class="navtop">
             <if condition="$Think.session.name neq null">
                 <a href="{:U('/home/person/homepage')}" class="log">{$Think.session.name}</a>
-                <a href="{:U('/home/login/register')}" class="log sign">注销</a>
+                <a href="{:U('/home/login/exits')}" class="log sign">注销</a>
                 <p>客服热线&nbsp;&nbsp;&nbsp;400&nbsp;-&nbsp;0000&nbsp;-&nbsp;000</p>
             <else />
                 <a href="{:U('/home/login/login')}" class="log">登录</a>
-                <a href="{:U('/home/login/register')}" class="log sign">注册</a>
+                <a href="{:U('/home/register')}" class="log sign">注册</a>
                 <p>客服热线&nbsp;&nbsp;&nbsp;400&nbsp;-&nbsp;0000&nbsp;-&nbsp;000</p>
             </if>
             </div>

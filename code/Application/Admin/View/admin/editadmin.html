@@ -3,26 +3,16 @@
 <form action="__PUBLIC__/json/ajaxDone.json" id="j_custom_form" data-toggle="validate" data-alertmsg="false">
     <input type="hidden" name="custom.id" value="edce142bc2ed4ec6b623aacaf602a4de">
     <div class="bjui-row col-3">
-        <label class="row-label">文章标题</label>
+        <label class="row-label">用户名</label>
         <div class="row-input required">
-            <input type="text" name="articletitle" id="j_custom_name" value="{$articlecontent.articletitle}" data-rule="required"></div>
-         <label class="row-label">作者</label>
+            <input type="text" name="adname" id="j_custom_name" value="{$admessage.adname}" data-rule="required"></div>
+         <label class="row-label">邮箱</label>
         <div class="row-input required">
-            <input type="text" name="articleauthor" id="j_custom_name" value="{$articlecontent.articleauthor}" data-rule="required"></div>
-        <label class="row-label">发布日期</label>
+            <input type="text" name="ademail" id="j_custom_name" value="{$admessage.ademail}" data-rule="required"></div>
+        <label class="row-label">联系方式</label>
         <div class="row-input required">
-            <input type="text" name="articletime" id="j_custom_issuedate" value="{$articlecontent.articletime}" data-toggle="datepicker" data-rule="required;date"></div>
+            <input type="text" name="adphonenum" id="j_custom_name" value="{$admessage.adphonenum}" data-rule="required;date"></div>
         <br>
-        <label class="row-label">文章简介</label>
-        <div class="row-input">
-            <textarea name="articleintroduction" id="j_form_content" class="j-content" style="width: 500px;height: 100px;" >{$articlecontent.articleintroduction}</textarea>
-        </div>
-        <br>
-        <br>
-        <label class="row-label">文章正文</label>
-        <div class="row-input">
-            <textarea name="articlecontent" id="j_form_content" class="j-content" style="width: 700px;height: 50px;" data-toggle="kindeditor" data-minheight="150">{$articlecontent.articlecontent}</textarea>
-        </div>
     </div>
         <br>
         <br>
