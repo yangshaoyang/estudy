@@ -1,0 +1,64 @@
+<div class="bjui-pageContent">
+
+<form action="__MODULE__/Certificate/add" id="j_custom_form" data-toggle="validate" data-alertmsg="false" method="post" enctype="multipart/form-data">
+    <!-- <input type="hidden" name="custom.id" value="edce142bc2ed4ec6b623aacaf602a4de"> -->
+    <div class="bjui-row col-3">
+        <label class="row-label">考证名称</label>
+        <div class="row-input required">
+            <input type="text" name="cname" id="j_custom_name" value="" data-rule="required"></div>
+        <br>
+        <label class="row-label">考证图片</label>
+        <div class="row-input">
+            <input type="file" name="cthumb" data-toggle="webuploader" data-options="
+                {
+                    pick: {label: '点击选择图片'},
+                    server: '__PUBLIC__/json/ajaxUpload.json',
+                    fileNumLimit: 1,
+                    formData: {dir:'custompic'},
+                    required: true,
+                    uploaded: '',
+                    basePath: '',
+                    accept: {
+                        title: '图片',
+                        extensions: 'jpg,png',
+                        mimeTypes: '.jpg,.png'
+                    }
+                }"></div>
+                <br>
+        <label class="row-label">考证日期</label>
+        <div class="row-input required">
+            <input type="text" name="ctime" id="j_custom_issuedate" value="2016-12-12" data-toggle="datepicker" data-rule="required;date"></div>
+        <label class="row-label">考证要求</label>
+        <div class="row-input required">
+            <input type="text" name="crequest" id="j_custom_name" value="" data-rule="required"></div>
+        <label class="row-label">关键字</label>
+        <div class="row-input">
+            <input type="text" name="keyword" id="j_custom_tags" value="" data-toggle="tags" data-url="../../json/ajaxTags.json" data-width="100%" size="20" placeholder="输入关键字，回车提交"></div>
+        <label class="row-label">考证费用</label>
+        <div class="row-input required">
+            <input type="text" name="cfee" id="j_custom_name" value="" data-rule="required"></div>
+        <label class="row-label">考证官网</label>
+        <div class="row-input required">
+            <input type="text" name="curl" id="j_custom_name" value="http://" data-rule="required"></div>
+
+        <br>
+        <br>
+
+
+        <label class="row-label">考证详情</label>
+        <div class="row-input">
+            <textarea name="mcontent" id="content" class="content" style="width: 700px;height: 30px;" data-toggle="kindeditor" data-minheight="150"></textarea>
+        </div>
+
+    </div>
+        <br>
+        <br>
+    <!-- 内容区 -->
+</div>
+<div class="bjui-pageFooter">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="submit" class="btn-default btn" data-icon="save"><i class="fa fa-save"></i>发布</button>
+&nbsp;&nbsp;
+<button type="button" class="btn-close btn" data-icon="close"><i class="fa fa-close"></i> 取消</button>
+</div>
+</form>
+
