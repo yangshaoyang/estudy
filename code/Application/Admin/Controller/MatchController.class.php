@@ -33,9 +33,9 @@ select();
         $Model->create();
         $num=$Model->add($data);
         if($num>0){
-        	$this->success("添加成功！",U("bid"));
+        	$this->success("添加成功！",U("match"));
         }else{
-        	$this->error("添加失败！",U("bid"));
+        	$this->error("添加失败！",U("match"));
         }
 
         $this->display();
