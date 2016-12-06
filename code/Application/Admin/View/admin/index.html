@@ -24,12 +24,13 @@
     }">
         <thead>
             <tr>
-                <th align="center" width="50">管理员ID</th>
+                <th align="center">管理员ID</th>
                 <th align="center">管理员名字</th>
                 <th align="center">管理员邮箱</th>
                 <th align="center">管理员联系方式</th>
+                <th align="center">操作</th>
             </tr>
-            <volist name="admin" id="vo">
+            <volist name="admessage" id="vo">
             <tr>
                 <td>{$vo.adminid}</td>
                 <td>{$vo.adname}</td>

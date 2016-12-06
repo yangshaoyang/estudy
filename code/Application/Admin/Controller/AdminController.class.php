@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 class AdminController extends Controller {
      public function index(){
-       $admin = M("admin")->select();
+                $admin = M("admin")->select();
 	   $this->assign("admessage",$admin);
 	   $this->display();
      }
@@ -20,7 +20,7 @@ class AdminController extends Controller {
     	if(!IS_POST){
             exit("bad request");
         }
-         $data=array(   	    
+         $data=array(
     			'adname' =>I('post.adname'),
     			'ademail' =>I('post.ademail'),
     			'adphonenum'  =>I('post.adphonenum'),
@@ -30,9 +30,9 @@ class AdminController extends Controller {
         $Model->create();
         $num=$Model->add($data);
         if($num>0){
-        	$this->success("添加成功！",U("bid"));
+        	$this->success("添加成功！",U("admin"));
         }else{
-        	$this->error("添加失败！",U("bid"));
+        	$this->error("添加失败！",U("admin"));
         }
 
         $this->display();
