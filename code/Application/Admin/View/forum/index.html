@@ -31,21 +31,20 @@
         <thead>
             <tr>
                 <th align="center" width="90">论坛ID</th>
-                <th align="center">论坛分类</th>
-                <th align="center">作者</th>
+                <th align="center">分类</th>
                 <th align="center">论坛标题</th>
                 <th align="center">发布时间</th>
                 <th align="center">文章简介</th>
                 <th align="center">操作</t
                 h>
             </tr>
-            <volist name="article" id="vo">
+            <volist name="forum" id="vo">
             <tr>
-                <td>{$vo.articleid}</td>
-                <td>{$vo.articletitle}</td>
-                <td> {$vo.articleauthor}</td>
-                <td> {$vo.articletime}</td>
-                <td> {$vo.articleintroduction}</td>
+                <td>{$vo.forumid}</td>
+                <td>{$vo.typeid}</td>
+                <td> {$vo.title}</td>
+                <td> {$vo.posttime}</td>
+                <td> {$vo.content}</td>
                 <td>
                     <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/article/articledetails/articleid/{$vo.articleid}', title:'{$vo.articletitle}', max:true}">查看</button>&nbsp;
                     <button type="button" class="btn-blue" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/article/editarticle/articleid/{$vo.articleid}', title:'修改文章：{$vo.articletitle}', max:true}">修改</button>&nbsp;
@@ -55,4 +54,6 @@
             </volist>
         </thead>
     </table>
+    <!--<div data-toggle="pagination" data-options="{total:31, pageSize:5, callback:pagination_test_callback}">-->
+    </div>
 </div>
