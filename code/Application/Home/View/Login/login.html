@@ -5,6 +5,33 @@
 <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function chk_form(){
+    var user = document.getElementById("user");
+    if(user.value==""){
+        alert("用户名不能为空！");
+        return false;
+        //user.focus();
+    }
+    var preg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/; //匹配Email
+    if(!preg.test(user.value)){ 
+        alert("Email格式错误！");
+        return false;
+        //email.focus();
+    }
+    var pass = document.getElementById("pass");
+    if(pass.value==""){
+        alert("密码不能为空！");
+        return false;
+        //pass.focus();
+    }
+    var passs=pass.value;
+    if(!(passs.length>=6)){
+         alert("密码长度应该大于6位！");
+        return false;
+    }
+}
+</script>
 <title>用户登陆</title>
 </head>
 <body>
@@ -19,24 +46,20 @@
         	<div class="search">
               <div class="search1">
                   <h1><span>普通登录</span></h1>
-                    <form action="">
-                        <input type="text"  name="yourname" class="email" placeholder="用户名或邮箱">
-                    </form>
-                    <form action="" >
-                        <input type="password" name="yourpassword"  minlength="8" maxlength="16" class="pwd" placeholder="密码大于8位小于16位">
-                    </form>
-                    <form action="">
+                    <form action="{:U('home/login/validation')}" method="post" onsubmit="return chk_form();">
+                        <input type="text"  name="yourname" id="user" class="email" placeholder="请输入邮箱">
+
+                        <input type="password" name="yourpassword" id="pass" minlength="6" class="pwd" placeholder="密码大于6位">
+
                         <div id="u1476" class="ax_default link_button">
                         <div id="u1476_div" class=""></div>
                         <!-- Unnamed () -->
                         <div id="u1477" class="text" style="visibility: visible;">
-                        <p>
-                        <span><input type="checkbox" name="aihao" value="1"/>记住账号</span>
-                        <span class="accountnumber"><a href="../../register">没有账号？</a></span>
-                        </p>
+                        <p><input type="checkbox" name="aihao" value="1"/>记住账号</p>
+                        <p><a href="../../register">没有账号？</a></p>
                         </div>
                         </div>
-                        <input type="button" value="登  录" class="login_button" />       
+                        <input type="submit" value="登  录" class="login_btn" />       
                    </form>
                 </div>  
                 <!--第三方登录-->  

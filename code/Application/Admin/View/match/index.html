@@ -30,25 +30,23 @@
     }">
         <thead>
             <tr>
-                <th align="center" width="90">比赛ID</th>
-                <th align="center">比赛名称</th>
+                <th align="center" width="70">序号</th>
+                <th align="center" width="300">比赛名称</th>
                 <th align="center">比赛时间</th>
                 <th align="center">比赛官网</th>
                 <th align="center">操作</th>
             </tr>
             <volist name="match" id="vo">
             <tr>
-                <td>{$vo.mid}</td>
+                <td>{$i}</td>
                 <td>{$vo.mname}</td>
                 <td> {$vo.mtime}</td>
                 <td><a href="{$vo.murl}">{$vo.murl}</a></td>
                 <td>
                     <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/match/content/mid/{$vo.mid}', title:'{$vo.mname}', max:true}">查看</button>&nbsp;
                     <button type="button" class="btn-blue" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/match/editmatch/mid/{$vo.mid}', title:'修改比赛：{$vo.mname}', max:true}">修改</button>&nbsp;
-                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="" id="__MODULE__/match/delete/mid/{$vo.mid}">删除</button>
-                    <button type="button" class="btn-default" data-toggle="doajax" data-options="{url:'__PUBLIC__/json/ajaxDone.json'}">Data API Ajax提交1</button>
-
-                    <a href="__MODULE__/match/delete/mid/{$vo.mid}" class="btn-red">删除</a>
+                    <button type="button" class="btn-red" data-toggle="alertmsg" target="ajaxTodo" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/match/delete/mid/{$vo.mid}');window.close();}}">删除</button>
+                    <!-- <a href="__MODULE__/match/delete/mid/{$vo.mid}'" class="btn-red" data-toggle="alertmsg" target="ajaxTodo">删除</a> -->
                 </td>
             </tr>
             </volist>
@@ -58,19 +56,3 @@
         <div data-toggle="pagination" data-options="{total:1000, pageSize:1, callback:pagination_test_callback}">
     </div>
 </div>
-<script type="text/javascript">
-    // $(".btn-red").click(function(){
-    //     console
-    //     url = $(this).id;
-    //     $.get(url, function(data){
-    //         console.log(data)
-    //     })
-    BJUI.ajax('doajax', {
-    url: '__PUBLIC__/json/ajax/ajax-test1.json',
-    type: GET,
-    loadingmask: true,
-    okCallback: function(json, options) {
-        console.log('返回内容：\n'+ JSON.stringify(json))
-    }
-})
-</script>
