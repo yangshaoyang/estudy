@@ -25,6 +25,7 @@ select();
     			'mtime'  =>I('post.mtime'),
     			'mrequest'=>I('post.mrequest'),
     			'mfee'    =>I('post.mfee'),
+                                       'mthumb'    =>I('post.mthumb'),
     			'murl'   =>I('post.murl'),
     			'mcontent'  =>I('post.mcontent')
     			);
@@ -40,15 +41,14 @@ select();
         $this->display();
     }
     public function editmatch($mid){
-	  $match=M("match")->find($mid);
-	  $this->assign("mcontent",$match);
-	  $this->display();
-	}
+        $match=M("match")->find($mid);
+        $this->assign("mcontent",$match);
+        $this->display();
+        }
     public function delete($mid){
         $mid = $_GET['mid'];
         if (M("match")->delete($mid)) {
-            echo  'ok';
-           // $this->success("删除成功！");
+            $this->success("删除成功！");
     }
 }
 }
