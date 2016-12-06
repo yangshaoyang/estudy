@@ -17,7 +17,7 @@ class PersonController extends Controller {
         $this->display();
     }
     public function editmessage($userid){
-        $users=M("users")->find($userid);;
+        $users=M("users")->find($userid);
         //dump($users);
         $this->assign("users",$users);
         $this->display();
@@ -29,7 +29,10 @@ class PersonController extends Controller {
         $this->display();
      
     }
-    public function repassword(){
-        $this->display();
+    public function delete($userid){
+        $userid = $_GET['userid'];
+        if (M("users")->delete($userid)) {
+            $this->success("删除成功！");
     }
+  }
 }
