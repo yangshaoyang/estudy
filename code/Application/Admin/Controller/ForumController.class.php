@@ -3,19 +3,19 @@ namespace Admin\Controller;
 use Think\Controller;
 class ForumController extends Controller {
      public function index(){
-       $article = M("article")->select();
-	   $this->assign("article",$article);
+       $forum = M("forum")->select();
+	   $this->assign("forum",$forum);
 	   $this->display();
      }
-     public function articledetails($articleid){
-	   $article=M("article")->find($articleid);
-	   $this->assign("articlecontent",$article);
+     public function forumdetails($forumid){
+	   $forum=M("forum")->find($forumid);
+	   $this->assign("forumcontent",$forum);
 	   $this->display();
 	 }
-     public function edit($articleid){
+     public function edit($forumid){
 	   $this->display();
 	 }
-     public function addarticle(){
+     public function addforum(){
          $this->display();
      }
 	public function add(){
@@ -23,14 +23,14 @@ class ForumController extends Controller {
             exit("bad request");
         }
          $data=array(   	    
-    			'articletitle' =>I('post.articletitle'),
-    			'articleauthor' =>I('post.articleauthor'),
-    			'articletime'  =>I('post.articletime'),
-    			'articleintroduction' =>I('post.articleintroduction'),	
-    			'articlecontent'  =>I('post.articlecontent')
+    			'forumtitle' =>I('post.forumtitle'),
+    			'forumauthor' =>I('post.forumauthor'),
+    			'forumtime'  =>I('post.forumtime'),
+    			'forumintroduction' =>I('post.forumintroduction'),	
+    			'forumcontent'  =>I('post.forumcontent')
     			);
 
-        $Model=D("article");
+        $Model=D("forum");
         $Model->create();
         $num=$Model->add($data);
         if($num>0){
@@ -41,9 +41,9 @@ class ForumController extends Controller {
 
         $this->display();
     }
-     public function editarticle($articleid){
-	  $article=M("article")->find($articleid);
-	   $this->assign("articlecontent",$article);
+     public function editforum($forumid){
+	  $forum=M("forum")->find($forumid);
+	   $this->assign("forumcontent",$forum);
 	   $this->display();
 	 }
  }
