@@ -12,11 +12,8 @@ class AdminController extends Controller {
 	   $this->assign("admessage",$admin);
 	   $this->display();
 	 }
-     public function edit($adminid){
-	   $this->display();
-	 }
-     //添加帖子
-	public function add(){
+     //添加管理员
+     public function add(){
     	if(!IS_POST){
             exit("bad request");
         }
@@ -37,14 +34,14 @@ class AdminController extends Controller {
 
         $this->display();
     }
-    //修改帖子
+    //修改管理员
      public function editadmin($adminid){
-	  $article=M("admin")->find($adminid);
-	   $this->assign("admessage",$admin);
-	   $this->display();
-	 }
-    //删除帖子
-      public function delete($adminid){
+        $admin=M("admin")->find($adminid);
+        $this->assign("admessage",$admin);
+        $this->display();
+    }
+    //删除管理员
+    public function delete($adminid){
         $articleid = $_GET['adminid'];
         if (M("admin")->delete($adminid)) {
             $this->success("删除成功！");
