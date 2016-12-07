@@ -16,8 +16,8 @@ class PersonController extends Controller {
         }else{
           $map['userid']=1;
           $users=M("users")->where($map)->select();
-          $user_certificate=M("user_certificate")->select();
-          $user_match=M("user_match")->select();
+          $user_certificate=M("user_certificate")->order('time desc')->limit(4)->select();
+          $user_match=M("user_match")->order('time desc')->limit(4)->select();
           $this->assign("users",$users[0]);
           $this->assign("user_certificate",$user_certificate);
           $this->assign("user_match",$user_match);
@@ -28,8 +28,8 @@ class PersonController extends Controller {
        if ($_SESSION['name'] == NULL) {
           $this->redirect('home/login/login','请登录');
         }else{
-          $user_certificate=M("user_certificate")->select();
-          $user_match=M("user_match")->select();
+          $user_certificate=M("user_certificate")->order('time desc')->limit(4)->select();
+          $user_match=M("user_match")->order('time desc')->limit(4)->select();
           $this->assign("user_certificate",$user_certificate);
           $this->assign("user_match",$user_match);
           $this->display();
