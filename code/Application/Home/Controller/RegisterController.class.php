@@ -29,7 +29,6 @@ class RegisterController extends Controller {
 		$data['regtime']=$regtime;
 		$data['state']=0;
 		if($User->add($data)){//写入成功，发邮件
-<<<<<<< .mine
 			import("HomeClass.smtp");//引用发送邮件类
 			$smtpserver     =     "smtp.126.com";//SMTP服务器
 	             $smtpserverport =    25;//SMTP服务器端口
@@ -52,7 +51,6 @@ class RegisterController extends Controller {
 
 
 
-=======
 			import("HomeClass.smtp");//引用发送邮件类
 			$smtpserver     =     "smtp.126.com";//SMTP服务器
 	             $smtpserverport =    25;//SMTP服务器端口
@@ -75,7 +73,7 @@ class RegisterController extends Controller {
 	             $datas = $smtp->sendmail($smtpemailto, $smtpusermail, $mailsubject, $mailbody, $mailtype);
 	        //$this->success("输出的提示信息",U('home/login/login'));
 	            $this->redirect('home/login/login');
->>>>>>> .theirs
+
 		}
 
     }
@@ -94,15 +92,9 @@ class RegisterController extends Controller {
 				if($nowtime>$result['token_exptime']){
 					$msg = '您的激活有效期已过，请登录您的帐号重新发送激活邮件.';
 				}else{
-<<<<<<< .mine
-
-
-=======
-				//$data[]
-
->>>>>>> .theirs
 				if(!($User->where($condition)->save($data))) die(0);
 				$msg = '激活成功！';
+				
 				}
 			}else{
 			$msg = 'error';
