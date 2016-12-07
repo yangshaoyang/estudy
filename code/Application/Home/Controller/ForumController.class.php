@@ -9,9 +9,9 @@ use Think\Controller;
 use \Library\Page;
 class ForumController extends Controller {
 	//论坛list页获取分类数据的方法
-    public function type($id){
+    protected function _tag($id){
     	/*选取分类1数据*/
-	    	$forum=M("forum")->where("typeid=$id");
+	    $forum=M("forum")->where("typeid=$id");
 	    /*分页码*/
 		// 1. 获取记录总条数
         $count =$forum->count();
@@ -30,22 +30,31 @@ class ForumController extends Controller {
         $page->setConfig('prev','上一页');
         $page->setConfig('next','下一页');
         // 7. 输出查询结果
-        $this->assign('forum', $forum);
         $pages=$page->show();
-        $this->assign('pages',$pages);
+        //8.构建返回结果
+        $res['id']=$id;
+        $res['forum']=$forum;
+        $res['pages']=$pages;
+        
+        return $res;
+    }
 
-        /*热议榜数据*/
+    //论坛list页展示分类数据的方法
+    public function tag($id){
+    	/*分类数据*/
+    	$sort=$this->_tag($id);
+    	/*热议榜数据*/
         $forum_hot=M("forum")->order('readcount desc')->limit(5)->select();
         $this->assign('forum_hot', $forum_hot);
-        //方便判断
-         $this->assign('id', $id);
+        //输出结果
+        $this->assign('id', $sort['id']);
+        $this->assign('forum', $sort['forum']);
+        $this->assign('pages', $sort['pages']);
         $this->display('index');
     }
 
-	//论坛list页的控制器
-    public function index(){
-    	$forumdata=new forumController();
-        /*提交数据*/
+    //处理提交表单方法
+    public function addForum(){
         if(IS_POST){
         	//1.I函数获取数据
         	$data=array();
@@ -57,12 +66,25 @@ class ForumController extends Controller {
         	//2插入数据
         	$editModel = M('forum');
         	if($editModel->add($data)){
-        		//dump('su');
+        		$typeid=$data['typeid'];
+        		$this->redirect("/home/forum/tag/id/$typeid");
         	}
         }
+    }
 
+	//论坛list页的控制器
+    public function index(){
     	/*分类数据*/
-    	$forumdata->type(1);
+    	$sort=$this->_tag(1);
+
+    	/*热议榜数据*/
+        $forum_hot=M("forum")->order('readcount desc')->limit(5)->select();
+        $this->assign('forum_hot', $forum_hot);
+        //输出结果
+        $this->assign('id', $sort['id']);
+        $this->assign('forum', $sort['forum']);
+        $this->assign('pages', $sort['pages']);
+        $this->display();
     }
 
     //论坛内容页的控制器
