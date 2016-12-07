@@ -40,38 +40,38 @@
     	<ul>
     		<switch name="id">
         		<case value="1">
-        			<li><a href="{:U('/home/forum/type/id/1')}" class="lphover">考证</a></li>
-            		<li><a href="{:U('/home/forum/type/id/2')}" class="lpli">比赛</a></li>
-        			<li><a href="{:U('/home/forum/type/id/3')}" class="lpli">生活</a></li>
-        			<li><a href="{:U('/home/forum/type/id/4')}" class="lpli">大杂烩</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/1')}" class="lphover">考证</a></li>
+            		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
         			<li><a href="#" class="lpli">意见反馈</a></li>
         		</case>
         		<case value="2">
-        			<li><a href="{:U('/home/forum/type/id/1')}" class="lpli">考证</a></li>
-            		<li><a href="{:U('/home/forum/type/id/2')}" class="lphover">比赛</a></li>
-        			<li><a href="{:U('/home/forum/type/id/3')}" class="lpli">生活</a></li>
-        			<li><a href="{:U('/home/forum/type/id/4')}" class="lpli">大杂烩</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
+            		<li><a href="{:U('/home/forum/tag/id/2')}" class="lphover">比赛</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
         			<li><a href="#" class="lpli">意见反馈</a></li>
         		</case>
         		<case value="3">
-        			<li><a href="{:U('/home/forum/type/id/1')}" class="lpli">考证</a></li>
-            		<li><a href="{:U('/home/forum/type/id/2')}" class="lpli">比赛</a></li>
-        			<li><a href="{:U('/home/forum/type/id/3')}" class="lphover">生活</a></li>
-        			<li><a href="{:U('/home/forum/type/id/4')}" class="lpli">大杂烩</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
+            		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/3')}" class="lphover">生活</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
         			<li><a href="#" class="lpli">意见反馈</a></li>
         		</case>
         		<case value="4">
-        			<li><a href="{:U('/home/forum/type/id/1')}" class="lpli">考证</a></li>
-            		<li><a href="{:U('/home/forum/type/id/2')}" class="lpli">比赛</a></li>
-        			<li><a href="{:U('/home/forum/type/id/3')}" class="lpli">生活</a></li>
-        			<li><a href="{:U('/home/forum/type/id/4')}" class="lphover">大杂烩</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
+            		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/4')}" class="lphover">大杂烩</a></li>
         			<li><a href="#" class="lpli">意见反馈</a></li>
         		</case>
         		<default />
-        			<li><a href="{:U('/home/forum/type/id/1')}" class="lpli">考证</a></li>
-            		<li><a href="{:U('/home/forum/type/id/2')}" class="lpli">比赛</a></li>
-        			<li><a href="{:U('/home/forum/type/id/3')}" class="lpli">生活</a></li>
-        			<li><a href="{:U('/home/forum/type/id/4')}" class="lpli">大杂烩</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
+            		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
+        			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
         			<li><a href="#" class="lphover">意见反馈</a></li>
     		</switch>
     		
@@ -97,7 +97,7 @@
         <div class="clear"></div>
         <div class="post_forum">
         	<a name="sub"></a>
-        	<form action="{:U('/home/forum')}" method="post">
+        	<form action="{:U('/home/forum/addForum')}" method="post">
 	        	<div>
 	        		<img src="__PUBLIC__/images/post_forum.png">
 	        		<span>发表新帖</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -106,7 +106,7 @@
 	        			<option value="4">大杂烩</option>         
 	        			<option value="2">比赛</option>         
 	        			<option value="3">生活</option>         
-	        			<option value="1">考证</option>   
+	        			<option value="1">考证</option> 
 	        		</select> 
 	        	</div>
 	        	<div>
