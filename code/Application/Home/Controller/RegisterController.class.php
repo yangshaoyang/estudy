@@ -37,11 +37,11 @@ class RegisterController extends Controller {
 		//dump($data);
 		if($User->add($data)){//写入成功，发邮件
 		 import("HomeClass.smtp");//引用发送邮件类
-		 $smtpserver     =     "smtp.126.com";//SMTP服务器
-         $smtpserverport =    25;//SMTP服务器端口
-         $smtpusermail     =     "zykjinghuashuiyue@126.com";//SMTP服务器的用户邮箱
-         $smtpuser         =     "zykjinghuashuiyue@126.com";//SMTP服务器的用户帐号
-         $smtppass         =     "zyk1350316";//SMTP服务器的用户密码
+		 $smtpserver     =     "csbroswer.cn";//SMTP服务器
+         $smtpserverport =    3306;//SMTP服务器端口
+         $smtpusermail     =     "estudyid@csbroswer.cn";//SMTP服务器的用户邮箱
+         $smtpuser         =     "estudyid@csbroswer.cn";//SMTP服务器的用户帐号
+         $smtppass         =     "CXD3434yue17";//SMTP服务器的用户密码
          
          $smtpemailto     =     $data['email'];//发送给谁
          //dump($smtpemailto);
@@ -57,7 +57,7 @@ class RegisterController extends Controller {
          
          $datas = $smtp->sendmail($smtpemailto, $smtpusermail, $mailsubject, $mailbody, $mailtype);
         //$this->success("输出的提示信息",U('home/login/login'));
-        $this->redirect('home/login/login');
+        $this->redirect('/');
 		}
 
     }

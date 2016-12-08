@@ -26,6 +26,10 @@ class MatchController extends Controller {
         if(!IS_POST){
             exit("bad request");
         }
+        $upload = new \Think\upload();
+        $upload->rootPath   = './Public/home';
+        $upload->savePath  ='/Upload';
+        $info = $upload->upload( );
         $data=array(
     	'mname' =>I('post.mname'),
     	'mtime'  =>I('post.mtime'),
