@@ -87,7 +87,7 @@
 	                <p><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.content}</a></p>
 	                <div class="forum-footer">
 	               	    	<img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/> 
-	                        <span class="forum-time">时间：{$vo.posttime}</span>
+	                        <span class="forum-time">时间：{$vo.posttime|substr=0,10}</span>
 	                        <span class="read-count">阅读量：{$vo.readcount}</span>
 	                </div>
 	            </li>
@@ -128,7 +128,7 @@
         	<h1 class="title">论坛热议榜<a href="{:U('/home/forum/')}" class="ckgd">更多&nbsp;>></a></h1>
             <ul class="topul">
             	<volist name="forum_hot" id="vo">
-	        		<li><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title}</a><span>{$vo.posttime}</span></li>
+	        		<li><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title}</a><span>{$vo.posttime|substr=0,10}</span></li>
 	            </volist>
         	</ul>
         </div>
