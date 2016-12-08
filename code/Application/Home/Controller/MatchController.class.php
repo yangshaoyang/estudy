@@ -46,5 +46,30 @@ class MatchController extends Controller {
 	      $this->assign("tmatch",$tmatch);
 	      $this->display();
 	}
+	public function user($mid){
+		//
+		$user = $_SESSION['name'];
+		$match=M("user_match");
+
+		$data=array(
+		    	'mname' =>I('post.mname'),
+		    	'mtime'  =>I('post.mtime'),
+		    	'mrequest'=>I('post.mrequest'),
+		    	'mfee'    =>I('post.mfee'),
+		             'mthumb'    => $image,
+		    	'murl'   =>I('post.murl'),
+		    	'mcontent'  =>I('post.mcontent')
+		    	);
+	        $Model=D("match");
+	        $Model->create();
+	        $num=$Model->add($data);
+	        if($num>0){
+	        	$this->success("添加成功！",U("match"));
+	        }else{
+	        	$this->error("添加失败！",U("match"));
+	        }
+
+
+	}
 
 }

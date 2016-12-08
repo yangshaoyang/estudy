@@ -17,20 +17,22 @@ class MatchController extends Controller {
         $this->display();
     }
 
-    public function addimage($mid){
-        $upload = new \Think\Upload();//
-        $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-        $upload->rootPath  =     './Uploads/'; // 设置附件上传根目录
-        $upload->savePath  =     ''; // 设置附件上传（子）目录
-    // 上传文件
-        $info   =   $upload->upload();
-//dump($info);
-        $image = $info['mthumb']['savename'];
+    public function addimage(){
+//         $upload = new \Think\Upload();//
+//         $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+//         $upload->rootPath  =     './Uploads/'; // 设置附件上传根目录
+//         $upload->savePath  =     ''; // 设置附件上传（子）目录
+//     // 上传文件
+//         $info   =   $upload->upload();
+// //dump($info);
+//         $image = $info['mthumb']['savename'];
+//         $data = array();
+//         $data['statusCode']=200;
+//         $data['message']="上传成功";
+//         $data['filename']='tttt';
         $data = array();
         $data['statusCode']=200;
         $data['message']="上传成功";
-        $data['filename']='tttt';
-
         echo json_encode($data);
     }
     public function add(){

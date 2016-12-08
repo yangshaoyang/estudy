@@ -1,0 +1,43 @@
+<div class="bjui-pageHeader" style="background-color:#fefefe; border-bottom:none;">
+<form data-toggle="ajaxsearch" data-options="{searchDatagrid:$.CurrentNavtab.find('#datagrid-test-filter')}">
+    <fieldset>
+        <legend style="font-weight:normal;">举报搜索：</legend>
+        <div style="margin:0; padding:1px 5px 5px;">
+            <span>举报用户：</span>
+            <input type="text" name="obj.code" class="form-control" size="15">
+                
+            <span>举报链接：</span>
+            <input type="text" name="obj.name" class="form-control" size="15">
+                
+            <div class="btn-group">
+                <button type="submit" class="btn-green" data-icon="search">开始搜索！</button>
+                <button type="reset" class="btn-orange" data-icon="times">重置</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+</div>
+<div class="bjui-pageContent">
+    <table class="table table-bordered" id="datagrid-test-filter" data-toggle="datagrid" data-options="{
+        height: '100%',
+        showToolbar: true,
+        toolbarItem: 'add,edit,del',
+        jsonPrefix: 'obj',
+        editMode: {dialog:{width:'800',height:500,title:'编辑信息',mask:true}},
+        paging: {pageSize:60},
+        showCheckboxcol: true,
+        linenumberAll: true,
+    }">
+        <thead>
+            <tr>
+                <th align="center" width="70">序号</th>
+                <th align="center" width="300">用户</th>
+                <th align="center">举报时间</th>
+                <th align="center">举报链接</th>
+                <th align="center">操作</th>
+            </tr>
+        </thead>
+    </table>
+        <div data-toggle="pagination" data-options="{total:1000, pageSize:1, callback:pagination_test_callback}">
+    </div>
+</div>

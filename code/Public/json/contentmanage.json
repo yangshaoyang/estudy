@@ -20,6 +20,6 @@
         {"id":"forumm", "name":"论坛管理", "target":"navtab", "url":"admin/forum/index.html"}
     ]},
     {"name":"举报管理", "children":[
-        {"id":"jubao", "name":"查看举报", "target":"navtab", "url":"admin/html/navtab.html"}
+        {"id":"jubao", "name":"查看举报", "target":"navtab", "url":"admin/report/index.html"}
     ]}
 ]
