@@ -8,8 +8,8 @@
         {"id":"base-dialog", "name":"添加考证", "target":"navtab", "url":"admin/certificate/addcertificate.html"}
     ]},
     {"name":"资讯管理", "children":[
-        {"id":"base-navtab", "name":"查看资讯", "target":"navtab", "url":"admin/html/navtab.html"},
-        {"id":"base-dialog", "name":"添加资讯", "target":"navtab", "url":"html/base/dialog.html"}
+        {"id":"base-navtab", "name":"查看资讯", "target":"navtab", "url":"admin/news/index.html"},
+        {"id":"base-dialog", "name":"添加资讯", "target":"navtab", "url":"admin/news/addnews.html"}
     ]},
     {"name":"文章管理", "children":[
         {"id":"base-navtab", "name":"查看文章", "target":"navtab", "url":"admin/article/index.html"},

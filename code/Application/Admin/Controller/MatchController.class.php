@@ -15,19 +15,26 @@ class MatchController extends Controller {
     public function edit($mid){
         $this->display();
     }
+
+    public function addimage(){
+        $data = array();
+        $data['statusCode']=200;
+        $data['message']="上传成功";
+        echo json_encode($data);
+    }
     public function add(){
         if(!IS_POST){
             exit("bad request");
         }
-         $data=array(
-    			'mname' =>I('post.mname'),
-    			'mtime'  =>I('post.mtime'),
-    			'mrequest'=>I('post.mrequest'),
-    			'mfee'    =>I('post.mfee'),
-                                       // 'mthumb'    =>I('post.mthumb'),
-    			'murl'   =>I('post.murl'),
-    			'mcontent'  =>I('post.mcontent')
-    			);
+        $data=array(
+    	'mname' =>I('post.mname'),
+    	'mtime'  =>I('post.mtime'),
+    	'mrequest'=>I('post.mrequest'),
+    	'mfee'    =>I('post.mfee'),
+             // 'mthumb'    =>I('post.mthumb'),
+    	'murl'   =>I('post.murl'),
+    	'mcontent'  =>I('post.mcontent')
+    	);
         $Model=D("match");
         $Model->create();
         $num=$Model->add($data);
