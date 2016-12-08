@@ -1,23 +1,23 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class ArticleController extends Controller {
+class NewsController extends Controller {
      public function index(){
        $news = M("news")->select();
 	   $this->assign("news",$news);
 	   $this->display();
      }
-     public function articledetails($articleid){
-	   $news=M("news")->find($articleid);
+     public function newsdetails($newsid){
+	   $news=M("news")->find($newsid);
 	   $this->assign("newscontent",$news);
 	   $this->display();
 	 }
-     public function edit($articleid){
-       $news=M("news")->find($articleid);
+     public function edit($newsid){
+       $news=M("news")->find($newsid);
        $this->assign("news",$news);
 	   $this->display();
 	 }
-     public function addarticle(){
+     public function addNews(){
          $this->display();
      }
      //添加帖子
@@ -39,13 +39,13 @@ class ArticleController extends Controller {
         $this->display();
     }
     //修改帖子
-     public function editarticle($articleid){
+     public function editNews($Newsid){
 	  $news=M("news")->find($newsid);
 	   $this->assign("newscontent",$news);
 	   $this->display();
 	 }
     //删除帖子
-      public function delete($articleid){
+      public function delete($Newsid){
         $articleid = $_GET['newsid'];
         if (M("news")->delete($newsid)) {
             $this->success("删除成功！");
