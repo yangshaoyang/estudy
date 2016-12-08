@@ -21,9 +21,5 @@
     ]},
     {"name":"举报管理", "children":[
         {"id":"jubao", "name":"查看举报", "target":"navtab", "url":"admin/html/navtab.html"}
-    ]},
-    {"name":"其他", "children":[
-        {"id":"other0", "name":"其他", "target":"navtab", "url":"admin/html/navtab.html"},
-        {"id":"other1", "name":"其他", "target":"navtab", "url":"html/base/dialog.html"}
     ]}
 ]
