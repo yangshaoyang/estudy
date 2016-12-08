@@ -12,6 +12,10 @@
 		</div>-->
         <div class="nav">
             <div class="navtop">
+            <?php
+            $url=$_SERVER['HTTP_REFERER'];
+            session('path',$url);
+            ?>
             <if condition="$Think.session.name neq null">
                 <a href="{:U('/home/person/homepage')}" class="log">{$Think.session.name}</a>
                 <a href="{:U('/home/login/exits')}" class="log sign">注销</a>
@@ -25,7 +29,7 @@
             <div class="line"></div>
             <a href="{:U('/home/match/matchlist')}" class="xz"><div class="xzimg"><img src="__PUBLIC__/images/gl2.png" width="21" height="21" alt="gl"/></div><p>比赛攻略</p></a>
             <a href="{:U('/home/certificate/certificatelist')}" class="xz xz2"><div class="xzimg"><img src="__PUBLIC__/images/gw2.png" width="21" height="21" alt="gl"/></div><p>考证顾问</p></a>
-            <a href="{:U('/home/forum')}" class="xz xz2"><div class="xzimg"><img src="__PUBLIC__/images/jy2.png" width="21" height="21" alt="gl"/></div><p>论坛交流</p></a>
+            <a href="{:U('/home/luntan')}" class="xz xz2"><div class="xzimg"><img src="__PUBLIC__/images/jy2.png" width="21" height="21" alt="gl"/></div><p>论坛交流</p></a>
         </div>
     </div>
 </div>

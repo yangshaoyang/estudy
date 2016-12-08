@@ -19,7 +19,8 @@ class LoginController extends Controller {
         if ($result == $password) {
         	session('name',$username); 
             session('id',$id);
-        	$this->success('登录成功！','javascript:history.back(-2);');
+            $url=session('path');
+        	$this->success('登陆成功',$url);
         	
         }else{
         	$this->error('用户名或密码不正确',U('home/login/login'));
