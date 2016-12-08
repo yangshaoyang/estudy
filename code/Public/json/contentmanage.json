@@ -9,7 +9,7 @@
     ]},
     {"name":"资讯管理", "children":[
         {"id":"base-navtab", "name":"查看资讯", "target":"navtab", "url":"admin/news/index.html"},
-        {"id":"base-dialog", "name":"添加资讯", "target":"navtab", "url":"html/news/addnews.html"}
+        {"id":"base-dialog", "name":"添加资讯", "target":"navtab", "url":"admin/news/addnews.html"}
     ]},
     {"name":"文章管理", "children":[
         {"id":"base-navtab", "name":"查看文章", "target":"navtab", "url":"admin/article/index.html"},
