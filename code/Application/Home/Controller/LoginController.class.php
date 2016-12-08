@@ -15,20 +15,27 @@ class LoginController extends Controller {
         $result = $User->getFieldByEmail($email,'password');
         //dump($result);
         $username = $User->getFieldByEmail($email,'username');
+        $id = $User->getFieldByUserid($email,'userid');
         if ($result == $password) {
         	session('name',$username); 
-        	$this->redirect('/');
+            session('id',$id);
+        	$this->success('登录成功！','javascript:history.back(-2);');
         	
         }else{
         	$this->error('用户名或密码不正确',U('home/login/login'));
         }
-        //if ($data['state']=0) {
+        // if ($data['state']=0) {
         //     $this->error('您的用户未激活，无法登陆，请到邮件验证激活',U('home/login/login'));
         // }
 
     }
     public function exits(){
         session('name',null); 
+        session('id',null);
         $this->redirect('/');
+    }
+
+    public function findpassword(){
+        $this->display();
     }
 }
