@@ -46,25 +46,22 @@ class MatchController extends Controller {
 	      $this->assign("tmatch",$tmatch);
 	      $this->display();
 	}
-	public function user($mid){
+	public function user($mid,$mtime){
 		$user = $_SESSION['name'];
 		// $match=M("user_match");
 
 		$data=array(
-		    	'mname' =>I('post.mname'),
-		    	'mtime'  =>I('post.mtime'),
-		    	'mrequest'=>I('post.mrequest'),
-		    	'mfee'    =>I('post.mfee'),
-		    	'murl'   =>I('post.murl'),
-		    	'mcontent'  =>I('post.mcontent')
+		    	'username'  =>$user,
+		    	'match'
+
 		    	);
-	        $Model=D("match");
+	        $Model=D("user_match");
 	        $Model->create();
 	        $num=$Model->add($data);
 	        if($num>0){
-	        	$this->success("添加成功！",U("match"));
+	        	$this->success("记录成功！将在比赛开始前给您推送通知及注意事项，请尽快前往官网报名",U("matchlist"),20);
 	        }else{
-	        	$this->error("添加失败！",U("match"));
+	        	$this->error("添加失败 /(ㄒoㄒ)/~~，请重试",U("matchlist"));
 	        }
 
 
