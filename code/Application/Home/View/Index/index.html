@@ -76,7 +76,7 @@ session('path',$url);
         </div>
         <div class="xfdiv">
             <div class="xf">
-                <a href="#" class="xz3" class="xz3 xz4" name="xz3">
+                <a href="{:U('/home/certificate/certificatelist')}" class="xz3" class="xz3 xz4" name="xz3">
                     <div class="wtxz" >
                         <img src="__PUBLIC__/images/wtxz.png" width="20" height="20" alt="wtxz" />
                     </div>
@@ -88,7 +88,7 @@ session('path',$url);
                     </div>
                     <p>比赛提醒</p>
                 </a>
-                <a href="#" class="xz3 xz4" name="xz3">
+                <a href="{:U('/home/forum')}" class="xz3 xz4" name="xz3">
                     <div class="wtxz">
                         <img src="__PUBLIC__/images/xzxq.png" width="20" height="20" alt="wtxz" />
                     </div>
@@ -113,24 +113,6 @@ session('path',$url);
                 <input type="text" placeholder="请输入考试或比赛关键字" class="searchtext">
                 <input type="button" value="开始搜索" class="searchbutton"></form>
         </div>
-        <!-- <div class="bannerc">
-        <div class="bannerchange">
-            <img src="__PUBLIC__/images/bannerc_h.png" width="10" height="10" alt="bc" />
-        </div>
-        <div class="bannerchange">
-            <img src="__PUBLIC__/images/bannerc.png" width="10" height="10" alt="bc" />
-        </div>
-        <div class="bannerchange">
-            <img src="__PUBLIC__/images/bannerc.png" width="10" height="10" alt="bc" />
-        </div>
-        <div class="bannerchange">
-            <img src="__PUBLIC__/images/bannerc.png" width="10" height="10" alt="bc" />
-        </div>
-        <div class="bannerchange">
-            <img src="__PUBLIC__/images/bannerc.png" width="10" height="10" alt="bc" />
-        </div>
-    </div>
-    -->
     <div class="b_nav">
         <ul>
             <li class="bnli">
@@ -203,23 +185,20 @@ session('path',$url);
 <div class="xzzc">
     <div class="xzl">
         <h1 class="title">
-            考证政策
-            <a href="#" class="ckgd ckgd2">查看更多&nbsp;>></a>
+            考证信息
+            <a href="home/certificate/certificatelist" class="ckgd ckgd2">查看更多&nbsp;>></a>
         </h1>
         <div class="xzimg">
             <volist name="textuals" id="vo">
-                <a href="#">
+                <a href="home/certificate/content?cid={$vo.cid}">
                     <img src="{$vo.cthumb}" width="280" height="181" alt="xzzc" />
                 </a>
             </volist>
-            <!-- <a href="#">
-            <img src="__PUBLIC__/images/xzzc.png" width="280" height="181" alt="xzzc" / class="xzimg2"></a>
-        -->
     </div>
     <ul>
         <volist name="textual" id="vo">
             <li>
-                <a href="{:U('/home/certificate/contnet')}">{$vo.cname}</a>
+                <a href="home/certificate/content?cid={$vo.cid}">{$vo.cname}</a>
                 <span>{$vo.ctime}</span>
             </li>
         </volist>
@@ -228,22 +207,19 @@ session('path',$url);
 <div class="xzl xzr">
     <h1 class="title">
         比赛信息
-        <a href="#" class="ckgd ckgd2">查看更多&nbsp;>></a>
+        <a href="home/match/matchlist" class="ckgd ckgd2">查看更多&nbsp;>></a>
     </h1>
     <div class="xzimg">
         <volist name="matchs" id="vo">
-            <a href="#">
+            <a href="home/match/content?mid={$vo.mid}">
                 <img src="{$vo.mthumb}" width="280" height="181" alt="xzzc" />
             </a>
         </volist>
-        <!-- <a href="#">
-        <img src="__PUBLIC__/images/xzzc.png" width="280" height="181" alt="xzzc" / class="xzimg2"></a>
-    -->
 </div>
 <ul>
     <volist name="match" id="vo">
         <li>
-            <a href="{:U('/home/match/content')}">{$vo.mname}</a>
+            <a href="home/match/content?mid={$vo.mid}">{$vo.mname}</a>
             <span>{$vo.mtime}</span>
         </li>
     </volist>
