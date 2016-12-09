@@ -41,5 +41,25 @@ class CertificateController extends Controller {
 	      $this->assign("tcertificate",$tcertificate);
 		$this->display();
 	}
+	public function user($cid,$ctime){
+		if ($_SESSION['name'] == NULL) {
+			$this->redirect('home/login/login','请登录');
+		}else{
+			$user = $_SESSION['name'];
+			$data=array(
+			    	'username'  =>$user,
+			    	'certifcateid' =>$cid,
+			    	'time' =>$ctime
+			    	);
+		        $Model=D("user_certificate");
+		        $Model->create();
+		        $num=$Model->add($data);
+		        if($num>0){
+		        	$this->success("记录成功！将在证件考试开始前给您推送通知及注意事项，请尽快前往官网报名",U("certificatelist"),20);
+		        }else{
+		        	$this->error("添加失败 /(ㄒoㄒ)/~~，请重试",U("certificatelist"),5);
+		        }
+	      }
+	}
 
 }

@@ -5,12 +5,11 @@ use \Library\Page;
 /**
  *比赛管理控制器
  */
-
 class MatchController extends Controller {
 	public function index(){
 		$this->display();
 	}
-	 public function matchlist(){
+	public function matchlist(){
 	 	/*选取分类1数据*/
 	 	$matchpage=M("match")->where("mid");
 	 	/*分页码*/
@@ -20,7 +19,7 @@ class MatchController extends Controller {
 		$pageSize =8;
 		// 3. 创建分页类对象
 		$page = new Page($count, $pageSize);
-		// 4.构造查询条件
+		// 4. 构造查询条件
 		$condition=array();
 		$condition['mid'] != NULL;
 		// 5. 分页查询
@@ -34,9 +33,6 @@ class MatchController extends Controller {
 	      $this->assign('match', $matchpage);//遍历数据数据
 	      $pages=$page->show();
 	      $this->assign('pages',$pages);
-
-	      //$match=M("match")->select();
-	      //$this->assign("match",$match);
 	      $this->display();
 	}
 	public function content($mid){
@@ -47,24 +43,24 @@ class MatchController extends Controller {
 	      $this->display();
 	}
 	public function user($mid,$mtime){
-		$user = $_SESSION['name'];
-		// $match=M("user_match");
-
-		$data=array(
-		    	'username'  =>$user,
-		    	'match'
-
-		    	);
-	        $Model=D("user_match");
-	        $Model->create();
-	        $num=$Model->add($data);
-	        if($num>0){
-	        	$this->success("记录成功！将在比赛开始前给您推送通知及注意事项，请尽快前往官网报名",U("matchlist"),20);
-	        }else{
-	        	$this->error("添加失败 /(ㄒoㄒ)/~~，请重试",U("matchlist"));
-	        }
-
-
+		if ($_SESSION['name'] == NULL) {
+			$this->redirect('home/login/login','请登录');
+		}else{
+			$user = $_SESSION['name'];
+			$data=array(
+			    	'username'  =>$user,
+			    	'matchid' =>$mid,
+			    	'time' =>$mtime
+			    	);
+		        $Model=D("user_match");
+		        $Model->create();
+		        $num=$Model->add($data);
+		        if($num>0){
+		        	$this->success("记录成功！将在比赛开始前给您推送通知及注意事项，请尽快前往官网报名",U("matchlist"),20);
+		        }else{
+		        	$this->error("添加失败 /(ㄒoㄒ)/~~，请重试",U("matchlist"),5);
+		        }
+	      }
 	}
 
 }
