@@ -47,16 +47,14 @@ class MatchController extends Controller {
 	      $this->display();
 	}
 	public function user($mid){
-		//
 		$user = $_SESSION['name'];
-		$match=M("user_match");
+		// $match=M("user_match");
 
 		$data=array(
 		    	'mname' =>I('post.mname'),
 		    	'mtime'  =>I('post.mtime'),
 		    	'mrequest'=>I('post.mrequest'),
 		    	'mfee'    =>I('post.mfee'),
-		             'mthumb'    => $image,
 		    	'murl'   =>I('post.murl'),
 		    	'mcontent'  =>I('post.mcontent')
 		    	);
