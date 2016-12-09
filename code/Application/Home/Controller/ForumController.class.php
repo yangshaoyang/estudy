@@ -61,7 +61,6 @@ class ForumController extends Controller {
         	$data=I('post.');
         	$data['content']=$data['editorValue'];
         	$data['userid']=5;
-        	$data['posttime']=2016-12-5;
         	//dump($data);
         	//2插入数据
         	$editModel = M('forum');
