@@ -13,10 +13,6 @@ class MatchController extends Controller {
         $this->assign("mcontent",$match);
         $this->display();
     }
-    public function edit($mid){
-        $this->display();
-    }
-
     public function addimage(){
 //         $upload = new \Think\Upload();//
 //         $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
@@ -72,7 +68,6 @@ class MatchController extends Controller {
         }else{
         	$this->error("添加失败！",U("match"));
         }
-
         $this->display();
     }
     public function editmatch($mid){
@@ -80,6 +75,24 @@ class MatchController extends Controller {
         $this->assign("mcontent",$match);
         $this->display();
         }
+    public function edit($mid){
+        $data=array(
+            'mname'     =>I('post.mname'),
+            'mtime'       =>I('post.mtime'),
+            'mrequest'=>I('post.mrequest'),
+            'mfee'    =>I('post.mfee'),
+            'murl'   =>I('post.murl'),
+            'mcontent'  =>I('post.mcontent')
+        );
+        $Model=M("match");
+        $num=$Model->where('mid='.$mid)->save($data);
+        if($num>0){
+            $this->success("修改成功！");
+        }else{
+            $this->error("修改失败！");
+        }
+        $this->display();
+    }
     public function delete($mid){
         $mid = $_GET['mid'];
         if (M("match")->delete($mid)) {
