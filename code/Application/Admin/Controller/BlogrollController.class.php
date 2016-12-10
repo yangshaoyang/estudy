@@ -1,44 +1,33 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-use Think\Upload;
-class MatchController extends Controller {
+class BlogrollController extends Controller {
     public function index(){
-        $match = M("match")->select();
-        $this->assign("match",$match);
+        $url = M("blogroll")->select();
+        $this->assign("blogroll",$url);
         $this->display();
     }
-    public function content($mid){
-        $match=M("match")->find($mid);
-        $this->assign("mcontent",$match);
-        $this->display();
-    }
-    public function edit($mid){
+    public function edit($id){
         $this->display();
     }
     public function add(){
-      $data=array(
-    	'mname' =>I('post.mname'),
-    	'mtime'  =>I('post.mtime'),
-    	'mrequest'=>I('post.mrequest'),
-    	'mfee'    =>I('post.mfee'),
-             'mthumb'    => $image,
-    	'murl'   =>I('post.murl'),
-    	'mcontent'  =>I('post.mcontent')
-    	);
-        $Model=D("match");
+        $data=array(
+        	'url'   =>I('post.url'),
+        	'name'  =>I('post.name')
+        );
+        $Model=D("blogroll");
         $Model->create();
         $num=$Model->add($data);
         if($num>0){
-        	$this->success("添加成功！",U("match"));
+            $this->success("添加成功！");
         }else{
-        	$this->error("添加失败！",U("match"));
+            $this->error("添加失败！");
         }
         $this->display();
     }
-    public function editurl($mid){
-        $match=M("match")->find($mid);
-        $this->assign("mcontent",$match);
+    public function editblogroll($id){
+        $url = M("blogroll")->find($id);
+        $this->assign("blogroll",$url);
         $this->display();
         }
     public function delete($id){

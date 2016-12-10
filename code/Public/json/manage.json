@@ -5,5 +5,8 @@
     {"name":"管理员管理", "children":[
         {"id":"admin", "name":"查看管理员", "target":"navtab", "url":"admin/admin/index.html"},
         {"id":"addadmin", "name":"添加管理员", "target":"navtab", "url":"admin/admin/addadmin.html"}
+    ]},
+    {"name":"友情链接", "children":[
+        {"id":"blogroll", "name":"友情链接管理", "target":"navtab", "url":"admin/blogroll/index.html"}
     ]}
 ]
