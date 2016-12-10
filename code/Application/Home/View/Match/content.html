@@ -17,28 +17,40 @@
                     <a href="{:U('/')}">易学助手</a>
                 </span>
                 >
-                <a href="../match/matchlist">比赛列表</a>
+                <a href="../../matchlist">比赛列表</a>
                 >
-                <a href="javascript:;">比赛详情</a>
+                <a href="#">比赛详情</a>
             </div>
-            <div class="left">
-                <h1>{$mcontent.mname}</h1>
-                <div class="fl">
-                    <div class="ssfl">
-                        <img src="__PUBLIC__/images/ssfl.gif" width="15" height="15" alt="ssfl" />
-                        <span>要求：{$mcontent.mrequest}</span>
+            <div style="float: left">
+                <div class="left">
+                    <h1>{$mcontent.mname}</h1>
+                    <div class="fl">
+                        <div class="ssfl">
+                            <img src="__PUBLIC__/images/ssfl.gif" width="15" height="15" alt="ssfl" />
+                            <span>要求：{$mcontent.mrequest}</span>
+                        </div>
+                        <div class="ssfl ssfl2">
+                            <img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" />
+                            <span>时间：{$mcontent.mtime}</span>
+                        </div>
+                        <div class="ssfl ssfl2">
+                            <img src="__PUBLIC__/images/zz.gif" width="15" height="15" alt="zz" />
+                            <span>报名费：{$mcontent.mfee} 元</span>
+                        </div>
                     </div>
-                    <div class="ssfl ssfl2">
-                        <img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" />
-                        <span>时间：{$mcontent.mtime}</span>
-                    </div>
-                    <div class="ssfl ssfl2">
-                        <img src="__PUBLIC__/images/zz.gif" width="15" height="15" alt="zz" />
-                        <span>报名费：{$mcontent.mfee} 元</span>
-                    </div>
+                    <p>{$mcontent.mcontent}</p>
                 </div>
-                <p>{$mcontent.mcontent}</p>
+                <!--PC版-->
+                <div id="SOHUCS" sid="{$mcontent.mid}" style="width: 790px;float: left;"></div>
+                <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+                <script type="text/javascript">
+                    window.changyan.api.config({
+                    appid: 'cysJVl9Cb',
+                    conf: 'prod_49c81d0f91ec3cbce38e37a23f0ec3f4'
+                    });
+                </script>
             </div>
+
             <div class="right">
                 <div class="righttop">
                     <h1 class="title">
@@ -93,30 +105,10 @@
                             </a>
                         </div>
                     </volist>
-                    <!-- <div class="lpimg1 lpimg2">
-                    <p>
-                        <a href="__PUBLIC__/#">某比赛</a>
-                        <span>2016年11月14日</span>
-                    </p>
-                    <a href="__PUBLIC__/#">
-                        <img src="__PUBLIC__/images/lp2.png" width="277" height="201" alt="lp" />
-                    </a>
-                </div>
-                <div class="lpimg1 lpimg2">
-                    <p>
-                        <a href="__PUBLIC__/#">某大赛</a>
-                        <span>时间待定</span>
-                    </p>
-                    <a href="__PUBLIC__/#">
-                        <img src="__PUBLIC__/images/lp3.png" width="277" height="201" alt="lp" />
-                    </a>
                 </div>
             </div>
-            -->
         </div>
     </div>
-</div>
-</div>
-<include file="Public/footer.html" />
+    <include file="Public/footer.html" />
 </body>
 </html>
