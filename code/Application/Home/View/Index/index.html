@@ -251,30 +251,11 @@
         <div class="footermiddle footerr">
             <a href="#" class="footernav">友情链接</a>
             <ul>
+                <volist name="blogroll" id="vo">
                 <li>
-                    <a href="#" class="yqlj">易学助手（石家庄）科技有限公司</a>
+                    <a href="{vo.url}" class="yqlj yqlj2">{$vo.name}</a>
                 </li>
-                <li>
-                    <a href="#" class="yqlj yqlj2">北京比赛提示</a>
-                </li>
-                <li>
-                    <a href="#" class="yqlj yqlj2">北京比赛提示</a>
-                </li>
-                <li>
-                    <a href="#" class="yqlj yqlj2">北京比赛提示</a>
-                </li>
-                <li>
-                    <a href="#" class="yqlj">北京比赛提示</a>
-                </li>
-                <li>
-                    <a href="#" class="yqlj yqlj2">北京比赛提示</a>
-                </li>
-                <li>
-                    <a href="#" class="yqlj yqlj2">北京比赛提示</a>
-                </li>
-                <li>
-                    <a href="#" class="yqlj yqlj2">北京比赛提示</a>
-                </li>
+            </volist>
             </ul>
         </div>
     </div>

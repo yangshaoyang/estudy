@@ -8,6 +8,8 @@ class BlogrollController extends Controller {
         $this->display();
     }
     public function edit($id){
+        $url = M("blogroll")->find($id);
+        $this->assign("blogroll",$url);
         $this->display();
     }
     public function add(){
@@ -26,10 +28,19 @@ class BlogrollController extends Controller {
         $this->display();
     }
     public function editblogroll($id){
-        $url = M("blogroll")->find($id);
-        $this->assign("blogroll",$url);
-        $this->display();
+        $data=array(
+            'url'   =>I('post.url'),
+            'name'  =>I('post.name')
+        );
+        $Model=M("blogroll");
+        $num=$Model->where('id='.$id)->save($data);
+        if($num>0){
+            $this->success("修改成功！");
+        }else{
+            $this->error("修改失败！");
         }
+        $this->display();
+    }
     public function delete($id){
         $id = $_GET['id'];
         if (M("blogroll")->delete($id)) {
