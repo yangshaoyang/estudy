@@ -2,13 +2,9 @@
 <form data-toggle="ajaxsearch" data-options="{searchDatagrid:$.CurrentNavtab.find('#datagrid-test-filter')}">
     <fieldset>
         <legend style="font-weight:normal;">论坛搜索：</legend>
-        <div style="margin:0; padding:1px 5px 5px;">
-            <!-- <span>比赛ID：</span>
-            <input type="text" name="obj.code" class="form-control" size="15"> -->
-                
+        <div style="margin:0; padding:1px 5px 5px;">         
             <span>论坛标题：</span>
-            <input type="text" name="obj.name" class="form-control" size="15">
-                
+            <input type="text" name="obj.name" class="form-control" size="15"> 
             <div class="btn-group">
                 <button type="submit" class="btn-green" data-icon="search">开始搜索！</button>
                 <button type="reset" class="btn-orange" data-icon="times">重置</button>
@@ -17,7 +13,7 @@
     </fieldset>
 </form>
 </div>
-<div class="bjui-pageContent">
+<div class="bjui-pageContent" >
     <table class="table table-bordered" id="datagrid-test-filter" data-toggle="datagrid" data-options="{
         height: '100%',
         showToolbar: true,
@@ -30,30 +26,31 @@
     }">
         <thead>
             <tr>
-                <th align="center" width="90">论坛ID</th>
+                <th align="center" width="90">序号</th>
                 <th align="center">分类</th>
+                <th align="center">作者</th>
                 <th align="center">论坛标题</th>
                 <th align="center">发布时间</th>
-                <th align="center">文章简介</th>
                 <th align="center">操作</t
                 h>
             </tr>
             <volist name="forum" id="vo">
-            <tr>
-                <td>{$vo.forumid}</td>
-                <td>{$vo.typeid}</td>
-                <td> {$vo.title}</td>
-                <td> {$vo.posttime}</td>
-                <td> {$vo.content}</td>
-                <td>
-                    <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/article/articledetails/articleid/{$vo.articleid}', title:'{$vo.articletitle}', max:true}">查看</button>&nbsp;
-                    <button type="button" class="btn-blue" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/article/editarticle/articleid/{$vo.articleid}', title:'修改文章：{$vo.articletitle}', max:true}">修改</button>&nbsp;
-                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){alert('删除成功！');}}">删除</button>
+            <tr id="pagination_test_ul1">
+                <td align="center">{$i}</td>
+                <td align="center">{$vo.typeid}</td>
+                <td align="center">{$vo.userid}</td>
+                <td align="center"> {$vo.title}</td>
+                <td align="center"> {$vo.posttime|substr=0,10}</td>
+                <td align="center">
+                    <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/forum/questions/forumid/{$vo.forumid}', title:'{$vo.title}', max:true}">查看</button>&nbsp;
+                    <button type="button" class="btn-red" data-toggle="del.datagrid.tr">删除</button>
                 </td>
             </tr>
             </volist>
         </thead>
     </table>
-    <!--<div data-toggle="pagination" data-options="{total:31, pageSize:5, callback:pagination_test_callback}">-->
-    </div>
+    <div data-toggle="pagination" data-options="{total:37, pageCurrent:1, form:'#pagination_test_searchform'}">
+        </div>
 </div>
+
+
