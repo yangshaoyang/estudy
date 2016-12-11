@@ -1,321 +1,403 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
-	<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
-	<link href="__PUBLIC__/css/questions.css" rel="stylesheet" type="text/css" />
-	<link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
-	<title>论坛详情</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="__PUBLIC__/assets/ico/favicon.ico">
+    <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/questions.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
+    <title>论坛详情</title>
 </head>
 <body>
-<!--首部导航栏-->
-<include file="Public/header.html"/>
-<div class="content">
-<div class="mybody">
-	<div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="{:U('/home/forum/')}">论坛</a> > <a href="{:U('/home/forum/questions')}">论坛详情</a></div>
-    <div class="left">
-	  <div class="question">
-	      <div class="qtop">
-	        	<h1><span>问题：</span>{$fcontent.title}</h1>
-	            <!--<div class="sc">
-	       	  		<img src="__PUBLIC__/images/sc.gif" width="12" height="12" alt="sc" /><span>收藏</span>
-	          	</div>-->
-	       </div>
-            <div class="fl">
-	        	<div class="ssfl">
-	        		<img src="__PUBLIC__/images/ssfl.gif" width="15" height="15" alt="ssfl" />
-	        		<span>所属分类:{$typename}</span>
-	        	</div>
-	            <div class="ssfl ssfl2">
-	            	<img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" /><span>时间：{$fcontent.posttime} </span>
-	            </div>
-	            <div class="ssfl ssfl2">
-	            	<img src="__PUBLIC__/images/twz.gif" width="15" height="15" alt="zz" />
-	            	<span>提问者：{$username}</span>
-	            </div>
-	            <div class="ssfl ssfl2">
-	            	<span>阅读量：{$fcontent.readcount}</span>
-	            </div>
-        	</div>
-        	<div class="qcontent">
-	        	{$fcontent.content}
-	            <!--<div class="sc">
-	       	  		<img src="__PUBLIC__/images/sc.gif" width="12" height="12" alt="sc" /><span>收藏</span>
-	          	</div>-->
-	       </div>
+    <!--首部导航栏-->
+    <include file="Public/header.html"/>
+    <div class="content">
+        <div class="mybody">
+            <div class="bread">
+                <a href="{:U('/')}">易学助手</a>
+                >
+                <a href="{:U('/home/forum/')}">论坛</a>
+                >
+                <a href="{:U('/home/forum/questions')}">论坛详情</a>
+            </div>
+            <div class="left">
+                <div class="question">
+                    <div class="qtop">
+                        <h1>
+                            <span>问题：</span>
+                            {$fcontent.title}
+                        </h1>
+                        <!--<div class="sc">
+                        <img src="__PUBLIC__/images/sc.gif" width="12" height="12" alt="sc" />
+                        <span>收藏</span>
+                    </div>
+                    -->
+                </div>
+                <div class="fl">
+                    <div class="ssfl">
+                        <img src="__PUBLIC__/images/ssfl.gif" width="15" height="15" alt="ssfl" />
+                        <span>所属分类:{$typename}</span>
+                    </div>
+                    <div class="ssfl ssfl2">
+                        <img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" />
+                        <span>时间：{$fcontent.posttime}</span>
+                    </div>
+                    <div class="ssfl ssfl2">
+                        <img src="__PUBLIC__/images/twz.gif" width="15" height="15" alt="zz" />
+                        <span>提问者：{$username}</span>
+                    </div>
+                    <div class="ssfl ssfl2">
+                        <span>阅读量：{$fcontent.readcount}</span>
+                    </div>
+                </div>
+                <div class="qcontent">
+                    {$fcontent.content}
+                    <!--<div class="sc">
+                    <img src="__PUBLIC__/images/sc.gif" width="12" height="12" alt="sc" />
+                    <span>收藏</span>
+                </div>
+                -->
+            </div>
 
         </div>
         <div class="question">
-        	<h2>共有60个回答<span>我要回答</span></h2>
+            <h2>
+                共有60个回答
+                <span>我要回答</span>
+            </h2>
         </div>
         <ul class="contentul">
-        	<li>
-            	<div class="lileft">
-           	    <img src="__PUBLIC__/images/userhead.gif" width="80" height="80" alt="head" />
+            <li>
+                <div class="lileft">
+                    <img src="__PUBLIC__/images/userhead.gif" width="80" height="80" alt="head" />
                 </div>
                 <div class="liright">
-                	<div class="rtop">
-                    	<h3>姓名：王子文</h3>
+                    <div class="rtop">
+                        <h3>姓名：王子文</h3>
                         <a>和TA交流</a>
-                        <div class="ssfl ssfl2 ssflul"><img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" /><span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00 </span></div>
+                        <div class="ssfl ssfl2 ssflul">
+                            <img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" />
+                            <span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00</span>
+                        </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
+                        <div class="hd">
+                            <h3>回答：</h3>
                         </div>
                         <div class="hdp">
-                        <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
+                            <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
                         </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>追问：</h3>
+                        <div class="hd">
+                            <h3>追问：</h3>
                         </div>
                         <div class="zwp">
-                        <p>大学的成绩是只需要达到60就可以了吗？</p>
+                            <p>大学的成绩是只需要达到60就可以了吗？</p>
                         </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
+                        <div class="hd">
+                            <h3>回答：</h3>
                         </div>
                         <div class="hdp">
-                        <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
+                            <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
                         </div>
                     </div>
-                    
+
                 </div>
                 <span class="hf">回复</span>
             </li>
             <li>
-            	<div class="lileft">
-           	    <img src="__PUBLIC__/images//userhead.gif" width="80" height="80" alt="head" />
+                <div class="lileft">
+                    <img src="__PUBLIC__/images//userhead.gif" width="80" height="80" alt="head" />
                 </div>
                 <div class="liright">
-                	<div class="rtop">
-                    	<h3>姓名：王子文</h3>
+                    <div class="rtop">
+                        <h3>姓名：王子文</h3>
                         <a>和TA交流</a>
-                        <div class="ssfl ssfl2 ssflul"><img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" /><span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00 </span></div>
+                        <div class="ssfl ssfl2 ssflul">
+                            <img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" />
+                            <span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00</span>
+                        </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
+                        <div class="hd">
+                            <h3>回答：</h3>
                         </div>
                         <div class="hdp">
-                        <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
+                            <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
                         </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>追问：</h3>
+                        <div class="hd">
+                            <h3>追问：</h3>
                         </div>
                         <div class="zwp">
-                        <p>大学的成绩是只需要达到60就可以了吗？</p>
+                            <p>大学的成绩是只需要达到60就可以了吗？</p>
                         </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
+                        <div class="hd">
+                            <h3>回答：</h3>
                         </div>
                         <div class="hdp">
-                        <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
+                            <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
                         </div>
                     </div>
-                    
+
                 </div>
                 <span class="hf">回复</span>
             </li>
             <li>
-            	<div class="lileft">
-           	    <img src="__PUBLIC__/images/userhead.gif" width="80" height="80" alt="head" />
+                <div class="lileft">
+                    <img src="__PUBLIC__/images/userhead.gif" width="80" height="80" alt="head" />
                 </div>
                 <div class="liright">
-                	<div class="rtop">
-                    	<h3>姓名：王子文</h3>
+                    <div class="rtop">
+                        <h3>姓名：王子文</h3>
                         <a>和TA交流</a>
-                        <div class="ssfl ssfl2 ssflul"><img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" /><span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00 </span></div>
+                        <div class="ssfl ssfl2 ssflul">
+                            <img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" />
+                            <span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00</span>
+                        </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
+                        <div class="hd">
+                            <h3>回答：</h3>
                         </div>
                         <div class="hdp">
-                        <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
+                            <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
                         </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>追问：</h3>
+                        <div class="hd">
+                            <h3>追问：</h3>
                         </div>
                         <div class="zwp">
-                        <p>大学的成绩是只需要达到60就可以了吗？</p>
+                            <p>大学的成绩是只需要达到60就可以了吗？</p>
                         </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
+                        <div class="hd">
+                            <h3>回答：</h3>
                         </div>
                         <div class="hdp">
-                        <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
+                            <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
                         </div>
                     </div>
-                    
+
                 </div>
                 <span class="hf">回复</span>
             </li>
             <li>
-            	<div class="lileft">
-           	    <img src="__PUBLIC__/images//userhead.gif" width="80" height="80" alt="head" />
+                <div class="lileft">
+                    <img src="__PUBLIC__/images//userhead.gif" width="80" height="80" alt="head" />
                 </div>
                 <div class="liright">
-                	<div class="rtop">
-                    	<h3>姓名：王子文</h3>
+                    <div class="rtop">
+                        <h3>姓名：王子文</h3>
                         <a>和TA交流</a>
-                        <div class="ssfl ssfl2 ssflul"><img src="__PUBLIC__/images//sj.gif" width="15" height="15" alt="sj" /><span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00 </span></div>
+                        <div class="ssfl ssfl2 ssflul">
+                            <img src="__PUBLIC__/images//sj.gif" width="15" height="15" alt="sj" />
+                            <span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00</span>
+                        </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
+                        <div class="hd">
+                            <h3>回答：</h3>
                         </div>
                         <div class="hdp">
-                        <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
+                            <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
                         </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>追问：</h3>
+                        <div class="hd">
+                            <h3>追问：</h3>
                         </div>
                         <div class="zwp">
-                        <p>大学的成绩是只需要达到60就可以了吗？</p>
+                            <p>大学的成绩是只需要达到60就可以了吗？</p>
                         </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
+                        <div class="hd">
+                            <h3>回答：</h3>
                         </div>
                         <div class="hdp">
-                        <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
+                            <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
                         </div>
                     </div>
-                    
+
                 </div>
                 <span class="hf">回复</span>
             </li>
-           <li>
-            	<div class="lileft">
-           	    <img src="__PUBLIC__/images//userhead.gif" width="80" height="80" alt="head" />
+            <li>
+                <div class="lileft">
+                    <img src="__PUBLIC__/images//userhead.gif" width="80" height="80" alt="head" />
                 </div>
                 <div class="liright">
-                	<div class="rtop">
-                    	<h3>姓名：王子文</h3>
+                    <div class="rtop">
+                        <h3>姓名：王子文</h3>
                         <a>和TA交流</a>
-                        <div class="ssfl ssfl2 ssflul"><img src="__PUBLIC__/images//sj.gif" width="15" height="15" alt="sj" /><span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00 </span></div>
+                        <div class="ssfl ssfl2 ssflul">
+                            <img src="__PUBLIC__/images//sj.gif" width="15" height="15" alt="sj" />
+                            <span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00</span>
+                        </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
+                        <div class="hd">
+                            <h3>回答：</h3>
                         </div>
                         <div class="hdp">
-                        <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
+                            <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
                         </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>追问：</h3>
+                        <div class="hd">
+                            <h3>追问：</h3>
                         </div>
                         <div class="zwp">
-                        <p>大学的成绩是只需要达到60就可以了吗？</p>
+                            <p>大学的成绩是只需要达到60就可以了吗？</p>
                         </div>
                     </div>
                     <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
+                        <div class="hd">
+                            <h3>回答：</h3>
                         </div>
                         <div class="hdp">
-                        <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
+                            <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
                         </div>
                     </div>
-                    
+
                 </div>
                 <span class="hf">回复</span>
             </li>
         </ul>
         <div class="page">
-            	<ul>
-                	<li class="up"><a href="#">上一页</a></li>
-                    <li class="now">1</li>
-                    <li class="num"><a href="#">2</a></li>
-                    <li class="num"><a href="#">3</a></li>
-                    <li class="num"><a href="#">4</a></li>
-                    <li class="num"><a href="#">5</a></li>
-                    <li>...</li>
-                    <li class="num"><a href="#">8</a></li>
-                    <li class="up"><a href="#">下一页</a></li>
-                </ul>
-    </div>
+            <ul>
+                <li class="up">
+                    <a href="#">上一页</a>
+                </li>
+                <li class="now">1</li>
+                <li class="num">
+                    <a href="#">2</a>
+                </li>
+                <li class="num">
+                    <a href="#">3</a>
+                </li>
+                <li class="num">
+                    <a href="#">4</a>
+                </li>
+                <li class="num">
+                    <a href="#">5</a>
+                </li>
+                <li>...</li>
+                <li class="num">
+                    <a href="#">8</a>
+                </li>
+                <li class="up">
+                    <a href="#">下一页</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="right">
-    	<div class="righttop">
-        	<h1 class="title">相关问题<a href="#" class="ckgd">更多&nbsp;>></a></h1>
+        <div class="righttop">
+            <h1 class="title">
+                相关问题
+                <a href="#" class="ckgd">更多&nbsp;>></a>
+            </h1>
             <ul class="topul">
-	        	<li><a href="#">大一新生应该怎样准备大学生活？</a><span>01-01</span></li>
-	            <li><a href="#">大一应该多参加什么类型的社团活动？</a><span>01-01</span></li>
-	            <li><a href="#">大一的生活应该怎么度过才算不荒废？</a><span>01-01</span></li>
-	            <li><a href="#">大一新生应该怎样准备大学生活？</a><span>01-01</span></li>
-	            <li><a href="#">大一应该多参加什么类型的社团活动？</a><span>01-01</span></li>
-	            <li><a href="#">大一的生活应该怎么度过才算不荒废？</a><span>01-01</span></li>
-	            <li><a href="#">大一时候可是考哪些专业证件考试？</a><span>01-01</span></li>
-        	</ul>
+                <li>
+                    <a href="#">大一新生应该怎样准备大学生活？</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="#">大一应该多参加什么类型的社团活动？</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="#">大一的生活应该怎么度过才算不荒废？</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="#">大一新生应该怎样准备大学生活？</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="#">大一应该多参加什么类型的社团活动？</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="#">大一的生活应该怎么度过才算不荒废？</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="#">大一时候可是考哪些专业证件考试？</a>
+                    <span>01-01</span>
+                </li>
+            </ul>
         </div>
-       	<div class="righttop righttop2">
-        	<h1 class="title title2">论坛达人<a href="#" class="ckgd">更多&nbsp;>></a></h1>
+        <div class="righttop righttop2">
+            <h1 class="title title2">
+                论坛达人
+                <a href="#" class="ckgd">更多&nbsp;>></a>
+            </h1>
             <div class="xzdr">
-       	    	<img src="__PUBLIC__/images//dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <img src="__PUBLIC__/images//dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
                 <div class="xzright">
-                <div class="drname">
-                <h1>王子文</h1>
-                <a>和TA交流</a>
-                </div>
-                <h3>达人介绍</h3>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。</p>
+                    <div class="drname">
+                        <h1>王子文</h1>
+                        <a>和TA交流</a>
+                    </div>
+                    <h3>达人介绍</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。
+                    </p>
                 </div>
             </div>
             <div class="xzdr xzdr2">
-       	    	<img src="__PUBLIC__/images//dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <img src="__PUBLIC__/images//dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
                 <div class="xzright">
-                <div class="drname">
-                <h1>王子文</h1>
-                <a>和TA交流</a>
-                </div>
-                <h3>达人介绍</h3>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。</p>
-                </div>
-            </div>
-             <div class="xzdr xzdr2">
-       	    	<img src="__PUBLIC__/images//dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
-                <div class="xzright">
-                <div class="drname">
-                <h1>王子文</h1>
-                <a>和TA交流</a>
-                </div>
-                <h3>达人介绍</h3>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。</p>
+                    <div class="drname">
+                        <h1>王子文</h1>
+                        <a>和TA交流</a>
+                    </div>
+                    <h3>达人介绍</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。
+                    </p>
                 </div>
             </div>
             <div class="xzdr xzdr2">
-       	    	<img src="__PUBLIC__/images//dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <img src="__PUBLIC__/images//dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
                 <div class="xzright">
-                <div class="drname">
-                <h1>王子文</h1>
-                <a>和TA交流</a>
-                </div>
-                <h3>达人介绍</h3>
-               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。</p>
+                    <div class="drname">
+                        <h1>王子文</h1>
+                        <a>和TA交流</a>
+                    </div>
+                    <h3>达人介绍</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。
+                    </p>
                 </div>
             </div>
-      </div>
-</div>
+            <div class="xzdr xzdr2">
+                <img src="__PUBLIC__/images//dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <div class="xzright">
+                    <div class="drname">
+                        <h1>王子文</h1>
+                        <a>和TA交流</a>
+                    </div>
+                    <h3>达人介绍</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
 <!--底部footer-->
