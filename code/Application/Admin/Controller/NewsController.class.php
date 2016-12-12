@@ -41,8 +41,8 @@ class NewsController extends Controller {
     }
     //修改帖子
      public function editNews($newsid){
-        $data = I('post.') 
-	  $news=M("news")->find($newsid);
+        $data = I('post.');
+        $news=M("news")->find($newsid);
        $num=$Model->where('newsid='.$newsid)->save($data);
 	   if($num>0){
             $this->success("修改成功！");
