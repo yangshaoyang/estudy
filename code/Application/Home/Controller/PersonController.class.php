@@ -1,8 +1,3 @@
-<!-- 
-文件：前台个人中心控制器
-作者：徐稳越
-最后修改日期：2016年12月12日 
--->
 <?php
 namespace Home\Controller;
 use Think\Controller;
