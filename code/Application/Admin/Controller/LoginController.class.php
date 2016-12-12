@@ -13,11 +13,9 @@ class LoginController extends Controller {
     	$adminid = $data->getFieldByAdminid($name,'adminid');
     	$adname =  $data->getFieldByAdname($name,'adname');
     	$adpassword =  $data->getFieldByAdname($name,'adpassword');
-        // var_dump($adminid,$adname,$adpassword);
-        // exits;
     	if($password == $adpassword){
-    			session('name',$name);
-    			$this->success('登陆中...',U('admin/index/index'));
+    		session('name',$name);
+    		$this->redirect('../admin');
     	}else{
     		$this->error('用户名或密码不正确',U('admin/login/login'));
     	}

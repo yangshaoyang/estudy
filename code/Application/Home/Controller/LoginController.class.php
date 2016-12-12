@@ -7,9 +7,9 @@ class LoginController extends Controller {
     }
     public function validation(){
         $data = I('post.');
-    	$User = M('users');
+        $User = M('users');
         $email = $data['yourname'];
-        
+
         $password = md5($data['yourpassword']);
         //dump($password);
         $result = $User->getFieldByEmail($email,'password');
@@ -17,11 +17,11 @@ class LoginController extends Controller {
         $username = $User->getFieldByEmail($email,'username');
         $id = $User->getFieldByUserid($email,'userid');
         if ($result == $password) {
-        	session('name',$username); 
+        	session('name',$username);
             session('id',$id);
             $url=session('path');
         	$this->success('登陆成功',$url);
-        	
+
         }else{
         	$this->error('用户名或密码不正确',U('home/login/login'));
         }
@@ -31,7 +31,7 @@ class LoginController extends Controller {
 
     }
     public function exits(){
-        session('name',null); 
+        session('name',null);
         session('id',null);
         $this->redirect('/');
     }
