@@ -51,23 +51,23 @@ class ArticleController extends Controller {
 	   $this->display();
 	 }
      //修改帖子
-     public function edit($articleid){
-        $data=array(
-            'articletitle'=>I('post.articletitle'),
-            'articleauthor'=>I('post.articleauthor'),
-            'articletime'=>I('post.articletime'),
-            'articleintroduction'=>I('post.articleintroduction'),
-            'articlecontent'=>I('post.articlecontent')
-            );
-        $Model=M('article');
-        $num=$Model->where('articleid='.$articleid)->save($data);
-        if($num>0){
-            $this->success("修改成功！");
-        }else{
-            $this->error("修改失败！");
-        }
-        $this-.display();
-     }
+     // public function edit($articleid){
+     //    $data=array(
+     //        'articletitle'=>I('post.articletitle'),
+     //        'articleauthor'=>I('post.articleauthor'),
+     //        'articletime'=>I('post.articletime'),
+     //        'articleintroduction'=>I('post.articleintroduction'),
+     //        'articlecontent'=>I('post.articlecontent')
+     //        );
+     //    $Model=M('article');
+     //    $num=$Model->where('articleid='.$articleid)->save($data);
+     //    if($num>0){
+     //        $this->success("修改成功！");
+     //    }else{
+     //        $this->error("修改失败！");
+     //    }
+     //    $this-.display();
+     // }
     //删除帖子
       public function delete($articleid){
         $articleid = $_GET['articleid'];
