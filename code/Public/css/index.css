@@ -26,14 +26,13 @@
 .nav{
 	float:right;
 	width:344px;
-	height:70px;}
+	height:70px;
+	margin-top:25px;}
 .nav a{
 	float:left;
 	color:#FFF;}
 .log{
 	margin-left:5px;}
-.nav{
-	margin-top:45px;}
 .nav p{
 	margin-right:5px;
 	float:right;
@@ -184,7 +183,7 @@
 	float:left;
 	margin-left:5px;}
 .b_nav{
-	margin-top:180px;
+	margin-top:188px;
 	overflow:auto;}
 .b_nav ul{
 	margin-left:75px;
