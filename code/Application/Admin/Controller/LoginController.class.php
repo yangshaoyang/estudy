@@ -22,6 +22,7 @@ class LoginController extends Controller {
     		$this->error('用户名或密码不正确',U('admin/login/login'));
     	}
     }
+//注销用户
     public function exits(){
     	session('name',null);
     	$this->redirect('admin/login/login');
