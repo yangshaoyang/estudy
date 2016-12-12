@@ -21,7 +21,6 @@ class CertificateController extends Controller {
     		'ctime'  =>I('post.ctime'),
     		'crequest'=>I('post.crequest'),
     		'cfee'    =>I('post.cfee'),
-                          // 'cthumb'    =>I('post.cthumb'),
     		'curl'   =>I('post.curl'),
     		'ccontent'  =>I('post.ccontent')
     	);
