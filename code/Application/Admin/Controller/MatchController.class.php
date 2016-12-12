@@ -34,7 +34,7 @@ class MatchController extends Controller {
     	'mtime'  =>I('post.mtime'),
     	'mrequest'=>I('post.mrequest'),
     	'mfee'    =>I('post.mfee'),
-             'mthumb'    => $image,
+             //'mthumb'    => $image,
     	'murl'   =>I('post.murl'),
     	'mcontent'  =>I('post.mcontent')
     	);

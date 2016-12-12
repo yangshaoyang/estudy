@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>B-JUI 系统登录</title>
+<title>eStudy系统登录</title>
 <meta name="renderer" content="webkit">
 <script src="__PUBLIC__/B-JUI/js/jquery-1.11.3.min.js"></script>
 <script src="__PUBLIC__/B-JUI/js/jquery.cookie.js"></script>
@@ -13,7 +13,7 @@
 html, body { height: 100%; overflow: hidden; }
 body {
     font-family: "Verdana", "Tahoma", "Lucida Grande", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
-    background: url(images/loginbg_01.jpg) no-repeat center center fixed;
+    background: url(imges/loginbg_01.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 .form-control{height:37px;}
@@ -28,6 +28,9 @@ body {
 }
 </style>
 <script type="text/javascript">
+$(function() {
+    choose_bg();
+});
     function check_admin() {
         var j_username = document.getElementId("j_username");
         if(j_username.value == ""){
@@ -36,10 +39,10 @@ body {
         }
         var j_password = document.getElementId("j_password");
         if(j_password.value ==""){
-            alert("密码不能为空");        
+            alert("密码不能为空");
         }
     }
-    function choose_bg() {
+function choose_bg() {
     var bg = Math.floor(Math.random() * 9 + 1);
     $('body').css('background-image', 'url(__PUBLIC__/images/loginbg_0'+ bg +'.jpg)');
 }
@@ -68,7 +71,7 @@ body {
             </div>
             <div class="form-group">
                 <div class="checkbox">
-                    <label for="j_remember" class="m"><input id="j_remember" type="checkbox" value="true">&nbsp;记住登陆账号!</label>
+                    <label for="j_remember" class="m"><input id="j_remember" type="checkbox" value="true">&nbsp;记住登录账号!</label>
                 </div>
             </div>
             <div class="text-center">
@@ -77,7 +80,7 @@ body {
             </div>
             <div class="text-center">
                 <hr>
-                2014 - 2016 <a href="login.html">eStudy后台管理</a>
+                2016 <a href="login.html">eStudy后台管理</a>
             </div>
         </form>
     </div>
