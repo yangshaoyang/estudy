@@ -12,33 +12,33 @@
 <include file="Public/header.html" />
 
 <div class="content">
-	<div class="mybody">
-    	<div class="bread"><span>易学助手</span> > <a href="{:U('/home/person/homepage')}">个人中心</a> > <a href="{:U('/home/person/message')}">消息管理</a> </div>
-		<!--个人中心left-->
+    <div class="mybody">
+        <div class="bread"><span>易学助手</span> > <a href="{:U('/home/person/homepage')}">个人中心</a> > <a href="{:U('/home/person/message')}">消息管理</a> </div>
+        <!--个人中心left-->
         <div class="personal_left">
-        	<div class="user">
-            	<a href="#"><img src="__PUBLIC__/images/user.gif" width="150" height="150" alt="user" /></a>
-                <p>欢迎你，XXX</p>
+            <div class="user">
+                <a href="#"><img src="__PUBLIC__/images/user.gif" width="150" height="150" alt="user" /></a>
+                <p>欢迎您   {$_SESSION['name']}</p>
             </div>
             <ul class="left_nav">
-                	<li class="left_nav_now"><a href="{:U('/home/person/homepage')}">个人首页</a></li>
+                    <li class="left_nav_now"><a href="{:U('/home/person/homepage')}">个人首页</a></li>
                     <li ><a href="{:U('/home/person/permessage')}">个人信息管理</a></li>
                     <li><a href="{:U('/home/person/message')}">消息管理</a></li>
                     <li><a href="{:U('/home/person/repassword')}">密码管理</a></li>
-			</ul>    	
+            </ul>       
         </div>
         <!--个人中心right-->
         <div class="personal_table_right">
             <div class="ss ss1">
-            	<form action="">
-                	<input type="text" value="请输入需要搜索的信息" name="ssk" />
+                <form action="">
+                    <input type="text" value="请输入需要搜索的信息" name="ssk" />
                     <input type="button" value="" name="ssn" />
                 </form>
             </div>
             <div class="table1">
-            	<table cellspacing="0">
-                	<tr>
-                    	<td class="border_top">时间</td>
+                <table cellspacing="0">
+                    <tr>
+                        <td class="border_top">时间</td>
                         <td class="border_top">所属类别</td>
                         <td class="border_top">简介</td>
                         <td class="border_top border_right">操作</td>
@@ -63,54 +63,54 @@
 
                     <!-- <tr>
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
-                    	<td>比赛提示</td>
+                        <td>比赛提示</td>
                         <td>文字测试文字测试文字测试</td>
                         <td class="border_right"><a href="{:U('/home/match/matchlist')}">查看</a></td>
                     </tr>
                     <tr>
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
-                    	<td>考证信息</td>
+                        <td>考证信息</td>
                         <td>文字测试文字测试文字测试</td>
                         <td class="border_right"><a href="{:U('/home/certificate/certificatelist')}">查看</a></td>
                     </tr>
                     
                     <tr>
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
-                    	<td>论坛消息</td>
+                        <td>论坛消息</td>
                         <td>文字测试文字测试文字测试</td>
                         <td class="border_right"><a href="{:U('/home/luntan/index')}">查看</a></td>
                     </tr>
                     <tr>
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
-                    	<td>论坛消息</td>
+                        <td>论坛消息</td>
                         <td>文字测试文字测试文字测试</td>
                         <td class="border_right"><a href="{:U('/home/luntan/index')}">查看</a></td>
                     </tr>
                     
                     <tr>
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
-                    	<td>考证信息</td>
+                        <td>考证信息</td>
                         <td>文字测试文字测试文字测试</td>
                         <td class="border_right"><a href="{:U('/home/certificate/certificatelist')}">查看</a></td>
                     </tr>
                     <tr>
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
-                    	<td>比赛提示</td>
+                        <td>比赛提示</td>
                         <td>文字测试文字测试文字测试</td>
                         <td class="border_right"><a href="{:U('/home/match/matchlist')}">查看</a></td>
                     </tr>
                     
                     <tr>
                         <td>2016.01.01&nbsp;&nbsp;17:00</td>
-                    	<td>论坛消息</td>
+                        <td>论坛消息</td>
                         <td>文字测试文字测试文字测试</td>
                         <td class="border_right"><a href="{:U('/home/luntan/index')}">查看</a></td>
                     </tr> -->
                 </table>
             </div>
              <div class="page">
-            	<!-- <ul>
-                	<li class="up"><a href="#">上一页</a></li>
+                <!-- <ul>
+                    <li class="up"><a href="#">上一页</a></li>
                     <li class="now">1</li>
                     <li class="num"><a href="#">2</a></li>
                     <li class="num"><a href="#">3</a></li>
@@ -122,7 +122,7 @@
                 </ul> -->
             </div>
         </div>
-	</div>
+    </div>
 </div>
 
 <include file="Public/footer.html" />

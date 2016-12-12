@@ -35,11 +35,28 @@ class AdminController extends Controller {
 
         $this->display();
     }
-    //修改管理员
+    
      public function editadmin($adminid){
         $admin=M("admin")->find($adminid);
         $this->assign("admessage",$admin);
         $this->display();
+    }
+    //修改管理员
+    public function edit($adminid){
+      $data=array(
+        'adname'=>I('post.adname'),
+        'ademail'=>I('post.ademail'),
+        'adphonenum'=>I('post.adphonenum')
+        );
+       $Model=M('admin');
+       $num=$Model->where('adminid='.$adminid)->save($data);
+       if($num>0){
+            $this->success("修改成功！");
+        }else{
+            $this->error("修改失败！");
+        }
+        $this->display();
+
     }
     //删除管理员
     public function delete($adminid){
