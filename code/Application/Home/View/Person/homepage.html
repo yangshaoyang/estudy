@@ -18,30 +18,30 @@
 
 <!--个人中心房源管理-->
 <div class="content">
-	<div class="mybody">
-    	<!-- <div class="bread"><span>易学助手</span> > <a href="{:U('/home/person/homepage')}">个人中心</a></div> -->
+    <div class="mybody">
+        <!-- <div class="bread"><span>易学助手</span> > <a href="{:U('/home/person/homepage')}">个人中心</a></div> -->
         <div class="bread"><span><a href="{:U('/')}">易学助手</a></span> > <a href="{:U('/home/person/homepage')}">个人中心</a></div> 
-		<!--个人中心left-->
+        <!--个人中心left-->
         <div class="personal_left">
-        	<div class="user">
-            	<a href="#"><img src="__PUBLIC__/images/user.gif" width="150" height="150" alt="user" /></a>
-                <p>欢迎您{$users.username}</p>
+            <div class="user">
+                <a href="#"><img src="__PUBLIC__/images/user.gif" width="150" height="150" alt="user" /></a>
+                <p>欢迎您  {$users.username}</p>
             </div>
             <ul class="left_nav">
-                	<li class="left_nav_now"><a href="{:U('/home/person/homepage')}">个人首页</a></li>
+                    <li class="left_nav_now"><a href="{:U('/home/person/homepage')}">个人首页</a></li>
                     <li ><a href="{:U('/home/person/permessage')}">个人信息管理</a></li>
                     <li><a href="{:U('/home/person/message')}">消息管理</a></li>
                     <li><a href="{:U('/home/person/repassword')}">密码管理</a></li>
                     <!--<li><a href="#">我的收藏</a></li>
                     <li><a href="#">我的足迹</a></li>-->
-			</ul>    	
+            </ul>       
         </div>
         <!--个人中心right-->
         <div class="personal_else">
-        	<h1>当前成长值</h1>
+            <h1>当前成长值</h1>
             <div class="exper"><img src="__PUBLIC__/images/experience.png" alt="exper" width="940" height="100" /></div>
             <div class="exper1 else_bg">
-            	<h1 class="h11">个人信息</h1>
+                <h1 class="h11">个人信息</h1>
                 
                   <ul>
                     <li>用户名<span>{$users.username}</span></li>
@@ -54,11 +54,11 @@
                    <!--  <li class="garyli">{$users.hobby}</li> -->
                   </ul>
                 
-			</div>
+            </div>
             <div class="exper1 else_bg exper2">
-            	<h1 class="h11">未读消息<!-- <span>【7条】</span> --></h1>
+                <h1 class="h11">未读消息<!-- <span>【7条】</span> --></h1>
                 <ul>
-                	<!-- <li><a href="#">消息一</a><span>01-01</span></li>
+                    <!-- <li><a href="#">消息一</a><span>01-01</span></li>
                     <li><a href="#">消息一</a><span>01-01</span></li>
                     <li><a href="#">消息一</a><span>01-01</span></li>
                     <li><a href="#">消息一</a><span>01-01</span></li>
@@ -75,15 +75,15 @@
                     </volist>
                     </ul>
                 
-			</div>
+            </div>
             <!--<div class="exper_button">
-            	<a href="#">菜单一</a>
+                <a href="#">菜单一</a>
                 <a href="#">菜单一</a>
                 <a href="#">菜单一</a>
                 <a href="#">菜单一</a>
             </div>-->
         </div>
-	</div>
+    </div>
 </div>
 
 <include file="Public/footer.html" />
