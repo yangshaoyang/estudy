@@ -39,7 +39,7 @@
                 <td>{$vo.name}</td>
                 <td><a href="{$vo.url}">{$vo.url}</a></td>
                 <td align="center">
-                    <button type="button" class="btn-blue" onclick="dialog_url();">修改</button>&nbsp;
+                    <button type="button" class="btn-blue" onclick="dialog_url(this);" id="{$vo.id}">修改</button>&nbsp;
                     <button type="button" class="btn-red" data-toggle="alertmsg" target="ajaxTodo" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/blogroll/delete/id/{$vo.id}');window.close();}}">删除</button>
                 </td>
             </tr>
@@ -53,10 +53,12 @@
 
 
 <script type="text/javascript">
-function dialog_url() {
+function dialog_url(obj) {
+    alert(obj.id)
+    var id =obj.id;
     BJUI.dialog({
         id:'edit',
-        url:'__MODULE__/blogroll/edit/id/{$vo.id}',
+        url:"__MODULE__/blogroll/edit/id/id",
         title:'修改友情链接'
     })
 }
