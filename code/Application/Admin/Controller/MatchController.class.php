@@ -60,8 +60,9 @@ class MatchController extends Controller {
             'mrequest'=>I('post.mrequest'),
             'mfee'    =>I('post.mfee'),
             'murl'   =>I('post.murl'),
-            'mcontent'  =>I('post.mcontent')
+            'mcontent'  =>I('post.content')
         );
+// dump($data);
         $Model=M("match");
         $num=$Model->where('mid='.$mid)->save($data);
         if($num>0){
