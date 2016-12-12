@@ -1,11 +1,27 @@
+<!--
+作者：李小雨
+日期：2016.12.11
+描述：论坛评论内容页
+-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="__PUBLIC__/assets/ico/favicon.ico"/>
 	<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
 	<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
 	<link href="__PUBLIC__/css/questions.css" rel="stylesheet" type="text/css" />
 	<link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
+	<link href="__PUBLIC__/css/forumlist.css" rel="stylesheet" type="text/css" />
+	<script src="__PUBLIC__/js/jquery.js" ></script>
+    <!-- 富文本框配置文件 -->
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/js/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/js/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/lang/zh-cn/zh-cn.js"></script>
+    <script src="__PUBLIC__/js/forum.js"></script>
 	<title>论坛详情</title>
 </head>
 <body>
@@ -13,14 +29,17 @@
 <include file="Public/header.html"/>
 <div class="content">
 <div class="mybody">
-	<div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="{:U('/home/forum/')}">论坛</a> > <a href="{:U('/home/forum/questions')}">论坛详情</a></div>
+	<div class="bread">
+		<a href="{:U('/')}">易学助手</a> > 
+		<a href="{:U('/home/forum/')}">论坛</a> > 
+		<a href="{:U('/home/forum/questions')}">论坛详情</a></div>
     <div class="left">
 	  <div class="question">
 	      <div class="qtop">
 	        	<h1><span>问题：</span>{$fcontent.title}</h1>
-	            <!--<div class="sc">
-	       	  		<img src="__PUBLIC__/images/sc.gif" width="12" height="12" alt="sc" /><span>收藏</span>
-	          	</div>-->
+	            <div class="sc">
+	       	  		<img src="__PUBLIC__/images/sc.gif" width="12" height="12" alt="sc" /><span>举报</span>
+	          	</div>
 	       </div>
             <div class="fl">
 	        	<div class="ssfl">
@@ -47,86 +66,45 @@
 
         </div>
         <div class="question">
-        	<h2>共有60个回答<span>我要回答</span></h2>
+        	<a href="#sub">
+        		<h2>共有{$count_comment}个回答<span>我要回答</span></h2>
+        	</a>
         </div>
         <ul class="contentul">
-        	<li>
-            	<div class="lileft">
-           	    <img src="__PUBLIC__/images/userhead.gif" width="80" height="80" alt="head" />
-                </div>
-                <div class="liright">
-                	<div class="rtop">
-                    	<h3>姓名：王子文</h3>
-                        <a>和TA交流</a>
-                        <div class="ssfl ssfl2 ssflul"><img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" /><span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00 </span></div>
-                    </div>
-                    <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
-                        </div>
-                        <div class="hdp">
-                        <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
-                        </div>
-                    </div>
-                    <div class="rtop">
-                    	<div class="hd">
-                    	<h3>追问：</h3>
-                        </div>
-                        <div class="zwp">
-                        <p>大学的成绩是只需要达到60就可以了吗？</p>
-                        </div>
-                    </div>
-                    <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
-                        </div>
-                        <div class="hdp">
-                        <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <span class="hf">回复</span>
-            </li>
-            <li>
-            	<div class="lileft">
-           	    <img src="__PUBLIC__/images//userhead.gif" width="80" height="80" alt="head" />
-                </div>
-                <div class="liright">
-                	<div class="rtop">
-                    	<h3>姓名：王子文</h3>
-                        <a>和TA交流</a>
-                        <div class="ssfl ssfl2 ssflul"><img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" /><span>时间：2016-01-01&nbsp;&nbsp;&nbsp;&nbsp;17:00:00 </span></div>
-                    </div>
-                    <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
-                        </div>
-                        <div class="hdp">
-                        <p>多参见院级组织、社团活动和自己专业相关的比赛资讯。</p>
-                        </div>
-                    </div>
-                    <div class="rtop">
-                    	<div class="hd">
-                    	<h3>追问：</h3>
-                        </div>
-                        <div class="zwp">
-                        <p>大学的成绩是只需要达到60就可以了吗？</p>
-                        </div>
-                    </div>
-                    <div class="rtop">
-                    	<div class="hd">
-                    	<h3>回答：</h3>
-                        </div>
-                        <div class="hdp">
-                        <p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <span class="hf">回复</span>
-            </li>
-            <li>
+        	<volist name="comment" id="vo">
+	        	<li>
+	            	<div class="lileft">
+	           	    <img src="__PUBLIC__/images/userhead.gif" width="80" height="80" alt="head" />
+	                </div>
+	                <div class="liright">
+                		<div class="rtop">
+                    		<h3>姓名：{$vo.userid}</h3>
+                       		<a>和TA交流</a>
+                       		<div class="ssfl ssfl2 ssflul"><img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" /><span>时间：{$vo.createtime}</span></div>
+                    	</div>
+                    	<div class="rtop">
+                    		<div class="hd"><h3>回答：</h3></div>
+                        	<div class="hdp">
+                        		<p>{$vo.forum_comment}</p>
+                       		</div>
+                    	</div>
+	                    <!--<div class="rtop">
+	                    	<div class="hd"><h3>追问：</h3></div>
+	                        <div class="zwp">
+	                        	<p>大学的成绩是只需要达到60就可以了吗？</p>
+	                        </div>
+	                    </div>
+	                    <div class="rtop">
+	                    	<div class="hd"><h3>回答:</h3></div>
+	                        <div class="hdp">
+	                        	<p>对于毕业证来说60就可以，但是奖学金、助学金等奖励或者福利等都会卡你的成绩。还有体测一定要够75分。</p>
+	                        </div>
+	                    </div>-->
+	                </div>
+	                <span class="hf">回复</span>
+	            </li>
+            </volist>
+            <!--<li>
             	<div class="lileft">
            	    <img src="__PUBLIC__/images/userhead.gif" width="80" height="80" alt="head" />
                 </div>
@@ -239,33 +217,35 @@
                     
                 </div>
                 <span class="hf">回复</span>
-            </li>
+            </li>-->
         </ul>
-        <div class="page">
-            	<ul>
-                	<li class="up"><a href="#">上一页</a></li>
-                    <li class="now">1</li>
-                    <li class="num"><a href="#">2</a></li>
-                    <li class="num"><a href="#">3</a></li>
-                    <li class="num"><a href="#">4</a></li>
-                    <li class="num"><a href="#">5</a></li>
-                    <li>...</li>
-                    <li class="num"><a href="#">8</a></li>
-                    <li class="up"><a href="#">下一页</a></li>
-                </ul>
-    </div>
+        <div class="page">{$pages}</div>
+        <!--发表回复-->
+        <div class="clear"></div>
+        <div class="post_forum">
+        	<a name="sub"></a>
+        	<form action="{:U('/home/forum/addComment')}" method="post">
+	        	<div>
+	        		<span>发表回复</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        	</div>
+            	<div id="editForm" class="post_text" >
+                    <!-- 加载编辑器的容器 -->
+                    <script id="editor" type="text/plain" style="width:660px;height:500px;"></script>
+                    
+		            <div>
+		            	 <input class="post_button" type="submit" onclick="getContent()"  value="发表" /> 
+		            </div>
+		        </div>
+            </form>
+         </div>
     </div>
     <div class="right">
     	<div class="righttop">
-        	<h1 class="title">相关问题<a href="#" class="ckgd">更多&nbsp;>></a></h1>
+        	<h1 class="title">论坛热议榜<a href="#" class="ckgd">更多&nbsp;>></a></h1>
             <ul class="topul">
-	        	<li><a href="#">大一新生应该怎样准备大学生活？</a><span>01-01</span></li>
-	            <li><a href="#">大一应该多参加什么类型的社团活动？</a><span>01-01</span></li>
-	            <li><a href="#">大一的生活应该怎么度过才算不荒废？</a><span>01-01</span></li>
-	            <li><a href="#">大一新生应该怎样准备大学生活？</a><span>01-01</span></li>
-	            <li><a href="#">大一应该多参加什么类型的社团活动？</a><span>01-01</span></li>
-	            <li><a href="#">大一的生活应该怎么度过才算不荒废？</a><span>01-01</span></li>
-	            <li><a href="#">大一时候可是考哪些专业证件考试？</a><span>01-01</span></li>
+            	<volist name="forum_hot" id="vo">
+	        		<li><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title}</a><span>{$vo.posttime|substr=0,10}</span></li>
+	            </volist>
         	</ul>
         </div>
        	<div class="righttop righttop2">
