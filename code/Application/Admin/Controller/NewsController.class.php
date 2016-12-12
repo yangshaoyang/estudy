@@ -29,6 +29,7 @@ class NewsController extends Controller {
 
         $Model=D("news");
         $Model->create();
+
         $num=$Model->add($data);
         if($num>0){
         	$this->success("添加成功！",U("bid"));
@@ -40,8 +41,14 @@ class NewsController extends Controller {
     }
     //修改帖子
      public function editNews($newsid){
+        $data = I('post.') 
 	  $news=M("news")->find($newsid);
-	   $this->assign("newscontent",$news);
+       $num=$Model->where('newsid='.$newsid)->save($data);
+	   if($num>0){
+            $this->success("修改成功！");
+        }else{
+            $this->error("修改失败！");
+        }
 	   $this->display();
 	 }
     //删除帖子

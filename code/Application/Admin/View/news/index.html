@@ -48,7 +48,7 @@
                 <td>
                     <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/news/newsetails/newsid/{$vo.newsid}', title:'{$vo.newstitle}', max:true}">查看</button>&nbsp;
                     <button type="button" class="btn-blue" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/news/editnews/newsid/{$vo.newsid}', title:'修改文章：{$vo.newstitle}', max:true}">修改</button>&nbsp;
-                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){alert('删除成功！');}}">删除</button>
+                    <button type="button" class="btn-red" data-toggle="alertmsg" data-options="{id:'', url:'__MODULE__/news/editnews/newsid/{$vo.newsid}',data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){alert('删除成功！');}}">删除</button>
                 </td>
             </tr>
             </volist>
