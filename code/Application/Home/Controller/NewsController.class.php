@@ -9,7 +9,7 @@ class NewsController extends Controller {
     public function index(){
     	$this->display();
     }
-     
+
     public function newslist(){
             /*选取分类1数据*/
         $newspage=M("news")->where("newsid");

@@ -8,7 +8,7 @@ class IndexController extends Controller {
 			$this->error('请先登录','admin/login/login');
 		}
 	}
-    public function index(){
-        $this->display();
-    }
+	public function index(){
+		$this->display();
+	}
 }

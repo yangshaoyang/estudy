@@ -45,6 +45,6 @@ class BlogrollController extends Controller {
         $id = $_GET['id'];
         if (M("blogroll")->delete($id)) {
             $this->success("删除成功！");
+        }
     }
-}
 }

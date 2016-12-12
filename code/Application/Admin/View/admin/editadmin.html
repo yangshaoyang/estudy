@@ -1,28 +1,31 @@
 <div class="bjui-pageContent">
 
-<form action="__MODULE__/Admin/edit/adminid/{$admessage.asminid}" id="j_custom_form" data-toggle="validate" data-alertmsg="false">
-    <div class="bjui-row col-3">
-        <label class="row-label">用户名</label>
-        <div class="row-input required">
-            <input type="text" name="adname" id="j_custom_name" value="{$admessage.adname}" readonly=""></div><br>
-         <label class="row-label">邮箱</label>
-        <div class="row-input required">
-            <input type="text" name="ademail" id="j_custom_name" value="{$admessage.ademail}" data-rule="required"></div><br>
-        <label class="row-label">联系方式</label>
-        <div class="row-input required">
-            <input type="text" name="adphonenum" id="j_custom_name" value="{$admessage.adphonenum}" data-rule="required;date"></div>
+    <form action="__MODULE__/Admin/edit/adminid/{$admessage.asminid}" id="j_custom_form" data-toggle="validate" data-alertmsg="false">
+        <div class="bjui-row col-3">
+            <label class="row-label">用户名</label>
+            <div class="row-input required">
+                <input type="text" name="adname" id="j_custom_name" value="{$admessage.adname}" readonly=""></div>
+            <br>
+            <label class="row-label">邮箱</label>
+            <div class="row-input required">
+                <input type="text" name="ademail" id="j_custom_name" value="{$admessage.ademail}" data-rule="required"></div>
+            <br>
+            <label class="row-label">联系方式</label>
+            <div class="row-input required">
+                <input type="text" name="adphonenum" id="j_custom_name" value="{$admessage.adphonenum}" data-rule="required;date"></div>
+            <br></div>
         <br>
+        <br>
+        <!-- 内容区 --> </div>
+    <div class="bjui-pageFooter">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn-green btn" data-icon="publish"> <i class="fa fa-save"></i>
+            保存
+        </button>
+        &nbsp;&nbsp;
+        <button type="button" class="btn-close btn" data-icon="close"> <i class="fa fa-close"></i>
+            取消
+        </button>
     </div>
-        <br>
-        <br>
-    <!-- 内容区 -->
-</div>
-<div class="bjui-pageFooter">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<button type="submit" class="btn-green btn" data-icon="publish"><i class="fa fa-save"></i> 保存</button>
-&nbsp;&nbsp;
-<button type="button" class="btn-close btn" data-icon="close"><i class="fa fa-close"></i> 取消</button>
-</div>
-
 
 </form>
-

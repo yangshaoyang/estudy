@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 class AdminController extends Controller {
      public function index(){
-      $admin = M("admin")->select();
+         $admin = M("admin")->select();
 	   $this->assign("admessage",$admin);
 	   $this->display();
      }
@@ -20,7 +20,7 @@ class AdminController extends Controller {
          $data=array(
     			'adname' =>I('post.adname'),
     			'ademail' =>I('post.ademail'),
-                'adpassword' =>md5(I('post.adpassword')),
+                   'adpassword' =>md5(I('post.adpassword')),
     			'adphonenum'  =>I('post.adphonenum'),
     			);
 
@@ -46,6 +46,6 @@ class AdminController extends Controller {
         $articleid = $_GET['adminid'];
         if (M("admin")->delete($adminid)) {
             $this->success("删除成功！");
+        }
     }
 }
- }

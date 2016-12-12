@@ -14,7 +14,7 @@ class ForumController extends Controller {
 				$forum->where("forumid=$forumid")->setInc('readcount');
     	$forum=$forum->find($forumid);
 		$this->assign("fcontent",$forum);
-		
+
 		//分类名称
 			//1.构造查询条件
 			$condition=array();
@@ -52,14 +52,13 @@ class ForumController extends Controller {
     	if(!IS_POST){
             exit("bad request");
         }
-         $data=array(   	    
+         $data=array(
     			'forumtitle' =>I('post.forumtitle'),
     			'forumauthor' =>I('post.forumauthor'),
     			'forumtime'  =>I('post.forumtime'),
-    			'forumintroduction' =>I('post.forumintroduction'),	
+    			'forumintroduction' =>I('post.forumintroduction'),
     			'forumcontent'  =>I('post.forumcontent')
     			);
-
         $Model=D("forum");
         $Model->create();
         $num=$Model->add($data);

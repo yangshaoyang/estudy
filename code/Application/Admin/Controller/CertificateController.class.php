@@ -62,6 +62,6 @@ class CertificateController extends Controller {
         $cid = $_GET['cid'];
         if (M("certificate")->delete($cid)) {
             $this->success("删除成功！");
+        }
     }
-}
 }

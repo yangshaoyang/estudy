@@ -2,10 +2,6 @@
 namespace Admin\Controller;
 use Think\Controller;
 class PersonController extends Controller {
-    // public function index(){
-    //     $this->display();
-    // }
-
     public function index(){
         $users=M("users")->select();
         // dump($users);
@@ -27,7 +23,7 @@ class PersonController extends Controller {
         //dump($users);
         $this->assign("users",$users);
         $this->display();
-     
+
     }
     public function delete($userid){
         $userid = $_GET['userid'];
