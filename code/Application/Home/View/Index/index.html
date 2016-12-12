@@ -166,14 +166,14 @@
         <div class="rdzxright" >
             <volist name="new" id="vo">
                 <h1>
-                    <a href="#" class="rdtit">{$vo.newstitle}</a>
-                    <a href="#" class="ckgd">查看更多&nbsp;>></a>
+                    <a href="home/news/newscontent?newsid={$vo.newsid}" class="rdtit">{$vo.newstitle}</a>
+                    <a href="home/news/newslist" class="ckgd">查看更多&nbsp;>></a>
                 </h1>
             </volist>
             <ul>
                 <volist name="news" id="vo">
                     <li>
-                        <a href="{:U('/home/match/content')}">{$vo.newstitle}</a>
+                        <a href="home/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
                         <span>{$vo.newstime}</span>
                     </li>
                 </volist>
