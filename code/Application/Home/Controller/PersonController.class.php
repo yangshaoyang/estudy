@@ -14,7 +14,8 @@ class PersonController extends Controller {
        if ($_SESSION['name'] == NULL) {
           $this->redirect('home/login/login','请登录');
         }else{
-          $map['userid']=1;
+          //$map['userid']=1;
+          $map['username']=$_SESSION['name'];
           $users=M("users")->where($map)->select();
           $user_certificate=M("user_certificate")->order('time desc')->limit(4)->select();
           $user_match=M("user_match")->order('time desc')->limit(4)->select();
