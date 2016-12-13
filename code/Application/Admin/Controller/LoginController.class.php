@@ -24,7 +24,6 @@ class LoginController extends Controller {
 //注销用户
     public function exits(){
     	session('adminname',null);
-        session('adminid',null);
     	$this->redirect('admin/login/login');
     }
 }
