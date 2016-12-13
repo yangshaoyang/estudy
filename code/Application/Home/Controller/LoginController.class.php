@@ -20,7 +20,12 @@ class LoginController extends Controller {
         	session('name',$username);
             session('id',$id);
             $url=session('path');
-        	$this->success('登录成功',$url);
+            if($url == ""){
+                $this->success('登录成功',U('/'));
+            }else{
+                $this->success('登录成功',$url);
+            }
+        	
 
         }else{
         	$this->error('用户名或密码不正确',U('home/login/login'));

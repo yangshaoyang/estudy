@@ -50,7 +50,7 @@ class RegisterController extends Controller {
 		$mailtype         =     "HTML";//邮件格式（HTML/TXT）,TXT为文本邮件
 
 		$smtp = new \smtp($smtpserver,$smtpserverport,true,$smtpuser,$smtppass);//这里面的一个true是表示使用身份验证,否则不使用身份验证.
-		$smtp->debug = FALSE;//是否显示发送的调试信息 FALSE or TRUE
+		$smtp->debug = TRUE;//是否显示发送的调试信息 FALSE or TRUE
 	      $datas = $smtp->sendmail($smtpemailto, $smtpusermail, $mailsubject, $mailbody, $mailtype);
 	      //$this->success("输出的提示信息",U('home/login/login'));
 	      $this->redirect('/');

@@ -10,9 +10,9 @@ class NewsController extends Controller {
     public function index(){
     	$this->display();
     }
-     
-    public function newslist(){
-         /*选取分类1数据*/
+
+    public function news(){
+            /*选取分类1数据*/
         $newspage=M("news")->where("newsid");
         /*分页码*/
         // 1. 获取记录总条数
@@ -21,7 +21,7 @@ class NewsController extends Controller {
         $pageSize =8;
         // 3. 创建分页类对象
         $page = new Page($count, $pageSize);
-        // 4.构造查询条件
+        // 4. 构造查询条件
         $condition=array();
         $condition['newsid'] != NULL;
         // 5. 分页查询
@@ -37,7 +37,6 @@ class NewsController extends Controller {
           $this->assign('pages',$pages);
           $this->display();
     }
-
 
     public function newscontent($newsid){
         //获取帖子文章内容
