@@ -50,7 +50,7 @@ class ArticleController extends Controller {
         $this->display();
     }
     //修改文章
-    public function edit($articleid){
+    public function change($articleid){
       $data=array(
         'articletitle'=>I('post.articletitle'),
         'articleauthor'=>I('post.articleauthor'),
