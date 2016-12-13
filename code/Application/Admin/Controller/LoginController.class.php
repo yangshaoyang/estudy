@@ -15,6 +15,7 @@ class LoginController extends Controller {
         $adpassword =  $data->getFieldByAdname($name,'adpassword');
         if($password == $adpassword){
     	session('adminname',$name);
+        session('adminid',$adminid);
     	$this->redirect('../admin');
         }else{
     	$this->error('用户名或密码不正确',U('admin/login/login'));
@@ -23,6 +24,7 @@ class LoginController extends Controller {
 //注销用户
     public function exits(){
     	session('adminname',null);
+        session('adminid',null);
     	$this->redirect('admin/login/login');
     }
 }

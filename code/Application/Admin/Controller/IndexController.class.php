@@ -11,26 +11,68 @@ class IndexController extends Controller {
     public function index(){
         $this->display();
     }
+    
+    public function editpassword($adminid){
+        $admin=M("admin")->find($adminid);
+        $this->assign("admessage",$admin);
+        $this->display();
+        }
 
-    //修改密码
-    public function changepswd($adminid){
-    	//提交修改密码表单
-    		$oldpassword = trim($_POST['oldpassword']);
-    		$password = trim($_POST['password']);
-    		$repassword = trim($_POST['repassword']);
-    		$data = M('admin');
-    		if($oldpassword == md5($data['adpassword'])){
-    				$Model=D('admin');
-    				$Model->update();
-    				$num=$Model->where('adminid='.$adminid)->save($repassword);
-    				if($num>0){
-                        $this->success("修改成功！",U("admin"));
-                    }else{
-                        $this->error("修改失败！",U("admin"));
-                    }
-    		}else{
-    			$this->error('旧密码不正确，请重新输入！',U("admin/index/index"));
-    		}
-    	
+        //修改管理员密码
+    public function changepswd($adminid=8){
+        $data=array(
+            'oldpassword'     =>I('post.oldpassword'),
+            'password'       =>I('post.password'),
+            'repassword'=>I('post.repassword')
+        );
+// dump($data);
+        $Model=M("admin");
+        if($oldpassword == md5($Model['adpassword'])){
+        	$num=$Model->where('adminid='.$adminid)->save($data);
+            if($num>0){
+               $this->success("修改成功！");
+            }else{
+               $this->error("修改失败！");
+            }
+        }else{
+        	$this->error('旧密码不正确，请重新输入！',U("admin/index/index"));
+        }
+        
+        $this->display();
     }
+    //修改密码
+    // public function changepswd($adminid){
+    // 	//提交修改密码表单
+    // 		$oldpassword = trim($_POST['oldpassword']);
+    // 		$password = trim($_POST['password']);
+    // 		$repassword = trim($_POST['repassword']);
+    // 		$data = M('admin')->find($adminid);
+    // 		$this->assign('admin',$data);
+    // 		if($oldpassword == md5($data['adpassword'])){
+    // 				$Model=D('admin');
+    // 				$Model->update();
+    // 				$num=$Model->where('adminid='.$adminid)->save($repassword);
+    // 				if($num>0){
+    //                     $this->success("修改成功！",U("admin"));
+    //                 }else{
+    //                     $this->error("修改失败！",U("admin"));
+    //                 }
+    // 		}else{
+    // 			$this->error('旧密码不正确，请重新输入！',U("admin/index/index"));
+    // 		}
+    	
+    // }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
