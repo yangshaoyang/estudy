@@ -1,15 +1,11 @@
 <div class="bjui-pageContent">
-    <form action="__MODULE__/admin/chpwd" data-toggle="validate" method="post" data-close-current="true">
-        <input type="hidden" name="user.id" value="${user.id }">
-        <input type="hidden" name="user.username" value="${user.username }" id="j_userinfo_changepass_username">
-        <input type="hidden" name="user.password" value="" id="j_userinfo_changepass_userpassword">
-        <input type="hidden" name="user.oldpass" value="" id="j_userinfo_changepass_userpassword_old">
+    <form action="__MODULE__/admin/changepswd/adminname/{$_SESSION['adminname']}" data-toggle="validate" method="post" data-close-current="true">
         <div class="bjui-row col-2">
             <label class="row-label">身份:</label>
             <div class="row-input">管理员</div>
             <br>
             <label class="row-label">登陆账号:</label>
-            <div class="row-input">BJUI</div>
+            <div class="row-input">{$_SESSION['adminname']}</div>
             <br>
             <label class="row-label">旧密码:</label>
             <div class="row-input required">
@@ -23,7 +19,7 @@
             <br>
             <label class="row-label">确认密码:</label>
             <div class="row-input required">
-                <input type="password" id="j_userinfo_changepass_confirmpass" name="" value="" data-rule="required;match(#j_userinfo_changepass_newpass)">
+                <input type="password" id="j_userinfo_changepass_confirmpass" name="repassword" value="" data-rule="required;match(#j_userinfo_changepass_newpass)">
             </div>
             <br>
         </div>
