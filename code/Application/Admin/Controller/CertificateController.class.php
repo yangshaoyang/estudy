@@ -56,7 +56,7 @@ class CertificateController extends Controller {
             $this->error("修改失败！");
         }
         $this->display();
-        $this->display();
+
     }
     public function delete($cid){
         $cid = $_GET['cid'];
