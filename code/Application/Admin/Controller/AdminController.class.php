@@ -58,6 +58,52 @@ class AdminController extends Controller {
         $this->display();
 
     }
+        
+        //修改管理员密码
+        public function changepswd($adminname){
+            $admin=M("admin");
+            $adpassword =$admin->getFieldByAdname($adminname,'adpassword');
+           //提交修改密码表单
+            $data=array(
+                'password' => md5(I('post.password'))
+                );
+           if(md5(I('post.oldpassword')) ==  $adpassword){
+              $num=$admin->where('adminname='.$adminname)->save($data);
+              // var_dump($num);
+              // exit;
+              if($num>0){
+               $this->success("修改成功！");
+              }else{
+               $this->error("修改失败！");
+            }
+           }else{
+            $this->error('旧密码不正确，请重新输入！',U("admin/index/index"));
+           }
+           $this->display();
+        }
+
+
+    // public function changepswd($adminname){
+    //     //提交密码表单
+    //     $oldpassword = md5(I('post.oldpassword'));
+    //     $password = md5(I('post.password'));
+    //     $repassword= md5(I('post.repassword'));
+    //     $Model=M("admin");
+    //     $name = I('post.adname');
+    //     $adpassword =  $Model->getFieldByAdname($name,'adpassword');
+    //     if($oldpassword ==  $adpassword){
+    //         $num=$Model->where('adminname='.$adminname)->save($repassword);
+    //         if($num>0){
+    //            $this->success("修改成功！");
+    //         }else{
+    //            $this->error("修改失败！");
+    //         }
+    //     }else{
+    //         $this->error('旧密码不正确，请重新输入！',U("admin/index/index"));
+    //     }
+        
+    //     $this->display();
+    // }
     //删除管理员
     public function delete($adminid){
         $articleid = $_GET['adminid'];
