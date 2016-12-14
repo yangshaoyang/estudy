@@ -27,7 +27,7 @@
             <div class="user">
                 <!-- <a href="#"><img src="__PUBLIC__/images/user.gif" width="150" height="150" alt="user" /></a> -->
                 <form action="__MODULE__/Person/addimage/username/{$_SESSION['name']}" method="post" enctype="multipart/form-data">
-                <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150" alt="user" style="cursor:pointer" onclick="F_Open_dialog()" />
+                <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150"  style="cursor:pointer" onclick="F_Open_dialog()" />
                 <input type="file" id="btn_file"   style="display:none" name='avatar_url' value="{$users.avatar_url}">
                 <button type="submit">...</button>
                 </form>
