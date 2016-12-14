@@ -76,7 +76,7 @@ class ForumController extends Controller {
     	/*分类数据*/
     	$sort=$this->_tag($id);
     	/*热议榜数据*/
-        $forum_hot=M("forum")->order('readcount desc')->limit(5)->select();
+        $forum_hot=M("forum")->order('readcount desc')->limit(10)->select();
         $this->assign('forum_hot', $forum_hot);
         //输出结果
         $this->assign('id', $sort['id']);
@@ -127,7 +127,7 @@ class ForumController extends Controller {
     	$sort=$this->_tag(1);
 
     	/*热议榜数据*/
-        $forum_hot=M("forum")->order('readcount desc')->limit(5)->select();
+        $forum_hot=M("forum")->order('readcount desc')->limit(10)->select();
         $this->assign('forum_hot', $forum_hot);
         //输出结果
         $this->assign('id', $sort['id']);
@@ -164,7 +164,7 @@ class ForumController extends Controller {
 			$this->assign("username",$username);
 
 		//热议榜数据
-        $forum_hot=M("forum")->order('readcount desc')->limit(5)->select();
+        $forum_hot=M("forum")->order('readcount desc')->limit(10)->select();
         $this->assign('forum_hot', $forum_hot);
 
         //评论数据
