@@ -7,17 +7,20 @@
 <link href="__PUBLIC__/css/personal_left.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/personal_table.css" rel="stylesheet" type="text/css" />
 <title>消息管理</title>
+
 </head>
 <body>
 <include file="Public/header.html" />
 
-<div class="content">
+<div class="content" >
     <div class="mybody">
         <div class="bread"><span>易学助手</span> > <a href="{:U('/home/person/homepage')}">个人中心</a> > <a href="{:U('/home/person/message')}">消息管理</a> </div>
         <!--个人中心left-->
         <div class="personal_left">
-            <div class="user">
-                <a href="#"><img src="__PUBLIC__/images/user.gif" width="150" height="150" alt="user" /></a>
+            <div class="user" >
+                <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150" style="cursor:pointer" onclick="F_Open_dialog()" />
+                </form>
+                <!-- </a> -->
                 <p>欢迎您   {$_SESSION['name']}</p>
             </div>
             <ul class="left_nav">
