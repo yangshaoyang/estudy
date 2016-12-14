@@ -4,9 +4,9 @@ use Think\Controller;
 use Think\Upload;
 class MatchController extends Controller {
     public function index(){
-        $match = M("match")->select();
-        $this->assign("match",$match);
-        $this->display();
+          $match = M("match")->select();
+          $this->assign("match",$match);
+          $this->display();
     }
     public function content($mid){
         $match=M("match")->find($mid);
