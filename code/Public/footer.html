@@ -22,24 +22,9 @@
         <div class="footermiddle footerr">
             <a href="#" class="footernav">友情链接</a>
             <ul><?php
-                        $connect = mysqli_connect('localhost','root','','estudy') or die('连接失败');
-                        //var_dump($connect);
-                        $sql = "select * from blogroll";
-                        //var_dump($sql);
-                        $result = mysqli_query($connect,$sql);
-                        var_dump($result);
-                    ?>
-                <li>
-                    <a href="#" class="yqlj yqlj2">深圳比赛提示</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-                    <?php
                         $dsn="mysql:host=localhost;dbname=estudy";
-                        $dbUser='root';
-                        $dbPswd='';
+                        $dbUser='phpestudy';
+                        $dbPswd='phpestudy';
                         $pdo = new PDO($dsn,$dbUser, $dbPswd);
 
                         $sql = "set names utf8";
@@ -53,12 +38,17 @@
                         $sql="select * from blogroll";
                         $sta = $pdo->query($sql);
                         $urls = $sta->fetchAll();
-                        var_dump($urls);
-                        foreach($urls as $a){
-                            foreach($a as $b){
-                            var_dump($b);
-                            }
+                        for($i=0;$i<count($urls);$i++){     // 循环读取二维数组中的数据
+                ?>
+                <li>
+                     <a href="<?php echo $urls[$i]['url'];?>" class="yqlj yqlj2"><?php echo $urls[$i]['name'];?></a>
+                </li>
+                <?php
+                }
+                ?>
+            </ul>
+        </div>
+    </div>
+</div>
 
-                        }
 
-                    ?>
