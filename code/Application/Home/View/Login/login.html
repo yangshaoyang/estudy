@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/login.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+  <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+  <link href="__PUBLIC__/css/login.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript">
 function chk_form(){
     var user = document.getElementById("user");
     if(user.value==""){
@@ -14,7 +14,7 @@ function chk_form(){
         //user.focus();
     }
     var preg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/; //匹配Email
-    if(!preg.test(user.value)){ 
+    if(!preg.test(user.value)){
         alert("Email格式错误！");
         return false;
         //email.focus();
@@ -32,58 +32,79 @@ function chk_form(){
     }
 }
 </script>
-<title>用户登陆</title>
+  <title>用户登陆</title>
 </head>
 <body>
-<include file="Public/header.html" />
+  <include file="Public/header.html" />
 
+  <!--登录页-->
+  <div class="content">
+    <div class="mybody">
+      <div class="bread">
+        <span>
+          <a href="{:U('/')}">易学助手</a>
+        </span>
+        >
+        <a href="../../login">用户登录</a>
+      </div>
+      <!--登陆-->
+      <div class="search">
+        <div class="search1">
+          <h1>
+            <span>普通登录</span>
+          </h1>
+          <form action="{:U('home/login/validation')}" method="post" onsubmit="return chk_form();">
+            <input type="text"  name="yourname" id="user" class="email" placeholder="请输入邮箱">
 
-<!--登录页-->
-<div class="content">
-	<div class="mybody">
-    	<div class="bread"><span><a href="{:U('/')}">易学助手</a></span> > <a href="../../login">用户登录</a></div>
-		<!--登陆-->
-        	<div class="search">
-              <div class="search1">
-                  <h1><span>普通登录</span></h1>
-                    <form action="{:U('home/login/validation')}" method="post" onsubmit="return chk_form();">
-                        <input type="text"  name="yourname" id="user" class="email" placeholder="请输入邮箱">
+            <input type="password" name="yourpassword" id="pass" minlength="6" class="pwd" placeholder="密码大于6位">
 
-                        <input type="password" name="yourpassword" id="pass" minlength="6" class="pwd" placeholder="密码大于6位">
-
-                        <div id="u1476" class="ax_default link_button">
-                        <div id="u1476_div" class=""></div>
-                        <!-- Unnamed () -->
-                        <div id="u1477" class="text" style="visibility: visible;">
-                        <p><a href="{:U('/home/register')}">没有账号？</a></p>
-                        </div>
-                        </div>
-                        <input type="submit" value="登  录" class="login_btn" />       
-                   </form>
-                </div>  
-                <!--第三方登录-->  
-                <div class="search2">
-                   <form>
-                   <div id="u1549" class="text" style="visibility: visible;">
-                   <p></p>
-                   <p><span>使用第三方账号登录</span></p>
-                   </div>
-                   <table>
-                    <tr>
-                      <td width="150"><a href="#"><img src="__PUBLIC__/images/weixin.png" width="50" height="50" alt="gl"/></a></td>
-                      <td width="150"><a href="#"><img src="__PUBLIC__/images/weibo.png" width="50" height="50" alt="gl"/></a></td>
-                      <td width="150"><a href="#"><img src="__PUBLIC__/images/qq.png" width="50" height="50" alt="gl"/></a></td>
-                    </tr>
-
-                    </table>
-                   </form>
-                </div>
+            <div id="u1476" class="ax_default link_button">
+              <div id="u1476_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u1477" class="text" style="visibility: visible;">
+                <p>
+                  <a href="{:U('/home/register')}">没有账号？</a>
+                </p>
+              </div>
             </div>
+            <input type="submit" value="登  录" class="login_btn" />
+          </form>
         </div>
-	</div>
-</div>
+        <!--第三方登录-->
+        <div class="search2">
+          <form>
+            <div id="u1549" class="text" style="visibility: visible;">
+              <p></p>
+              <p>
+                <span>使用第三方账号登录</span>
+              </p>
+            </div>
+            <table>
+              <tr>
+                <td width="150" align="center">
+                  <a href="#">
+                    <img src="__PUBLIC__/images/weixin.png" width="50" height="50" alt="gl"/>
+                  </a>
+                </td>
+                <td width="150" align="center">
+                  <a href="#">
+                    <img src="__PUBLIC__/images/weibo.png" width="50" height="50" alt="gl"/>
+                  </a>
+                </td>
+                <td width="150" align="center">
+                  <a href="#">
+                    <img src="__PUBLIC__/images/qq.png" width="50" height="50" alt="gl"/>
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<include file="Public/footer.html" />
+  <include file="Public/footer.html" />
 
 </body>
 </html>

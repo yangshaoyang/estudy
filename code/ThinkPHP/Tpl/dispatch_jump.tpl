@@ -10,6 +10,9 @@
 	<!-- <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
 	-->
 	<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+	<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+	<link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
+	<link href="__PUBLIC__/css/dynamicdetails.css" rel="stylesheet" type="text/css" />
 	<title>跳转提示</title>
 	<style type="text/css">
 		*{ padding: 0; margin: 0; }
