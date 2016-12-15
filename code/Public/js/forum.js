@@ -1,3 +1,8 @@
+/*
+作者：李小雨
+日期：2016.12.6
+描述：论坛js，主要是uedit的js
+*/
 //实例化编辑器
     //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
     var ue = UE.getEditor('editor');
@@ -29,12 +34,19 @@
         //定义变量
        var content=UE.getEditor('editor').getContent();
        var title=document.getElementById("title").value;
-       var typeid=document.getElementById("typeid").value;
-       document.getElementById("hidden").value=content;
-       arr.push(typeid);
-       arr.push(title);
-       arr.push(document.getElementById("hidden").value);
-       alert(arr.join("\n"));
+       //判断标题和内容是否为空
+        if(!title){
+	        alert("标题不能为空！");
+	        return false;
+	        //user.focus();
+	    }
+	    if(!content){
+	    	alert("内容不能为空！");
+	        return false;
+	    }
+       /*arr.push(title);
+       arr.push(content);
+       alert(arr.join("\n"));*/
     }
     function getPlainTxt() {
         var arr = [];
@@ -115,3 +127,6 @@
         UE.getEditor('editor').execCommand( "clearlocaldata" );
         alert("已清空草稿箱")
     }
+
+   
+   
