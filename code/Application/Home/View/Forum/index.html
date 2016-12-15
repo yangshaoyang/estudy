@@ -98,7 +98,7 @@
         <div class="clear"></div>
         <div class="post_forum">
         	<a name="sub"></a>
-        	<form action="{:U('/home/forum/addForum')}" method="post">
+        	<form action="{:U('/home/forum/addForum')}" method="post" onsubmit="return getContent()"  >
 	        	<div>
 	        		<img src="__PUBLIC__/images/post_forum.png">
 	        		<span>发表新帖</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -111,14 +111,14 @@
 	        		</select> 
 	        	</div>
 	        	<div>
-	        		<input type="text" name="title" placeholder="请填写标题" class="post_title">
+	        		<input type="text" name="title" id="title" placeholder="请填写标题" class="post_title">
 	        	</div>
             	<div id="editForm" class="post_text" >
                     <!-- 加载编辑器的容器 -->
                     <script id="editor" type="text/plain" style="width:660px;height:500px;"></script>
                     
 		            <div>
-		            	 <input class="post_button" type="submit" onclick="getContent()"  value="发表" /> 
+		            	 <input class="post_button" type="submit" value="发表" /> 
 		            </div>
 		        </div>
             </form>
