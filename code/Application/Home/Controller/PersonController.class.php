@@ -69,7 +69,7 @@ class PersonController extends Controller {
         
         $Model=M("users");
         $Model->create();
-        $map[username]=$username;
+        $map['username']=$username;
         $num=$Model->where($map)->save($data);
         $this->redirect('home/person/homepage');
         }
@@ -88,7 +88,7 @@ class PersonController extends Controller {
     public function addimage($username){
         $upload = new \Think\Upload();//
         $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-        $upload->rootPath  =     THINK_PATH; // 设置附件上传根目录
+        //$upload->rootPath  =     THINK_PATH; // 设置附件上传根目录
         $upload->savePath  =     '../Public/Uploads/uploads';  // 设置附件上传（子）目录
         $info   =   $upload->upload();
         //dump($info);
@@ -97,8 +97,8 @@ class PersonController extends Controller {
         $data['avatar_url']=$image;
         // dump($data);
         $Model=M("users");
-        $map[username]=$username;
-        //dump($map);
+        $map['username']=$username;
+        // dump($map);
         $num=$Model->where($map)->save($data);
         if($num>0){
             $this->success("添加成功！",U('home/Person/permessage'));
