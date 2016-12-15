@@ -1,101 +1,109 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/dynamicdetails.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
-<title>热点资讯</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/dynamicdetails.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
+    <title>热点资讯</title>
 </head>
 <body>
-<include file="Public/header.html" />
-<div class="content">
-<div class="mybody">
-	<div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="{:U('/home/news/news')}">热点资讯</a> ></div>
-    <div class="left">
-        <h1>{$newscontent.newstitle}</h1>
-        <div class="fl">
-            <div class="ssfl ssfl2"><img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" /><span>时间：{$newscontent.newstime} </span></div>
-            <div class="ssfl ssfl2"><img src="__PUBLIC__/images/zz.gif" width="15" height="15" alt="zz" /><span>来源：{$newscontent.newssource}</span></div>
+    <include file="Public/header.html" />
+    <div class="content">
+        <div class="mybody">
+            <div class="bread">
+                <a href="{:U('/')}">易学助手</a>
+                >
+                <a href="{:U('/home/news/news')}">热点资讯</a>
+                >
+            </div>
+            <div style="float: left">
+                <div class="left">
+                    <h1>{$newscontent.newstitle}</h1>
+                    <div class="fl">
+                        <div class="ssfl ssfl2">
+                            <img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" />
+                            <span>时间：{$newscontent.newstime}</span>
+                        </div>
+                        <div class="ssfl ssfl2">
+                            <img src="__PUBLIC__/images/zz.gif" width="15" height="15" alt="zz" />
+                            <span>来源：{$newscontent.newssource}</span>
+                        </div>
+                    </div>
+                    <p>{$newscontent.newscontent}</p>
+                </div>
+                <!--PC版-->
+                <div id="SOHUCS" sid="{$mcontent.mid}" style="width: 790px;float: left;"></div>
+                <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+                <script type="text/javascript">
+                    window.changyan.api.config({
+                    appid: 'cysJVl9Cb',
+                    conf: 'prod_49c81d0f91ec3cbce38e37a23f0ec3f4'
+                    });
+                </script>
+            </div>
+            <div class="right">
+                <div class="righttop">
+                    <h1 class="title">
+                        热门资讯
+                        <a href="#" class="ckgd">更多&nbsp;>></a>
+                    </h1>
+                    <ul class="topul">
+                        <li>
+                            <a href="{:U('/home/article/articledetails')}">励志音乐，你Get了吗？</a>
+                            <span>11-10</span>
+                        </li>
+                        <li>
+                            <a href="{:U('/home/article/articledetails')}">鸡汤励志成名曲</a>
+                            <span>11-10</span>
+                        </li>
+                        <li>
+                            <a href="{:U('/home/article/articledetails')}">这本该是个励志的故事...</a>
+                            <span>11-10</span>
+                        </li>
+                        <li>
+                            <a href="{:U('/home/article/articledetails')}">励志故事的背后你又知道哪些？</a>
+                            <span>11-10</span>
+                        </li>
+                        <li>
+                            <a href="{:U('/home/article/articledetails')}">怎么看待励志的书籍？</a>
+                            <span>11-10</span>
+                        </li>
+                        <li>
+                            <a href="{:U('/home/article/articledetails')}">如何写好励志小说...</a>
+                            <span>11-10</span>
+                        </li>
+                        <li>
+                            <a href="{:U('/home/article/articledetails')}">哇咔咔，今天的鸡汤好喝吗...</a>
+                            <span>11-10</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="righttop righttop2">
+                    <h1 class="title title2">
+                        励志达人
+                        <a href="#" class="ckgd">更多&nbsp;>></a>
+                    </h1>
+                    <div class="xzdr">
+                        <img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                        <div class="xzright">
+                            <div class="drname">
+                                <h1>俞敏洪</h1>
+                            </div>
+                            <ul>
+                                <li>人物简介</li>
+                                <li>人物经历</li>
+                                <li>主要著作</li>
+                                <li>综艺节目</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="xzdr xzdr2"></div>
+                </div>
+            </div>
         </div>
-      <p>{$newscontent.newscontent}</p>  
     </div>
-     <div class="right">
-        <div class="righttop">
-            <h1 class="title">热门资讯<a href="#" class="ckgd">更多&nbsp;>></a></h1>
-            <ul class="topul">
-            <li><a href="{:U('/home/article/articledetails')}">励志音乐，你Get了吗？</a><span>11-10</span></li>
-            <li><a href="{:U('/home/article/articledetails')}">鸡汤励志成名曲</a><span>11-10</span></li>
-            <li><a href="{:U('/home/article/articledetails')}">这本该是个励志的故事...</a><span>11-10</span></li>
-            <li><a href="{:U('/home/article/articledetails')}">励志故事的背后你又知道哪些？</a><span>11-10</span></li>
-            <li><a href="{:U('/home/article/articledetails')}">怎么看待励志的书籍？</a><span>11-10</span></li>
-            <li><a href="{:U('/home/article/articledetails')}">如何写好励志小说...</a><span>11-10</span></li>
-            <li><a href="{:U('/home/article/articledetails')}">哇咔咔，今天的鸡汤好喝吗...</a><span>11-10</span></li>
-        </ul>
-        </div>
-        <div class="righttop righttop2">
-            <h1 class="title title2">励志达人<a href="#" class="ckgd">更多&nbsp;>></a></h1>
-            <div class="xzdr">
-                <img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
-                <div class="xzright">
-                <div class="drname">
-                <h1>俞敏洪</h1>
-                </div>
-                <ul>
-                    <li>人物简介</li>
-                    <li>人物经历</li>
-                    <li>主要著作</li>
-                    <li>综艺节目</li>
-                </ul>
-                </div>
-            </div>
-            <div class="xzdr xzdr2">
-                <img src="__PUBLIC__/images/dr2.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
-                <div class="xzright">
-                <div class="drname">
-                <h1>尼克胡哲</h1>
-                </div>
-                <ul>
-                    <li>人物简介</li>
-                    <li>人物经历</li>
-                    <li>主要著作</li>
-                    <li>励志演讲</li>
-                </ul>
-                </div>
-            </div>
-            <div class="xzdr xzdr2">
-                <img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
-                <div class="xzright">
-                <div class="drname">
-                <h1>俞敏洪</h1>
-                </div>
-                <ul>
-                    <li>人物简介</li>
-                    <li>人物经历</li>
-                    <li>主要著作</li>
-                    <li>综艺节目</li>
-                </ul>
-                </div>
-            </div>
-            <div class="xzdr xzdr2">
-                <img src="__PUBLIC__/images/dr2.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
-                <div class="xzright">
-                <div class="drname">
-                <h1>尼克胡哲</h1>
-                </div>
-                <ul>
-                    <li>人物简介</li>
-                    <li>人物经历</li>
-                    <li>主要著作</li>
-                    <li>励志演讲</li>
-                </ul>
-                </div>
-      </div>
-    </div>
-</div>
-</div>
-</div>
-<include file="Public/footer.html" />
+    <include file="Public/footer.html" />
 </body>
 </html>

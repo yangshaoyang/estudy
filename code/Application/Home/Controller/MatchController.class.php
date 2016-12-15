@@ -39,8 +39,10 @@ class MatchController extends Controller {
 		$match=M("match")->find($mid);
 		$this->assign("mcontent",$match);
 		$tmatch=M("match")->limit(3)->select();//比赛推荐部分
-	      $this->assign("tmatch",$tmatch);
-	      $this->display();
+	     $this->assign("tmatch",$tmatch);
+	     $news=M("news")->order("newsid desc")->limit(7)->select();
+		$this->assign("news",$news);
+	     $this->display();
 	}
 	public function user($mid,$mtime){
 		if ($_SESSION['name'] == NULL) {

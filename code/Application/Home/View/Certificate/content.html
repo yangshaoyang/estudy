@@ -48,46 +48,23 @@
                     appid: 'cysJVl9Cb',
                     conf: 'prod_49c81d0f91ec3cbce38e37a23f0ec3f4'
                     });
-                </script>
+        </script>
       </div>
       <div class="right">
         <div class="righttop">
           <h1 class="title">
             热门资讯
-            <a href="__PUBLIC__/#" class="ckgd">更多&nbsp;>></a>
+            <a href="__MODULE__/news/newslist" class="ckgd">更多&nbsp;>></a>
           </h1>
           <ul class="topul">
-            <li>
-              <a href="__PUBLIC__/#">最中意的5类证件，你Get了吗？</a>
-              <span>01-01</span>
-            </li>
-            <li>
-              <a href="__PUBLIC__/#">如果选择创业，哪个行业值得考虑？</a>
-              <span>01-01</span>
-            </li>
-            <li>
-              <a href="__PUBLIC__/#">春风十里，不如带你逛逛那些比赛...</a>
-              <span>01-01</span>
-            </li>
-            <li>
-              <a href="__PUBLIC__/#">测试文字一定要很长的对对对</a>
-              <span>01-01</span>
-            </li>
-            <li>
-              <a href="__PUBLIC__/#">测试文字一定要很长的</a>
-              <span>01-01</span>
-            </li>
-            <li>
-              <a href="__PUBLIC__/#">测试文字一定要很长的...</a>
-              <span>01-01</span>
-            </li>
-            <li>
-              <a href="__PUBLIC__/#">测试文字一定要很长</a>
-              <span>01-01</span>
-            </li>
+            <volist name="news" id="vo">
+              <li>
+                <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
+                <span>{$vo.newstime}</span>
+              </li>
+            </volist>
           </ul>
         </div>
-
         <div class="righttop righttop2 righttop3">
           <h1 class="title title2">
             考证推荐
@@ -104,30 +81,10 @@
               </a>
             </div>
           </volist>
-          <!-- <div class="lpimg1 lpimg2">
-          <p>
-            <a href="__PUBLIC__/#">某比赛</a>
-            <span>2016年11月14日</span>
-          </p>
-          <a href="__PUBLIC__/#">
-            <img src="__PUBLIC__/images/lp2.png" width="277" height="201" alt="lp" />
-          </a>
-        </div>
-        <div class="lpimg1 lpimg2">
-          <p>
-            <a href="__PUBLIC__/#">某大赛</a>
-            <span>时间待定</span>
-          </p>
-          <a href="__PUBLIC__/#">
-            <img src="__PUBLIC__/images/lp3.png" width="277" height="201" alt="lp" />
-          </a>
         </div>
       </div>
-      -->
     </div>
   </div>
-</div>
-</div>
-<include file="Public/footer.html" />
+  <include file="Public/footer.html" />
 </body>
 </html>
