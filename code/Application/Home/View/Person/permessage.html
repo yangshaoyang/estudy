@@ -7,6 +7,13 @@
 <link href="__PUBLIC__/css/personal_left.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/personal_form.css" rel="stylesheet" type="text/css" />
 <title>个人信息管理</title>
+<script type="text/javascript">
+        function F_Open_dialog() 
+       { 
+            document.getElementById("btn_file").click(); 
+       } 
+
+    </script>
 </head>
 <body>
 <include file="Public/header.html" />
@@ -18,7 +25,12 @@
         <!--个人中心left-->
         <div class="personal_left">
             <div class="user">
-                <a href="#"><img src="__PUBLIC__/images/user.gif" width="150" height="150" alt="user" /></a>
+                <!-- <a href="#"><img src="__PUBLIC__/images/user.gif" width="150" height="150" alt="user" /></a> -->
+                <form action="__MODULE__/Person/addimage/username/{$_SESSION['name']}" method="post" enctype="multipart/form-data">
+                <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150"  style="cursor:pointer" onclick="F_Open_dialog()" />
+                <input type="file" id="btn_file"   style="display:none" name='avatar_url' value="{$users.avatar_url}">
+                <button type="submit">...</button>
+                </form>
                 <p>欢迎您   {$_SESSION['name']}</p>
             </div>
             <ul class="left_nav">
@@ -31,7 +43,7 @@
         </div>
         <!--个人中心right-->
         <div class="personal_form_right form_bg">
-            <div class="img"><img src="__PUBLIC__/images/user.gif" alt="img" /></div>
+            <div class="img"><img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150"/></div>
             <div class="form1">
             <form action="__MODULE__/Person/add/username/{$_SESSION['name']}" method="post">
                 <table cellspacing="30">

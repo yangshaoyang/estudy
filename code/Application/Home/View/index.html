@@ -124,7 +124,7 @@
                     <a href="{:U('/home/match/matchlist')}" class="bnfirst2">比赛提示</a>
                 </li>
                 <li class="bnli">
-                    <a href="{:U('/home/article/article')}" class="bnfirst2">励志人生</a>
+                    <a href="{:U('/home/article/article')}" class="bnfirst2">励志帖子</a>
                 </li>
                 <li class="bnli">
                     <a href="{:U('/home/forum/index')}" class="bnfirst2">论坛交流</a>
@@ -167,7 +167,7 @@
             <volist name="new" id="vo">
                 <h1>
                     <a href="home/news/newscontent?newsid={$vo.newsid}" class="rdtit">{$vo.newstitle}</a>
-                    <a href="home/news/newslist" class="ckgd">查看更多&nbsp;>></a>
+                    <a href="home/news/news" class="ckgd">查看更多&nbsp;>></a>
                 </h1>
             </volist>
             <ul>
@@ -196,7 +196,7 @@
             <ul>
                 <volist name="textual" id="vo">
                     <li>
-                        <a href="home/certificate/content?cid={$vo.cid}" style="font-size: 16px">{$vo.cname}</a>
+                        <a href="home/certificate/content?cid={$vo.cid}">{$vo.cname}</a>
                         <span>{$vo.ctime}</span>
                     </li>
                 </volist>
@@ -217,7 +217,7 @@
             <ul>
                 <volist name="match" id="vo">
                     <li>
-                        <a href="home/match/content?mid={$vo.mid}" style="font-size: 16px">{$vo.mname}</a>
+                        <a href="home/match/content?mid={$vo.mid}">{$vo.mname}</a>
                         <span>{$vo.mtime}</span>
                     </li>
                 </volist>
@@ -245,7 +245,7 @@
                     <a href="#" class="footernav footernav2">意见反馈</a>
                 </li>
             </ul>
-            <p class="bq">版权所有 2016 易学助手项目组 保留一切权利 冀ICP备16024873号</p>
+            <p class="bq">版权所有 2016 易学助手有限公司 保留一切权利 冀ICP备16024873号</p>
             <p class="dh">联系邮箱：estudy@csbroswer.cn</p>
         </div>
         <div class="footermiddle footerr">

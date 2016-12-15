@@ -35,11 +35,11 @@ class RegisterController extends Controller {
 		//dump($data);
 		if($User->add($data)){//写入成功，发邮件
 		import("HomeClass.smtp");//引用发送邮件类
-		$smtpserver     =     "smtp.qq.com";//SMTP服务器
-	      	$smtpserverport =    465;//SMTP服务器端口
-	      	$smtpusermail     =     "396030162@qq.com";//SMTP服务器的用户邮箱
-	      	$smtpuser         =     "396030162";//SMTP服务器的用户帐号
-	      	$smtppass         =     "ysy396030162";//SMTP服务器的用户密码
+			$smtpserver     =     "smtp.qq.com";//SMTP服务器
+	      	$smtpserverport =    587;//SMTP服务器端口
+	      	$smtpusermail     =     "estudyid@csbroswer.cn";//SMTP服务器的用户邮箱
+	      	$smtpuser         =     "22900359@qq.com";//SMTP服务器的用户帐号
+	      	$smtppass         =     "CXD3434yue17";//SMTP服务器的用户密码
 	      	$smtpemailto     =     $data['email'];//发送给谁
 	      	//dump($smtpemailto);
 	      	$mailsubject     =     "eStudy账号激活";//邮件主题
@@ -50,10 +50,10 @@ class RegisterController extends Controller {
 		$mailtype         =     "HTML";//邮件格式（HTML/TXT）,TXT为文本邮件
 
 		$smtp = new \smtp($smtpserver,$smtpserverport,true,$smtpuser,$smtppass);//这里面的一个true是表示使用身份验证,否则不使用身份验证.
-		$smtp->debug = FALSE;//是否显示发送的调试信息 FALSE or TRUE
+		$smtp->debug = TRUE;//是否显示发送的调试信息 FALSE or TRUE
 	      $datas = $smtp->sendmail($smtpemailto, $smtpusermail, $mailsubject, $mailbody, $mailtype);
 	      //$this->success("输出的提示信息",U('home/login/login'));
-	      $this->redirect('/');
+	      //$this->redirect('/');
 		}
 	}
 	public function findpassword(){

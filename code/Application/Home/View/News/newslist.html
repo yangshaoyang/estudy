@@ -30,7 +30,7 @@
                     <h1><a href="../news/newscontent/newsid/{$vo.newsid}">{$vo.newstitle}</a></h1>
                     <h2>{$vo.newssource}</h2>
                 </div>
-                <p><a href="#">{$vo.newscontent}</a> </p>
+                <p><a href="../news/newscontent/newsid/{$vo.newsid}">{$vo.newscontent|msubstr=0,40,'utf-8',true}</a> </p>
                 <div class="time">
                         <img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/> 
                         <span class="sj">时间：{$vo.newstime}</span>

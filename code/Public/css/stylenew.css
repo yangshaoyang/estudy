@@ -1,0 +1,8 @@
+.myupload-container .table{float:left;margin-right:15px;margin-bottom:10px;display:table;}
+.myupload-container .table-cell{text-align:center;vertical-align:middle;display:table-cell;}
+.myupload-container .content{width:200px;height:200px;padding:5px;border:solid 1px #ccc;cursor:pointer;position:relative;}
+.myupload-container .content img{max-width:95%;max-height:95%;}
+.myupload-container .mask{position:absolute;z-index:9900;top:0;left:0;width:100%;height:100%;background:#3c59c0;filter:alpha(opacity=15); -moz-opacity:0.15; -khtml-opacity: 0.15; opacity: 0.15;cursor:pointer;}
+.myupload-container .controllbar{position:absolute;z-index:9999;bottom:-10px;left:0;width:100%;height:100%;}
+.myupload-container .controllbar .upload{width:50%;height:50px;line-height:50px;text-align:center;vertical-align:middle;background:#3c59c0;font-family:Microsoft Yahei;color:white;cursor:pointer;border-right:solid 1px #fff;overflow:hidden;}
+.myupload-container .controllbar .cancel{width:50%;height:50px;line-height:50px;text-align:center;vertical-align:middle;background:#3c59c0;font-family:Microsoft Yahei;color:white;cursor:pointer;overflow:hidden;}
