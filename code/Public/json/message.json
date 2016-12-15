@@ -1,7 +1,7 @@
 [
     {"name":"消息推送", "children":[
-        {"id":"match", "name":"比赛消息", "target":"navtab", "url":"html/base/navtab.html"},
-        {"id":"artcle", "name":"考证消息", "target":"navtab", "url":"html/base/navtab.html"},
-        {"id":"forum", "name":"论坛消息", "target":"navtab", "url":"html/base/navtab.html"}
+        {"id":"match", "name":"比赛消息", "target":"navtab", "url":"admin/usermatch/index.html"},
+        {"id":"artcle", "name":"考证消息", "target":"navtab", "url":"admin/usercertificate/index.html"},
+        {"id":"forum", "name":"论坛消息", "target":"navtab", "url":"admin/forum_comment/index.html"}
     ]}
 ]
