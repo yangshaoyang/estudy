@@ -95,7 +95,7 @@ class ForumController extends Controller {
         	$data['userid']=5;
         	//dump($data);
         	//2插入数据
-        	$editModel = M('forum');
+            $editModel = M('forum');
         	if($editModel->add($data)){
         		$typeid=$data['typeid'];
         		$this->redirect("/home/forum/tag/id/$typeid");
