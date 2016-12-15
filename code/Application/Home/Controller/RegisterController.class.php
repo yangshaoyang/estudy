@@ -37,9 +37,9 @@ class RegisterController extends Controller {
 		import("HomeClass.smtp");//引用发送邮件类
 		$smtpserver     =     "smtp.qq.com";//SMTP服务器
 	      	$smtpserverport =    465;//SMTP服务器端口
-	      	$smtpusermail     =     "estudyid@csbroswer.cn";//SMTP服务器的用户邮箱
-	      	$smtpuser         =     "estudyid@csbroswer.cn";//SMTP服务器的用户帐号
-	      	$smtppass         =     "CXD3434yue17";//SMTP服务器的用户密码
+	      	$smtpusermail     =     "396030162@qq.com";//SMTP服务器的用户邮箱
+	      	$smtpuser         =     "396030162";//SMTP服务器的用户帐号
+	      	$smtppass         =     "ysy396030162";//SMTP服务器的用户密码
 	      	$smtpemailto     =     $data['email'];//发送给谁
 	      	//dump($smtpemailto);
 	      	$mailsubject     =     "eStudy账号激活";//邮件主题

@@ -1,3 +1,8 @@
+<!--
+文件：前台个人中心控制器
+作者：徐稳越
+最后修改日期：2016年12月12日
+-->
 <?php
 namespace Home\Controller;
 use Think\Controller;
@@ -14,7 +19,7 @@ class PersonController extends Controller {
        if ($_SESSION['name'] == NULL) {
           $this->redirect('home/login/login','请登录');
         }else{
-          
+
           //输出个人信息
           $map['username']=$_SESSION['name'];
           $users=M("users")->where($map)->select();
@@ -24,7 +29,7 @@ class PersonController extends Controller {
           $this->assign("user_certificate",$user_certificate);
           $this->assign("user_match",$user_match);
           $this->display();
-        
+
       }
     }
     public function message(){
@@ -60,7 +65,7 @@ class PersonController extends Controller {
           'city'=>I('post.city'),
           'hobby'=>I('post.hobby')
          );
-        
+
         $Model=M("users");
         $Model->create();
         $map[username]=$username;

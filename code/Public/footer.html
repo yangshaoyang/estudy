@@ -1,28 +1,64 @@
 <div class="footer">
-	<div class="mybody">
-	<div class="ewm"><img src="__PUBLIC__/images/ewm.jpg" width="110" height="110" alt="ewm"/><p>关注 eStudy 微信</p></div>
-    <div class="footermiddle">
-    <ul>
-    	<li><a href="#" class="footernav">关于我们</a></li>
-        <li><a href="#" class="footernav footernav2">联系我们</a></li>
-        <li><a href="#" class="footernav footernav2">网站规则</a></li>
-        <li><a href="#" class="footernav footernav2">意见反馈</a></li>
-    </ul>
-	<p class="bq">版权所有 2016 易学助手有限公司 保留一切权利 京ICP备111111111号</p>
-    <p class="dh">联系电话：400-000-000</p>
-    </div>
-    <div class="footermiddle footerr">
-    	<a href="#" class="footernav">友情链接</a>
-        <ul>
-    	<li><a href="#" class="yqlj">易学（北京）科技有限公司</a></li>
-        <li><a href="#" class="yqlj yqlj2">北京比赛提示</a></li>
-        <li><a href="#" class="yqlj yqlj2">上海比赛提示</a></li>
-        <li><a href="#" class="yqlj yqlj2">广东比赛提示</a></li>
-        <li><a href="#" class="yqlj yqlj2">深圳比赛提示</a></li>
-        <li><a href="#" class="yqlj yqlj2">深圳比赛提示</a></li>
-        <li><a href="#" class="yqlj yqlj2">深圳比赛提示</a></li>
-        <li><a href="#" class="yqlj yqlj2">深圳比赛提示</a></li>
-    	</ul>
-    </div>
+    <div class="mybody">
+        <div class="ewm">
+            <img src="__PUBLIC__/images/ewm.jpg" width="110" height="110" alt="ewm" />
+            <p>关注estudy微信公众号</p>
+        </div>
+        <div class="footermiddle">
+            <ul>
+                <li>
+                    <a href="#" class="footernav">关于我们</a>
+                </li>
+                <li>
+                    <a href="#" class="footernav footernav2">联系我们</a>
+                </li>
+                <li>
+                    <a href="#" class="footernav footernav2">意见反馈</a>
+                </li>
+            </ul>
+            <p class="bq">版权所有 2016 易学助手项目组 保留一切权利 冀ICP备16024873号</p>
+            <p class="dh">联系邮箱：estudy@csbroswer.cn</p>
+        </div>
+        <div class="footermiddle footerr">
+            <a href="#" class="footernav">友情链接</a>
+            <ul><?php
+                        $connect = mysqli_connect('localhost','root','','estudy') or die('连接失败');
+                        //var_dump($connect);
+                        $sql = "select * from blogroll";
+                        //var_dump($sql);
+                        $result = mysqli_query($connect,$sql);
+                        var_dump($result);
+                    ?>
+                <li>
+                    <a href="#" class="yqlj yqlj2">深圳比赛提示</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
+                    <?php
+                        $dsn="mysql:host=localhost;dbname=estudy";
+                        $dbUser='root';
+                        $dbPswd='';
+                        $pdo = new PDO($dsn,$dbUser, $dbPswd);
+
+                        $sql = "set names utf8";
+                        $pdo->exec($sql);
+
+                        if(!$pdo){
+                            echo '连接失败';
+                        }
+
+                        //2、有结果的查询
+                        $sql="select * from blogroll";
+                        $sta = $pdo->query($sql);
+                        $urls = $sta->fetchAll();
+                        var_dump($urls);
+                        foreach($urls as $a){
+                            foreach($a as $b){
+                            var_dump($b);
+                            }
+
+                        }
+
+                    ?>

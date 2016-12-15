@@ -54,11 +54,12 @@
 
 <script type="text/javascript">
 function dialog_url(obj) {
-    alert(obj.id)
+
     var id =obj.id;
+     alert("__MODULE__/blogroll/edit/id/"+id);
     BJUI.dialog({
         id:'edit',
-        url:"__MODULE__/blogroll/edit/id/id",
+        url:"__MODULE__/blogroll/edit/id/"+id,
         title:'修改友情链接'
     })
 }

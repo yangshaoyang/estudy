@@ -17,11 +17,10 @@ class LoginController extends Controller {
         $username = $User->getFieldByEmail($email,'username');
         $id = $User->getFieldByUserid($email,'userid');
         if ($result == $password) {
-        	session('name',$username);
+            session('name',$username);
             session('id',$id);
             $url=session('path');
-        	$this->success('登录成功',$url);
-
+            $this->success('登录成功',$url);
         }else{
         	$this->error('用户名或密码不正确',U('home/login/login'));
         }
