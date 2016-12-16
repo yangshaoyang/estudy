@@ -34,11 +34,16 @@
         //定义变量
        var content=UE.getEditor('editor').getContent();
        var title=document.getElementById("title").value;
+       var sessionid=document.getElementById("session").value;
+       //判断是否登陆
+       if(!sessionid){
+	        alert("请您先登录！");
+	        return false;
+	    }
        //判断标题和内容是否为空
         if(!title){
 	        alert("标题不能为空！");
 	        return false;
-	        //user.focus();
 	    }
 	    if(!content){
 	    	alert("内容不能为空！");
