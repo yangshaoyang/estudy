@@ -34,8 +34,23 @@
                 <th align="center" width="300">用户</th>
                 <th align="center">举报时间</th>
                 <th align="center">举报链接</th>
+                <th align="center">举报状态</th>
                 <th align="center">操作</th>
             </tr>
+            <volist name="report" id="vo">
+            <tr>
+                <td>{$i}</td>
+                <td>{$vo.username}</td>
+                <td> {$vo.time}</td>
+                <td><a href="home/forum/questions/forumid/{$vo.forumid}">forum/questions/forumid/{$vo.forumid}</a></td>
+                <td> {$vo.feedback}</td>
+                <td align="center">
+                    <!-- <button type="button" class="btn-green" data-toggle="dialog" data-icon="sign-in" data-options="{id:'', url:'__MODULE__/match/content/mid/{$vo.mid}', title:'{$vo.mname}', max:true}">查看</button>&nbsp;
+                    <button type="button" class="btn-blue" data-toggle="dialog" data-icon="edit" data-options="{id:'', url:'__MODULE__/match/editmatch/mid/{$vo.mid}', title:'修改比赛：{$vo.mname}', max:true}">修改</button>&nbsp;
+                    <button type="button" class="btn-red" data-toggle="alertmsg" data-icon="times" target="ajaxTodo" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/match/delete/mid/{$vo.mid}');window.close();}}">删除</button> -->
+                </td>
+            </tr>
+            </volist>
         </thead>
     </table>
         <div data-toggle="pagination" data-options="{total:1000, pageSize:1, callback:pagination_test_callback}">

@@ -112,7 +112,6 @@ var bjui_index_container = 'container_fluid'
 
 function bjui_index_exchange() {
     bjui_index_container = bjui_index_container == 'container_fluid' ? 'container' : 'container_fluid'
-
     $('#bjui-top').find('> div').attr('class', bjui_index_container)
     $('#bjui-navbar').find('> div').attr('class', bjui_index_container)
     $('#bjui-body-box').find('> div').attr('class', bjui_index_container)
@@ -141,7 +140,7 @@ function bjui_index_exchange() {
                     <li><a href="">账号：{$_SESSION['adminname']}</a></li>
                     <li><a href="">角色：管理员</a></li>
                     <li><a href="admin/admin/chpwd.html" data-toggle="dialog" data-id="sys_user_changepass" data-mask="true" data-width="550" data-height="400">修改密码</a></li>
-                    <li><a href="__MODULE__/login/login" style="font-weight:bold;">&nbsp;<i class="fa fa-power-off"></i> 注销登陆</a></li>
+                    <li><a href="__MODULE__/login/exits" style="font-weight:bold;">&nbsp;<i class="fa fa-power-off"></i> 注销登陆</a></li>
                     <li class="dropdown"><a href="" class="dropdown-toggle bjui-fonts-tit" data-toggle="dropdown" title="更改字号"><i class="fa fa-font"></i> 大</a>
                         <ul class="dropdown-menu" role="menu" id="bjui-fonts">
                             <li><a href="javascript:;" class="bjui-font-a" data-toggle="fonts"><i class="fa fa-font"></i> 特大</a></li>
@@ -186,9 +185,6 @@ function bjui_index_exchange() {
                         <script class="items"></script> -->
                         <a href="http://csbroswer.cn" target="_blank" data-id-key="targetid">网站首页</a>
                     </li>
-                    <!-- <li>
-                        <a href="1.2" target="_blank">旧版DEMO</a>
-                    </li> -->
                 </ul>
             </nav>
         </div>
