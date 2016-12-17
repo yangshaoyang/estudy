@@ -15,7 +15,7 @@ class LoginController extends Controller {
         $result = $User->getFieldByEmail($email,'password');
         //dump($result);
         $username = $User->getFieldByEmail($email,'username');
-        $id = $User->getFieldByUserid($email,'userid');
+        $id = $User->getFieldByEmail($email,'userid');
         if ($result == $password) {
         	session('name',$username);
             session('id',$id);
