@@ -89,10 +89,11 @@ class ForumController extends Controller {
     public function addForum(){
         if(IS_POST){
         	//1.I函数获取数据
+        	//dump(session());
         	$data=array();
         	$data=I('post.');
         	$data['content']=$data['editorValue'];
-        	$data['userid']=5;
+        	$data['userid']=session('id');
         	//dump($data);
         	//2插入数据
             $editModel = M('forum');
