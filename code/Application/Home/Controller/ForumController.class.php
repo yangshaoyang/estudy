@@ -9,7 +9,7 @@ use Think\Controller;
 use \Library\Page;
 
 //编码方式
- header("Content-Type: text/html; charset=UTF-8");
+header("Content-Type: text/html; charset=UTF-8");
 class ForumController extends Controller {
 	//论坛list页获取分类数据的方法
     protected function _tag($id){
@@ -38,14 +38,14 @@ class ForumController extends Controller {
         $res['id']=$id;
         $res['forum']=$forum;
         $res['pages']=$pages;
-        
+
         return $res;
     }
 
     //论坛content页获取评论数据的方法
     protected function _comment($id){
     	/*对应id的评论*/
-	    $forum_comment=M("forum_comment")->where("forumid=$id");
+        $forum_comment=M("forum_comment")->where("forumid=$id");
 	    /*分页码*/
 		// 1. 获取记录总条数
         $count =$forum_comment->count();
@@ -74,7 +74,7 @@ class ForumController extends Controller {
     //论坛list页展示分类数据的方法
     public function tag($id){
     	/*分类数据*/
-    	$sort=$this->_tag($id);
+        $sort=$this->_tag($id);
     	/*热议榜数据*/
         $forum_hot=M("forum")->order('readcount desc')->limit(10)->select();
         $this->assign('forum_hot', $forum_hot);
@@ -125,7 +125,7 @@ class ForumController extends Controller {
 	//论坛list页的控制器
     public function index(){
     	/*分类数据*/
-    	$sort=$this->_tag(1);
+        $sort=$this->_tag(1);
 
     	/*热议榜数据*/
         $forum_hot=M("forum")->order('readcount desc')->limit(10)->select();
@@ -139,35 +139,31 @@ class ForumController extends Controller {
 
     //论坛内容页的控制器
     public function questions($forumid){
-    	//找id对应的帖子内容
-    	$forum=M("forum");
-    		//阅读量
-			$forum->where("forumid=$forumid")->setInc('readcount');
-    	$forum=$forum->find($forumid);
-		$this->assign("fcontent",$forum);
-		
-		//分类名称
-			//1.构造查询条件
-			$condition=array();
-			$condition['typeid']=M("forum")->where("forumid=$forumid")->getField('typeid');
-			//2.查询分类名称
-			$typename=M("forum_sort")->where($condition)->getField('typename');
-			//dump($typename);
-			$this->assign("typename",$typename);
-
-		//发帖人名称
-			//1.构造查询条件
-			$condition=array();
-			$condition['userid']=M("forum")->where("forumid=$forumid")->getField('userid');
-			//2.查询分类名称
-			$username=M("users")->where($condition)->getField('username');
-			//dump($typename);
-			$this->assign("username",$username);
-
-		//热议榜数据
+        //找id对应的帖子内容
+        $forum=M("forum");
+        //阅读量
+        $forum->where("forumid=$forumid")->setInc('readcount');
+        $forum=$forum->find($forumid);
+        $this->assign("fcontent",$forum);
+        //分类名称
+        //1.构造查询条件
+        $condition=array();
+        $condition['typeid']=M("forum")->where("forumid=$forumid")->getField('typeid');
+        //2.查询分类名称
+        $typename=M("forum_sort")->where($condition)->getField('typename');
+        //dump($typename);
+        $this->assign("typename",$typename);
+        //发帖人名称
+        //1.构造查询条件
+        $condition=array();
+        $condition['userid']=M("forum")->where("forumid=$forumid")->getField('userid');
+        //2.查询分类名称
+        $username=M("users")->where($condition)->getField('username');
+        //dump($typename);
+        $this->assign("username",$username);
+        //热议榜数据
         $forum_hot=M("forum")->order('readcount desc')->limit(10)->select();
         $this->assign('forum_hot', $forum_hot);
-
         //评论数据
         $res=$this->_comment($forumid);
         $comment=$res['forum_comment'];
@@ -177,7 +173,25 @@ class ForumController extends Controller {
         //输出结果
         $this->display();
     }
+    public function report($username,$forumid){
+        if ($_SESSION['name'] == NULL) {
+            $this->redirect('home/login/login','请登录');
+        }else{
+            $data=array(
+                    'username'  =>$username,
+                    'forumid' =>$forumid
+                    );
+               $Model=D("report");
+               $Model->create();
+               $num=$Model->add($data);
+               if($num>0){
+                $this->success("举报成功！管理员处理后将及时给您反馈",U("home/forum/questions/forumid/$forumid"),5);
+               }else{
+                $this->error("举报失败 /(ㄒoㄒ)/~~，请重试",U("home/forum/questions/forumid/$forumid"),5);
+               }
+            }
+    }
 
-    
+
 
 }
