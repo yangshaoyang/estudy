@@ -173,6 +173,13 @@ class ForumController extends Controller {
         //输出结果
         $this->display();
     }
+
+    //论坛内容页的控制器
+    public function suggestions(){
+        //输出结果
+        $this->display();
+    }
+    //举报功能控制器
     public function report($username,$forumid){
         if ($_SESSION['name'] == NULL) {
             $this->redirect('home/login/login','请登录');
