@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 return array(
 	//'配置项'=>'配置值'
     'DB_TYPE'                => 'mysql', // 数据库类型
