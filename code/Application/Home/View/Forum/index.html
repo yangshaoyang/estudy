@@ -45,35 +45,35 @@
             		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
         			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
         			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
-        			<li><a href="#" class="lpli">意见反馈</a></li>
+        			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
         		</case>
         		<case value="2">
         			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
             		<li><a href="{:U('/home/forum/tag/id/2')}" class="lphover">比赛</a></li>
         			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
         			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
-        			<li><a href="#" class="lpli">意见反馈</a></li>
+        			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
         		</case>
         		<case value="3">
         			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
             		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
         			<li><a href="{:U('/home/forum/tag/id/3')}" class="lphover">生活</a></li>
         			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
-        			<li><a href="#" class="lpli">意见反馈</a></li>
+        			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
         		</case>
         		<case value="4">
         			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
             		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
         			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
         			<li><a href="{:U('/home/forum/tag/id/4')}" class="lphover">大杂烩</a></li>
-        			<li><a href="#" class="lpli">意见反馈</a></li>
+        			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
         		</case>
         		<default />
         			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
             		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
         			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
         			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
-        			<li><a href="#" class="lphover">意见反馈</a></li>
+        			<li><a href="{:U('/home/forum/suggestions')}" class="lphover">意见反馈</a></li>
     		</switch>
     		
     	</ul>
@@ -135,30 +135,14 @@
         	</ul>
         </div>
        	<div class="righttop righttop2">
-        	<h1 class="title title2">公告板<a href="#" class="ckgd">更多&nbsp;>></a></h1>
-            <div class="lpimg"><a href="#"><img src="__PUBLIC__/images/commitment001.jpg" width="220" height="100" alt="lp" /></a></div>
+        	<h1 class="title title2">公告板</h1>
+            <div class="lpimg"><a href="{:U('/home/forum/questions/forumid/57')}"><img src="__PUBLIC__/images/commitment001.jpg" width="220" height="100" alt="lp" /></a></div>
      		 <ul class="topul">
-	        	<li><a href="#">违规论坛举报反映通道</a><span>01-01</span></li>
-	            <li><a href="#">贴吧志愿者招募</a><span>01-01</span></li>
+	        	<li><a href="{:U('/home/forum/suggestions')}">违规论坛举报反映通道</a><span>2016-12-18</span></li>
         	</ul>
       	</div>
-      	<!--<div class="righttop righttop2 righttop3">
-      		<h1 class="title title2">论坛达人<a href="#" class="ckgd">更多&nbsp;>></a></h1>
-            <div class="xzdr">
-       	    	<img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
-                <div class="xzright">
-                <div class="drname">
-                <h1>王子文</h1>
-                <a>和TA交流</a>
-                </div>
-                <h3>达人介绍</h3>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人今年大四，就读于清华大学计算机专业。</p>
-                </div>
-            </div>
-   	 </div>-->
+	</div>
 </div>
-</div>
-
 <!--底部footer-->
 <include file="Public/footer.html" />
 </body>
