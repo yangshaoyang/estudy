@@ -61,12 +61,6 @@
 	line-height:28px;
 	}
 textarea{resize: none;}
-.form1 #forms{
-	width:405px;
-	height:30px;
-	/*border:1px solid #ccc;*/
-	float: left;
-	}
 .form1 input[type="button"]{
 	width:120px;
 	height:40px;
@@ -80,7 +74,7 @@ textarea{resize: none;}
 	background:#609dbe;
 	}
 .button{
-	text-align:center;
+	padding-left: 270px;
 	}
 
 .form2{
@@ -324,6 +318,21 @@ textarea{resize: none;}
 	}
 .form2 .tag .tag_3{margin-left:-173px;}
 
+.formnew {
+	width: 560px;
+	height: 490px;
+	margin-left: 170px;
+}
+#hobby{
+	width: 42px;
+	height: 30px;
+}
+#forms{
+	padding-left: 30px;
+}
+.Button{
+	padding-right: 150px;
+}
 
 
 
