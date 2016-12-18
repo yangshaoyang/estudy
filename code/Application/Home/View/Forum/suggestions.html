@@ -10,10 +10,8 @@
     <link rel="shortcut icon" href="__PUBLIC__/assets/ico/favicon.ico"/>
     <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
     <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
-    <link href="__PUBLIC__/css/questions.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/dynamicdetails.css" rel="stylesheet" type="text/css" />
     <link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
-    <link href="__PUBLIC__/css/forumlist.css" rel="stylesheet" type="text/css" />
-    <script src="__PUBLIC__/js/jquery.js" ></script>
     <title>论坛意见反馈</title>
 </head>
 <body>
@@ -28,25 +26,39 @@
                 >
                 <a href="{:U('/home/forum/suggestions')}">意见反馈</a>
             </div>
-            <div class="left">
-                <div class="question">
-                    <div class="qtop">
-                        <h1>
-                            <span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;意见反馈专注于用户的需求，专心于易学助手的完善。倾听，始终如一。用心倾听您的建议。如果您在使用易学助手时遇到问题和功能障碍，或者对我们的产品有相关意见建议，欢迎在此精确反馈。</span>
-                        </h1>
-                    </div>
+            <div style="float: left">
+                <div class="left">
+                    <h1>论坛意见反馈</h1>
+                    <div class="fl"></div>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;意见反馈专注于用户的需求，专心于易学助手的完善。倾听，始终如一。用心倾听您的建议。如果您在使用易学助手时遇到问题和功能障碍，或者对我们的产品有相关意见建议，欢迎在此精确反馈。
+                    </p>
                 </div>
-                <div class="clear"></div>
+                <!--PC版-->
+                <div id="SOHUCS" sid="luntanfankui" style="width: 790px;float: left;"></div>
+                <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+                <script type="text/javascript">
+                    window.changyan.api.config({
+                    appid: 'cysJVl9Cb',
+                    conf: 'prod_49c81d0f91ec3cbce38e37a23f0ec3f4'
+                    });
+                </script>
             </div>
             <div class="right">
                 <div class="righttop">
-		        	<h1 class="title title2">公告板</h1>
-		            <div class="lpimg"><a href="{:U('/home/forum/questions/forumid/57')}"><img src="__PUBLIC__/images/commitment001.jpg" width="220" height="100" alt="lp" /></a></div>
-		     		 <ul class="topul">
-			        	<li><a href="{:U('/home/forum/suggestions')}">违规论坛举报反映通道</a><span>2016-12-18</span></li>
-		        	</ul>
-		      	</div>
+                    <h1 class="title title2">公告板</h1>
+                    <div class="lpimg" style="margin-left: 60px;">
+                        <a href="{:U('/home/forum/questions/forumid/57')}">
+                            <img src="__PUBLIC__/images/commitment001.jpg" width="220" height="100" alt="lp" />
+                        </a>
+                    </div>
+                    <ul class="topul">
+                        <li>
+                            <a href="{:U('/home/forum/suggestions')}">违规论坛举报反映通道</a>
+                            <span>2016-12-18</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
