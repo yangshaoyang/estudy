@@ -29,16 +29,14 @@
 
                         $sql = "set names utf8";
                         $pdo->exec($sql);
-
                         if(!$pdo){
                             echo '连接失败';
                         }
-
-                        //2、有结果的查询
+                        //有结果的查询
                         $sql="select * from blogroll";
                         $sta = $pdo->query($sql);
                         $urls = $sta->fetchAll();
-                        for($i=0;$i<count($urls);$i++){     // 循环读取二维数组中的数据
+                        for($i=0;$i<count($urls);$i++){// 循环读取二维数组中的数据
                 ?>
                 <li>
                      <a href="<?php echo $urls[$i]['url'];?>" class="yqlj yqlj2"><?php echo $urls[$i]['name'];?></a>
