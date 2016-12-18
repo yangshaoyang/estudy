@@ -86,12 +86,12 @@
                     <volist name="comment" id="vo">
                         <li>
                             <div class="lileft">
-                                <img src="__PUBLIC__/images/userhead.gif" width="80" height="80" alt="head" />
+                                <img src="__PUBLIC__/{$vo.avatar_url}" width="90" height="110" alt="head" />
                             </div>
                             <div class="liright">
                                 <div class="rtop">
-                                    <h3>姓名：{$vo.userid}</h3>
-                                    <a>和TA交流</a>
+                                    <h3>姓名：{$vo.username}</h3>
+                                    <!--<a>和TA交流</a>-->
                                     <div class="ssfl ssfl2 ssflul">
                                         <img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" />
                                         <span>时间：{$vo.createtime}</span>
@@ -106,7 +106,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span class="hf">回复</span>
+                            <!--<span class="hf">回复</span>-->
                         </li>
                     </volist>
                 </ul>
@@ -115,7 +115,7 @@
                 <div class="clear"></div>
                 <div class="post_forum">
                     <a name="sub"></a>
-                    <form action="{:U('/home/forum/addComment')}" method="post">
+                    <form action="{:U('/home/forum/addComment')}" method="post"  onsubmit="return checkResponse()">
                         <div>
                             <span>发表回复</span>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -125,7 +125,9 @@
                             <script id="editor" type="text/plain" style="width:660px;height:500px;"></script>
 
                             <div>
-                                <input class="post_button" type="submit" onclick="getContent()"  value="发表" />
+                            	<input hidden="hidden" id=session value="{$Think.session.name}" /> 
+                            	<input hidden="hidden" name="forumid" value="{$id}" /> 
+                                <input class="post_button" type="submit" value="发表" />
                             </div>
                         </div>
                     </form>

@@ -132,6 +132,24 @@
         UE.getEditor('editor').execCommand( "clearlocaldata" );
         alert("已清空草稿箱")
     }
-
+    //回复中的验证是否登录
+    function checkResponse() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        //定义变量
+       var content=UE.getEditor('editor').getContent();
+       var sessionid=document.getElementById("session").value;
+       //判断是否登陆
+       if(!sessionid){
+	        alert("请您先登录！");
+	        return false;
+	    }
+       //判断标题和内容是否为空
+	    if(!content){
+	    	alert("回复内容不能为空！");
+	        return false;
+	    }
+    }
    
    
