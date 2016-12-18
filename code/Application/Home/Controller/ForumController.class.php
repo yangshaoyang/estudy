@@ -52,21 +52,23 @@ class ForumController extends Controller {
         $pageSize =3;
         // 3. 创建分页类对象
         $page = new Page($count, $pageSize);
-         //4.构造查询条件
-        $condition=array();
-        $condition['forumid']=$id;
-        // 5. 分页查询
-        $forum_comment=$forum_comment->where($condition)->order('forum_answerid')
+        // 4. 分页查询
+        $Model=M();
+        $forum_comment=$Model->field('username,avatar_url,createtime,forum_comment,forum_answerid')
+    		  			->table(array('users'=>'a','forum_comment'=>'b'))
+    		  			->where("a.userid=b.userid AND forumid=$id")->order('forum_answerid')
         				->limit($page->firstRow.','.$page->listRows)
             			->select();
-        //6.定义分页样式
+        // 5.定义分页样式
         $page->setConfig('prev','上一页');
         $page->setConfig('next','下一页');
-        // 7. 输出查询结果
+        // 6. 输出查询结果
         $pages=$page->show();
-        //8.构建返回结果
-        $res['forum_comment']=$forum_comment;
+        // 7.构建返回结果
+        $res['id']=$id;
         $res['pages']=$pages;
+        $res['count']=$count;
+        $res['forum_comment']=$forum_comment;
         return $res;
     }
 
@@ -109,15 +111,16 @@ class ForumController extends Controller {
         	//1.I函数获取数据
         	$data=array();
         	$data=I('post.');
-        	$data['content']=$data['editorValue'];
-        	$data['userid']=5;
-        	dump($data);
+        	$data['userid']=session('id');
+        	$data['forum_comment']=$data['editorValue'];
+        	$data['forum_answerid']=0;
+        	//dump($data);
         	//2插入数据
-        	/*$editModel = M('forum_comment');
+        	$editModel = M('forum_comment');
         	if($editModel->add($data)){
-        		$typeid=$data['typeid'];
-        		$this->redirect("/home/forum/tag/id/$typeid");
-        	}*/
+        		$id=$data['forumid'];
+        		$this->redirect("/home/forum/questions/forumid/$id");
+        	}
         }
     }
 
@@ -164,8 +167,9 @@ class ForumController extends Controller {
         //评论数据
         $res=$this->_comment($forumid);
         $comment=$res['forum_comment'];
+        $this->assign('id', $res['id']);
         $this->assign('pages', $res['pages']);
-        $this->assign('count_comment',count($comment));
+        $this->assign('count_comment',$res['count']);
         $this->assign('comment',$comment);
         //输出结果
         $this->display();
