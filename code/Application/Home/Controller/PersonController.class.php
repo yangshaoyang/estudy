@@ -82,7 +82,7 @@ class PersonController extends Controller {
         // dump($map);
         $num=$Model->where($map)->save($data);
         if($num>0){
-            $this->success("添加成功！",U('home/Person/permessage'));
+            $this->success("添加成功！",U('home/Person/homepage'));
           }else{
             $this->error("添加失败！");
           }
@@ -105,6 +105,36 @@ class PersonController extends Controller {
           $this->display();
         }
     }
+
+      public function changepswd($username){
+        //先判断是否登录
+        if($_SESSION['name'] == NULL){
+        $this->redirect('home/login/login');
+      }else{
+            $users=M("users");
+            $password =$users->getFieldByusername($username,'password');
+            //dump($password);
+           //提交修改密码表单
+            $data=array(
+                'password' => md5(I('post.newpassword'))
+                );
+            // dump($data);
+           if(md5(I('post.oldpassword')) == $password){
+              $map['username']=$username;
+              $num=$users->where($map)->save($data);
+              // var_dump($num);
+              // exit;
+              if($num>0){
+               $this->success("修改成功！",U("home/login/login"));
+              }else{
+               $this->error("修改失败！");
+            }
+           }else{
+            $this->error('旧密码不正确，请重新输入！',U("home/person/repassword"));
+           }
+           $this->display();
+         }
+        }
     // public function addimage($username){
     //     $upload = new \Think\Upload();//
     //     $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
