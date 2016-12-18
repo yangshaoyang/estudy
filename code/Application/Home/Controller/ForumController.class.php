@@ -11,18 +11,18 @@ use \Library\Page;
 //编码方式
 header("Content-Type: text/html; charset=UTF-8");
 class ForumController extends Controller {
-	//论坛list页获取分类数据的方法
+    //论坛list页获取分类数据的方法
     protected function _tag($id){
-    	/*选取分类1数据*/
-	    $forum=M("forum")->where("typeid=$id");
-	    /*分页码*/
-		// 1. 获取记录总条数
+        /*选取分类1数据*/
+        $forum=M("forum")->where("typeid=$id");
+        /*分页码*/
+        // 1. 获取记录总条数
         $count =$forum->count();
         // 2. 设置（获取）每一页显示的个数
         $pageSize =5;
         // 3. 创建分页类对象
         $page = new Page($count, $pageSize);
-      //4.构造查询条件
+        //4.构造查询条件
         $condition=array();
         $condition['typeid']=$id;
         // 5. 分页查询
@@ -38,7 +38,6 @@ class ForumController extends Controller {
         $res['id']=$id;
         $res['forum']=$forum;
         $res['pages']=$pages;
-
         return $res;
     }
 
@@ -122,12 +121,11 @@ class ForumController extends Controller {
         }
     }
 
-	//论坛list页的控制器
+    //论坛list页的控制器
     public function index(){
-    	/*分类数据*/
+        /*分类数据*/
         $sort=$this->_tag(1);
-
-    	/*热议榜数据*/
+        /*热议榜数据*/
         $forum_hot=M("forum")->order('readcount desc')->limit(10)->select();
         $this->assign('forum_hot', $forum_hot);
         //输出结果
@@ -136,7 +134,6 @@ class ForumController extends Controller {
         $this->assign('pages', $sort['pages']);
         $this->display();
     }
-
     //论坛内容页的控制器
     public function questions($forumid){
         //找id对应的帖子内容
