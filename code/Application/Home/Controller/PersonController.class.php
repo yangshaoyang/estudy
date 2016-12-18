@@ -7,7 +7,7 @@ class PersonController extends Controller {
         if ($_SESSION['name'] == NULL) {
           $this->redirect('home/login/login','请登录');
         }else{
-          $this->display();
+          // $this->display();
         }
     }
 
@@ -66,26 +66,7 @@ class PersonController extends Controller {
           'city'=>I('post.city'),
           'hobby'=>I('post.hobby')
          );
-        
-        $Model=M("users");
-        $Model->create();
-        $map['username']=$username;
-        $num=$Model->where($map)->save($data);
-        $this->redirect('home/person/homepage');
-        }
-    }
 
-    public function repassword(){
-        if ($_SESSION['name'] == NULL) {
-          $this->redirect('home/login/login','请登录');
-        }else{
-          $map['username']=$_SESSION['name'];
-          $users=M("users")->where($map)->select();
-          $this->assign("users",$users[0]);
-          $this->display();
-        }
-    }
-    public function addimage($username){
         $upload = new \Think\Upload();//
         $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
         //$upload->rootPath  =     THINK_PATH; // 设置附件上传根目录
@@ -105,6 +86,45 @@ class PersonController extends Controller {
           }else{
             $this->error("添加失败！");
           }
+        
+        $Model=M("users");
+        $Model->create();
+        $map['username']=$username;
+        $num=$Model->where($map)->save($data);
+        $this->redirect('home/person/homepage');
+        }
     }
+
+    public function repassword(){
+        if ($_SESSION['name'] == NULL) {
+          $this->redirect('home/login/login','请登录');
+        }else{
+          $map['username']=$_SESSION['name'];
+          $users=M("users")->where($map)->select();
+          $this->assign("users",$users[0]);
+          $this->display();
+        }
+    }
+    // public function addimage($username){
+    //     $upload = new \Think\Upload();//
+    //     $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+    //     //$upload->rootPath  =     THINK_PATH; // 设置附件上传根目录
+    //     $upload->savePath  =     '../Public/Uploads/uploads';  // 设置附件上传（子）目录
+    //     $info   =   $upload->upload();
+    //     //dump($info);
+    //     $image = $info['avatar_url']['savepath'].$info['avatar_url']['savename'];
+    //     // dump($image);
+    //     $data['avatar_url']=$image;
+    //     // dump($data);
+    //     $Model=M("users");
+    //     $map['username']=$username;
+    //     // dump($map);
+    //     $num=$Model->where($map)->save($data);
+    //     if($num>0){
+    //         $this->success("添加成功！",U('home/Person/permessage'));
+    //       }else{
+    //         $this->error("添加失败！");
+    //       }
+    // }
 
 }
