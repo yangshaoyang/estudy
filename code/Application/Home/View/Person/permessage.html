@@ -10,10 +10,15 @@
 <script type="text/javascript">
         function F_Open_dialog() 
        { 
+            alert("点击底部提交方可显示哦!");
             document.getElementById("btn_file").click(); 
        } 
+       function Open_dialog2() 
+       { 
+            alert("点击右侧头像哦!");
+       } 
 
-    </script>
+</script>
 </head>
 <body>
 <include file="Public/header.html" />
@@ -26,11 +31,8 @@
         <div class="personal_left">
             <div class="user">
                
-               <!--  <form action="__MODULE__/Person/addimage/username/{$_SESSION['name']}" method="post" enctype="multipart/form-data"> -->
-                <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150"  style="cursor:pointer" onclick="F_Open_dialog()" />
+                <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150"  style="cursor:pointer"  onclick="Open_dialog2()"/>
                 <input type="file" id="btn_file"   style="display:none" name='avatar_url' value="{$users.avatar_url}">
-                <!-- <button type="submit">...</button> -->
-                <!-- </form> -->
                 <p>欢迎您   {$_SESSION['name']}</p>
             </div>
             <ul class="left_nav">
@@ -43,7 +45,7 @@
         </div>
         <!--个人中心right-->
         <div class="personal_form_right form_bg">
-            <div class="img"><img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150"/></div>
+            <div class="img"><img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150" onclick="F_Open_dialog()" style="cursor:pointer"/></div>
             <div class="form1">
             <div class="formnew">
            <!--  <form action="__MODULE__/Person/add/username/{$_SESSION['name']}" method="post"> -->
@@ -54,19 +56,19 @@
                     </tr>
                     <tr>
                         <td>性别</td>
-                        <td><input type="text" name="sex" value="" /></td>
+                        <td><input type="text" name="sex" value="{$users.sex}" /></td>
                     </tr>
                     <tr>
                         <td>专业</td>
-                        <td><input type="text" name="major" value="" /></td>
+                        <td><input type="text" name="major" value="{$users.major}" /></td>
                     </tr>
                     <tr>
                         <td>学校</td>
-                        <td><input type="text" name="colleage" value="" /></td>
+                        <td><input type="text" name="colleage" value="{$users.colleage}" /></td>
                     </tr>
                     <tr>
                         <td>城市</td>
-                        <td><input type="text" name="city" value="" /></td>
+                        <td><input type="text" name="city" value="{$users.city}" /></td>
                     </tr>
                     <tr>
                         <td id="hobby">爱好</td>
