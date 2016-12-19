@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/sitelist.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
+<title>热点资讯</title>
+</head>
+<body>
+<include file="Public/header.html" />
+
+<div class="content">
+<div class="mybody">
+    <div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="../../news">搜素</a></div>
+    <div class="left">
+        <div>
+        <form class="search"  action="{:U('home/search/search')}" method="post" onsubmit="return chk_form();">
+            <input type="text" value="请输入感兴趣的内容..." class="searchtext" name="condition">
+            <input type="submit" value="开始搜索" class="searchbutton">
+        </form>
+        </div>
+        <div class="lp">
+        </div>
+        <ul class="proul">
+        <!-- 比赛 -->
+            <volist name="match" id="vo" length="4">
+                <li>
+                            <div class="list">
+                                <div class="listleft">
+                                    <h1>{$vo.mname}</h1>
+                                    <div class="time">
+                                        <img src="__PUBLIC__/images/time.gif" width="13" height="13" alt="time"/>
+                                        <span class="sj">时间：{$vo.mtime}</span>
+                                        <span class="qy">{$vo.keyword}</span>
+                                        <span class="qy xzl">{$vo.keyword2}</span>
+                                        <span class="qy qz">{$vo.keyword3}</span>
+                                    </div>
+                                    <div class="yusuan">
+                                        <span>要求：{$vo.mrequest}</span>
+                                        <span class="yusuan2">报名费：{$vo.mfee} 元</span>
+                                        <span class="yusuan2">
+                                            官网：
+                                            <a href="{$vo.murl}">{$vo.murl}</a>
+                                        </span>
+                                    </div>
+                            </div>
+                            <div class="listright">
+                                <form>
+                                    <input type="button" value="我要参加" onclick="return alertMsg('确定要参加吗？',1,'__CONTROLLER__/user/mid/{$vo.mid}/mtime/{$vo.mtime}');" class="button1" id="{$vo.mid}">
+                                    <input type="button" value="查看详情" class="button1 button2"  onclick="location.href='__CONTROLLER__/content/mid/{$vo.mid}'"></form>
+                            </div>
+                        </div>
+                    </li>
+            </volist>
+            <!-- 考证 -->
+            <volist name="certificate" id="vo" length="4">
+                        <li>
+                            <div class="list">
+                                <div class="listleft">
+                                    <h1>{$vo.cname}</h1>
+                                    <div class="time">
+                                        <img src="__PUBLIC__/images/time.gif" width="13" height="13" alt="time"/>
+                                        <span class="sj">时间：{$vo.ctime}</span>
+                                        <span class="qy">{$vo.keyword}</span>
+                                        <span class="qy xzl">{$vo.keyword2}</span>
+                                        <span class="qy qz">{$vo.keyword3}</span>
+                                    </div>
+                                    <div class="yusuan">
+                                        <span>要求：{$vo.crequest}</span>
+                                        <span class="yusuan2">报名费：{$vo.cfee} 元</span>
+                                        <span class="yusuan2">
+                                            官网：
+                                            <a href="{$vo.murl}">{$vo.curl}</a>
+                                        </span>
+                                    </div>
+                            </div>
+                            <div class="listright">
+                                <form>
+                                    <input type="button" value="我要考取" onclick="return alertMsg('确定要参加吗？',1,'__CONTROLLER__/user/cid/{$vo.cid}/ctime/{$vo.ctime}');" class="button1">
+                                    <input type="button" value="查看详情" class="button1 button2"  onclick="location.href='__CONTROLLER__/content/cid/{$vo.cid}'"></form>
+                            </div>
+                        </div>
+                    </li>
+                </volist>
+        </ul>
+        <div class="page">
+                {$pages}
+    </div>
+    </div>
+    <div class="right">
+        <div class="righttop">
+            <h1 class="title">热门资讯<a href="#" class="ckgd">更多&nbsp;>></a></h1>
+            <ul class="topul">
+            <li><a href="#">励志音乐，你Get了吗？</a><span>01-01</span></li>
+            <li><a href="#">鸡汤励志成名曲</a><span>01-01</span></li>
+            <li><a href="#">这本该是个励志的故事...</a><span>01-01</span></li>
+            <li><a href="#">励志故事的背后你又知道哪些？</a><span>01-01</span></li>
+            <li><a href="#">怎么看待励志的书籍？</a><span>01-01</span></li>
+            <li><a href="#">如何写好励志小说...</a><span>01-01</span></li>
+            <li><a href="#">哇咔咔，今天的鸡汤好喝吗...</a><span>01-01</span></li>
+        </ul>
+        </div>
+        <div class="righttop righttop2">
+            <h1 class="title title2">励志达人<a href="#" class="ckgd">更多&nbsp;>></a></h1>
+            <div class="xzdr">
+                <img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <div class="xzright">
+                <div class="drname">
+                <h1>王子文</h1>
+                </div>
+                <ul>
+                    <li>人物简介</li>
+                    <li>人物经历</li>
+                    <li>主要著作</li>
+                    <li>综艺节目</li>
+                </ul>
+                </div>
+            </div>
+            <div class="xzdr xzdr2">
+                <img src="__PUBLIC__/images/dr2.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <div class="xzright">
+                <div class="drname">
+                <h1>尼克胡哲</h1>
+                </div>
+                <ul>
+                    <li>人物简介</li>
+                    <li>人物经历</li>
+                    <li>主要著作</li>
+                    <li>励志演讲</li>
+                </ul>
+                </div>
+            </div>
+            <div class="xzdr xzdr2">
+                <img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <div class="xzright">
+                <div class="drname">
+                <h1>俞敏洪</h1>
+                </div>
+                <ul>
+                    <li>人物简介</li>
+                    <li>人物经历</li>
+                    <li>主要著作</li>
+                    <li>综艺节目</li>
+                </ul>
+                </div>
+            </div>
+            <div class="xzdr xzdr2">
+                <img src="__PUBLIC__/images/dr2.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+                <div class="xzright">
+                <div class="drname">
+                <h1>尼克胡哲</h1>
+                </div>
+                <ul>
+                    <li>人物简介</li>
+                    <li>人物经历</li>
+                    <li>主要著作</li>
+                    <li>励志演讲</li>
+                </ul>
+                </div>
+      </div>
+    </div>
+</div>
+</div>
+
+<include file="Public/footer.html" />
+
+</body>
+</html>
