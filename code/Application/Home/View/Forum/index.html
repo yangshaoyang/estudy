@@ -85,7 +85,7 @@
 	                	<h1><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title}</a></h1>
 	                    <!--<h2>刚入学的小萌新求指导</h2>-->
 	                </div>
-	                <p><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.content}</a></p>
+	                <p><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.content|substr=0,279}</a></p>
 	                <div class="forum-footer">
 	               	    	<img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/> 
 	                        <span class="forum-time">时间：{$vo.posttime|substr=0,10}</span>
