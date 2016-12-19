@@ -4,12 +4,7 @@ use Think\Controller;
 class PersonController extends Controller {
     public function index(){
         $users=M("users")->select();
-        // dump($users);
-        // $user_certificate=M("user_certificate")->select();
-        // $user_match=M("user_match")->select();
         $this->assign("users",$users);
-        // $this->assign("user_certificate",$user_certificate);
-        // $this->assign("user_match",$user_match);
         $this->display();
     }
     public function editmessage($userid){
@@ -17,6 +12,30 @@ class PersonController extends Controller {
         //dump($users);
         $this->assign("users",$users);
         $this->display();
+    }
+    public function edit($userid){
+        $data=array(
+          'username' =>I('post.username'),
+          'email'=>I('post.email'),
+          'sex'=>I('post.sex'),
+          'major'=>I('post.major'),
+          'colleage'=>I('post.colleage'),
+          'city'=>I('post.city'),
+          'hobby'=>I('post.hobby')
+        );
+        // dump($data);
+        $Model=M("users");
+        $num=$Model->where('userid='.$userid)->save($data);
+        if($num>0){
+            $this->success("修改成功！",U('admin/Person/index'));
+        }else{
+            $this->error("修改失败！");
+        }
+        $this->display();
+        // $users=M("users")->find($userid);
+        // //dump($users);
+        // $this->assign("users",$users);
+        // $this->display();
     }
     public function permessage($userid){
       $users=M("users")->find($userid);;
