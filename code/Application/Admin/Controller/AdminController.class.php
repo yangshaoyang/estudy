@@ -1,4 +1,10 @@
 <?php
+/**
+*开发者：胡琪
+*开发功能：实现后台管理员对管理员的操作功能
+*修改时间：2016/12/09
+*/
+
 namespace Admin\Controller;
 use Think\Controller;
 class AdminController extends Controller {
@@ -59,7 +65,7 @@ class AdminController extends Controller {
         'adname' => I('post.adname'),
         'ademail' => I('post.ademail'),
         'adphonenum' => I('post.adphonenum')
-        );
+      );
       $Model = M('admin');
       $num = $Model->where('adminid=' . $adminid)->save($data);
       if ($num > 0) {
