@@ -7,10 +7,17 @@
 <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/personal_left.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/personal_else.css" rel="stylesheet" type="text/css" />
-<!-- <link href="../css/public.css" rel="stylesheet" type="text/css" />
-<link href="../css/head.css" rel="stylesheet" type="text/css" />
-<link href="../css/personal_left.css" rel="stylesheet" type="text/css" />
-<link href="../css/personal_else.css" rel="stylesheet" type="text/css" /> -->
+<script type="text/javascript">
+        function Open_dialog() 
+       { 
+            alert("请到个人信息管理界面点击上传头像!");
+       } 
+        function Open_dialog1() 
+       { 
+            alert("请到个人信息管理界面完善个人资料!");
+       } 
+
+</script>
 <title>个人中心</title>
 </head>
 <body>
@@ -24,7 +31,7 @@
         <!--个人中心left-->
         <div class="personal_left">
             <div class="user">
-               <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150" style="cursor:pointer" onclick="F_Open_dialog()" />
+               <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150" style="cursor:pointer" onclick="Open_dialog()" />
                 <p>欢迎您  {$users.username}</p>
             </div>
             <ul class="left_nav">
@@ -32,15 +39,12 @@
                     <li ><a href="{:U('/home/person/permessage')}">个人信息管理</a></li>
                     <li><a href="{:U('/home/person/message')}">消息管理</a></li>
                     <li><a href="{:U('/home/person/repassword')}">密码管理</a></li>
-                    <!--<li><a href="#">我的收藏</a></li>
-                    <li><a href="#">我的足迹</a></li>-->
             </ul>       
         </div>
         <!--个人中心right-->
         <div class="personal_else">
-            <h1>请完善资料信息</h1>
-            <!-- <div class="exper"><img src="__PUBLIC__/{$users.avatar_url}"  width="940" height="100" /></div> -->
-            <div class="exper1 else_bg">
+            <h1 onclick="Open_dialog1()">请完善资料信息</h1>
+            <div class="exper1 else_bg" onclick="Open_dialog1()">
                 <h1 class="h11">个人信息</h1>
                 
                   <ul>
@@ -76,12 +80,6 @@
                     </ul>
                 
             </div>
-            <!--<div class="exper_button">
-                <a href="#">菜单一</a>
-                <a href="#">菜单一</a>
-                <a href="#">菜单一</a>
-                <a href="#">菜单一</a>
-            </div>-->
         </div>
     </div>
 </div>
