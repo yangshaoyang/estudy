@@ -16,7 +16,7 @@
     <div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="../../article">励志人生</a></div>
     <div class="left">
         <div class="search">
-        <form>
+        <form class="search"  action="{:U('home/search/search')}" method="post" onsubmit="return chk_form();">
             <input type="text" value="请输入感兴趣的内容..." class="searchtext">
             <input type="button" value="开始搜索" class="searchbutton">
         </form>

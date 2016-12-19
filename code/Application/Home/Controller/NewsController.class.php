@@ -12,6 +12,10 @@ class NewsController extends Controller {
     }
      
     public function newslist(){
+      $match=M("match")->order("mid desc")->limit(5)->select();
+      $this->assign("match",$match);
+      $textual=M("certificate")->order("cid desc")->limit(5)->select();
+      $this->assign("textual",$textual);
          /*选取分类1数据*/
         $newspage=M("news")->where("newsid");
         /*分页码*/
