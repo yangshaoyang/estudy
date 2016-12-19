@@ -10,8 +10,8 @@ class MatchController extends Controller {
 		$this->display();
 	}
 	public function matchlist(){
-	 	/*选取分类1数据*/
-	 	$matchpage=M("match")->where("mid");
+	 	/*选取数据*/
+	 	$matchpage=M("match")->order("mid desc")->where("mid");
 	 	/*分页码*/
 		// 1. 获取记录总条数
 		$count =$matchpage->count();
@@ -40,7 +40,7 @@ class MatchController extends Controller {
 		$this->assign("mcontent",$match);
 		$tmatch=M("match")->limit(3)->select();//比赛推荐部分
 	     $this->assign("tmatch",$tmatch);
-	     $news=M("news")->order("newsid desc")->limit(7)->select();
+	     $news=M("news")->order("newsid desc")->limit(7)->select();//热门资讯获取
 		$this->assign("news",$news);
 	     $this->display();
 	}

@@ -7,8 +7,8 @@ class CertificateController extends Controller {
 		$this->display();
 	}
 	 public function certificatelist(){
-	 	/*选取分类1数据*/
-	 	$certificatepage=M("certificate")->where("cid");
+	 	/*选取数据*/
+	 	$certificatepage=M("certificate")->order("cid desc")->where("cid");
 	 	/*分页码*/
 		// 1. 获取记录总条数
 		$count =$certificatepage->count();
@@ -38,7 +38,9 @@ class CertificateController extends Controller {
 		$certificate=M("certificate")->find($cid);
 		$this->assign("ccontent",$certificate);
 		$tcertificate=M("certificate")->limit(3)->select();//比赛推荐部分
-	      $this->assign("tcertificate",$tcertificate);
+	     $this->assign("tcertificate",$tcertificate);
+	     $news=M("news")->order("newsid desc")->limit(7)->select();//热门资讯获取
+		$this->assign("news",$news);
 		$this->display();
 	}
 	public function user($cid,$ctime){
