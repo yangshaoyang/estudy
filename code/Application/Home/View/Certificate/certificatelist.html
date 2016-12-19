@@ -16,7 +16,9 @@
         <div class="mybody">
             <div class="bread">
 
-                <span><a href="{:U('/')}">易学助手</a></span>
+                <span>
+                    <a href="{:U('/')}">易学助手</a>
+                </span>
                 >
                 <a href="../../certificatelist">考证列表</a>
             </div>
@@ -49,24 +51,20 @@
                                             <a href="{$vo.murl}">{$vo.curl}</a>
                                         </span>
                                     </div>
-                                    <!-- <p>
-                                    比赛提示：河北师范大学2016年大学生课外学术科技创新项目、大学生创业计划项目自2016年3月开始申报以来，经过立项和中期检查等环节，现进入科研、科技项目结题评审阶段。
-                                </p>
-                                -->
+                                </div>
+                                <div class="listright">
+                                    <form>
+                                        <input type="button" value="我要考取" onclick="return alertMsg('确定要参加吗？',1,'__CONTROLLER__/user/cid/{$vo.cid}/ctime/{$vo.ctime}');" class="button1">
+                                        <input type="button" value="查看详情" class="button1 button2"  onclick="location.href='__CONTROLLER__/content/cid/{$vo.cid}'"></form>
+                                </div>
                             </div>
-                            <div class="listright">
-                                <form>
-                                    <input type="button" value="我要考取" onclick="return alertMsg('确定要参加吗？',1,'__CONTROLLER__/user/cid/{$vo.cid}/ctime/{$vo.ctime}');" class="button1">
-                                    <input type="button" value="查看详情" class="button1 button2"  onclick="location.href='__CONTROLLER__/content/cid/{$vo.cid}'"></form>
-                            </div>
-                        </div>
-                    </li>
-                </volist>
-            </ul>
-            <div class="page">{$pages}</div>
+                        </li>
+                    </volist>
+                </ul>
+                <div class="page">{$pages}</div>
+            </div>
         </div>
     </div>
-</div>
-<include file="Public/footer.html" />
+    <include file="Public/footer.html" />
 </body>
 </html>
