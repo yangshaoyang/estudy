@@ -26,7 +26,7 @@
                         $dbUser='root';
                         $dbPswd='';
                         $pdo = new PDO($dsn,$dbUser, $dbPswd);
-
+echo $pdo;
                         $sql = "set names utf8";
                         $pdo->exec($sql);
                         if(!$pdo){
@@ -36,7 +36,8 @@
                         $sql="select * from blogroll";
                         $sta = $pdo->query($sql);
                         $urls = $sta->fetchAll();
-                        for($i=0;$i<count($urls);$i++){// 循环读取二维数组中的数据
+
+                        for($i=0;$i<count($urls);$i++){    // 循环读取二维数组中的数据
                 ?>
                 <li>
                      <a href="<?php echo $urls[$i]['url'];?>" class="yqlj yqlj2"><?php echo $urls[$i]['name'];?></a>
