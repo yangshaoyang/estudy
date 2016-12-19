@@ -37,19 +37,19 @@
             <volist name="forum" id="vo">
             <tr id="pagination_test_ul1">
                 <td align="center">{$i}</td>
-                <td align="center">{$vo.typeid}</td>
-                <td align="center">{$vo.userid}</td>
+                <td align="center">{$vo.typename}</td>
+                <td align="center">{$vo.username}</td>
                 <td align="center"> {$vo.title}</td>
                 <td align="center"> {$vo.posttime|substr=0,10}</td>
                 <td align="center">
                     <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/forum/questions/forumid/{$vo.forumid}', title:'{$vo.title}', max:true}">查看</button>&nbsp;
-                    <button type="button" class="btn-red" data-toggle="del.datagrid.tr">删除</button>
+                    <button type="button" class="btn-red" data-toggle="alertmsg" target="ajaxTodo"  data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/forum/delete/forumid/{$vo.forumid}');window.close();}}">删除</button>
                 </td>
             </tr>
             </volist>
         </thead>
     </table>
-    <div data-toggle="pagination" data-options="{total:37, pageCurrent:1, form:'#pagination_test_searchform'}">
+    <div data-toggle="pagination" data-options="{total:18, pageCurrent:1, form:'#pagination_test_searchform'}">
         </div>
 </div>
 
