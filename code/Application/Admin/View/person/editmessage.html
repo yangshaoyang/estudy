@@ -2,7 +2,7 @@
 <br>
 <div class="bjui-pageContent">
 
-<form action="__PUBLIC__/json/ajaxDone.json" id="j_custom_form" data-toggle="validate" data-alertmsg="false">
+<form action="__MODULE__/Person/edit/userid/{$users.userid}" id="j_custom_form" data-toggle="validate" data-alertmsg="false">
     <input type="hidden" name="custom.id" value="edce142bc2ed4ec6b623aacaf602a4de">
     <div class="bjui-row col-3">
         <label class="row-label">用户名</label>
@@ -32,15 +32,15 @@
         <br>
         <label class="row-label">爱好</label>
         <div class="row-label">
-        <input type="checkbox" name="hobby" id="j_form_checkbox1" value="1" data-toggle="icheck" >移动互联网</div>
+        <input type="radio" name="hobby" id="j_form_checkbox1" value="移动互联网"  checked="" data-toggle="icheck" >移动互联网</div>
         <div class="row-label">
-        <input type="checkbox" name="hobby" id="j_form_checkbox2" value="2" data-toggle="icheck" >软件开发</div>
+        <input type="radio" name="hobby" id="j_form_checkbox2" value="软件开发" data-toggle="icheck" >软件开发</div>
         <div class="row-label">
-        <input type="checkbox" name="hobby" id="j_form_checkbox3" value="3" data-toggle="icheck" >专业比赛</div>
+        <input type="radio" name="hobby" id="j_form_checkbox3" value="专业比赛" data-toggle="icheck" >专业比赛</div>
         <div class="row-label">
-        <input type="checkbox" name="hobby" id="j_form_checkbox4" value="4" data-toggle="icheck" >专业考证</div>
+        <input type="radio" name="hobby" id="j_form_checkbox4" value="专业考证" data-toggle="icheck" >专业考证</div>
         <div class="row-label">
-        <input type="checkbox" name="hobby" id="j_form_checkbox5" value="5" data-toggle="icheck" >科技创新</div>
+        <input type="radio" name="hobby" id="j_form_checkbox5" value="科技创新" data-toggle="icheck" >科技创新</div>
         <br>
     
 
@@ -51,11 +51,13 @@
 </div>
 <div class="bjui-pageFooter">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<button type="submit" class="btn-default btn" data-icon="save"><i class="fa fa-save"></i>完成修改</button>
-&nbsp;&nbsp;
-<button type="submit" class="btn-default btn" data-icon="publish"><i class="fa fa-save"></i>发布</button>
-&nbsp;&nbsp;
-<button type="button" class="btn-close btn" data-icon="close"><i class="fa fa-close"></i> 取消</button>
+        <button type="submit" class="btn-green btn" data-icon="save"> <i class="fa fa-save"></i>
+            保存修改
+        </button>
+        &nbsp;&nbsp;
+        <button type="button" class="btn-close btn" data-icon="close"> <i class="fa fa-close"></i>
+            取消
+        </button>
 </div>
 
 
