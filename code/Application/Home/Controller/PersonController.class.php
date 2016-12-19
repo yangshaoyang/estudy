@@ -74,7 +74,13 @@ class PersonController extends Controller {
         //dump($info);
         $image = $info['avatar_url']['savepath'].$info['avatar_url']['savename'];
         // dump($image);
+        if(empty($image)){
+          $data1=array('avatar_url1'=>I('post.avatar_url'));//avatar_url1
+          $image=$data1;
+        }else{
         $data['avatar_url']=$image;
+        }
+        // $data['avatar_url']=$image;
         // dump($data);
         $Model=M("users");
         $map['username']=$username;
@@ -83,14 +89,15 @@ class PersonController extends Controller {
         if($num>0){
             $this->success("添加成功！",U('home/Person/homepage'));
           }else{
-            $this->error("添加失败！");
+            // $this->error("添加失败！");
+             $this->redirect('home/person/permessage');
           }
         
-        $Model=M("users");
-        $Model->create();
-        $map['username']=$username;
-        $num=$Model->where($map)->save($data);
-        $this->redirect('home/person/homepage');
+        // $Model=M("users");
+        // $Model->create();
+        // $map['username']=$username;
+        // $num=$Model->where($map)->save($data);
+        // $this->redirect('home/person/homepage');
         }
     }
 
