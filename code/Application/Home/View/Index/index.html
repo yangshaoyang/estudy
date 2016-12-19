@@ -135,206 +135,205 @@
             </ul>
         </div>
     </div>
-<div class="mybody">
-    <div class="ctop">
-        <div class="ctop1">
-            <img src="__PUBLIC__/images/dtzf.png" width="90" height="90" alt="dtzf" />
-            <h1>励志人生</h1>
-        </div>
-        <div class="ctop1 ctop2 ctop3">
-            <img src="__PUBLIC__/images/yhfy.png" width="90" height="90" alt="dtzf" />
-            <h1>考证助手</h1>
-        </div>
-        <div class="ctop1 ctop2">
-            <img src="__PUBLIC__/images/zcjd.png" width="90" height="90" alt="dtzf" />
-            <h1>比赛助手</h1>
-        </div>
-        <div class="ctop1 ctop2 ctop3">
-            <img src="__PUBLIC__/images/qyfw.png" width="90" height="90" alt="dtzf" />
-            <h1>论坛交流</h1>
-        </div>
-    </div>
-    <div class="rdzx">
-        <h1 class="title">热点资讯</h1>
-        <volist name="new" id="vo">
-            <div class="rdzximg">
-                <a href="#">
-                    <img src="http://localhost/project/estudy/code/{$vo.newsthumb}" width="400" height="250" alt="rdzx" />
-                </a>
-            </volist>
-        </div>
-        <div class="rdzxright" >
-            <volist name="new" id="vo">
-                <h1>
-                    <a href="home/news/newscontent?newsid={$vo.newsid}" class="rdtit">{$vo.newstitle}</a>
-                    <a href="home/news/newslist" class="ckgd">查看更多&nbsp;>></a>
-                </h1>
-            </volist>
-            <ul>
-                <volist name="news" id="vo">
-                    <li>
-                        <a href="home/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
-                        <span>{$vo.newstime}</span>
-                    </li>
-                </volist>
-            </ul>
-        </div>
-    </div>
-    <div class="xzzc">
-        <div class="xzl">
-            <h1 class="title">
-                考证信息
-                <a href="home/certificate/certificatelist" class="ckgd ckgd2">查看更多&nbsp;>></a>
-            </h1>
-            <div class="xzimg">
-                <volist name="textuals" id="vo">
-                    <a href="home/certificate/content?cid={$vo.cid}">
-                        <img src="{$vo.cthumb}" width="280" height="181" alt="xzzc" />
-                    </a>
-                </volist>
-            </div>
-            <ul>
-                <volist name="textual" id="vo">
-                    <li>
-                        <a href="home/certificate/content?cid={$vo.cid}" style="font-size: 16px">{$vo.cname}</a>
-                        <span>{$vo.ctime}</span>
-                    </li>
-                </volist>
-            </ul>
-        </div>
-        <div class="xzl xzr">
-            <h1 class="title">
-                比赛信息
-                <a href="home/match/matchlist" class="ckgd ckgd2">查看更多&nbsp;>></a>
-            </h1>
-            <div class="xzimg">
-                <volist name="matchs" id="vo">
-                    <a href="home/match/content?mid={$vo.mid}">
-                        <img src="{$vo.mthumb}" width="280" height="181" alt="xzzc" />
-                    </a>
-                </volist>
-            </div>
-            <ul>
-                <volist name="match" id="vo">
-                    <li>
-                        <a href="home/match/content?mid={$vo.mid}" style="font-size: 16px">{$vo.mname}</a>
-                        <span>{$vo.mtime}</span>
-                    </li>
-                </volist>
-            </ul>
-        </div>
-    </div>
-    <div class="lp"></div>
-    <div class="ggw"></div>
-</div>
-<div class="footer">
     <div class="mybody">
-        <div class="ewm">
-            <img src="__PUBLIC__/images/ewm.jpg" width="110" height="110" alt="ewm" />
-            <p>关注estudy微信公众号</p>
-        </div>
-        <div class="footermiddle">
-            <ul>
-                <li>
-                    <a href="{:U('/home/others/aboutus')}" class="footernav">关于我们</a>
-                </li>
-                <li>
-                    <a href="{:U('/home/others/callus')}" class="footernav footernav2">联系我们</a>
-                </li>
-                <li>
-                    <a href="{:U('/home/others/tellus')}" class="footernav footernav2">意见反馈</a>
-                </li>
-            </ul>
-            <p class="bq">版权所有 2016 易学助手项目组 保留一切权利 冀ICP备16024873号</p>
-            <p class="dh">联系邮箱：estudy@csbroswer.cn</p>
-        </div>
-        <div class="footermiddle footerr">
-            <a href="#" class="footernav">友情链接</a>
-            <ul>
-                <volist name="blogroll" id="vo">
-                <li>
-                    <a href="{vo.url}" class="yqlj yqlj2">{$vo.name}</a>
-                </li>
-            </volist>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- 弹窗 -->
-<div class="box">
-    <div class="box1">
-        <div class="box2" id="boxclose">
-            <div style="margin-left:75px;margin-top:50px;">
-                <div class="box12" style="margin-bottom:10px;">
-                    <h2 style="font-size:25px;">考证提示</h2>
-                </div>
-
-                <div class="box11" style="margin-bottom:20px;">
-                    <ul>
-                        <li>
-                            <a href="#" float: left;>中国创翼2016</a>
-                            &emsp;&emsp;&emsp;&emsp;
-                            <span>2016-11-30</span>
-                        </li>
-                        <li>
-                            <a href="#" float: left;>中国创翼2016</a>
-                            &emsp;&emsp;&emsp;&emsp;
-                            <span>2016-11-30</span>
-                        </li>
-                        <li>
-                            <a href="#" float: left;>中国创翼2016</a>
-                            &emsp;&emsp;&emsp;&emsp;
-                            <span>2016-11-30</span>
-                        </li>
-                        <li>
-                            <a href="#" float: left;>中国创翼2016</a>
-                            &emsp;&emsp;&emsp;&emsp;
-                            <span>2016-11-30</span>
-                        </li>
-                    </ul>
-                </div>
-                <div  class="box12" style="margin-bottom:10px;">
-                    <h2 style="font-size:25px;">比赛提示</h2>
-                </div>
-                <div class="box11">
-                    <ul>
-                        <li>
-                            <a href="#" float: left;>中国创翼2016</a>
-                            &emsp;&emsp;&emsp;&emsp;
-                            <span>2016-11-30</span>
-                        </li>
-                        <li>
-                            <a href="#" float: left;>中国创翼2016</a>
-                            &emsp;&emsp;&emsp;&emsp;
-                            <span>2016-11-30</span>
-                        </li>
-                        <li>
-                            <a href="#" float: left;>中国创翼2016</a>
-                            &emsp;&emsp;&emsp;&emsp;
-                            <span>2016-11-30</span>
-                        </li>
-                        <li>
-                            <a href="#" float: left;>中国创翼2016</a>
-                            &emsp;&emsp;&emsp;&emsp;
-                            <span>2016-11-30</span>
-                        </li>
-                    </ul>
-                </div>
+        <div class="ctop">
+            <div class="ctop1">
+                <img src="__PUBLIC__/images/dtzf.png" width="90" height="90" alt="dtzf" />
+                <h1>励志人生</h1>
             </div>
-            <div style="margin-top:50px;margin-left:140px" onclick="jQuery('.box').hide()">
-                <button id="close">
-                    <p style="color:white;display: inline-block;padding:7px 20px;background-color: rgb(47,137,187);font-size:18px;">关闭</p>
-                </button>
+            <div class="ctop1 ctop2 ctop3">
+                <img src="__PUBLIC__/images/yhfy.png" width="90" height="90" alt="dtzf" />
+                <h1>考证助手</h1>
+            </div>
+            <div class="ctop1 ctop2">
+                <img src="__PUBLIC__/images/zcjd.png" width="90" height="90" alt="dtzf" />
+                <h1>比赛助手</h1>
+            </div>
+            <div class="ctop1 ctop2 ctop3">
+                <img src="__PUBLIC__/images/qyfw.png" width="90" height="90" alt="dtzf" />
+                <h1>论坛交流</h1>
             </div>
         </div>
+        <div class="rdzx">
+            <h1 class="title">热点资讯</h1>
+            <volist name="new" id="vo">
+                <div class="rdzximg">
+                    <a href="#">
+                        <img src="http://localhost/project/estudy/code/{$vo.newsthumb}" width="400" height="250" alt="rdzx" />
+                    </a>
+                </volist>
+            </div>
+            <div class="rdzxright" >
+                <volist name="new" id="vo">
+                    <h1>
+                        <a href="home/news/newscontent?newsid={$vo.newsid}" class="rdtit">{$vo.newstitle}</a>
+                        <a href="home/news/newslist" class="ckgd">查看更多&nbsp;>></a>
+                    </h1>
+                </volist>
+                <ul>
+                    <volist name="news" id="vo">
+                        <li>
+                            <a href="home/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
+                            <span>{$vo.newstime}</span>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="xzzc">
+            <div class="xzl">
+                <h1 class="title">
+                    考证信息
+                    <a href="home/certificate/certificatelist" class="ckgd ckgd2">查看更多&nbsp;>></a>
+                </h1>
+                <div class="xzimg">
+                    <volist name="textuals" id="vo">
+                        <a href="home/certificate/content?cid={$vo.cid}">
+                            <img src="{$vo.cthumb}" width="280" height="181" alt="xzzc" />
+                        </a>
+                    </volist>
+                </div>
+                <ul>
+                    <volist name="textual" id="vo">
+                        <li>
+                            <a href="home/certificate/content?cid={$vo.cid}" style="font-size: 16px">{$vo.cname}</a>
+                            <span>{$vo.ctime}</span>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+            <div class="xzl xzr">
+                <h1 class="title">
+                    比赛信息
+                    <a href="home/match/matchlist" class="ckgd ckgd2">查看更多&nbsp;>></a>
+                </h1>
+                <div class="xzimg">
+                    <volist name="matchs" id="vo">
+                        <a href="home/match/content?mid={$vo.mid}">
+                            <img src="{$vo.mthumb}" width="280" height="181" alt="xzzc" />
+                        </a>
+                    </volist>
+                </div>
+                <ul>
+                    <volist name="match" id="vo">
+                        <li>
+                            <a href="home/match/content?mid={$vo.mid}" style="font-size: 16px">{$vo.mname}</a>
+                            <span>{$vo.mtime}</span>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="lp"></div>
+        <div class="ggw"></div>
     </div>
-</div>
+    <div class="footer">
+        <div class="mybody">
+            <div class="ewm">
+                <img src="__PUBLIC__/images/ewm.jpg" width="110" height="110" alt="ewm" />
+                <p>关注estudy微信公众号</p>
+            </div>
+            <div class="footermiddle">
+                <ul>
+                    <li>
+                        <a href="{:U('/home/others/aboutus')}" class="footernav">关于我们</a>
+                    </li>
+                    <li>
+                        <a href="{:U('/home/others/callus')}" class="footernav footernav2">联系我们</a>
+                    </li>
+                    <li>
+                        <a href="{:U('/home/others/tellus')}" class="footernav footernav2">意见反馈</a>
+                    </li>
+                </ul>
+                <p class="bq">版权所有 2016 易学助手项目组 保留一切权利 冀ICP备16024873号</p>
+                <p class="dh">联系邮箱：estudy@csbroswer.cn</p>
+            </div>
+            <div class="footermiddle footerr">
+                <a href="#" class="footernav">友情链接</a>
+                <ul>
+                    <volist name="blogroll" id="vo">
+                        <li>
+                            <a href="{vo.url}" class="yqlj yqlj2">{$vo.name}</a>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="box">
+        <div class="box1">
+            <div class="box2" id="boxclose">
+                <div style="margin-left:75px;margin-top:50px;">
+                    <div class="box12" style="margin-bottom:10px;">
+                        <h2 style="font-size:25px;">考证提示</h2>
+                    </div>
 
-<div class="box10" style="display:none" id="box1close">
-    <img src="__PUBLIC__/images/ewm.jpg" width="220" height="220">
-</div>
+                    <div class="box11" style="margin-bottom:20px;">
+                        <ul>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div  class="box12" style="margin-bottom:10px;">
+                        <h2 style="font-size:25px;">比赛提示</h2>
+                    </div>
+                    <div class="box11">
+                        <ul>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="margin-top:50px;margin-left:140px" onclick="jQuery('.box').hide()">
+                    <button id="close">
+                        <p style="color:white;display: inline-block;padding:7px 20px;background-color: rgb(47,137,187);font-size:18px;">关闭</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box10" style="display:none" id="box1close">
+        <img src="__PUBLIC__/images/ewm.jpg" width="220" height="220"></div>
 </body>
-<script type="text/javascript">
+    <script type="text/javascript">
 window.onload=function(){
    $(document).ready(function(){
     $('#box1').mouseover(function(){
