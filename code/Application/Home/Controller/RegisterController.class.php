@@ -19,6 +19,12 @@ class RegisterController extends Controller {
 			echo '<script>alert("用户名已存在，请换个其他的用户名");window.history.go(-1);</script>';
 			exit;
 		}
+		$result = $User ->getFieldByUsername($username,'email');
+		$num = count($result);
+		if($num==1){
+			echo '<script>alert("邮箱已存在，请换其他邮箱");window.history.go(-1);</script>';
+			exit;
+		}
 		$data['password'] = md5($data['password']);
 		//dump($password);
 		$data['email'] = trim($data['email']);
@@ -85,7 +91,7 @@ class RegisterController extends Controller {
 		//发送命令 返回布尔值 
 		//PS：经过测试，要是收件人不存在，若不出现错误依然返回true 也就是说在发送之前 自己需要些方法实现检测该邮箱是否真实有效
 		$status = $mail->send();
-	    $this->success('请接收邮件进行验证',U('/'));
+	    $this->success('请接收邮件进行验证,没有验证的用户无法登陆',U('/'),10);
 		}
 	}
 	public function findpassword(){

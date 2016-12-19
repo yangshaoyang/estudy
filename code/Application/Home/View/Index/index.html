@@ -108,7 +108,7 @@
             </div>
         </div>
         <div class="search">
-            <form>
+            <form class="search"  action="{:U('home/search/search')}" method="post" onsubmit="return chk_form();">
                 <input type="text" placeholder="请输入考试或比赛关键字" class="searchtext">
                 <input type="button" value="开始搜索" class="searchbutton"></form>
         </div>
@@ -159,7 +159,7 @@
         <volist name="new" id="vo">
             <div class="rdzximg">
                 <a href="#">
-                    <img src="{$vo.newsthumb}" width="400" height="250" alt="rdzx" />
+                    <img src="http://localhost/project/estudy/code/{$vo.newsthumb}" width="400" height="250" alt="rdzx" />
                 </a>
             </volist>
         </div>

@@ -10,20 +10,20 @@ class IndexController extends Controller {
     	$this->assign("matchs",$matchs);
 
     	$textual=M("certificate")->order("cid desc")->limit(5)->select();
-	$this->assign("textual",$textual);
+		$this->assign("textual",$textual);
 
-	$textuals=M("certificate")->order("cid desc")->limit(2)->select();
-	$this->assign("textuals",$textuals);
+		$textuals=M("certificate")->order("cid desc")->limit(2)->select();
+		$this->assign("textuals",$textuals);
 
-	$news=M("news")->order("newsid desc")->limit(5)->select();
-	$this->assign("news",$news);
+		$news=M("news")->order("newsid desc")->limit(5)->select();
+		$this->assign("news",$news);
 
-	$new=M("news")->order("newsid desc")->limit(1)->select();
-	$this->assign("new",$new);
+		$new=M("news")->order("newsid desc")->limit(1)->select();
+		$this->assign("new",$new);
 
-	$url = M("blogroll")->select();
-	$this->assign("blogroll",$url);
+		$url = M("blogroll")->select();
+		$this->assign("blogroll",$url);
 
-	$this->display();
+		$this->display();
     }
 }
