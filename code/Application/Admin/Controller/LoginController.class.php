@@ -1,4 +1,9 @@
 <?php
+/**
+*开发者：胡琪
+*开发功能：实现后台登录功能
+*修改时间：2016/12/05
+*/
 namespace Admin\Controller;
 use Think\Controller;
 class LoginController extends Controller {
@@ -13,6 +18,7 @@ class LoginController extends Controller {
         $adminid = $data->getFieldByAdminid($name,'adminid');
         $adname =  $data->getFieldByAdname($name,'adname');
         $adpassword =  $data->getFieldByAdname($name,'adpassword');
+        //检测管理员输入密码是否正确
         if($password == $adpassword){
     	session('adminname',$name);
         session('adminid',$adminid);
@@ -21,9 +27,10 @@ class LoginController extends Controller {
     	$this->error('用户名或密码不正确',U('admin/login/login'));
         }
     }
-//注销用户
+    //注销用户
     public function exits(){
     	session('adminname',null);
+        //调转回登录页
     	$this->redirect('admin/login/login');
     }
 }
