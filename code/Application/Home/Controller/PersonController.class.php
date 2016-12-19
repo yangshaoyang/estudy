@@ -66,7 +66,6 @@ class PersonController extends Controller {
           'city'=>I('post.city'),
           'hobby'=>I('post.hobby')
          );
-
         $upload = new \Think\Upload();//
         $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
         //$upload->rootPath  =     THINK_PATH; // 设置附件上传根目录
