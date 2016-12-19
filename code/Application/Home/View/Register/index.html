@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/login.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/login.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
 function chk_form(){
     var user = document.getElementById("user");
     if(user.value==""){
@@ -37,44 +37,51 @@ function chk_form(){
         //email.focus();
     }
     var preg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/; //匹配Email
-    if(!preg.test(email.value)){ 
+    if(!preg.test(email.value)){
         alert("Email格式错误！");
         return false;
         //email.focus();
     }
     var check = document.getElementById("check"); //判断单选
 
-    if(!(check.checked)){ 
+    if(!(check.checked)){
         alert("未同意条款！");
         return false;
         //email.focus();
     }
 }
 </script>
-<title>用户注册</title>
+    <title>用户注册</title>
 </head>
 <body>
-<include file="Public/header.html" />
+    <include file="Public/header.html" />
 
-<!--登录页-->
-<div class="content">
-	<div class="mybody">
-    	<div class="bread"><span><a href="{:U('/')}">易学助手</a></span> > <a href="../../register">用户注册</a></div>
-		<!--用户注册-->
-        	<div class="search search1">
-                    <form action="{:U('home/register/register')}" method="post" onsubmit="return chk_form();">
-                        <input type="text" placeholder="用户名" class="username" name="username" id="user"/>
-                        <input type="text" placeholder="邮箱" class="email" name="email" id="email" />
-                        <input type="password" placeholder="输入密码"  name="password" id="pass" />
-                        <input type="password" placeholder="确认新密码"  name="psw" id="pswd" />
-                        <input name="" type="checkbox" id="check" />&nbsp;&nbsp;已阅读并同意<a href="#">《易学助手的服务条款》</a>
-                        <input type="submit" value="注  册" class="login_btn" onclick="return alertMsg('请接收邮件进行验证'); "/>
-                    </form>	
+    <!--登录页-->
+    <div class="content">
+        <div class="mybody">
+            <div class="bread">
+                <span>
+                    <a href="{:U('/')}">易学助手</a>
+                </span>
+                >
+                <a href="../../register">用户注册</a>
+            </div>
+            <!--用户注册-->
+            <div class="search search1">
+                <form action="{:U('home/register/register')}" method="post" onsubmit="return chk_form();">
+                    <input type="text" placeholder="用户名" class="username" name="username" id="user"/>
+                    <input type="text" placeholder="邮箱" class="email" name="email" id="email" />
+                    <input type="password" placeholder="输入密码"  name="password" id="pass" />
+                    <input type="password" placeholder="确认新密码"  name="psw" id="pswd" />
+                    <input name="" type="checkbox" id="check" />
+                    &nbsp;&nbsp;已阅读并同意
+                    <a href="{:U('/home/others/tellyou')}" target="_blank">《易学助手的服务条款》</a>
+                    <input type="submit" value="注  册" class="login_btn" onclick="return alertMsg('请接收邮件进行验证'); "/>
+                </form>
             </div>
         </div>
-	</div>
-</div>
+    </div>
 
-<include file="Public/footer.html" />
+    <include file="Public/footer.html" />
 </body>
 </html>
