@@ -10,14 +10,8 @@
 <script type="text/javascript">
         function F_Open_dialog() 
        { 
-            alert("点击底部提交方可显示哦!");
             document.getElementById("btn_file").click(); 
        } 
-       function Open_dialog2() 
-       { 
-            alert("点击右侧头像哦!");
-       } 
-
 </script>
 </head>
 <body>
@@ -31,8 +25,8 @@
         <div class="personal_left">
             <div class="user">
                
-                <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150"  style="cursor:pointer"  onclick="Open_dialog2()"/>
-                <input type="file" id="btn_file"   style="display:none" name='avatar_url' value="{$users.avatar_url}">
+                <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150"  style="cursor:pointer"  />
+                <input type="file" id="btn_file"   style="display:none" name='avatar_url' >
                 <p>欢迎您   {$_SESSION['name']}</p>
             </div>
             <ul class="left_nav">
@@ -45,7 +39,7 @@
         </div>
         <!--个人中心right-->
         <div class="personal_form_right form_bg">
-            <div class="img"><img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150" onclick="F_Open_dialog()" style="cursor:pointer"/></div>
+            <div class="img"><img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150" value="{$users.avatar_url}" onclick="F_Open_dialog()" style="cursor:pointer"/></div>
             <div class="form1">
             <div class="formnew">
            <!--  <form action="__MODULE__/Person/add/username/{$_SESSION['name']}" method="post"> -->
