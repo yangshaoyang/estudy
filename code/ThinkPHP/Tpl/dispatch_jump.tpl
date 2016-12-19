@@ -27,14 +27,19 @@
 </head>
 <body>
 	<include file="Public/header.html" />
-	<div class="content" style="background-color: #f7f7f7;">
+	<div class="content" style="background-color: #f7f7f7;padding-bottom:30px;">
 		<div class="mybody">
-			<div class="system-message">
+
+			<div class="system-message" style="text-align:center;padding-top:7%">
 				<?php if(isset($message)) {?>
+				<div style="position:absolute;text-align:center;left:23%;top:32%">
+				<img src="__PUBLIC__/images/success.png" alt="success" width="200px"></div>
 				<h1>eStudy提醒您</h1>
 				<p class="success">
 					<?php echo($message); ?></p>
 				<?php }else{?>
+				<div style="position:absolute;text-align:center;left:23%;top:28%">
+				<img src="__PUBLIC__/images/404.png" alt="success"  width="200px"></div>
 				<h1>eStudy提醒您</h1>
 				<p class="error">
 					<?php echo($error); ?></p>
@@ -60,15 +65,10 @@ var interval = setInterval(function(){
 })();
 </script>
 			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
+			
 		</div>
 	</div>
+
 	<include file="Public/footer.html" />
 </body>
 </html>
