@@ -16,7 +16,7 @@
     <div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="../../article">励志人生</a></div>
     <div class="left">
         <div class="search">
-        <form>
+        <form class="search"  action="{:U('home/search/search')}" method="post" onsubmit="return chk_form();">
             <input type="text" value="请输入感兴趣的内容..." class="searchtext">
             <input type="button" value="开始搜索" class="searchbutton">
         </form>
@@ -37,7 +37,6 @@
                 </div>
                </li>
             </volist>
-
 
             <!--<li>
                 <div class="litop">
@@ -82,25 +81,25 @@
         <div class="righttop righttop2">
             <h1 class="title">经典文章<a href="#" class="ckgd">更多&nbsp;>></a></h1>
             <ul class="topul">
-              <li><a href="#">这一别已是天涯</a><span>01-01</span></li>
-              <li><a href="#">你的眼里没有睛</a><span>01-01</span></li>
-              <li><a href="#">不要羡慕朋友圈里的生活</a><span>01-01</span></li>
-              <li><a href="#">稻草</a><span>01-01</span></li>
-              <li><a href="#">跨过去，其实很简单</a><span>01-01</span></li>
-              <li><a href="#">生命过程中的痛</a><span>01-01</span></li>
-              <li><a href="#">错过花，你将收获雨</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">这一别已是天涯</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">你的眼里没有睛</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">不要羡慕朋友圈里的生活</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">稻草</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">跨过去，其实很简单</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">生命过程中的痛</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">错过花，你将收获雨</a><span>01-01</span></li>
         </ul>
         </div>
         
         <div class="righttop righttop3">
             <h1 class="title">推荐书籍<a href="#" class="ckgd">更多&nbsp;>></a></h1>
             <ul class="topul">
-              <li><a href="#">百年孤独</a><span>01-01</span></li>
-              <li><a href="#">哈姆雷特</a><span>01-01</span></li>
-              <li><a href="#">围城</a><span>01-01</span></li>
-              <li><a href="#">张爱玲典藏全集</a><span>01-01</span></li>
-              <li><a href="#">安妮日记</a><span>01-01</span></li>
-              <li><a href="#">小王子</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">百年孤独</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">哈姆雷特</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">围城</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">张爱玲典藏全集</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">安妮日记</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">小王子</a><span>01-01</span></li>
               <li><a href="#">追风筝的人</a><span>01-01</span></li>
         </ul>
         </div>

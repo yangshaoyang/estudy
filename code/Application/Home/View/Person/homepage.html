@@ -7,17 +7,6 @@
 <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/personal_left.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/personal_else.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
-        function Open_dialog()
-       {
-            alert("请到个人信息管理界面点击上传头像!");
-       }
-        function Open_dialog1()
-       {
-            alert("请到个人信息管理界面完善个人资料!");
-       }
-
-</script>
 <title>个人中心</title>
 </head>
 <body>
@@ -27,11 +16,11 @@
 <div class="content">
     <div class="mybody">
         <!-- <div class="bread"><span>易学助手</span> > <a href="{:U('/home/person/homepage')}">个人中心</a></div> -->
-        <div class="bread"><span><a href="{:U('/')}">易学助手</a></span> > <a href="{:U('/home/person/homepage')}">个人中心</a></div>
+        <div class="bread"><span><a href="{:U('/')}">易学助手</a></span> > <a href="{:U('/home/person/homepage')}">个人中心</a></div> 
         <!--个人中心left-->
         <div class="personal_left">
             <div class="user">
-               <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150"  />
+               <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150" style="cursor:pointer"  />
                 <p>欢迎您  {$users.username}</p>
             </div>
             <ul class="left_nav">
@@ -39,14 +28,14 @@
                     <li ><a href="{:U('/home/person/permessage')}">个人信息管理</a></li>
                     <li><a href="{:U('/home/person/message')}">消息管理</a></li>
                     <li><a href="{:U('/home/person/repassword')}">密码管理</a></li>
-            </ul>
+            </ul>       
         </div>
         <!--个人中心right-->
         <div class="personal_else">
-            <h1 onclick="Open_dialog1()">请完善资料信息</h1>
-            <div class="exper1 else_bg" onclick="Open_dialog1()">
+            <h1 >消息中心</h1>
+            <div class="exper1 else_bg" >
                 <h1 class="h11">个人信息</h1>
-
+                
                   <ul>
                     <li>用户名<span>{$users.username}</span></li>
                     <li>邮箱<span>{$users.email}</span></li>
@@ -57,7 +46,7 @@
                     <li>爱好<span>{$users.hobby}</span></li>
                    <!--  <li class="garyli">{$users.hobby}</li> -->
                   </ul>
-
+                
             </div>
             <div class="exper1 else_bg exper2">
                 <h1 class="h11">未读消息<!-- <span>【7条】</span> --></h1>
@@ -78,7 +67,7 @@
                     <li><a href="{:U('/home/match/matchlist')}">{$vo1.umtype}</a><span>{$vo1.time}</span></li>
                     </volist>
                     </ul>
-
+                
             </div>
         </div>
     </div>
