@@ -7,7 +7,6 @@ class PersonController extends Controller {
         if ($_SESSION['name'] == NULL) {
           $this->redirect('home/login/login','请登录');
         }else{
-          // $this->display();
         }
     }
 
@@ -19,8 +18,8 @@ class PersonController extends Controller {
           //输出个人信息
           $map['username']=$_SESSION['name'];
           $users=M("users")->where($map)->select();
-          $user_certificate=M("user_certificate")->order('time desc')->limit(4)->select();
-          $user_match=M("user_match")->order('time desc')->limit(4)->select();
+          $user_certificate=M("user_certificate")->where('num=0')->order('time desc')->limit(4)->select();
+          $user_match=M("user_match")->where('num=0')->order('time desc')->limit(4)->select();
           $this->assign("users",$users[0]);
           $this->assign("user_certificate",$user_certificate);
           $this->assign("user_match",$user_match);
@@ -36,8 +35,8 @@ class PersonController extends Controller {
           //消息获取
           $map['username']=$_SESSION['name'];
           $users=M("users")->where($map)->select();
-          $user_certificate=M("user_certificate")->order('time desc')->limit(4)->select();
-          $user_match=M("user_match")->order('time desc')->limit(4)->select();
+          $user_certificate=M("user_certificate")->order('time desc')->select();
+          $user_match=M("user_match")->order('time desc')->select();
           $this->assign("users",$users[0]);
           $this->assign("user_certificate",$user_certificate);
           $this->assign("user_match",$user_match);
@@ -141,26 +140,33 @@ class PersonController extends Controller {
            $this->display();
          }
         }
-    // public function addimage($username){
-    //     $upload = new \Think\Upload();//
-    //     $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-    //     //$upload->rootPath  =     THINK_PATH; // 设置附件上传根目录
-    //     $upload->savePath  =     '../Public/Uploads/uploads';  // 设置附件上传（子）目录
-    //     $info   =   $upload->upload();
-    //     //dump($info);
-    //     $image = $info['avatar_url']['savepath'].$info['avatar_url']['savename'];
-    //     // dump($image);
-    //     $data['avatar_url']=$image;
-    //     // dump($data);
-    //     $Model=M("users");
-    //     $map['username']=$username;
-    //     // dump($map);
-    //     $num=$Model->where($map)->save($data);
-    //     if($num>0){
-    //         $this->success("添加成功！",U('home/Person/permessage'));
-    //       }else{
-    //         $this->error("添加失败！");
-    //       }
-    // }
+   public function uccontent($cid){
+    $certificate=M("certificate")->find($cid);
+    $this->assign("ccontent",$certificate);
+    $tcertificate=M("certificate")->limit(3)->select();//比赛推荐部分
+    $this->assign("tcertificate",$tcertificate);
+    $news=M("news")->order("newsid desc")->limit(7)->select();//热门资讯获取
+    $this->assign("news",$news);
+    //消息点击数量加1
+    $user_certificate=M("user_certificate")->table(array('user_certificate'=>'a','certificate'=>'b'))
+                           ->where("a.certifcateid=b.cid AND cid=$cid")
+                           ->setInc('num');
+    $this->assign("user_certificate",$user_certificate);                       
+    $this->display();
+  }
+  public function umcontent($mid){
+    $match=M("match")->find($mid);
+    $this->assign("mcontent",$match);
+    $tmatch=M("match")->limit(3)->select();//比赛推荐部分
+    $this->assign("tmatch",$tmatch);
+    $news=M("news")->order("newsid desc")->limit(7)->select();//热门资讯获取
+    $this->assign("news",$news);
+    //消息点击数量加1 
+    $user_match=M("user_match")->table(array('user_match'=>'a','match'=>'b'))
+                           ->where("a.matchid=b.mid AND mid=$mid")
+                           ->setInc('num');
+    $this->assign("user_match",$user_match); 
+    $this->display();
+  }
 
 }
