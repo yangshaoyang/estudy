@@ -7,22 +7,22 @@
 namespace Admin\Controller;
 use Think\Controller;
 class ForumController extends Controller {
-	//论坛查看帖子页
+	//论坛管理帖子页
      public function index(){
      	$Model=M();
         $forum=$Model->field('typename,username,forumid,title,posttime,readcount')
     		  			->table(array('users'=>'a','forum'=>'b','forum_sort'=>'c'))
     		  			->where("a.userid=b.userid AND b.typeid=c.typeid")
     		  			->order('readcount desc')->select();
-       	//$forum = M("forum")->select();
 	   	$this->assign("forum",$forum);
 	   	$this->display();
      }
+
+     //论坛管理评论页
       public function questions($forumid){
     	//找id对应的帖子内容
     	$forum=M("forum");
     	//阅读量
-		$forum->where("forumid=$forumid")->setInc('readcount');
     	$forum=$forum->find($forumid);
 		$this->assign("fcontent",$forum);
 
@@ -54,15 +54,33 @@ class ForumController extends Controller {
             $this->success("删除成功！");
         }
     }
-    public function test(){ 
-      $forum= M('forum');
-      $data = $forum->select();
-      $data=$this->ajaxReturn($data,'JSON');
-      //dump($data);
 
-      $this->assign("data",$data);
+    //论坛管理评论
+    public function comment(){
+    	$Model=M();
+        $forum_comment=$Model->field('username,forum_commentid,title,createtime,forum_comment,b.forumid')
+    		  			->table(array('users'=>'a','forum_comment'=>'b','forum'=>'c'))
+    		  			->where("a.userid=b.userid AND b.forumid=c.forumid")
+    		  			->order('createtime desc')->select();
+	   	$this->assign("comment",$forum_comment);
+	   	$this->display();
+	}
+
+	//论坛管理评论
+	public function deleteComment($forum_commentid){ 
+		if (M("forum_comment")->delete($forum_commentid)) {
+            $this->success("删除成功！");
+        }
+    }
+    public function test(){ 
+      	$forum= M('forum');
+      	$data = $forum->select();
+      	$data=$this->ajaxReturn($data,'JSON');
+      	//dump($data);
+
+      	$this->assign("data",$data);
 
         //输出结果
-        $this->display('test','utf-8', 'text/json');
+      	$this->display('test','utf-8', 'text/json');
     }
  }
