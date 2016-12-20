@@ -52,7 +52,7 @@
                     <ul class="topul">
                         <volist name="news" id="vo">
                             <li>
-                                <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
+                                <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle|msubstr=0,15,'utf-8',true}</a>
                                 <span>{$vo.newstime}</span>
                             </li>
                         </volist>
@@ -64,7 +64,7 @@
                         <ul class="topul">
                             <volist name="match" id="vo">
                                 <li>
-                                    <a href="__MODULE__/match/content?mid={$vo.mid}">{$vo.mname}</a><span>{$vo.mtime}</span>
+                                    <a href="__MODULE__/match/content?mid={$vo.mid}">{$vo.mname|msubstr=0,15,'utf-8',true}</a><span>{$vo.mtime}</span>
                                 </li>
                             </volist>
                         </ul> 
