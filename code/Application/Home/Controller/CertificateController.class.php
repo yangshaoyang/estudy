@@ -20,19 +20,19 @@ class CertificateController extends Controller {
 		$condition=array();
 		$condition['cid'] != NULL;
 		// 5. 分页查询
-	      $certificatepage = $certificatepage->where($condition)->order('cid desc')
-	          ->limit($page->firstRow.','.$page->listRows)
-	          ->select();
-	      // 6. 定义分页样式
-	      $page->setConfig('prev','上一页');
-	      $page->setConfig('next','下一页');
-	      // 7. 输出查询结果
-	      $this->assign('certificate', $certificatepage);//遍历数据数据
-	      $pages=$page->show();
-	      $this->assign('pages',$pages);
-	      //$certificate=M("certificate")->select();
-	      //$this->assign("certificate",$certificate);
-	      $this->display();
+	     $certificatepage = $certificatepage->where($condition)->order('cid desc')
+	         ->limit($page->firstRow.','.$page->listRows)
+	         ->select();
+	     // 6. 定义分页样式
+	     $page->setConfig('prev','上一页');
+	     $page->setConfig('next','下一页');
+	     // 7. 输出查询结果
+	     $this->assign('certificate', $certificatepage);//遍历数据数据
+	     $pages=$page->show();
+	     $this->assign('pages',$pages);
+	     //$certificate=M("certificate")->select();
+	     //$this->assign("certificate",$certificate);
+	     $this->display();
 	}
 	public function content($cid){
 		$certificate=M("certificate")->find($cid);
@@ -51,16 +51,17 @@ class CertificateController extends Controller {
 			$data=array(
 			    	'username'  =>$user,
 			    	'certifcateid' =>$cid,
+			    	'uctype' =>'考证信息',
 			    	'time' =>$ctime
 			    	);
-		        $Model=D("user_certificate");
-		        $Model->create();
-		        $num=$Model->add($data);
-		        if($num>0){
-		        	$this->success("记录成功！将在证件考试开始前给您推送通知及注意事项，请尽快前往官网报名",U("certificatelist"),20);
-		        }else{
-		        	$this->error("添加失败 /(ㄒoㄒ)/~~，请重试",U("certificatelist"),5);
-		        }
+		     $Model=D("user_certificate");
+		     $Model->create();
+		     $num=$Model->add($data);
+		     if($num>0){
+		     		$this->success("记录成功！将在证件考试开始前给您推送通知及注意事项，请尽快前往官网报名",U("certificatelist"),10);
+		     }else{
+		       	$this->error("添加失败 /(ㄒoㄒ)/~~，请重试",U("certificatelist"),4);
+		     }
 	      }
 	}
 	public function search(){
