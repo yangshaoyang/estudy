@@ -16,9 +16,10 @@ class LoginController extends Controller {
         //dump($result);
         $username = $User->getFieldByEmail($email,'username');
         $id = $User->getFieldByEmail($email,'userid');
-        $state = $User->getFieldByEmail($email,'state');
-        if ($data['state']=0) {
-             $this->error('您的用户未激活，无法登陆，请到邮件验证激活',U('home/login/login'));
+        $state = $User->getFieldByState($email,'state');
+        dump($state);
+        if ($state==0) {
+             $this->error('您的用户未激活，无法登陆，请到邮件验证激活',U('home/login/login'),6);
          }
         if ($result == $password) {
         	session('name',$username);
