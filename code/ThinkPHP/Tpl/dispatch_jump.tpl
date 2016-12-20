@@ -26,28 +26,69 @@
 	</style>
 </head>
 <body>
-	<include file="Public/header.html" />
+	<div class="header">
+		<div class="mybody">
+			<div class="logo">
+				<a href="http://estudy.csbroswer.cn">
+					<img src="__PUBLIC__/images/logo2.png" width="193" height="60" alt="logo" />
+				</a>
+			</div>
+			<div class="nav">
+				<div class="navtop">
+					<if condition="$Think.session.name neq null">
+						<a href="{:U('/home/person/homepage')}" class="log">{$Think.session.name}</a>
+						<a href="{:U('/home/login/exits')}" class="log sign">注销</a>
+						<p>客服热线&nbsp;&nbsp;&nbsp;400&nbsp;-&nbsp;0000&nbsp;-&nbsp;000</p>
+						<else />
+						<a href="{:U('/home/login/login')}" class="log">登录</a>
+						<a href="{:U('/home/register')}" class="log sign">注册</a>
+						<p>客服热线&nbsp;&nbsp;&nbsp;400&nbsp;-&nbsp;0000&nbsp;-&nbsp;000</p>
+					</if>
+				</div>
+				<div class="line"></div>
+				<a href="{:U('/home/match/matchlist')}" class="xz">
+					<div class="xzimg">
+						<img src="__PUBLIC__/images/gl2.png" width="21" height="21" alt="gl"/>
+					</div>
+					<p>比赛攻略</p>
+				</a>
+				<a href="{:U('/home/certificate/certificatelist')}" class="xz xz2">
+					<div class="xzimg">
+						<img src="__PUBLIC__/images/gw2.png" width="21" height="21" alt="gl"/>
+					</div>
+					<p>考证顾问</p>
+				</a>
+				<a href="{:U('/home/forum')}" class="xz xz2">
+					<div class="xzimg">
+						<img src="__PUBLIC__/images/jy2.png" width="21" height="21" alt="gl"/>
+					</div>
+					<p>论坛交流</p>
+				</a>
+			</div>
+		</div>
+	</div>
+
 	<div class="content" style="background-color: #f7f7f7;padding-bottom:30px;">
 		<div class="mybody">
 
 			<div class="system-message" style="text-align:center;padding-top:7%">
 				<?php if(isset($message)) {?>
 				<div style="position:absolute;text-align:center;left:23%;top:32%">
-				<img src="__PUBLIC__/images/success.png" alt="success" width="200px"></div>
+					<img src="__PUBLIC__/images/success.png" alt="success" width="200px"></div>
 				<h1>eStudy提醒您</h1>
 				<p class="success">
 					<?php echo($message); ?></p>
 				<?php }else{?>
 				<div style="position:absolute;text-align:center;left:23%;top:28%">
-				<img src="__PUBLIC__/images/404.png" alt="success"  width="200px"></div>
+					<img src="__PUBLIC__/images/404.png" alt="success"  width="200px"></div>
 				<h1>eStudy提醒您</h1>
 				<p class="error">
 					<?php echo($error); ?></p>
 				<?php }?>
 				<p class="detail"></p>
 				<p class="jump">
-					页面将在
-					<b id="wait"><?php echo($waitSecond); ?></b> 秒后自动
+					页面将在 <b id="wait"><?php echo($waitSecond); ?></b>
+					秒后自动
 					<a id="href" href="<?php echo($jumpUrl); ?>">跳转</a>
 
 				</p>
@@ -65,7 +106,7 @@ var interval = setInterval(function(){
 })();
 </script>
 			<br/>
-			
+
 		</div>
 	</div>
 
