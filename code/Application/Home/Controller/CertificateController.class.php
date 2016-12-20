@@ -67,7 +67,7 @@ class CertificateController extends Controller {
 		if(isset($_GET['text'])){
 			$data=$_GET['text'];
 			/*选取数据*/
-		 	$certificatepage=M("certificate")->order("cid desc")->where("cname like '%$data%' ");
+		 	$certificatepage=M("certificate")->order("cid desc")->where("cname like '%$data%'");
 		 	/*分页码*/
 			// 1. 获取记录总条数
 			$count =$certificatepage->count();

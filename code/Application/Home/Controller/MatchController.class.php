@@ -68,7 +68,7 @@ class MatchController extends Controller {
 		if(isset($_GET['text'])){
 			$data=$_GET['text'];
 	     		/*选取数据*/
-		 	$matchpage=M("match")->order("mid desc")->where("mname like '%$data%' ");
+		 	$matchpage=M("match")->order("mid desc")->where("mname like '%$data%'");
 		 	/*分页码*/
 			// 1. 获取记录总条数
 			$count =$matchpage->count();
@@ -79,7 +79,7 @@ class MatchController extends Controller {
 			// 4. 构造查询条件
 
 			// 5. 分页查询
-		      $matchpage = $matchpage->where("mname like '%$data%' ")->order('mid desc')
+		      $matchpage = $matchpage->where("mname like '%$data%'")->order('mid desc')
 		          ->limit($page->firstRow.','.$page->listRows)
 		          ->select();
 		      // 6. 定义分页样式
