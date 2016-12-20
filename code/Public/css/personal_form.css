@@ -61,12 +61,12 @@
 	line-height:28px;
 	}
 textarea{resize: none;}
-.form1 input[type="button"]{
-	width:120px;
-	height:40px;
+.form1 input[type="submit"]{
+	width:90px;
+	height:30px;
 	background:#2f8abb;
 	color:#fff;
-	font-size:18px;
+	font-size:16px;
 	margin-left:90px;
 	cursor:pointer;
 	}
@@ -74,7 +74,7 @@ textarea{resize: none;}
 	background:#609dbe;
 	}
 .button{
-	padding-left: 270px;
+	padding-left: 150px;
 	}
 
 .form2{
@@ -331,7 +331,7 @@ textarea{resize: none;}
 	padding-left: 30px;
 }
 .Button{
-	padding-right: 190px;
+	padding-right: 160px;
 }
 
 
