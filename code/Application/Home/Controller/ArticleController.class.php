@@ -1,4 +1,10 @@
 <?php
+/**
+*开发者：胡琪
+*开发功能：前台界面励志人生模块功能实现
+*修改时间：2016/12/15
+*/
+
 namespace Home\Controller;
 use Think\Controller;
 class ArticleController extends Controller {
@@ -16,14 +22,14 @@ class ArticleController extends Controller {
     	$this->assign('article',$article);
     	$this->display();
     }
-
+    //励志人生内容页
     public function articledetails($articleid){
         //获取帖子文章内容
         $article = M('article')->find($articleid);
         $this->assign('articlecontent',$article);
         $this->display();
-
     }
+    //分页功能实现
     public function pages (){
     	//1.获取记录总条数
     	$count = $this->_db->count();
