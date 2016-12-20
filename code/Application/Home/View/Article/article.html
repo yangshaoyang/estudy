@@ -13,7 +13,7 @@
 
 <div class="content">
 <div class="mybody">
-    <div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="../../article">励志人生</a></div>
+    <div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="__CONTROLLER__/article">励志人生</a></div>
     <div class="left">
         <div class="search">
         <form class="search"  action="{:U('home/search/search')}" method="post" onsubmit="return chk_form();">
@@ -27,7 +27,7 @@
             <volist name="article" id="vo">
                <li>
                  <div class="litop">
-                    <h1><a href="../article/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a></h1>
+                    <h1><a href="__CONTROLLER__/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a></h1>
                     <h2>{$vo.articleauthor}</h2>
                 </div>
                 <p><a href="#">{$vo.articleintroduction}</a> </p>
@@ -50,57 +50,57 @@
                 </div>
             </li>-->
         </ul>
-        <div class="page">
-                <ul>
-                    <li class="up"><a href="#">上一页</a></li>
-                    <li class="now">1</li>
-                    <li class="num"><a href="#">2</a></li>
-                    <li class="num"><a href="#">3</a></li>
-                    <li class="num"><a href="#">4</a></li>
-                    <li class="num"><a href="#">5</a></li>
-                    <li>...</li>
-                    <li class="num"><a href="#">8</a></li>
-                    <li class="up"><a href="#">下一页</a></li>
-                </ul>
-    </div>
+        <div class="page">{$pages}</div> 
     </div>
     <div class="right">
         <div class="righttop">
-            <h1 class="title">热门资讯<a href="#" class="ckgd">更多&nbsp;>></a></h1>
+            <h1 class="title">热门资讯<a href="__MODULE__/news/newslist" class="ckgd">更多&nbsp;>></a></h1>
             <ul class="topul">
-              <li><a href="#">励志音乐，你Get了吗？</a><span>01-01</span></li>
-              <li><a href="#">鸡汤励志成名曲</a><span>01-01</span></li>
+              <volist name="news" id="vo">
+                <li>
+                  <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
+                  <span>{$vo.newstime}</span>
+                </li>
+              </volist>
+              <!-- <li><a href="{:U('/home/article/articledetails')}">励志音乐，你Get了吗？</a><span>01-01</span></li>
+              <li><a href="{:U('/home/article/articledetails')}">鸡汤励志成名曲</a><span>01-01</span></li>
               <li><a href="#">这本该是个励志的故事...</a><span>01-01</span></li>
               <li><a href="#">励志故事的背后你又知道哪些？</a><span>01-01</span></li>
               <li><a href="#">怎么看待励志的书籍？</a><span>01-01</span></li>
               <li><a href="#">如何写好励志小说...</a><span>01-01</span></li>
-              <li><a href="#">哇咔咔，今天的鸡汤好喝吗...</a><span>01-01</span></li>
+              <li><a href="#">哇咔咔，今天的鸡汤好喝吗...</a><span>01-01</span></li> -->
             </ul>
         </div>
         
         <div class="righttop righttop2">
             <h1 class="title">经典文章<a href="#" class="ckgd">更多&nbsp;>></a></h1>
             <ul class="topul">
-              <li><a href="{:U('/home/article/articledetails')}">这一别已是天涯</a><span>01-01</span></li>
-              <li><a href="{:U('/home/article/articledetails')}">你的眼里没有睛</a><span>01-01</span></li>
-              <li><a href="{:U('/home/article/articledetails')}">不要羡慕朋友圈里的生活</a><span>01-01</span></li>
-              <li><a href="{:U('/home/article/articledetails')}">稻草</a><span>01-01</span></li>
-              <li><a href="{:U('/home/article/articledetails')}">跨过去，其实很简单</a><span>01-01</span></li>
-              <li><a href="{:U('/home/article/articledetails')}">生命过程中的痛</a><span>01-01</span></li>
-              <li><a href="{:U('/home/article/articledetails')}">错过花，你将收获雨</a><span>01-01</span></li>
+               <volist name="article" id="vo">
+                  <li>
+                    <a href="__CONTROLLER__/article/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a>
+                    <span>{$vo.articletime}</span>
+                  </li>
+               </volist>
+                <!-- <li><a href="#">这一别已是天涯</a><span>12-19</span></li>
+                <li><a href="#">你的眼里没有睛</a><span>12-20</span></li>
+                <li><a href="#">不要羡慕朋友圈里的生活</a><span>12-20</span></li>
+                <li><a href="#">稻草</a><span>12-20</span></li>
+                <li><a href="#">跨过去，其实很简单</a><span>12-21</span></li>
+                <li><a href="#">生命过程中的痛</a><span>12-22</span></li>
+                <li><a href="#">错过花，你将收获雨</a><span>12-25</span></li> -->
         </ul>
         </div>
         
         <div class="righttop righttop3">
             <h1 class="title">推荐书籍<a href="#" class="ckgd">更多&nbsp;>></a></h1>
             <ul class="topul">
-              <li><a href="#">百年孤独</a><span>01-01</span></li>
-              <li><a href="#">哈姆雷特</a><span>01-01</span></li>
-              <li><a href="#">围城</a><span>01-01</span></li>
-              <li><a href="#">张爱玲典藏全集</a><span>01-01</span></li>
-              <li><a href="#">安妮日记</a><span>01-01</span></li>
-              <li><a href="#">小王子</a><span>01-01</span></li>
-              <li><a href="#">追风筝的人</a><span>01-01</span></li>
+              <li><a href="#">百年孤独</a><span>2016-12-25</span></li>
+              <li><a href="#">哈姆雷特</a><span>2016-12-25</span></li>
+              <li><a href="#">围城</a><span>2016-12-25</span></li>
+              <li><a href="#">张爱玲典藏全集</a><span>2016-12-25</span></li>
+              <li><a href="#">安妮日记</a><span>2016-12-25</span></li>
+              <li><a href="#">小王子</a><span>2016-12-25</span></li>
+              <li><a href="#">追风筝的人</a><span>2016-12-25</span></li>
         </ul>
         </div>
 
@@ -166,8 +166,6 @@
     </div> -->
 </div>
 </div>
-
 <include file="Public/footer.html" />
-
 </body>
 </html>

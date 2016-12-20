@@ -11,6 +11,7 @@ class RegisterController extends Controller {
 	    	//dump($data);
 	    	$User = M('users');
 	      $username = $data['username'];
+	      $email=$data['email'];
 		$result = $User ->getFieldByUsername($username,'userid');
 		//dump($User->_sql());
 		$num = count($result);
@@ -19,7 +20,7 @@ class RegisterController extends Controller {
 			echo '<script>alert("用户名已存在，请换个其他的用户名");window.history.go(-1);</script>';
 			exit;
 		}
-		$result = $User ->getFieldByUsername($username,'email');
+		$result = $User ->getFieldByEmail($email,'userid');
 		$num = count($result);
 		if($num==1){
 			echo '<script>alert("邮箱已存在，请换其他邮箱");window.history.go(-1);</script>';
@@ -81,7 +82,7 @@ class RegisterController extends Controller {
 		//添加该邮件的主题
 		$mail->Subject = '易学助手邮箱验证';
 		//添加邮件正文 上方将isHTML设置成了true，则可以是完整的html字符串 如：使用file_get_contents函数读取本地的html文件
-		$mail->Body =  "亲爱的".$data['username']."：<br/>请点击链接激活您的帐号。<br/><a href='http://localhost/project/index/index.php/home/register/active.html?verify=".$token."' target='_blank'>http://www.index.com/demo/register/active.php?verify=".$token."</a><br/>如果以上链接无法点击，请将它复制到你的浏览器地址栏中进入访问，该链接24小时内有效。<br/>如果此次激活请求非你本人所发，请忽略本邮件。<br/><p style='text-align:right'></p>";//邮件内容
+		$mail->Body =  "亲爱的".$data['username']."：<br/>请点击链接激活您的帐号。<br/><a href='http://estudy.csbroswer.cn/home/register/active.html?verify=".$token."' target='_blank'>http://estudy.csbroswer.cn/register/active.php?verify=".$token."</a><br/>如果以上链接无法点击，请将它复制到你的浏览器地址栏中进入访问，该链接24小时内有效。<br/>如果此次激活请求非你本人所发，请忽略本邮件。<br/><p style='text-align:right'></p>";//邮件内容
 		//为该邮件添加附件 该方法也有两个参数 第一个参数为附件存放的目录（相对目录、或绝对目录均可） 第二参数为在邮件附件中该附件的名称
 		//$mail->addAttachment('./d.jpg','mm.jpg');
 		//同样该方法可以多次调用 上传多个附件
