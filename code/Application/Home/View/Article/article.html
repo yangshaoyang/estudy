@@ -1,169 +1,259 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/sitelist.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
-<title>励志人生</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/sitelist.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
+    <title>励志人生</title>
 </head>
 <body>
-<include file="Public/header.html" />
+    <include file="Public/header.html" />
+    <div class="content">
+        <div class="mybody">
+            <div class="bread">
+                <a href="{:U('/')}">易学助手</a>
+                >
+                <a href="__CONTROLLER__/article">励志人生</a>
+            </div>
+            <div class="left">
+                <div class="search">
+                    <form class="search"  action="{:U('home/search/search')}" method="post" onsubmit="return chk_form();">
+                        <input type="text" value="请输入感兴趣的内容..." class="searchtext">
+                        <input type="button" value="开始搜索" class="searchbutton"></form>
+                </div>
+                <div class="lp"></div>
+                <ul class="proul">
+                    <volist name="article" id="vo">
+                        <li>
+                            <div class="litop">
+                                <h1>
+                                    <a href="__CONTROLLER__/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a>
+                                </h1>
+                                <h2>{$vo.articleauthor}</h2>
+                            </div>
+                            <p>
+                                <a href="#">{$vo.articleintroduction}</a>
+                            </p>
+                            <div class="time">
+                                <img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/>
+                                <span class="sj">时间：{$vo.articletime}</span>
+                            </div>
+                        </li>
+                    </volist>
 
-<div class="content">
-<div class="mybody">
-    <div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="__CONTROLLER__/article">励志人生</a></div>
-    <div class="left">
-        <div class="search">
-        <form class="search"  action="{:U('home/search/search')}" method="post" onsubmit="return chk_form();">
-            <input type="text" value="请输入感兴趣的内容..." class="searchtext">
-            <input type="button" value="开始搜索" class="searchbutton">
-        </form>
-        </div>
-        <div class="lp">
-        </div>
-        <ul class="proul">
-            <volist name="article" id="vo">
-               <li>
-                 <div class="litop">
-                    <h1><a href="__CONTROLLER__/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a></h1>
-                    <h2>{$vo.articleauthor}</h2>
-                </div>
-                <p><a href="#">{$vo.articleintroduction}</a> </p>
-                <div class="time">
-                        <img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/> 
-                        <span class="sj">时间：{$vo.articletime}</span>
-                </div>
-               </li>
-            </volist>
-
-            <!--<li>
-                <div class="litop">
-                    <h1><a href="{:U('/home/article/articledetails')}">年轻人如何在独居时有效地保持自律</a></h1>
-                    <h2>鲁迈</h2>
-                </div>
-                <p><a href="#">谈到独居与自律，我自信有发言权，无论是在国内的少年事期，还是去斯坦福念书，我大部分时间都算是独居，而且始终保持着自律，当然效果也是很棒的。自律看上去是个名词，但真的做起来却一点都不容易，在这里我分享一点经验，希望对大家有所帮助.....</a></p>
-                <div class="time">
-                        <img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/> 
+                    <!--<li>
+                    <div class="litop">
+                        <h1>
+                            <a href="{:U('/home/article/articledetails')}">年轻人如何在独居时有效地保持自律</a>
+                        </h1>
+                        <h2>鲁迈</h2>
+                    </div>
+                    <p>
+                        <a href="#">
+                            谈到独居与自律，我自信有发言权，无论是在国内的少年事期，还是去斯坦福念书，我大部分时间都算是独居，而且始终保持着自律，当然效果也是很棒的。自律看上去是个名词，但真的做起来却一点都不容易，在这里我分享一点经验，希望对大家有所帮助.....
+                        </a>
+                    </p>
+                    <div class="time">
+                        <img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/>
                         <span class="sj">时间：2016-11-01</span>
-                </div>
-            </li>-->
-        </ul>
-        <div class="page">{$pages}</div> 
-    </div>
-    <div class="right">
-        <div class="righttop">
-            <h1 class="title">热门资讯<a href="__MODULE__/news/newslist" class="ckgd">更多&nbsp;>></a></h1>
-            <ul class="topul">
-              <volist name="news" id="vo">
-                <li>
-                  <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
-                  <span>{$vo.newstime}</span>
+                    </div>
                 </li>
-              </volist>
-              <!-- <li><a href="{:U('/home/article/articledetails')}">励志音乐，你Get了吗？</a><span>01-01</span></li>
-              <li><a href="{:U('/home/article/articledetails')}">鸡汤励志成名曲</a><span>01-01</span></li>
-              <li><a href="#">这本该是个励志的故事...</a><span>01-01</span></li>
-              <li><a href="#">励志故事的背后你又知道哪些？</a><span>01-01</span></li>
-              <li><a href="#">怎么看待励志的书籍？</a><span>01-01</span></li>
-              <li><a href="#">如何写好励志小说...</a><span>01-01</span></li>
-              <li><a href="#">哇咔咔，今天的鸡汤好喝吗...</a><span>01-01</span></li> -->
+                -->
+            </ul>
+            <div class="page">{$pages}</div>
+        </div>
+        <div class="right">
+            <div class="righttop">
+                <h1 class="title">
+                    热门资讯
+                    <a href="__MODULE__/news/newslist" class="ckgd">更多&nbsp;>></a>
+                </h1>
+                <ul class="topul">
+                    <volist name="news" id="vo">
+                        <li>
+                            <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
+                            <span>{$vo.newstime}</span>
+                        </li>
+                    </volist>
+                    <!-- <li>
+                    <a href="{:U('/home/article/articledetails')}">励志音乐，你Get了吗？</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="{:U('/home/article/articledetails')}">鸡汤励志成名曲</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="#">这本该是个励志的故事...</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="#">励志故事的背后你又知道哪些？</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="#">怎么看待励志的书籍？</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="#">如何写好励志小说...</a>
+                    <span>01-01</span>
+                </li>
+                <li>
+                    <a href="#">哇咔咔，今天的鸡汤好喝吗...</a>
+                    <span>01-01</span>
+                </li>
+                -->
             </ul>
         </div>
-        
-        <div class="righttop righttop2">
-            <h1 class="title">经典文章<a href="#" class="ckgd">更多&nbsp;>></a></h1>
-            <ul class="topul">
-               <volist name="article" id="vo">
-                  <li>
-                    <a href="__CONTROLLER__/article/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a>
-                    <span>{$vo.articletime}</span>
-                  </li>
-               </volist>
-                <!-- <li><a href="#">这一别已是天涯</a><span>12-19</span></li>
-                <li><a href="#">你的眼里没有睛</a><span>12-20</span></li>
-                <li><a href="#">不要羡慕朋友圈里的生活</a><span>12-20</span></li>
-                <li><a href="#">稻草</a><span>12-20</span></li>
-                <li><a href="#">跨过去，其实很简单</a><span>12-21</span></li>
-                <li><a href="#">生命过程中的痛</a><span>12-22</span></li>
-                <li><a href="#">错过花，你将收获雨</a><span>12-25</span></li> -->
-        </ul>
-        </div>
-        
-        <div class="righttop righttop3">
-            <h1 class="title">推荐书籍<a href="#" class="ckgd">更多&nbsp;>></a></h1>
-            <ul class="topul">
-              <li><a href="#">百年孤独</a><span>2016-12-25</span></li>
-              <li><a href="#">哈姆雷特</a><span>2016-12-25</span></li>
-              <li><a href="#">围城</a><span>2016-12-25</span></li>
-              <li><a href="#">张爱玲典藏全集</a><span>2016-12-25</span></li>
-              <li><a href="#">安妮日记</a><span>2016-12-25</span></li>
-              <li><a href="#">小王子</a><span>2016-12-25</span></li>
-              <li><a href="#">追风筝的人</a><span>2016-12-25</span></li>
-        </ul>
-        </div>
 
-        <!-- 第二版功能实现 -->
-       <!--  <div class="righttop righttop2">
-            <h1 class="title title2">励志达人<a href="#" class="ckgd">更多&nbsp;>></a></h1>
-            <div class="xzdr">
-                <img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
-                <div class="xzright">
-                <div class="drname">
+        <div class="righttop righttop2">
+            <h1 class="title">
+                经典文章
+                <a href="#" class="ckgd">更多&nbsp;>></a>
+            </h1>
+            <ul class="topul">
+                <volist name="article" id="vo">
+                    <li>
+                        <a href="__CONTROLLER__/article/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a>
+                        <span>{$vo.articletime}</span>
+                    </li>
+                </volist>
+                <!-- <li>
+                <a href="#">这一别已是天涯</a>
+                <span>12-19</span>
+            </li>
+            <li>
+                <a href="#">你的眼里没有睛</a>
+                <span>12-20</span>
+            </li>
+            <li>
+                <a href="#">不要羡慕朋友圈里的生活</a>
+                <span>12-20</span>
+            </li>
+            <li>
+                <a href="#">稻草</a>
+                <span>12-20</span>
+            </li>
+            <li>
+                <a href="#">跨过去，其实很简单</a>
+                <span>12-21</span>
+            </li>
+            <li>
+                <a href="#">生命过程中的痛</a>
+                <span>12-22</span>
+            </li>
+            <li>
+                <a href="#">错过花，你将收获雨</a>
+                <span>12-25</span>
+            </li>
+            -->
+        </ul>
+    </div>
+
+    <div class="righttop righttop3">
+        <h1 class="title">
+            推荐书籍
+            <a href="#" class="ckgd">更多&nbsp;>></a>
+        </h1>
+        <ul class="topul">
+            <li>
+                <a href="#">百年孤独</a>
+                <span>2016-12-25</span>
+            </li>
+            <li>
+                <a href="#">哈姆雷特</a>
+                <span>2016-12-25</span>
+            </li>
+            <li>
+                <a href="#">围城</a>
+                <span>2016-12-25</span>
+            </li>
+            <li>
+                <a href="#">张爱玲典藏全集</a>
+                <span>2016-12-25</span>
+            </li>
+            <li>
+                <a href="#">安妮日记</a>
+                <span>2016-12-25</span>
+            </li>
+            <li>
+                <a href="#">小王子</a>
+                <span>2016-12-25</span>
+            </li>
+            <li>
+                <a href="#">追风筝的人</a>
+                <span>2016-12-25</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 第二版功能实现 -->
+    <!--  <div class="righttop righttop2">
+    <h1 class="title title2">
+        励志达人
+        <a href="#" class="ckgd">更多&nbsp;>></a>
+    </h1>
+    <div class="xzdr">
+        <img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+        <div class="xzright">
+            <div class="drname">
                 <h1>王子文</h1>
-                </div>
-                <ul>
-                    <li>人物简介</li>
-                    <li>人物经历</li>
-                    <li>主要著作</li>
-                    <li>综艺节目</li>
-                </ul>
-                </div>
             </div>
-            <div class="xzdr xzdr2">
-                <img src="__PUBLIC__/images/dr2.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
-                <div class="xzright">
-                <div class="drname">
+            <ul>
+                <li>人物简介</li>
+                <li>人物经历</li>
+                <li>主要著作</li>
+                <li>综艺节目</li>
+            </ul>
+        </div>
+    </div>
+    <div class="xzdr xzdr2">
+        <img src="__PUBLIC__/images/dr2.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+        <div class="xzright">
+            <div class="drname">
                 <h1>尼克胡哲</h1>
-                </div>
-                <ul>
-                    <li>人物简介</li>
-                    <li>人物经历</li>
-                    <li>主要著作</li>
-                    <li>励志演讲</li>
-                </ul>
-                </div>
             </div>
-            <div class="xzdr xzdr2">
-                <img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
-                <div class="xzright">
-                <div class="drname">
+            <ul>
+                <li>人物简介</li>
+                <li>人物经历</li>
+                <li>主要著作</li>
+                <li>励志演讲</li>
+            </ul>
+        </div>
+    </div>
+    <div class="xzdr xzdr2">
+        <img src="__PUBLIC__/images/dr1.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+        <div class="xzright">
+            <div class="drname">
                 <h1>俞敏洪</h1>
-                </div>
-                <ul>
-                    <li>人物简介</li>
-                    <li>人物经历</li>
-                    <li>主要著作</li>
-                    <li>综艺节目</li>
-                </ul>
-                </div>
             </div>
-            <div class="xzdr xzdr2">
-                <img src="__PUBLIC__/images/dr2.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
-                <div class="xzright">
-                <div class="drname">
+            <ul>
+                <li>人物简介</li>
+                <li>人物经历</li>
+                <li>主要著作</li>
+                <li>综艺节目</li>
+            </ul>
+        </div>
+    </div>
+    <div class="xzdr xzdr2">
+        <img src="__PUBLIC__/images/dr2.jpg" width="150" height="190" alt="dr" class="xzdrimg"/>
+        <div class="xzright">
+            <div class="drname">
                 <h1>尼克胡哲</h1>
-                </div>
-                <ul>
-                    <li>人物简介</li>
-                    <li>人物经历</li>
-                    <li>主要著作</li>
-                    <li>励志演讲</li>
-                </ul>
-                </div>
-      </div>
-    </div> -->
+            </div>
+            <ul>
+                <li>人物简介</li>
+                <li>人物经历</li>
+                <li>主要著作</li>
+                <li>励志演讲</li>
+            </ul>
+        </div>
+    </div>
+    -->
+</div>
 </div>
 </div>
 <include file="Public/footer.html" />
