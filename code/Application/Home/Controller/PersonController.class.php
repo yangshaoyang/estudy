@@ -149,7 +149,7 @@ class PersonController extends Controller {
     $this->assign("news",$news);
     //消息点击数量加1
     $user_certificate=M("user_certificate")->table(array('user_certificate'=>'a','certificate'=>'b'))
-                           ->where("a.certifcateid=b.cid AND cid=$cid")
+                           ->where("a.certificateid=b.cid AND cid=$cid")
                            ->setInc('num');
     $this->assign("user_certificate",$user_certificate);                       
     $this->display();
