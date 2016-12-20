@@ -109,9 +109,9 @@
             </div>
         </div>
         <div class="search">
-            <form class="search"  action="{:U('home/search/search')}" method="post" onsubmit="return chk_form();">
-                <input type="text" placeholder="请输入考试或比赛关键字" class="searchtext">
-                <input type="button" value="开始搜索" class="searchbutton"></form>
+            <form class="search"  action="__MODULE__/search/search?" method="get">
+                <input type="text" placeholder="请输入考试或比赛关键字" class="searchtext" name="text">
+                <input type="submit" value="开始搜索" class="searchbutton"></form>
         </div>
         <div class="b_nav">
             <ul>
@@ -267,9 +267,7 @@
                         $sql="select * from blogroll";
                         $sta = $pdo->query($sql);
                         $urls = $sta->fetchAll();
-
-                        for($i=0;$i
-                    <count($urls);$i++){    // 循环读取二维数组中的数据
+                        for($i=0;$i<count($urls);$i++){    // 循环读取二维数组中的数据
                 ?>
                         <li>
                             <a href="<?php echo $urls[$i]['url'];?>

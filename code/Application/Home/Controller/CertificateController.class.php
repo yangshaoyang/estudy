@@ -92,7 +92,7 @@ class CertificateController extends Controller {
 		      }
 		      $pages=$page->show();
 		      $this->assign('pages',$pages);
-	      	$this->display();
+		      $this->display();
 	    	}else{
 	    		$this->error("您肿么到这里了/(ㄒoㄒ)/~~，快回去",U("certificatelist"));
 	    	}
