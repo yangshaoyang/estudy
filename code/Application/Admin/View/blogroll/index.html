@@ -39,8 +39,8 @@
                 <td>{$vo.name}</td>
                 <td><a href="{$vo.url}">{$vo.url}</a></td>
                 <td align="center">
-                    <button type="button" class="btn-blue" onclick="dialog_url(this);" id="{$vo.id}">修改</button>&nbsp;
-                    <button type="button" class="btn-red" data-toggle="alertmsg" target="ajaxTodo" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/blogroll/delete/id/{$vo.id}');window.close();}}">删除</button>
+                    <button type="button" class="btn-blue" onclick="dialog_url(this);" id="{$vo.id}" data-icon="edit">修改</button>&nbsp;
+                    <button type="button" class="btn-red" data-toggle="alertmsg" target="ajaxTodo" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/blogroll/delete/id/{$vo.id}');window.close();}}" data-icon="times">删除</button>
                 </td>
             </tr>
             </volist>

@@ -3,11 +3,11 @@ namespace Admin\Controller;
 use Think\Controller;
 class ReportController extends Controller { //举报管理控制器
     public function index(){
-    	   $m = M("report")->order('reportid desc')->select();
+        $m = M("report")->order('reportid desc')->select();
         $this->assign("report",$m);
         $this->display();
     }
-    public function feedback($rid){
+    public function feedback(){
         // $data=array(
         // );
         // $Model=M("report");
