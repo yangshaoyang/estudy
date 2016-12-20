@@ -16,14 +16,6 @@
     <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
     <script type="text/javascript" charset="utf-8" src="__PUBLIC__/lang/zh-cn/zh-cn.js"></script>
     <script src="__PUBLIC__/js/forum.js"></script>
-	<!--<style type="text/css">
-       	a.titlep{
-       		width:500px; 
-			white-space:nowrap; 
-			overflow:hidden; 
-			border:1px solid #000000;
-		}
-    </style>-->
 	<title>论坛</title>
 </head>
 <body>
@@ -31,15 +23,19 @@
 <include file="Public/header.html"/>
 <div class="content">
 <div class="mybody">
-	<div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="{:U('/home/forum/')}">论坛</a></div>
+	<div class="bread">
+		<a href="{:U('/')}">易学助手</a> 
+		> 
+		<a href="{:U('/home/forum/')}">论坛</a>
+	</div>
     <div class="left">
     	<div class="search">
-    	<form>
-            <input type="text" placeholder="请输入论坛名称或话题" class="searchtext">
-            <input type="button" value="开始搜索" class="searchbutton">
-            <a href="#sub"><input type="button" value="我要发帖" class="postbutton"></a>
-        </form>
-   		</div>
+            <form action="__CONTROLLER__/search?" method="get">
+                <input type="text" placeholder="请输入帖子名称" class="searchtext" name="text" value="{$_GET['text']}">
+                <input type="submit" value="开始搜索" class="searchbutton">
+                <a href="#sub"><input type="button" value="我要发帖" class="postbutton"></a>
+            </form>
+        </div>
         <div class="lp">
     	<ul>
     		<switch name="id">
