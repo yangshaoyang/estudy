@@ -15,7 +15,7 @@
             <div class="bread">
                 <a href="{:U('/')}">易学助手</a>
                 >
-                <a href="../../article">励志人生</a>
+                <a href="__CONTROLLER__/article">励志人生</a>
                 >
             </div>
             <div style="float: left">
@@ -70,7 +70,7 @@
                   <ul class="topul">
                     <volist name="article" id="vo">
                       <li>
-                        <a href="../article/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a>
+                        <a href="__CONTROLLER__/article/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a>
                         <span>{$vo.articletime}</span>
                       </li>
                     </volist>
