@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+  <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+  <link href="__PUBLIC__/css/dynamicdetails.css" rel="stylesheet" type="text/css" />
+  <link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
+  <title>{$ccontent.cname}</title>
+</head>
+<body>
+  <include file="Public/header.html" />
+  <div class="content">
+    <div class="mybody">
+      <div class="bread">
+        <span>
+          <a href="{:U('/')}">易学助手</a>
+        </span>
+        >
+        <a href="../certificate/certificatelist">考证列表</a>
+        >
+        <a href="javascript:;">考证详情</a>
+      </div>
+      <div style="float: left">
+        <div class="left">
+          <h1>{$ccontent.cname}</h1>
+          <div class="fl">
+            <div class="ssfl">
+              <img src="__PUBLIC__/images/ssfl.gif" width="15" height="15" alt="ssfl" />
+              <span>要求：{$ccontent.crequest}</span>
+            </div>
+            <div class="ssfl ssfl2">
+              <img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" />
+              <span>时间：{$ccontent.ctime}</span>
+            </div>
+            <div class="ssfl ssfl2">
+              <img src="__PUBLIC__/images/zz.gif" width="15" height="15" alt="zz" />
+              <span>报名费：{$ccontent.cfee} 元</span>
+            </div>
+          </div>
+          <p>{$ccontent.ccontent}</p>
+        </div>
+        <!--PC版-->
+        <div id="SOHUCS" sid="{$ccontent.cid}" style="width: 790px;float: left;"></div>
+        <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+        <script type="text/javascript">
+                    window.changyan.api.config({
+                    appid: 'cysJVl9Cb',
+                    conf: 'prod_49c81d0f91ec3cbce38e37a23f0ec3f4'
+                    });
+        </script>
+      </div>
+      <div class="right">
+        <div class="righttop">
+          <h1 class="title">
+            热门资讯
+            <a href="__MODULE__/news/newslist" class="ckgd">更多&nbsp;>></a>
+          </h1>
+          <ul class="topul">
+            <volist name="news" id="vo">
+              <li>
+                <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
+                <span>{$vo.newstime}</span>
+              </li>
+            </volist>
+          </ul>
+        </div>
+        <div class="righttop righttop2 righttop3">
+          <h1 class="title title2">
+            考证推荐
+            <a href="__MODULE__/certificate/certificatelist" class="ckgd">更多&nbsp;>></a>
+          </h1>
+          <volist name="tcertificate" id="vo">
+            <div class="lpimg1 lpimg2">
+              <p>
+                <a href="__MODULE__/certificate/content?cid={$vo.cid}">{$vo.cname}</a>
+              </p>
+              <a href="__MODULE__/certificate/content?cid={$vo.cid}">
+                <img src="{$vo.cthumb}" width="277" height="201" alt="lp" />
+              </a>
+            </div>
+          </volist>
+        </div>
+      </div>
+    </div>
+  </div>
+  <include file="Public/footer.html" />
+</body>
+</html>
