@@ -1,4 +1,10 @@
 <?php
+/**
+*开发者：胡琪
+*开发功能：前台界面励志人生模块功能实现
+*修改时间：2016/12/15
+*/
+
 namespace Home\Controller;
 use Think\Controller;
 class ArticleController extends Controller {
