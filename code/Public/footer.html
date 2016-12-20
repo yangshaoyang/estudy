@@ -26,7 +26,6 @@
                         $dbUser='root';
                         $dbPswd='';
                         $pdo = new PDO($dsn,$dbUser, $dbPswd);
-echo $pdo;
                         $sql = "set names utf8";
                         $pdo->exec($sql);
                         if(!$pdo){

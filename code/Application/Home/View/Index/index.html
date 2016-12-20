@@ -86,7 +86,7 @@
                     <div class="wtxz">
                         <img src="__PUBLIC__/images/fbfy.png" width="20" height="20" alt="wtxz" />
                     </div>
-                    <p>比赛提醒</p>
+                    <p>消息提醒</p>
                 </a>
                 <a href="{:U('/home/forum')}" class="xz3 xz4" name="xz3">
                     <div class="wtxz">
@@ -250,77 +250,97 @@
                 <p class="dh">联系邮箱：estudy@csbroswer.cn</p>
             </div>
             <div class="footermiddle footerr">
-                <a href="javascript:;" class="footernav">友情链接</a>
+                <a href="#" class="footernav">友情链接</a>
                 <ul>
-                    <volist name="blogroll" id="vo">
+                    <?php
+                        $dsn="mysql:host=localhost;dbname=estudy";
+                        $dbUser='root';
+                        $dbPswd='';
+                        $pdo = new PDO($dsn,$dbUser, $dbPswd);
+                        $sql = "set names utf8";
+                        $pdo->
+                    exec($sql);
+                        if(!$pdo){
+                            echo '连接失败';
+                        }
+                        //有结果的查询
+                        $sql="select * from blogroll";
+                        $sta = $pdo->query($sql);
+                        $urls = $sta->fetchAll();
+
+                        for($i=0;$i<count($urls);$i++){    // 循环读取二维数组中的数据
+                ?>
                         <li>
-                            <a href='{vo.url}' class="yqlj yqlj2">{$vo.name}</a>
+                            <a href="<?php echo $urls[$i]['url'];?>
+                                " class="yqlj yqlj2">
+                                <?php echo $urls[$i]['name'];?></a>
                         </li>
-                    </volist>
-                </ul>
+                        <?php
+                }
+                ?></ul>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- 弹窗 -->
-    <div class="box">
-        <div class="box1">
-            <div class="box2" id="boxclose">
-                <div style="margin-left:75px;margin-top:50px;">
-                    <div class="box12" style="margin-bottom:10px;">
-                        <h2 style="font-size:25px;">考证提示</h2>
-                    </div>
+        <!-- 弹窗 -->
+        <div class="box">
+            <div class="box1">
+                <div class="box2" id="boxclose">
+                    <div style="margin-left:75px;margin-top:50px;">
+                        <div class="box12" style="margin-bottom:10px;">
+                            <h2 style="font-size:25px;">考证提示</h2>
+                        </div>
 
-                    <div class="box11" style="margin-bottom:20px;">
-                        <ul>
-                            <li>
-                                <a href="#" float: left;>中国创翼2016</a>
-                                &emsp;&emsp;&emsp;&emsp;
-                                <span>2016-11-30</span>
-                            </li>
-                            <li>
-                                <a href="#" float: left;>中国创翼2016</a>
-                                &emsp;&emsp;&emsp;&emsp;
-                                <span>2016-11-30</span>
-                            </li>
-                            <li>
-                                <a href="#" float: left;>中国创翼2016</a>
-                                &emsp;&emsp;&emsp;&emsp;
-                                <span>2016-11-30</span>
-                            </li>
-                            <li>
-                                <a href="#" float: left;>中国创翼2016</a>
-                                &emsp;&emsp;&emsp;&emsp;
-                                <span>2016-11-30</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div  class="box12" style="margin-bottom:10px;">
-                        <h2 style="font-size:25px;">比赛提示</h2>
-                    </div>
-                    <div class="box11">
-                        <ul>
-                            <volist name="MTH" id="vo">
+                        <div class="box11" style="margin-bottom:20px;">
+                            <ul>
                                 <li>
-                                    <a href="__MODULE__/match/content?mid={$vo.mid}" float: left;>{$vo.mname}</a>
-                                    <span>{$vo.mtime}</span>
+                                    <a href="#" float: left;>中国创翼2016</a>
+                                    &emsp;&emsp;&emsp;&emsp;
+                                    <span>2016-11-30</span>
                                 </li>
-                            </volist>
-                        </ul>
+                                <li>
+                                    <a href="#" float: left;>中国创翼2016</a>
+                                    &emsp;&emsp;&emsp;&emsp;
+                                    <span>2016-11-30</span>
+                                </li>
+                                <li>
+                                    <a href="#" float: left;>中国创翼2016</a>
+                                    &emsp;&emsp;&emsp;&emsp;
+                                    <span>2016-11-30</span>
+                                </li>
+                                <li>
+                                    <a href="#" float: left;>中国创翼2016</a>
+                                    &emsp;&emsp;&emsp;&emsp;
+                                    <span>2016-11-30</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div  class="box12" style="margin-bottom:10px;">
+                            <h2 style="font-size:25px;">比赛提示</h2>
+                        </div>
+                        <div class="box11">
+                            <ul>
+                                <volist name="MTH" id="vo">
+                                    <li>
+                                        <a href="__MODULE__/match/content?mid={$vo.mid}" float: left;>{$vo.mname}</a>
+                                        <span>{$vo.mtime}</span>
+                                    </li>
+                                </volist>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div style="margin-top:50px;margin-left:140px" onclick="jQuery('.box').hide()">
-                    <button id="close">
-                        <p style="color:white;display: inline-block;padding:7px 20px;background-color: rgb(47,137,187);font-size:18px;">关闭</p>
-                    </button>
+                    <div style="margin-top:50px;margin-left:140px" onclick="jQuery('.box').hide()">
+                        <button id="close">
+                            <p style="color:white;display: inline-block;padding:7px 20px;background-color: rgb(47,137,187);font-size:18px;">关闭</p>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="box10" style="display:none" id="box1close">
-        <img src="__PUBLIC__/images/ewm.jpg" width="220" height="220"></div>
+        <div class="box10" style="display:none" id="box1close">
+            <img src="__PUBLIC__/images/ewm.jpg" width="220" height="220"></div>
 </body>
-    <script type="text/javascript">
+        <script type="text/javascript">
 window.onload=function(){
    $(document).ready(function(){
     $('#box1').mouseover(function(){
@@ -332,4 +352,4 @@ window.onload=function(){
    });
 }
 </script>
-</html>
+    </html>
