@@ -92,11 +92,6 @@ class MatchController extends Controller {
 		      }
 		      $pages=$page->show();
 		      $this->assign('pages',$pages);
-
-	     		$tmatch=M("match")->limit(3)->select();//比赛推荐部分
-	    		$this->assign("tmatch",$tmatch);
-	     		$news=M("news")->order("newsid desc")->limit(7)->select();//热门资讯获取
-			$this->assign("news",$news);
 	      	$this->display();
 	    	}else{
 	    		$this->error("您肿么到这里了/(ㄒoㄒ)/~~，快回去",U("matchlist"));

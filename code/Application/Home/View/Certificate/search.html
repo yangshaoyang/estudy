@@ -8,7 +8,7 @@
     <link href="__PUBLIC__/css/bidlist.css" rel="stylesheet" type="text/css" />
     <link href="__PUBLIC__/css/confirmdelete.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="__PUBLIC__/js/confirmdelete.js"></script>
-    <title>考证列表</title>
+    <title>考证{$_GET['text']}搜索结果</title>
 </head>
 <body>
     <include file="Public/header.html" />
@@ -21,6 +21,8 @@
                 </span>
                 >
                 <a href="../../certificatelist">考证列表</a>
+                >
+                <a href="javascript:;">{$_GET['text']}的搜索结果</a>
             </div>
             <div class="ss">
                 <div class="search">
@@ -31,7 +33,7 @@
             </div>
             <div class="content">
                 <ul class="contentul">
-                    <volist name="certificate" id="vo">
+                    <volist name="result" id="vo">
                         <li>
                             <div class="list">
                                 <div class="listleft">
