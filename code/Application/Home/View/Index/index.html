@@ -167,14 +167,14 @@
             <div class="rdzxright" >
                 <volist name="new" id="vo">
                     <h1>
-                        <a href="home/news/newscontent?newsid={$vo.newsid}" class="rdtit">{$vo.newstitle}</a>
-                        <a href="home/news/newslist" class="ckgd">查看更多&nbsp;>></a>
+                        <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}" class="rdtit">{$vo.newstitle}</a>
+                        <a href="__MODULE__/news/newslist" class="ckgd">查看更多&nbsp;>></a>
                     </h1>
                 </volist>
                 <ul>
                     <volist name="news" id="vo">
                         <li>
-                            <a href="home/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
+                            <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
                             <span>{$vo.newstime}</span>
                         </li>
                     </volist>
@@ -185,11 +185,11 @@
             <div class="xzl">
                 <h1 class="title">
                     考证信息
-                    <a href="home/certificate/certificatelist" class="ckgd ckgd2">查看更多&nbsp;>></a>
+                    <a href="__MODULE__/certificate/certificatelist" class="ckgd ckgd2">查看更多&nbsp;>></a>
                 </h1>
                 <div class="xzimg">
                     <volist name="textuals" id="vo">
-                        <a href="home/certificate/content?cid={$vo.cid}">
+                        <a href="__MODULE__/certificate/content?cid={$vo.cid}">
                             <img src="{$vo.cthumb}" width="280" height="181" alt="xzzc" />
                         </a>
                     </volist>
@@ -197,7 +197,7 @@
                 <ul>
                     <volist name="textual" id="vo">
                         <li>
-                            <a href="home/certificate/content?cid={$vo.cid}" style="font-size: 16px">{$vo.cname}</a>
+                            <a href="__MODULE__/certificate/content?cid={$vo.cid}" style="font-size: 16px">{$vo.cname}</a>
                             <span>{$vo.ctime}</span>
                         </li>
                     </volist>
@@ -206,11 +206,11 @@
             <div class="xzl xzr">
                 <h1 class="title">
                     比赛信息
-                    <a href="home/match/matchlist" class="ckgd ckgd2">查看更多&nbsp;>></a>
+                    <a href="__MODULE__/match/matchlist" class="ckgd ckgd2">查看更多&nbsp;>></a>
                 </h1>
                 <div class="xzimg">
                     <volist name="matchs" id="vo">
-                        <a href="home/match/content?mid={$vo.mid}">
+                        <a href="__MODULE__/match/content?mid={$vo.mid}">
                             <img src="{$vo.mthumb}" width="280" height="181" alt="xzzc" />
                         </a>
                     </volist>
@@ -218,7 +218,7 @@
                 <ul>
                     <volist name="match" id="vo">
                         <li>
-                            <a href="home/match/content?mid={$vo.mid}" style="font-size: 16px">{$vo.mname}</a>
+                            <a href="__MODULE__/match/content?mid={$vo.mid}" style="font-size: 16px">{$vo.mname}</a>
                             <span>{$vo.mtime}</span>
                         </li>
                     </volist>
@@ -250,7 +250,7 @@
                 <p class="dh">联系邮箱：estudy@csbroswer.cn</p>
             </div>
             <div class="footermiddle footerr">
-                <a href="#" class="footernav">友情链接</a>
+                <a href="javascript:;" class="footernav">友情链接</a>
                 <ul>
                     <volist name="blogroll" id="vo">
                         <li>

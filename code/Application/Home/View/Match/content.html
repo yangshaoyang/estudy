@@ -70,14 +70,14 @@
                 <div class="righttop righttop2 righttop3">
                     <h1 class="title title2">
                         比赛推荐
-                        <a href="__PUBLIC__/#" class="ckgd">更多&nbsp;>></a>
+                        <a href="__MODULE__/match/matchlist" class="ckgd">更多&nbsp;>></a>
                     </h1>
                     <volist name="tmatch" id="vo">
                         <div class="lpimg1 lpimg2">
                             <p>
-                                <a href="__PUBLIC__/#">{$vo.mname}</a>
+                                <a href="__MODULE__/match/content/mid/{$vo.mid}">{$vo.mname}</a>
                             </p>
-                            <a href="__PUBLIC__/#">
+                            <a href="__MODULE__/match/content/mid/{$vo.mid}">
                                 <img src="{$vo.mthumb}" width="277" height="201" alt="lp" />
                             </a>
                         </div>

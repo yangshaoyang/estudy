@@ -68,15 +68,14 @@
         <div class="righttop righttop2 righttop3">
           <h1 class="title title2">
             考证推荐
-            <a href="__PUBLIC__/#" class="ckgd">更多&nbsp;>></a>
+            <a href="__MODULE__/certificate/certificatelist" class="ckgd">更多&nbsp;>></a>
           </h1>
           <volist name="tcertificate" id="vo">
             <div class="lpimg1 lpimg2">
               <p>
-                <a href="__PUBLIC__/#">{$vo.cname}</a>
-                <span>{$vo.ctime}</span>
+                <a href="__MODULE__/certificate/content?cid={$vo.cid}">{$vo.cname}</a>
               </p>
-              <a href="__PUBLIC__/#">
+              <a href="__MODULE__/certificate/content?cid={$vo.cid}">
                 <img src="{$vo.cthumb}" width="277" height="201" alt="lp" />
               </a>
             </div>
