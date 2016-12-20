@@ -13,7 +13,7 @@
 
 <div class="content">
 <div class="mybody">
-    <div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="../../article">励志人生</a></div>
+    <div class="bread"><a href="{:U('/')}">易学助手</a> > <a href="__CONTROLLER__/article">励志人生</a></div>
     <div class="left">
         <div class="search">
         <form class="search"  action="{:U('home/search/search')}" method="post" onsubmit="return chk_form();">
@@ -27,7 +27,7 @@
             <volist name="article" id="vo">
                <li>
                  <div class="litop">
-                    <h1><a href="../article/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a></h1>
+                    <h1><a href="__CONTROLLER__/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a></h1>
                     <h2>{$vo.articleauthor}</h2>
                 </div>
                 <p><a href="#">{$vo.articleintroduction}</a> </p>
@@ -50,19 +50,7 @@
                 </div>
             </li>-->
         </ul>
-<!--         <div class="page">
-                <ul>
-                    <li class="up"><a href="#">上一页</a></li>
-                    <li class="now">1</li>
-                    <li class="num"><a href="#">2</a></li>
-                    <li class="num"><a href="#">3</a></li>
-                    <li class="num"><a href="#">4</a></li>
-                    <li class="num"><a href="#">5</a></li>
-                    <li>...</li>
-                    <li class="num"><a href="#">8</a></li>
-                    <li class="up"><a href="#">下一页</a></li>
-                </ul>
-    </div> -->
+        <div class="page">{$pages}</div> 
     </div>
     <div class="right">
         <div class="righttop">
@@ -89,7 +77,7 @@
             <ul class="topul">
                <volist name="article" id="vo">
                   <li>
-                    <a href="../article/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a>
+                    <a href="__CONTROLLER__/article/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a>
                     <span>{$vo.articletime}</span>
                   </li>
                </volist>
@@ -178,8 +166,6 @@
     </div> -->
 </div>
 </div>
-
 <include file="Public/footer.html" />
-
 </body>
 </html>
