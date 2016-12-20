@@ -45,6 +45,12 @@ class NewsController extends Controller {
 
     public function newscontent($newsid){
         //获取帖子文章内容
+        $match=M("match")->order("mid desc")->limit(5)->select();
+        $this->assign("match",$match);
+        $textual=M("certificate")->order("cid desc")->limit(5)->select();
+        $this->assign("textual",$textual);
+        $new=M("news")->order("newsid desc")->limit(5)->select();
+        $this->assign("news",$new);
         $news = M('news')->find($newsid);
         $this->assign('newscontent',$news);
         $this->display();

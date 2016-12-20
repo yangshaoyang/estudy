@@ -41,32 +41,32 @@
     </div>
     <div class="right">
         <div class="righttop">
-            <h1 class="title">热门资讯<a href="home/news/newslist" class="ckgd">更多&nbsp;>></a></h1>
+            <h1 class="title">热门资讯<a href="__MODULE__/news/newslist" class="ckgd">更多&nbsp;>></a></h1>
             <ul class="topul">
             <volist name="news" id="vo">
                     <li>
-                        <a href="home/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a> 
+                        <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a> 
                         <span>{$vo.newstime}</span>
                     </li>
             </volist>
             </ul>
         </div>
         <div class="righttop righttop2">
-            <h1 class="title">比赛信息<a href="home/match/matchlist" class="ckgd">更多&nbsp;>></a></h1>
+            <h1 class="title">比赛信息<a href="__MODULE__/match/matchlist" class="ckgd">更多&nbsp;>></a></h1>
             <ul class="topul">
             <volist name="match" id="vo">
                     <li>
-                        <a href="home/match/content?mid={$vo.mid}">{$vo.mname}</a><span>{$vo.mtime}</span>
+                        <a href="__MODULE__/match/content?mid={$vo.mid}">{$vo.mname}</a><span>{$vo.mtime}</span>
                     </li>
             </volist>
             </ul>
         </div>
         <div class="righttop">
-            <h1 class="title">考证信息<a href="home/certificate/certificatelist" class="ckgd">更多&nbsp;>></a></h1>
+            <h1 class="title">考证信息<a href="__MODULE__/certificate/certificatelist" class="ckgd">更多&nbsp;>></a></h1>
             <ul class="topul">
             <volist name="textual" id="vo">
                     <li>
-                        <a href="home/certificate/content?cid={$vo.cid}">{$vo.cname}</a> <span>{$vo.ctime}</span>
+                        <a href="__MODULE__/certificate/content?cid={$vo.cid}">{$vo.cname}</a> <span>{$vo.ctime}</span>
                     </li>
             </volist>
             </ul>
