@@ -77,8 +77,7 @@ class CertificateController extends Controller {
 			// 3. 创建分页类对象
 			$page = new Page($count, $pageSize);
 			// 4.构造查询条件
-			$condition=array();
-			$condition['cid'] != NULL;
+
 			// 5. 分页查询
 		      $certificatepage = $certificatepage->where("cname like '%$data%'")->order('cid desc')
 		          ->limit($page->firstRow.','.$page->listRows)
@@ -95,7 +94,7 @@ class CertificateController extends Controller {
 		      $this->assign('pages',$pages);
 	      	$this->display();
 	    	}else{
-	    		$this->error("您肿么到这里了/(ㄒoㄒ)/~~，快回去",U("matchlist"));
+	    		$this->error("您肿么到这里了/(ㄒoㄒ)/~~，快回去",U("certificatelist"));
 	    	}
     }
 

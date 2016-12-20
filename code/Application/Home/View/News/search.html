@@ -6,7 +6,7 @@
     <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
     <link href="__PUBLIC__/css/sitelist.css" rel="stylesheet" type="text/css" />
     <link href="__PUBLIC__/css/contentright.css" rel="stylesheet" type="text/css" />
-    <title>热点资讯</title>
+    <title>{$_GET['text']}资讯</title>
 </head>
 <body>
     <include file="Public/header.html" />
@@ -17,16 +17,17 @@
                 <a href="{:U('/')}">易学助手</a>
                 >
                 <a href="../../news">热点资讯</a>
+                >
+                <a href="javascript:;">{$_GET['text']}的搜索结果</a>
             </div>
             <div class="left">
                 <div class="search">
                     <form class="search"  action="__MODULE__/news/search?" method="get">
-                        <input type="text" placeholder="请输入感兴趣的内容..." class="searchtext" name="text">
-                        <input type="submit" value="开始搜索" class="searchbutton">
-                        </form>
+                        <input type="text" placeholder="请输入感兴趣的内容..." class="searchtext" name="text" value="{$_GET['text']}">
+                        <input type="submit" value="开始搜索" class="searchbutton"></form>
                 </div>
                 <ul class="proul">
-                    <volist name="news" id="vo">
+                    <volist name="result" id="vo">
                         <li>
                             <div class="litop">
                                 <h1>
