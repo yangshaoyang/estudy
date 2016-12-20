@@ -10,26 +10,25 @@ class LoginController extends Controller {
         $User = M('users');
         $email = $data['yourname'];
 
-        $password = md5($data['yourpassword']);
-        //dump($password);
-        $result = $User->getFieldByEmail($email,'password');
-        //dump($result);
-        $username = $User->getFieldByEmail($email,'username');
-        $id = $User->getFieldByEmail($email,'userid');
-        $state = $User->getFieldByState($email,'state');
-        dump($state);
+        $state = $User->getFieldByEmail($email,'state');
+        //dump($state);
         if ($state==0) {
              $this->error('您的用户未激活，无法登陆，请到邮件验证激活',U('home/login/login'),6);
-         }
+        }
+        $password = md5($data['yourpassword']);
+        $result = $User->getFieldByEmail($email,'password');
+        $username = $User->getFieldByEmail($email,'username');
+        $id = $User->getFieldByEmail($email,'userid');
+      
         if ($result == $password) {
         	session('name',$username);
             session('id',$id);
             $url=session('path');
-            if($url == ""){
-                $this->success('登录成功',U('/'));
-            }else{
-                $this->success('登录成功',$url);
-            }
+             if($url == ""){
+                 $this->success('登录成功',U('/'));
+             }else{
+                 $this->success('登录成功',$url);
+             }
         	
 
         }else{

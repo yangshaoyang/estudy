@@ -18,7 +18,7 @@ class ArticleController extends Controller {
     }
      
     public function article(){
-        //获取帖子列表
+        //获取文章列表
     	$article = M('article');
     	/*分页码*/
         // 1. 获取记录总条数
@@ -37,20 +37,23 @@ class ArticleController extends Controller {
         // 7. 输出查询结果
         $pages=$page->show();
         $this->assign('pages',$pages);
+        //文章首页
     	$this->assign('article',$article);
         //热门资讯部分
-        $news=M("news")->order("newsid desc")->limit(7)->select();
+        $news=M("news")->order("newstime")->limit(7)->select();
         $this->assign("news",$news);
     	$this->display();
     }
     //励志人生内容页
     public function articledetails($articleid){
-        //获取帖子文章内容
-        $article = M('article')->find($articleid);
-        $this->assign('articlecontent',$article);
+        //获取文章内容
+        $articledetails = M('article')->find($articleid);
+        $this->assign('articlecontent',$articledetails);
         //热门资讯部分
-        $news=M("news")->order("newsid desc")->limit(7)->select();
+        $news=M("news")->order("newsid asc")->limit(7)->select();
         $this->assign("news",$news);
+        $article=M("article")->order("articletime")->limit(5)->select();
+        $this->assign("article",$article);
         $this->display();
     }
     //分页功能实现

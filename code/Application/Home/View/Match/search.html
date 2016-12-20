@@ -7,7 +7,7 @@
     <link href="__PUBLIC__/css/bidlist.css" rel="stylesheet" type="text/css" />
     <link href="__PUBLIC__/css/confirmdelete.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="__PUBLIC__/js/confirmdelete.js"></script>
-    <title>比赛列表</title>
+    <title>比赛{$_GET['text']}搜索结果</title>
 </head>
 <body>
     <include file="Public/header.html" />
@@ -20,17 +20,19 @@
                 </span>
                 >
                 <a href="../../matchlist">比赛列表</a>
+                >
+                <a href="javascript:;">{$_GET['text']}的搜索结果</a>
             </div>
             <div class="ss">
                 <div class="search">
                     <form action="__MODULE__/match/search?" method="get">
-                        <input type="text" placeholder="请输入比赛名称" class="searchtext" name="text">
+                        <input type="text" placeholder="请输入比赛名称" class="searchtext" name="text" value="{$_GET['text']}">
                         <input type="submit" value="开始搜索" class="searchbutton"></form>
                 </div>
             </div>
             <div class="content">
                 <ul class="contentul">
-                    <volist name="match" id="vo">
+                    <volist name="result" id="vo">
                         <li>
                             <div class="list">
                                 <div class="listleft">

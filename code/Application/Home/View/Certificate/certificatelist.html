@@ -24,9 +24,9 @@
             </div>
             <div class="ss">
                 <div class="search">
-                    <form>
-                        <input type="text" placeholder="请输入证件名称" class="searchtext">
-                        <input type="button" value="开始搜索" class="searchbutton"></form>
+                    <form action="__MODULE__/certificate/search?" method="get">
+                        <input type="text" placeholder="请输入考证名称" class="searchtext" name="text" value="{$_GET['text']}">
+                        <input type="submit" value="开始搜索" class="searchbutton"></form>
                 </div>
             </div>
             <div class="content">

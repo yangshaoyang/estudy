@@ -44,27 +44,20 @@
                     <li>学校<span>{$users.colleage}</span></li>
                     <li>城市<span>{$users.city}</span></li>
                     <li>爱好<span>{$users.hobby}</span></li>
-                   <!--  <li class="garyli">{$users.hobby}</li> -->
                   </ul>
                 
             </div>
             <div class="exper1 else_bg exper2">
                 <h1 class="h11">未读消息<!-- <span>【7条】</span> --></h1>
                 <ul>
-                    <!-- <li><a href="#">消息一</a><span>01-01</span></li>
-                    <li><a href="#">消息一</a><span>01-01</span></li>
-                    <li><a href="#">消息一</a><span>01-01</span></li>
-                    <li><a href="#">消息一</a><span>01-01</span></li>
-                    <li><a href="#">消息一</a><span>01-01</span></li>
-                    <li><a href="#">消息一</a><span>01-01</span></li>
-                    <li><a href="#">消息一</a><span>01-01</span></li> -->
+                    
                     <volist name="user_certificate" id="vo">
-                    <li><a href="{:U('/home/certificate/certificatelist')}">{$vo.uctype}</a><span>{$vo.time}</span></li>
+                    <li><a href="__MODULE__/certificate/content/cid/{$vo.certifcateid}">{$vo.uctype}</a><span>{$vo.time}</span></li>
                     </volist>
                     </ul>
                     <ul>
-                    <volist name="user_match" id="vo1">
-                    <li><a href="{:U('/home/match/matchlist')}">{$vo1.umtype}</a><span>{$vo1.time}</span></li>
+                    <volist name="user_match" id="vo">
+                    <li><a href="__MODULE__/match/content/mid/{$vo.matchid}">{$vo.umtype}</a><span>{$vo.time}</span></li>
                     </volist>
                     </ul>
                 
