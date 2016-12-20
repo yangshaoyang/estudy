@@ -142,7 +142,7 @@
                     <ul class="topul">
                         <volist name="forum_hot" id="vo">
                             <li>
-                                <a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title}</a>
+                                <a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title|msubstr=0,15,'utf-8',true}</a>
                                 <span>{$vo.posttime|substr=0,10}</span>
                             </li>
                         </volist>

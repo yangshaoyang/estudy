@@ -1555,13 +1555,14 @@ function msubstr($str, $start=0, $length, $charset="utf-8", $suffix=true)
     {  
   if(function_exists("mb_substr")){  
 
-              if($suffix)  
+              if($suffix==true&&strlen($str)>3*$length){
 
               return mb_substr($str, $start, $length, $charset)."...";  
 
-              else
+              }else{
 
-                   return mb_substr($str, $start, $length, $charset);  
+                   return mb_substr($str, $start, $length, $charset); 
+               } 
 
          }  
 
