@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class BlogrollController extends Controller {
+class BlogrollController extends Controller { //友情链接控制器
     public function index(){
         $url = M("blogroll")->select();
         $this->assign("blogroll",$url);

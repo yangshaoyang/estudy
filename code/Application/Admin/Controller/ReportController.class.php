@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class ReportController extends Controller {
+class ReportController extends Controller { //举报管理控制器
     public function index(){
     	   $m = M("report")->order('reportid desc')->select();
         $this->assign("report",$m);
