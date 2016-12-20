@@ -299,26 +299,12 @@
                     </div>
                     <div class="box11">
                         <ul>
-                            <li>
-                                <a href="#" float: left;>中国创翼2016</a>
-                                &emsp;&emsp;&emsp;&emsp;
-                                <span>2016-11-30</span>
-                            </li>
-                            <li>
-                                <a href="#" float: left;>中国创翼2016</a>
-                                &emsp;&emsp;&emsp;&emsp;
-                                <span>2016-11-30</span>
-                            </li>
-                            <li>
-                                <a href="#" float: left;>中国创翼2016</a>
-                                &emsp;&emsp;&emsp;&emsp;
-                                <span>2016-11-30</span>
-                            </li>
-                            <li>
-                                <a href="#" float: left;>中国创翼2016</a>
-                                &emsp;&emsp;&emsp;&emsp;
-                                <span>2016-11-30</span>
-                            </li>
+                            <volist name="MTH" id="vo">
+                                <li>
+                                    <a href="__MODULE__/match/content?mid={$vo.mid}" float: left;>{$vo.mname}</a>
+                                    <span>{$vo.mtime}</span>
+                                </li>
+                            </volist>
                         </ul>
                     </div>
                 </div>
