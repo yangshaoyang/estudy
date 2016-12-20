@@ -268,7 +268,8 @@
                         $sta = $pdo->query($sql);
                         $urls = $sta->fetchAll();
 
-                        for($i=0;$i<count($urls);$i++){    // 循环读取二维数组中的数据
+                        for($i=0;$i
+                    <count($urls);$i++){    // 循环读取二维数组中的数据
                 ?>
                         <li>
                             <a href="<?php echo $urls[$i]['url'];?>
@@ -341,15 +342,15 @@
             <img src="__PUBLIC__/images/ewm.jpg" width="220" height="220"></div>
 </body>
         <script type="text/javascript">
-window.onload=function(){
-   $(document).ready(function(){
-    $('#box1').mouseover(function(){
-        $('#box1close').css("display","block");
-    });
-    $('#box1').mouseout(function(){
-        $('#box1close').css("display","none");
-    });
-   });
-}
-</script>
-    </html>
+            window.onload=function(){
+               $(document).ready(function(){
+                $('#box1').mouseover(function(){
+                    $('#box1close').css("display","block");
+                });
+                $('#box1').mouseout(function(){
+                    $('#box1close').css("display","none");
+                });
+               });
+            }
+        </script>
+</html>
