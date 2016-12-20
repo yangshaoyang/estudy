@@ -52,15 +52,15 @@
                         <td class="border_top">{$vo.time}</td>
                         <td class="border_top">{$vo.uctype}</td>
                         <td class="border_top">{$vo.introduce}</td>
-                        <td class="border_top border_right"><a href="{:U('/home/certificate/certificatelist')}">{$vo.operate}</a></td>
+                        <td class="border_top border_right"><a href="__MODULE__/certificate/content/cid/{$vo.certifcateid}">{$vo.operate}</a></td>
                     </tr>
                     </volist>
-                     <volist name="user_match" id="vo1">
+                     <volist name="user_match" id="vo">
                     <tr>
-                        <td class="border_top">{$vo1.time}</td>
-                        <td class="border_top">{$vo1.umtype}</td>
-                        <td class="border_top">{$vo1.introduce}</td>
-                        <td class="border_top border_right"><a href="{:U('/home/match/matchlist')}">{$vo1.operate}</a></td>
+                        <td class="border_top">{$vo.time}</td>
+                        <td class="border_top">{$vo.umtype}</td>
+                        <td class="border_top">{$vo.introduce}</td>
+                        <td class="border_top border_right"><a href="__MODULE__/match/content/mid/{$vo.matchid}">{$vo.operate}</a></td>
                     </tr>
                     </volist>
 
