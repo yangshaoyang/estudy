@@ -21,11 +21,11 @@
                 <div class="search">
                     <form class="search"  action="__MODULE__/article/search?" method="get">
                         <input type="text" placeholder="请输入感兴趣的内容" class="searchtext" name="text" value="{$_GET['text']}">
-                        <input type="button" value="开始搜索" class="searchbutton"></form>
+                        <input type="submit" value="开始搜索" class="searchbutton"></form>
                 </div>
                 <div class="lp"></div>
                 <ul class="proul">
-                    <volist name="article" id="vo">
+                    <volist name="articles" id="vo">
                         <li>
                             <div class="litop">
                                 <h1>
