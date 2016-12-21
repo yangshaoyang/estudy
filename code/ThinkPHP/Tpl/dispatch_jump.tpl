@@ -17,11 +17,13 @@
 	<style type="text/css">
 		*{ padding: 0; margin: 0; }
 		body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
-		.system-message{ padding: 24px 48px; }
-		.system-message h1{ font-size: 60px; font-weight: normal; line-height: 80px; margin-bottom: 12px; }
+		.content{ height: 312px;}
+		.system-message{ font-size:25px; padding: 24px 48px; }
+		.system-message .message{ width: 385px;}
+		.system-message h1{ font-size: 45px; font-weight: normal; line-height: 80px;}
 		.system-message .jump{ padding-top: 10px}
 		.system-message .jump a{ color: #333;}
-		.system-message .success,.system-message .error{ line-height: 1.8em; font-size: 36px }
+		.system-message .success,.system-message .error{ line-height: 1.8em;font-size: 28px }
 		.system-message .detail{ font-size: 12px; line-height: 20px; margin-top: 12px; display:none}
 	</style>
 </head>
@@ -67,31 +69,34 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="content" style="background-color: #f7f7f7;padding-bottom:30px;">
-		<div class="mybody">
-
-			<div class="system-message" style="text-align:center;padding-top:7%">
+	<div class="content">
+		<div class="mybody"  style="background-color: #f7f7f7;padding-bottom:30px;height=300px;">
+			<div class="system-message" style="position:absolute;text-align:center;padding-top:7%;left:35%;bottom:60%">
 				<?php if(isset($message)) {?>
-				<div style="position:absolute;text-align:center;left:23%;top:32%">
-					<img src="__PUBLIC__/images/success.png" alt="success" width="200px"></div>
-				<h1>eStudy提醒您</h1>
-				<p class="success">
-					<?php echo($message); ?></p>
-				<?php }else{?>
-				<div style="position:absolute;text-align:center;left:23%;top:28%">
-					<img src="__PUBLIC__/images/404.png" alt="success"  width="200px"></div>
-				<h1>eStudy提醒您</h1>
-				<p class="error">
-					<?php echo($error); ?></p>
-				<?php }?>
-				<p class="detail"></p>
-				<p class="jump">
-					页面将在 <b id="wait"><?php echo($waitSecond); ?></b>
-					秒后自动
-					<a id="href" href="<?php echo($jumpUrl); ?>">跳转</a>
-
-				</p>
+				<div style="position:absolute;text-align:center;left:-190%;top:40%">
+					<img src="__PUBLIC__/images/success.png" alt="success" width="220px">
+				</div>
+				<div class="message" style="position:absolute;left:38%;bottom:-100%">
+					<h1>eStudy提醒您</h1>
+					<p class="success">
+						<?php echo($message); ?></p>
+					<?php }else{?>
+					<div style="position:absolute;text-align:center;left:-110%;top:40%">
+						<img src="__PUBLIC__/images/404.png" alt="success"  width="200px">
+					</div>
+					<div class="message" style="position:absolute;left:38%;bottom:-80%">
+						<h1>eStudy提醒您</h1>
+						<p class="error">
+							<?php echo($error); ?></p>
+						<?php }?>
+						<p class="detail"></p>
+						<p class="jump">
+							页面将在 <b id="wait"><?php echo($waitSecond); ?></b>
+							秒后自动
+							<a id="href" href="<?php echo($jumpUrl); ?>">跳转</a>
+						</p>
+					</div>
+				</div>
 			</div>
 			<script type="text/javascript">
 (function(){
