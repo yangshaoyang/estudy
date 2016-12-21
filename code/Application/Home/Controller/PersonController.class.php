@@ -91,12 +91,6 @@ class PersonController extends Controller {
             // $this->error("添加失败！");
              $this->redirect('home/person/permessage');
           }
-        
-        // $Model=M("users");
-        // $Model->create();
-        // $map['username']=$username;
-        // $num=$Model->where($map)->save($data);
-        // $this->redirect('home/person/homepage');
         }
     }
 
@@ -175,5 +169,26 @@ class PersonController extends Controller {
     $this->assign("user_match",$user_match); 
     $this->display();
   }
+  public function search(){
+      if(isset($_GET['text'])){
+        $data=$_GET['text'];
+          // dump($data);
+        $map['username']=$_SESSION['name'];
+        $users=M("users")->where($map)->select();
+        $this->assign("users",$users[0]);
+         $user_match = M("user_match")->where("introduce like '%$data%'")->order('time desc')->select();
+         $user_certificate = M("user_certificate")->where("introduce like '%$data%'")->order('time desc')->select();
+        $this->assign('user_match', $user_match);//遍历数据数据
+        $this->assign('user_certificate', $user_certificate);
+        if ($user_match == NULL && $user_certificate == NULL) {
+          $this->error("搜索无结果",U("message"));
+        }else{
+        $this->display();
+        }
+      }
+        else{
+        $this->error("您肿么到这里了/(ㄒoㄒ)/~~，快回去",U("message"));
+        }
+    }
 
 }
