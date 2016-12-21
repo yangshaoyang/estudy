@@ -48,6 +48,8 @@ class MatchController extends Controller {
 		if ($_SESSION['name'] == NULL) {
 			$this->redirect('home/login/login','请登录');
 		}else{
+			//session('mingzi',$mid)
+			$_SESSION['mid'] = $mid;
 			$user = $_SESSION['name'];
 			$data=array(
 			    	'username'  =>$user,

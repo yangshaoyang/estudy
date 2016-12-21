@@ -16,7 +16,7 @@ class ArticleController extends Controller {
     public function index(){
     	$this->display();
     }
-     
+
     public function article(){
         //获取文章列表
     	$article = M('article');
@@ -38,7 +38,7 @@ class ArticleController extends Controller {
         $pages=$page->show();
         $this->assign('pages',$pages);
         //文章首页
-    	$this->assign('article',$article);
+    	   $this->assign('article',$article);
         //热门资讯部分
         $news=M("news")->order("newstime")->limit(7)->select();
         $this->assign("news",$news);

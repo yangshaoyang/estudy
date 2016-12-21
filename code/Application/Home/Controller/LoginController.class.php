@@ -19,7 +19,7 @@ class LoginController extends Controller {
         $result = $User->getFieldByEmail($email,'password');
         $username = $User->getFieldByEmail($email,'username');
         $id = $User->getFieldByEmail($email,'userid');
-      
+
         if ($result == $password) {
         	session('name',$username);
             session('id',$id);
@@ -29,13 +29,11 @@ class LoginController extends Controller {
              }else{
                  $this->success('登录成功',$url);
              }
-        	
+
 
         }else{
         	$this->error('用户名或密码不正确',U('home/login/login'));
         }
-        
-
     }
     public function exits(){
         session('name',null);

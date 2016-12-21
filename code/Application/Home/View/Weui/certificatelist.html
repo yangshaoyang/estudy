@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>考证列表</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/weui.min.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery-weui.min.css" />
+	<style type="text/css">
+		html,body{
+			height: 100%;
+		}
+	    .swiper-container {
+      		width: 100%;
+      	}
+
+         .swiper-container img {
+        		display: block;
+        		width: 100%;
+          }
+
+          .weui_tab .weui_tab_bd .content img{
+          		width: 100%;
+          		display: block;
+          }
+	</style>
+
+</head>
+<body>
+<div class="weui_tab">
+  <div class="weui_tab_bd">
+  <!-- 导航栏 -->
+	  <div class="weui_tab">
+
+	    <!-- 导航栏结束 -->
+	  <div class="weui_tab_bd">
+	  <!-- 第一个选项卡 -->
+	  <div class="content" >
+	<div class="bd">
+	    <div class="weui_panel weui_panel_access">
+	        <div class="weui_panel_hd">微头条</div>
+	        <div class="weui_panel_bd">
+	        <volist name="hotmatch" id="vo">
+	            <a href="__MODULE__/weui/certificatecontent/cid/{$vo.cid}" class="weui_media_box weui_media_appmsg">
+	                <div class="weui_media_hd">
+	                    <img class="weui_media_appmsg_thumb" src="__PUBLIC__/http://yangshaoyang.cn/student/logo3.png" alt="">
+	                </div>
+	                <div class="weui_media_bd">
+	                    <h4 class="weui_media_title">{$vo.cname}</h4>
+	                    <p class="weui_media_desc">本次科普作品创作大赛主题为“微纳技术让生活变更好”，意在提倡参赛者结合身边的微米纳米技术应用展开创作。重点征集MEMS/NEMS应用、穿戴设备、微流体、微循环、纳米材料、纳米器件、3D打印的原创科普作品。</p>
+	                </div>
+	            </a>
+	          </volist>
+	        </div>
+	    </div>
+	    <div class="weui_panel weui_panel_access">
+	        <div class="weui_panel_hd">比赛列表</div>
+	        <div class="weui_panel_bd">
+	            <div class="weui_media_box weui_media_small_appmsg">
+	                <div class="weui_cells weui_cells_access">
+	                <volist name="certificate" id="vo">
+	                    <a class="weui_cell" href="__MODULE__/weui/certificatecontent/cid/{$vo.cid}">
+	                        <div class="weui_cell_hd"><img src="__PUBLIC__/images/icon_nav_panel.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+	                        <div class="weui_cell_bd weui_cell_primary">
+	                            <p> {$vo.cname}</p>
+	                        </div>
+	                        <span class="weui_cell_ft"></span>
+	                    </a>
+	                  </volist>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+
+
+	  </div>
+	</div>
+
+
+	  </div>
+  	</div>
+
+
+  </div>
+  <div class="weui_tabbar">
+    <a href="__PUBLIC__/index.html" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/home.jpg" alt="">
+      </div>
+      <p class="weui_tabbar_label">主页</p>
+    </a>
+    <a href="__PUBLIC__/list.html" class="weui_tabbar_item weui_bar_item_on">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/broadcast.jpg" alt="">
+      </div>
+      <p class="weui_tabbar_label">通知</p>
+    </a>
+    <a href="__PUBLIC__/news.html" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/news.jpg" alt="">
+      </div>
+      <p class="weui_tabbar_label">新闻</p>
+    </a>
+    <a href="__PUBLIC__/list_fengcai.html" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="__PUBLIC__/images/mien.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">风采</p>
+    </a>
+  </div>
+</div>
+
+
+
+</body>
+	<script type="text/javascript" src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-weui.min.js"></script>
+</html>

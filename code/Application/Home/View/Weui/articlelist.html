@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>励志人生</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/weui.min.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery-weui.min.css" />
+	<style type="text/css">
+		html,body{
+			height: 100%;
+		}
+	    .swiper-container {
+      		width: 100%;
+      	}
+
+         .swiper-container img {
+        		display: block;
+        		width: 100%;
+          }
+
+          .weui_tab .weui_tab_bd .content img{
+          		width: 100%;
+          		display: block;
+          }
+	</style>
+
+</head>
+<body>
+	<div class="weui_tab">
+
+		<!-- 导航栏结束 -->
+		<div class="weui_tab_bd">
+			<!-- 第一个选项卡 -->
+			<div class="content" >
+				<div class="bd">
+					<div class="weui_panel weui_panel_access">
+						<div class="weui_panel_hd">励志人生</div>
+						<div class="weui_panel_bd">
+							<volist name="article" id="vo">
+								<div class="weui_panel">
+									<div class="weui_panel_bd">
+										<div class="weui_media_box weui_media_text">
+											<h4 class="weui_media_title">{$vo.articletitle}</h4>
+											<p class="weui_media_desc">
+												{$vo.articletitle}
+											</p>
+											<ul class="weui_media_info">
+												<li class="weui_media_info_meta">{$vo.articleauthor}</li>
+												<li class="weui_media_info_meta">{$vo.articletime}</li>
+												<li class="weui_media_info_meta weui_media_info_meta_extra">微官网</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+							</volist>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="weui_tabbar">
+			<a href="__PUBLIC__/index.html" class="weui_tabbar_item">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/home.jpg" alt=""></div>
+				<p class="weui_tabbar_label">主页</p>
+			</a>
+			<a href="__PUBLIC__/list.html" class="weui_tabbar_item weui_bar_item_on">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/broadcast.jpg" alt=""></div>
+				<p class="weui_tabbar_label">通知</p>
+			</a>
+			<a href="__PUBLIC__/news.html" class="weui_tabbar_item">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/news.jpg" alt=""></div>
+				<p class="weui_tabbar_label">新闻</p>
+			</a>
+			<a href="__PUBLIC__/list_fengcai.html" class="weui_tabbar_item">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/mien.png" alt=""></div>
+				<p class="weui_tabbar_label">风采</p>
+			</a>
+		</div>
+	</div>
+
+</body>
+	<script type="text/javascript" src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-weui.min.js"></script>
+</html>

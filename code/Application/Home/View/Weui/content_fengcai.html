@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>学子风采</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="lib/weui.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css" />
+        <style type="text/css">
+          html,body{
+            height: 100%;
+          }
+            .swiper-container {
+                width: 100%;
+              }
+
+               .swiper-container img {
+                  display: block;
+                  width: 100%;
+                }
+
+                .weui_tab .weui_tab_bd .content img{
+                    width: 100%;
+                    display: block;
+                }
+
+                .demos-title{
+                  color: #3cc51f;
+                  font-size: 3px;
+                }
+                .title{
+                  color:gray;
+                }
+
+        </style>
+
+</head>
+<body>
+<div class="weui_tab">
+  <div class="weui_tab_bd">
+<article class="weui_article">
+   <h1 class="demos-title">软件学院举行2016年度优秀毕业生思源论坛</h1>
+   发布时间：<span class="title">2016年10月27日20:33:56</span>
+       <section>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;软件学院梦想华丽走起，我在名企等你----2016年度思源论坛”在美术与设计学院报告厅隆重举行。河北师范大学招生就业处处长张云清、河北师范大学软件学院管理委员会主任张子龙、河北师范大学软件学院副书记、副院长王喜、软件学院副院长赵书良、张玉华、单博出席此次活动。</p>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;论坛活动分毕业生优秀经验分享和现场访谈两个部分，邀请了软件学院毕业生刘宁、刘焕兴、许凤强、杨绿茵返回母校，和学院200余名在校生欢聚一堂，畅谈成长故事，分享职场经验，为在校生成长指点迷津。</p>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;下午，四位优秀毕业生又与学院授课教师们进行了座谈，结合当前工作当中的一些感悟，毕业生们对学院的基础课程建设、实习实训等工作提出了个人的意见和建议，表达了希望学院蓬勃发展、越来越好的美好愿望。</p>
+       </section>
+</article>
+
+
+  </div>
+  <div class="weui_tabbar">
+    <a href="index.html" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="images/home.jpg" alt="">
+      </div>
+      <p class="weui_tabbar_label">主页</p>
+    </a>
+    <a href="list.html" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="images/broadcast.jpg" alt="">
+      </div>
+      <p class="weui_tabbar_label">通知</p>
+    </a>
+    <a href="news.html" class="weui_tabbar_item">
+      <div class="weui_tabbar_icon">
+        <img src="images/news.jpg" alt="">
+      </div>
+      <p class="weui_tabbar_label">新闻</p>
+    </a>
+    <a href="list_fengcai.html" class="weui_tabbar_item  weui_bar_item_on">
+      <div class="weui_tabbar_icon">
+        <img src="images/mien.png" alt="">
+      </div>
+      <p class="weui_tabbar_label">风采</p>
+    </a>
+  </div>
+</div>
+
+
+
+</body>
+	<script type="text/javascript" src="lib/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/jquery-weui.min.js"></script>
+	<script type='text/javascript' src='js/swiper.js' charset='utf-8'></script>
+	<script>
+      var pb = $.photoBrowser({
+	  items: [
+	    "images/wumo.jpg",
+	    "images/wangxiao.jpg",
+	    "images/nanlan.jpg"
+	  ]
+	});
+      pb.open();
+    </script>
+
+</html>
