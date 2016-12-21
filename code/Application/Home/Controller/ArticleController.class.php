@@ -99,8 +99,8 @@ class ArticleController extends Controller {
             $page = new Page($count, $pageSize);
             // 4. 分页查询
               $articlepage = $articlepage->where("articletitle like '%$data%'")->order('articletime')
-                  ->limit($page->firstRow.','.$page->listRows)
-                  ->select();
+                             ->limit($page->firstRow.','.$page->listRows)
+                             ->select();
               // 5. 定义分页样式
               $page->setConfig('prev','上一页');
               $page->setConfig('next','下一页');
