@@ -56,14 +56,16 @@ class ForumController extends Controller {
     }
 
     //论坛管理评论
-    public function comment(){
+    public function commentt(){
     	$Model=M();
         $forum_comment=$Model->field('username,forum_commentid,title,createtime,forum_comment,b.forumid')
     		  			->table(array('users'=>'a','forum_comment'=>'b','forum'=>'c'))
     		  			->where("a.userid=b.userid AND b.forumid=c.forumid")
     		  			->order('createtime desc')->select();
-	   	$this->assign("comment",$forum_comment);
-	   	$this->display();
+        $forum_commentjson = $this->ajaxReturn($forum_comment,'JSON');
+        echo $forum_commentjson;
+	   	/*$this->assign("comment",$forum_comment);
+	   	$this->display();*/
 	}
 
 	//论坛管理评论
@@ -75,12 +77,9 @@ class ForumController extends Controller {
     public function test(){ 
       	$forum= M('forum');
       	$data = $forum->select();
-      	$data=$this->ajaxReturn($data,'JSON');
+      	$datajson = $this->ajaxReturn($data,'JSON');
       	//dump($data);
 
-      	$this->assign("data",$data);
-
-        //输出结果
-      	$this->display('test','utf-8', 'text/json');
+      	echo $datajson;
     }
  }
