@@ -83,4 +83,37 @@ class ArticleController extends Controller {
           $this->assign('pages',$pages);
           $this->display();
     }*/
+
+    //搜索功能
+    public function search(){
+        if(isset($_GET['text'])){
+            $data=$_GET['text'];
+             /*选取数据*/
+            $articlepage=M("article")->order("articletime")->where("articletitle like '%$data%'");
+            /*分页码*/
+            // 1. 获取记录总条数
+            $count =$articlepage->count();
+            // 2. 设置（获取）每一页显示的个数
+            $pageSize =4;
+            // 3. 创建分页类对象
+            $page = new Page($count, $pageSize);
+            // 4. 分页查询
+              $articlepage = $articlepage->where("articletitle like '%$data%'")->order('articletime')
+                  ->limit($page->firstRow.','.$page->listRows)
+                  ->select();
+              // 5. 定义分页样式
+              $page->setConfig('prev','上一页');
+              $page->setConfig('next','下一页');
+              // 6. 输出查询结果
+              $this->assign('result', $articlepage);//遍历数据
+              if ($articlepage == NULL) {
+                $this->error("搜索无结果",U("article"));
+              }
+              $pages=$page->show();
+              $this->assign('pages',$pages);
+              $this->display();
+              }else{
+                $this->error("您肿么到这里了/(ㄒoㄒ)/~~，快回去",U("article"));
+              }
+    }
 }
