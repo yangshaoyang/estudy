@@ -9,9 +9,9 @@ code-代码目录；
 
 ##项目链接
 
-[前台URL](http://csbroswer.cn)
+[前台URL](http://estudy.csbroswer.cn)
 
-[后台URL](http://csbroswer.cn/estudy/code/admin)
+[后台URL](http://houtai.csbroswer.cn)
 
 [redmine地址](http://www.hostedredmine.com/projects/php)
 
