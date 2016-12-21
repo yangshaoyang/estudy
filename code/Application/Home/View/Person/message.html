@@ -20,7 +20,7 @@
         <div class="personal_left">
             <div class="user" >
                 <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150"   />
-                </form>
+        
                 <!-- </a> -->
                 <p>欢迎您   {$_SESSION['name']}</p>
             </div>
@@ -34,9 +34,9 @@
         <!--个人中心right-->
         <div class="personal_table_right">
             <div class="ss ss1">
-                <form action="">
-                    <input type="text" value="请输入需要搜索的信息" name="ssk" />
-                    <input type="button" value="" name="ssn" />
+                <form action="__MODULE__/person/search?" method="get">
+                    <input type="text" value="{$_GET['text']}" name="text" class="searchtext" placeholder="请输入要搜索的简介信息"/>
+                    <input type="submit" value="" class="searchbutton" />
                 </form>
             </div>
             <div class="table1">
