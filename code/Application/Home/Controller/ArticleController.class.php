@@ -101,11 +101,12 @@ class ArticleController extends Controller {
               $articlepage = $articlepage->where("articletitle like '%$data%'")->order('articletime')
                              ->limit($page->firstRow.','.$page->listRows)
                              ->select();
+              // dump($articlepage);
               // 5. 定义分页样式
               $page->setConfig('prev','上一页');
               $page->setConfig('next','下一页');
               // 6. 输出查询结果
-              $this->assign('result', $articlepage);//遍历数据
+              $this->assign('articles', $articlepage);//遍历数据
               if ($articlepage == NULL) {
                 $this->error("搜索无结果",U("article"));
               }
