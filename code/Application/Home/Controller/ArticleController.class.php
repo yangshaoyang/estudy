@@ -111,6 +111,11 @@ class ArticleController extends Controller {
               }
               $pages=$page->show();
               $this->assign('pages',$pages);
+              //热点资讯
+              $news=M("news")->order("newsid asc")->limit(7)->select();
+              $this->assign("news",$news);
+              $article=M("article")->order("articletime")->limit(5)->select();
+              $this->assign("article",$article);
               $this->display();
               }else{
                 $this->error("您肿么到这里了/(ㄒoㄒ)/~~，快回去",U("article"));
