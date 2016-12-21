@@ -19,8 +19,6 @@ class SearchController extends Controller {
             $this->error("搜索无结果",U("/"));
         }
 
-
-
         $this->display();
     }
   }
