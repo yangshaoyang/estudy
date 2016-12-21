@@ -19,7 +19,7 @@
             </div>
             <div class="left">
                 <div class="search">
-                    <form class="search"  action="{:U('home/search/search')}" method="post" onsubmit="return chk_form();">
+                    <form class="search"  action="__MODULE__/article/search?" method="get" onsubmit="return chk_form();">
                         <input type="text" placeholder="请输入感兴趣的内容" class="searchtext" name="text">
                         <input type="button" value="开始搜索" class="searchbutton"></form>
                 </div>
