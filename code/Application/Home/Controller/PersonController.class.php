@@ -113,32 +113,39 @@ class PersonController extends Controller {
 
       public function changepswd($username){
         //先判断是否登录
-        if($_SESSION['name'] == NULL){
-        $this->redirect('home/login/login');
-      }else{
-            $users=M("users");
-            $password =$users->getFieldByusername($username,'password');
-            //dump($password);
-           //提交修改密码表单
-            $data=array(
-                'password' => md5(I('post.newpassword'))
-                );
-            // dump($data);
-           if(md5(I('post.oldpassword')) == $password){
-              $map['username']=$username;
-              $num=$users->where($map)->save($data);
-              // var_dump($num);
-              // exit;
-              if($num>0){
-               $this->success("修改成功！",U("home/login/login"));
-              }else{
-               $this->error("修改失败！");
-            }
-           }else{
-            $this->error('旧密码不正确，请重新输入！',U("home/person/repassword"));
+       if($_SESSION['name'] == NULL){
+      $this->redirect('home/login/login');
+    }else{
+          $users=M("users");
+          $password =$users->getFieldByusername($username,'password');
+          //dump($password);
+         //提交修改密码表单
+          $data=array(
+              'password' => md5(I('post.newpassword'))
+              );
+          $Data=array(
+            'password' => md5(I('post.repassword'))
+            );
+          // dump($data);
+         if(md5(I('post.oldpassword')) == $password && $data==$Data ){
+            $map['username']=$username;
+            $num=$users->where($map)->save($data);
+            // var_dump($num);
+            // exit;
+            if($num>=6){
+             $this->success("修改成功！",U("home/login/login"));
+            }else{
+             $this->error("修改失败,密码应至少6位！",U("home/person/repassword"));
+          }
+         }else{
+          if ($data!=$Data) {
+            $this->error("修改失败,确认密码应与新密码相同",U("home/person/repassword"));
+          }else{
+          $this->error('旧密码不正确，请重新输入！',U("home/person/repassword"));
            }
-           $this->display();
          }
+         $this->display();
+       }
         }
    public function uccontent($cid){
     $certificate=M("certificate")->find($cid);
