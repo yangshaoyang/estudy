@@ -60,7 +60,7 @@
                     <ul class="topul">
                         <volist name="news" id="vo">
                             <li>
-                                <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
+                                <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle|msubstr=0,15,'utf-8',true}</a>
                                 <span>{$vo.newstime}</span>
                             </li>
                         </volist>
@@ -75,7 +75,7 @@
                     <volist name="tmatch" id="vo">
                         <div class="lpimg1 lpimg2">
                             <p>
-                                <a href="__MODULE__/match/content/mid/{$vo.mid}">{$vo.mname}</a>
+                                <a href="__MODULE__/match/content/mid/{$vo.mid}">{$vo.mname|msubstr=0,15,'utf-8',true}</a>
                             </p>
                             <a href="__MODULE__/match/content/mid/{$vo.mid}">
                                 <img src="{$vo.mthumb}" width="277" height="201" alt="lp" />

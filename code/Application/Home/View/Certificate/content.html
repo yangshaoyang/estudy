@@ -59,7 +59,7 @@
           <ul class="topul">
             <volist name="news" id="vo">
               <li>
-                <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
+                <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle|msubstr=0,15,'utf-8',true}</a>
                 <span>{$vo.newstime}</span>
               </li>
             </volist>
@@ -73,7 +73,7 @@
           <volist name="tcertificate" id="vo">
             <div class="lpimg1 lpimg2">
               <p>
-                <a href="__MODULE__/certificate/content?cid={$vo.cid}">{$vo.cname}</a>
+                <a href="__MODULE__/certificate/content?cid={$vo.cid}">{$vo.cname|msubstr=0,15,'utf-8',true}</a>
               </p>
               <a href="__MODULE__/certificate/content?cid={$vo.cid}">
                 <img src="{$vo.cthumb}" width="277" height="201" alt="lp" />

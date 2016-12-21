@@ -50,7 +50,7 @@ class CertificateController extends Controller {
 			$user = $_SESSION['name'];
 			$data=array(
 			    	'username'  =>$user,
-			    	'certifcateid' =>$cid,
+			    	'certifciateid' =>$cid,
 			    	'uctype' =>'考证信息',
 			    	'time' =>$ctime
 			    	);

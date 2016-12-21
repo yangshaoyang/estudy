@@ -167,14 +167,14 @@
             <div class="rdzxright" >
                 <volist name="new" id="vo">
                     <h1>
-                        <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}" class="rdtit">{$vo.newstitle}</a>
+                        <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}" class="rdtit">{$vo.newstitle|msubstr=0,30,'utf-8',true}</a>
                         <a href="__MODULE__/news/newslist" class="ckgd">查看更多&nbsp;>></a>
                     </h1>
                 </volist>
                 <ul>
                     <volist name="news" id="vo">
                         <li>
-                            <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle}</a>
+                            <a href="__MODULE__/news/newscontent?newsid={$vo.newsid}">{$vo.newstitle|msubstr=0,30,'utf-8',true}</a>
                             <span>{$vo.newstime}</span>
                         </li>
                     </volist>
@@ -197,7 +197,7 @@
                 <ul>
                     <volist name="textual" id="vo">
                         <li>
-                            <a href="__MODULE__/certificate/content?cid={$vo.cid}" style="font-size: 16px">{$vo.cname}</a>
+                            <a href="__MODULE__/certificate/content?cid={$vo.cid}" style="font-size: 16px">{$vo.cname|msubstr=0,30,'utf-8',true}</a>
                             <span>{$vo.ctime}</span>
                         </li>
                     </volist>
@@ -218,7 +218,7 @@
                 <ul>
                     <volist name="match" id="vo">
                         <li>
-                            <a href="__MODULE__/match/content?mid={$vo.mid}" style="font-size: 16px">{$vo.mname}</a>
+                            <a href="__MODULE__/match/content?mid={$vo.mid}" style="font-size: 16px">{$vo.mname|msubstr=0,30,'utf-8',true}</a>
                             <span>{$vo.mtime}</span>
                         </li>
                     </volist>
