@@ -19,7 +19,7 @@ class ForumController extends Controller {
         // 1. 获取记录总条数
         $count =$forum->count();
         // 2. 设置（获取）每一页显示的个数
-        $pageSize =5;
+        $pageSize =4;
         // 3. 创建分页类对象
         $page = new Page($count, $pageSize);
         //4.构造查询条件
@@ -56,7 +56,7 @@ class ForumController extends Controller {
         $Model=M();
         $forum_comment=$Model->field('username,avatar_url,createtime,forum_comment,forum_answerid')
     		  			->table(array('users'=>'a','forum_comment'=>'b'))
-    		  			->where("a.userid=b.userid AND forumid=$id")->order('forum_answerid')
+    		  			->where("a.userid=b.userid AND forumid=$id")->order('createtime')
         				->limit($page->firstRow.','.$page->listRows)
             			->select();
         // 5.定义分页样式
@@ -70,6 +70,43 @@ class ForumController extends Controller {
         $res['count']=$count;
         $res['forum_comment']=$forum_comment;
         return $res;
+    }
+
+    //搜索功能
+    public function search(){
+		if(isset($_GET['text'])){
+			$data=$_GET['text'];
+			/*选取数据*/
+		 	$forum_search=M("forum")->where("title like '%$data%'");
+		 	/*分页码*/
+			// 1. 获取记录总条数
+			$count =$forum_search->count();
+			// 2. 设置（获取）每一页显示的个数
+			$pageSize =4;
+			// 3. 创建分页类对象
+			$page = new Page($count, $pageSize);
+			// 4. 分页查询
+		    $forum_search = $forum_search->where("title like '%$data%'")
+		    			->order('readcount desc')
+		          		->limit($page->firstRow.','.$page->listRows)
+		         		->select();
+			// 6. 定义分页样式
+			$page->setConfig('prev','上一页');
+			$page->setConfig('next','下一页');
+			// 7. 输出查询结果
+			$this->assign('forum_search', $forum_search);
+			if ($forum_search == NULL) {
+				$this->error("搜索无结果",U("index"));
+			}
+			$pages=$page->show();
+			$this->assign('pages',$pages);
+		    //热议榜数据
+        	$forum_hot=M("forum")->order('readcount desc')->limit(10)->select();
+        	$this->assign('forum_hot', $forum_hot);
+		      $this->display();
+	    	}else{
+	    		$this->error("您肿么到这里了/(ㄒoㄒ)/~~，快回去",U("index"));
+	    	}
     }
 
     //论坛list页展示分类数据的方法
@@ -137,6 +174,7 @@ class ForumController extends Controller {
         $this->assign('pages', $sort['pages']);
         $this->display();
     }
+
     //论坛内容页的控制器
     public function questions($forumid){
         //找id对应的帖子内容
@@ -180,6 +218,7 @@ class ForumController extends Controller {
         //输出结果
         $this->display();
     }
+
     //举报功能控制器
     public function report($username,$forumid){
         if ($_SESSION['name'] == NULL) {

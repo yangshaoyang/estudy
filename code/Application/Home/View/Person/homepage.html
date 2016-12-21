@@ -52,12 +52,12 @@
                 <ul>
                     
                     <volist name="user_certificate" id="vo">
-                    <li><a href="__MODULE__/certificate/content/cid/{$vo.certifcateid}">{$vo.uctype}</a><span>{$vo.time}</span></li>
+                    <li><a href="__MODULE__/person/uccontent/cid/{$vo.certificateid}">{$vo.uctype}</a><span>{$vo.time}</span></li>
                     </volist>
                     </ul>
                     <ul>
                     <volist name="user_match" id="vo">
-                    <li><a href="__MODULE__/match/content/mid/{$vo.matchid}">{$vo.umtype}</a><span>{$vo.time}</span></li>
+                    <li><a href="__MODULE__/person/umcontent/mid/{$vo.matchid}">{$vo.umtype}</a><span>{$vo.time}</span></li>
                     </volist>
                     </ul>
                 
