@@ -27,6 +27,7 @@
                         <input type="text" placeholder="请输入比赛名称" class="searchtext" name="text">
                         <input type="submit" value="开始搜索" class="searchbutton"></form>
                 </div>
+                {$Think.session.mid}
             </div>
             <div class="content">
                 <ul class="contentul">
@@ -53,8 +54,13 @@
                                 </div>
                                 <div class="listright">
                                     <form>
-                                        <input type="button" value="我要参加" onclick="return alertMsg('确定要参加吗？',1,'__CONTROLLER__/user/mid/{$vo.mid}/mtime/{$vo.mtime}');" class="button1" id="{$vo.mid}">
-                                        <input type="button" value="查看详情" class="button1 button2"  onclick="location.href='__CONTROLLER__/content/mid/{$vo.mid}'"></form>
+                                        <if condition="116 eq $Think.session.mid">
+                                            <input type="button" value="我要参加" onclick="return alertMsg('确定要参加吗？',1,'__CONTROLLER__/user/mid/{$vo.mid}/mtime/{$vo.mtime}');" class="button1" id="{$vo.mid}">
+                                            <input type="button" value="查看详情" class="button1 button2"  onclick="location.href='__CONTROLLER__/content/mid/{$vo.mid}'">
+                                            <else />
+                                            <input type="button" value="您已报名" disabled="disabled" style="cursor:default" class="button1 button3">
+                                            <input type="button" value="查看详情" class="button1 button2" onclick="location.href='__CONTROLLER__/content/mid/{$vo.mid}'"></if>
+                                    </form>
                                 </div>
                             </div>
                         </li>
