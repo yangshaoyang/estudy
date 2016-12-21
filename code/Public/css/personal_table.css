@@ -47,7 +47,7 @@
 	float:left;
 	text-indent:4em;
 	}
-.ss input[type=button]{
+.ss input[type=submit]{
 	background:url(../images/ss1.gif);
 	width:120px;
 	height:50px;
@@ -55,7 +55,7 @@
 	float:left;
 	cursor:pointer;
 	}
-.ss input[type=button]:hover{
+.ss input[type=submit]:hover{
 	background:url(../images/ss2.gif);
 	}
 .table1 table{
