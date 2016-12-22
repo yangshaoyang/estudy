@@ -3,27 +3,6 @@ namespace Home\Controller;
 use Think\Controller;
 class WeuiController extends Controller {
     public function index(){
-        $match=M("match")->order("mid desc")->limit(5)->select();
-        $this->assign("match",$match);
-
-        $matchs=M("match")->order("mid desc")->limit(2)->select();
-        $this->assign("matchs",$matchs);
-
-        $textual=M("certificate")->order("cid desc")->limit(5)->select();
-        $this->assign("textual",$textual);
-
-        $textuals=M("certificate")->order("cid desc")->limit(2)->select();
-        $this->assign("textuals",$textuals);
-
-        $news=M("news")->order("newsid desc")->limit(5)->select();
-        $this->assign("news",$news);
-
-        $new=M("news")->order("newsid desc")->limit(1)->select();
-        $this->assign("new",$new);
-
-        $url = M("blogroll")->select();
-        $this->assign("blogroll",$url);
-
         $this->display();
     }
 
@@ -90,5 +69,22 @@ class WeuiController extends Controller {
 
         $this->display();
     }
+
+    public function newslist(){
+        $news=M("news")->order("newsid desc")->select();
+        $this->assign("news",$news);
+
+        $this->display();
+    }
+
+    public function newscontent($newsid){
+        $news = M('news')->find($newsid);
+        $this->assign('newscontent',$news);
+
+        $this->display();
+
+    }
+
+
 
 }

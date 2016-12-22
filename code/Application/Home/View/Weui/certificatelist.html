@@ -28,90 +28,81 @@
 
 </head>
 <body>
-<div class="weui_tab">
-  <div class="weui_tab_bd">
-  <!-- 导航栏 -->
-	  <div class="weui_tab">
+	<div class="weui_tab">
+		<div class="weui_tab_bd">
+			<!-- 导航栏 -->
+			<div class="weui_tab">
 
-	    <!-- 导航栏结束 -->
-	  <div class="weui_tab_bd">
-	  <!-- 第一个选项卡 -->
-	  <div class="content" >
-	<div class="bd">
-	    <div class="weui_panel weui_panel_access">
-	        <div class="weui_panel_hd">微头条</div>
-	        <div class="weui_panel_bd">
-	        <volist name="hotmatch" id="vo">
-	            <a href="__MODULE__/weui/certificatecontent/cid/{$vo.cid}" class="weui_media_box weui_media_appmsg">
-	                <div class="weui_media_hd">
-	                    <img class="weui_media_appmsg_thumb" src="__PUBLIC__/http://yangshaoyang.cn/student/logo3.png" alt="">
-	                </div>
-	                <div class="weui_media_bd">
-	                    <h4 class="weui_media_title">{$vo.cname}</h4>
-	                    <p class="weui_media_desc">本站特地为您推荐含金量高、社会认可度大的几项认证，这些认证相对容易通过，并且实用性高，可以很好地提高您的社会竞争力。</p>
-	                </div>
-	            </a>
-	          </volist>
-	        </div>
-	    </div>
-	    <div class="weui_panel weui_panel_access">
-	        <div class="weui_panel_hd">考证列表</div>
-	        <div class="weui_panel_bd">
-	            <div class="weui_media_box weui_media_small_appmsg">
-	                <div class="weui_cells weui_cells_access">
-	                <volist name="certificate" id="vo">
-	                    <a class="weui_cell" href="__MODULE__/weui/certificatecontent/cid/{$vo.cid}">
-	                        <div class="weui_cell_hd"><img src="__PUBLIC__/images/icon_nav_panel.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
-	                        <div class="weui_cell_bd weui_cell_primary">
-	                            <p> {$vo.cname}</p>
-	                        </div>
-	                        <span class="weui_cell_ft"></span>
-	                    </a>
-	                  </volist>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
+				<!-- 导航栏结束 -->
+				<div class="weui_tab_bd">
+					<!-- 第一个选项卡 -->
+					<div class="content" >
+						<div class="bd">
+							<div class="weui_panel weui_panel_access">
+								<div class="weui_panel_hd">微头条</div>
+								<div class="weui_panel_bd">
+									<volist name="hotmatch" id="vo">
+										<a href="__MODULE__/weui/certificatecontent/cid/{$vo.cid}" class="weui_media_box weui_media_appmsg">
+											<div class="weui_media_hd">
+												<img class="weui_media_appmsg_thumb" src="__PUBLIC__/http://yangshaoyang.cn/student/logo3.png" alt=""></div>
+											<div class="weui_media_bd">
+												<h4 class="weui_media_title">{$vo.cname}</h4>
+												<p class="weui_media_desc">本站特地为您推荐含金量高、社会认可度大的几项认证，这些认证相对容易通过，并且实用性高，可以很好地提高您的社会竞争力。</p>
+											</div>
+										</a>
+									</volist>
+								</div>
+							</div>
+							<div class="weui_panel weui_panel_access">
+								<div class="weui_panel_hd">考证列表</div>
+								<div class="weui_panel_bd">
+									<div class="weui_media_box weui_media_small_appmsg">
+										<div class="weui_cells weui_cells_access">
+											<volist name="certificate" id="vo">
+												<a class="weui_cell" href="__MODULE__/weui/certificatecontent/cid/{$vo.cid}">
+													<div class="weui_cell_hd">
+														<img src="__PUBLIC__/images/icon_nav_panel.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+													<div class="weui_cell_bd weui_cell_primary">
+														<p>{$vo.cname}</p>
+													</div>
+													<span class="weui_cell_ft"></span>
+												</a>
+											</volist>
+										</div>
+									</div>
+								</div>
+							</div>
 
+						</div>
+					</div>
 
-	  </div>
+				</div>
+			</div>
+
+		</div>
+		<div class="weui_tabbar">
+			<a href="__MODULE__/weui/index" class="weui_tabbar_item">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/home.jpg" alt=""></div>
+				<p class="weui_tabbar_label">易学主页</p>
+			</a>
+			<a href="__MODULE__/weui/mclist" class="weui_tabbar_item  weui_bar_item_on">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/broadcast.jpg" alt=""></div>
+				<p class="weui_tabbar_label">比赛考证</p>
+			</a>
+			<a href="__MODULE__/weui/newslist" class="weui_tabbar_item">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/news.png" alt=""></div>
+				<p class="weui_tabbar_label">新闻资讯</p>
+			</a>
+			<a href="__MODULE__/weui/articlelist" class="weui_tabbar_item">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/mien.png" alt=""></div>
+				<p class="weui_tabbar_label">励志人生</p>
+			</a>
+		</div>
 	</div>
-
-
-	  </div>
-  	</div>
-
-
-  </div>
-  <div class="weui_tabbar">
-    <a href="__PUBLIC__/index.html" class="weui_tabbar_item">
-      <div class="weui_tabbar_icon">
-        <img src="__PUBLIC__/images/home.jpg" alt="">
-      </div>
-      <p class="weui_tabbar_label">主页</p>
-    </a>
-    <a href="__PUBLIC__/list.html" class="weui_tabbar_item weui_bar_item_on">
-      <div class="weui_tabbar_icon">
-        <img src="__PUBLIC__/images/broadcast.jpg" alt="">
-      </div>
-      <p class="weui_tabbar_label">通知</p>
-    </a>
-    <a href="__PUBLIC__/news.html" class="weui_tabbar_item">
-      <div class="weui_tabbar_icon">
-        <img src="__PUBLIC__/images/news.jpg" alt="">
-      </div>
-      <p class="weui_tabbar_label">新闻</p>
-    </a>
-    <a href="__PUBLIC__/list_fengcai.html" class="weui_tabbar_item">
-      <div class="weui_tabbar_icon">
-        <img src="__PUBLIC__/images/mien.png" alt="">
-      </div>
-      <p class="weui_tabbar_label">风采</p>
-    </a>
-  </div>
-</div>
-
-
 
 </body>
 	<script type="text/javascript" src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
