@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
   <link href="__PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
   <link href="__PUBLIC__/css/login.css" rel="stylesheet" type="text/css" />
@@ -32,10 +33,52 @@ function chk_form(){
     }
 }
 </script>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>  
+  <script src="__PUBLIC__/js/Ajax.js"></script>  
   <title>用户登陆</title>
 </head>
 <body>
-  <include file="Public/header.html" />
+  <div class="header">
+    <div class="mybody">
+      <div class="logo">
+        <a href="http://estudy.csbroswer.cn">
+          <img src="__PUBLIC__/images/logo2.png" width="193" height="60" alt="logo" />
+        </a>
+      </div>
+      <div class="nav">
+        <div class="navtop">
+          <if condition="$Think.session.name neq null">
+            <a href="{:U('/home/person/homepage')}" class="log">{$Think.session.name}</a>
+            <a href="{:U('/home/login/exits')}" class="log sign">注销</a>
+            <p>客服热线&nbsp;&nbsp;&nbsp;400&nbsp;-&nbsp;0000&nbsp;-&nbsp;000</p>
+            <else />
+            <a href="{:U('/home/login/login')}" class="log">登录</a>
+            <a href="{:U('/home/register')}" class="log sign">注册</a>
+            <p>客服热线&nbsp;&nbsp;&nbsp;400&nbsp;-&nbsp;0000&nbsp;-&nbsp;000</p>
+          </if>
+        </div>
+        <div class="line"></div>
+        <a href="{:U('/home/match/matchlist')}" class="xz">
+          <div class="xzimg">
+            <img src="__PUBLIC__/images/gl2.png" width="21" height="21" alt="gl"/>
+          </div>
+          <p>比赛攻略</p>
+        </a>
+        <a href="{:U('/home/certificate/certificatelist')}" class="xz xz2">
+          <div class="xzimg">
+            <img src="__PUBLIC__/images/gw2.png" width="21" height="21" alt="gl"/>
+          </div>
+          <p>考证顾问</p>
+        </a>
+        <a href="{:U('/home/forum')}" class="xz xz2">
+          <div class="xzimg">
+            <img src="__PUBLIC__/images/jy2.png" width="21" height="21" alt="gl"/>
+          </div>
+          <p>论坛交流</p>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!--登录页-->
   <div class="content">
@@ -53,7 +96,9 @@ function chk_form(){
           <h1>
             <span>普通登录</span>
           </h1>
-          <form action="{:U('home/login/validation')}" method="post" onsubmit="return chk_form();">
+          <h1 id="loginSuccess" style="color:red">您的账号未激活，请收到邮件激活后登录</h1>  
+          <h1 id="loginError" style="color:red">账号密码不正确</h1>  
+          <form action="{:U('/home/login/logined')}" method="post" onsubmit="return chk_form();" id="form">
             <input type="text"  name="yourname" id="user" class="email" placeholder="请输入邮箱">
 
             <input type="password" name="yourpassword" id="pass" minlength="6" class="pwd" placeholder="密码大于6位">
@@ -67,7 +112,7 @@ function chk_form(){
                 </p>
               </div>
             </div>
-            <input type="submit" value="登  录" class="login_btn" />
+            <input type="button" value="登  录" class="login_btn" id="loginbtn" />
           </form>
         </div>
         <!--第三方登录-->

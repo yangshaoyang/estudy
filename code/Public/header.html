@@ -1,12 +1,13 @@
 <div class="header">
     <div class="mybody">
+    <?php
+            $url=$_SERVER["REQUEST_SCHEME"].'://'.$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+            session('path',$url);
+            ?>
     <div class="logo"><a href="http://estudy.csbroswer.cn"><img src="__PUBLIC__/images/logo2.png" width="193" height="60" alt="logo" /></a></div>
         <div class="nav">
             <div class="navtop">
-            <?php
-            $url=$_SERVER['HTTP_REFERER'];
-            session('path',$url);
-            ?>
+            
             <if condition="$Think.session.name neq null">
                 <a href="{:U('/home/person/homepage')}" class="log">{$Think.session.name}</a>
                 <a href="{:U('/home/login/exits')}" class="log sign">注销</a>

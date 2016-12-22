@@ -21,9 +21,6 @@ class IndexController extends Controller {
 		$new=M("news")->order("newsid desc")->limit(1)->select();
 		$this->assign("new",$new);
 
-		$url = M("blogroll")->select();
-		$this->assign("blogroll",$url);
-
 		$this->display();
     }
 }
