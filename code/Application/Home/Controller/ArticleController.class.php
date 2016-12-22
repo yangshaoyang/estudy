@@ -16,7 +16,7 @@ class ArticleController extends Controller {
     public function index(){
     	$this->display();
     }
-
+     
     public function article(){
         //获取文章列表
     	$article = M('article');
@@ -28,7 +28,7 @@ class ArticleController extends Controller {
         // 3. 创建分页类对象
         $page = new Page($count, $pageSize);
         // 4. 分页查询
-        $article= $article->order('articleid desc')
+        $article= $article->order('articletime desc')
             ->limit($page->firstRow.','.$page->listRows)
             ->select();
         //6定义分页样式
@@ -38,7 +38,7 @@ class ArticleController extends Controller {
         $pages=$page->show();
         $this->assign('pages',$pages);
         //文章首页
-    	   $this->assign('article',$article);
+    	$this->assign('article',$article);
         //热门资讯部分
         $news=M("news")->order("newstime")->limit(7)->select();
         $this->assign("news",$news);
@@ -52,37 +52,11 @@ class ArticleController extends Controller {
         //热门资讯部分
         $news=M("news")->order("newsid asc")->limit(7)->select();
         $this->assign("news",$news);
+        //经典文章部分
         $article=M("article")->order("articletime")->limit(5)->select();
         $this->assign("article",$article);
         $this->display();
     }
-    //分页功能实现
-   /* public function pages (){
-        //选取数据
-        $articlepage=M("article")->order("articleid desc")->where("articleid");
-        //分页码
-        // 1. 获取记录总条数
-        $count =$articlepage->count();
-        // 2. 设置（获取）每一页显示的个数
-        $pageSize =4;
-        // 3. 创建分页类对象
-        $page = new Page($count, $pageSize);
-        // 4. 构造查询条件
-        $condition=array();
-        $condition['mid'] != NULL;
-        // 5. 分页查询
-          $$articlepage = $articlepage->where($condition)->order('articleid desc')
-              ->limit($page->firstRow.','.$page->listRows)
-              ->select();
-          // 6. 定义分页样式
-          $page->setConfig('prev','上一页');
-          $page->setConfig('next','下一页');
-          // 7. 输出查询结果
-          $this->assign('article', $articlepage);//遍历数据数据
-          $pages=$page->show();
-          $this->assign('pages',$pages);
-          $this->display();
-    }*/
 
     //搜索功能
     public function search(){
@@ -94,7 +68,7 @@ class ArticleController extends Controller {
             // 1. 获取记录总条数
             $count =$articlepage->count();
             // 2. 设置（获取）每一页显示的个数
-            $pageSize =4;
+            $pageSize =3;
             // 3. 创建分页类对象
             $page = new Page($count, $pageSize);
             // 4. 分页查询
@@ -121,5 +95,25 @@ class ArticleController extends Controller {
               }else{
                 $this->error("您肿么到这里了/(ㄒoㄒ)/~~，快回去",U("article"));
               }
+    }
+
+    //举报功能
+    public function report($username,$articleid){
+        if ($_SESSION['name'] == NULL) {
+            $this->redirect('home/login/login','请登录');
+        }else{
+            $data=array(
+                    'username'  =>$username,
+                    'articleid' =>$articleid
+                    );
+               $Model=D("report");
+               $Model->create();
+               $num=$Model->add($data);
+               if($num>0){
+                $this->success("举报成功！管理员处理后将及时给您反馈",U("home/article/articledetails/articleid/$articleid"),5);
+               }else{
+                $this->error("举报失败 /(ㄒoㄒ)/~~，请重试",U("home/article/articledetails/articleid/$articleid"),5);
+               }
+            }
     }
 }
