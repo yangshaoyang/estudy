@@ -29,7 +29,7 @@ class PersonController extends Controller {
     }
     public function message(){
        if ($_SESSION['name'] == NULL) {
-          $this->redirect('home/login/login','请登录');
+          $this->success('请先登录',U('home/login/login'));
         }else{
           
           //消息获取
