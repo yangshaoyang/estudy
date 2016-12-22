@@ -108,8 +108,8 @@ class PersonController extends Controller {
       public function changepswd($username){
         //先判断是否登录
        if($_SESSION['name'] == NULL){
-      $this->redirect('home/login/login');
-    }else{
+         $this->redirect('home/login/login');
+       }else{
           $users=M("users");
           $password =$users->getFieldByusername($username,'password');
           //dump($password);
@@ -121,74 +121,73 @@ class PersonController extends Controller {
             'password' => md5(I('post.repassword'))
             );
           // dump($data);
-         if(md5(I('post.oldpassword')) == $password && $data==$Data ){
-            $map['username']=$username;
-            $num=$users->where($map)->save($data);
-            // var_dump($num);
-            // exit;
-            if($num>=6){
+         if(md5(I('post.oldpassword')) == $password && $data==$Data  ){
+            
+            if(strlen(I('post.newpassword'))>=6){
+             $map['username']=$username;
+             $num=$users->where($map)->save($data);
              $this->success("修改成功！",U("home/login/login"));
             }else{
              $this->error("修改失败,密码应至少6位！",U("home/person/repassword"));
           }
          }else{
-          if ($data!=$Data) {
-            $this->error("修改失败,确认密码应与新密码相同",U("home/person/repassword"));
+          if (md5(I('post.oldpassword')) !== $password) {
+            $this->error("旧密码不正确，请重新输入！",U("home/person/repassword"));
           }else{
-          $this->error('旧密码不正确，请重新输入！',U("home/person/repassword"));
+          $this->error('确认密码应与新密码相同，请重新输入！',U("home/person/repassword"));
            }
          }
          $this->display();
        }
-        }
-   public function uccontent($cid){
-    $certificate=M("certificate")->find($cid);
-    $this->assign("ccontent",$certificate);
-    $tcertificate=M("certificate")->limit(3)->select();//比赛推荐部分
-    $this->assign("tcertificate",$tcertificate);
-    $news=M("news")->order("newsid desc")->limit(7)->select();//热门资讯获取
-    $this->assign("news",$news);
-    //消息点击数量加1
-    $user_certificate=M("user_certificate")->table(array('user_certificate'=>'a','certificate'=>'b'))
-                           ->where("a.certificateid=b.cid AND cid=$cid")
-                           ->setInc('num');
-    $this->assign("user_certificate",$user_certificate);                       
-    $this->display();
-  }
-  public function umcontent($mid){
-    $match=M("match")->find($mid);
-    $this->assign("mcontent",$match);
-    $tmatch=M("match")->limit(3)->select();//比赛推荐部分
-    $this->assign("tmatch",$tmatch);
-    $news=M("news")->order("newsid desc")->limit(7)->select();//热门资讯获取
-    $this->assign("news",$news);
-    //消息点击数量加1 
-    $user_match=M("user_match")->table(array('user_match'=>'a','match'=>'b'))
-                           ->where("a.matchid=b.mid AND mid=$mid")
-                           ->setInc('num');
-    $this->assign("user_match",$user_match); 
-    $this->display();
-  }
-  public function search(){
-      if(isset($_GET['text'])){
-        $data=$_GET['text'];
-          // dump($data);
-        $map['username']=$_SESSION['name'];
-        $users=M("users")->where($map)->select();
-        $this->assign("users",$users[0]);
-         $user_match = M("user_match")->where("introduce like '%$data%'")->order('time desc')->select();
-         $user_certificate = M("user_certificate")->where("introduce like '%$data%'")->order('time desc')->select();
-        $this->assign('user_match', $user_match);//遍历数据数据
-        $this->assign('user_certificate', $user_certificate);
-        if ($user_match == NULL && $user_certificate == NULL) {
-          $this->error("搜索无结果",U("message"));
-        }else{
-        $this->display();
-        }
       }
-        else{
-        $this->error("您肿么到这里了/(ㄒoㄒ)/~~，快回去",U("message"));
-        }
+     public function uccontent($cid){
+      $certificate=M("certificate")->find($cid);
+      $this->assign("ccontent",$certificate);
+      $tcertificate=M("certificate")->limit(3)->select();//比赛推荐部分
+      $this->assign("tcertificate",$tcertificate);
+      $news=M("news")->order("newsid desc")->limit(7)->select();//热门资讯获取
+      $this->assign("news",$news);
+      //消息点击数量加1
+      $user_certificate=M("user_certificate")->table(array('user_certificate'=>'a','certificate'=>'b'))
+                             ->where("a.certificateid=b.cid AND cid=$cid")
+                             ->setInc('num');
+      $this->assign("user_certificate",$user_certificate);                       
+      $this->display();
     }
+    public function umcontent($mid){
+      $match=M("match")->find($mid);
+      $this->assign("mcontent",$match);
+      $tmatch=M("match")->limit(3)->select();//比赛推荐部分
+      $this->assign("tmatch",$tmatch);
+      $news=M("news")->order("newsid desc")->limit(7)->select();//热门资讯获取
+      $this->assign("news",$news);
+      //消息点击数量加1 
+      $user_match=M("user_match")->table(array('user_match'=>'a','match'=>'b'))
+                             ->where("a.matchid=b.mid AND mid=$mid")
+                             ->setInc('num');
+      $this->assign("user_match",$user_match); 
+      $this->display();
+    }
+    public function search(){
+        if(isset($_GET['text'])){
+          $data=$_GET['text'];
+            // dump($data);
+          $map['username']=$_SESSION['name'];
+          $users=M("users")->where($map)->select();
+          $this->assign("users",$users[0]);
+           $user_match = M("user_match")->where("introduce like '%$data%'")->order('time desc')->select();
+           $user_certificate = M("user_certificate")->where("introduce like '%$data%'")->order('time desc')->select();
+          $this->assign('user_match', $user_match);//遍历数据数据
+          $this->assign('user_certificate', $user_certificate);
+          if ($user_match == NULL && $user_certificate == NULL) {
+            $this->error("搜索无结果",U("message"));
+          }else{
+          $this->display();
+          }
+        }
+          else{
+          $this->error("您肿么到这里了/(ㄒoㄒ)/~~，快回去",U("message"));
+          }
+      }
 
 }
