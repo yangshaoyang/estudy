@@ -33,8 +33,11 @@ function chk_form(){
     }
 }
 </script>
-  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>  
-  <script src="__PUBLIC__/js/Ajax.js"></script>  
+  <script type="text/javascript">
+    var appUrl="__APP__";
+  </script>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+  <script src="__PUBLIC__/js/Ajax.js"></script>
   <title>用户登陆</title>
 </head>
 <body>
@@ -96,8 +99,8 @@ function chk_form(){
           <h1>
             <span>普通登录</span>
           </h1>
-          <h1 id="loginSuccess" style="color:red">您的账号未激活，请收到邮件激活后登录</h1>  
-          <h1 id="loginError" style="color:red">账号密码不正确</h1>  
+          <h1 id="loginSuccess" style="color:red">您的账号未激活，请收到邮件激活后登录</h1>
+          <h1 id="loginError" style="color:red">账号密码不正确</h1>
           <form action="{:U('/home/login/logined')}" method="post" onsubmit="return chk_form();" id="form">
             <input type="text"  name="yourname" id="user" class="email" placeholder="请输入邮箱">
 
@@ -127,17 +130,17 @@ function chk_form(){
             <table>
               <tr>
                 <td width="150" align="center">
-                  <a href="#">
+                  <a href="javascript:;">
                     <img src="__PUBLIC__/images/weixin.png" width="50" height="50" alt="gl"/>
                   </a>
                 </td>
                 <td width="150" align="center">
-                  <a href="#">
+                  <a href="javascript:;">
                     <img src="__PUBLIC__/images/weibo.png" width="50" height="50" alt="gl"/>
                   </a>
                 </td>
                 <td width="150" align="center">
-                  <a href="#">
+                  <a href="javascript:;">
                     <img src="__PUBLIC__/images/qq.png" width="50" height="50" alt="gl"/>
                   </a>
                 </td>

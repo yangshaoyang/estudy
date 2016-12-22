@@ -46,19 +46,19 @@
                         <td class="border_top">简介</td>
                         <td class="border_top border_right">操作</td>
                     </tr>
-                    <volist name="user_certificate" id="vo">
+                    <volist name="certificate" id="vo">
                     <tr>
                         <td class="border_top">{$vo.time}</td>
                         <td class="border_top">{$vo.uctype}</td>
-                        <td class="border_top">{$vo.introduce}</td>
+                        <td class="border_top">{$vo.cname}</td>
                         <td class="border_top border_right"><a href="__MODULE__/person/uccontent/cid/{$vo.certificateid}">查看</a></td>
                     </tr>
                     </volist>
-                     <volist name="user_match" id="vo">
+                     <volist name="match" id="vo">
                     <tr>
                         <td class="border_top">{$vo.time}</td>
                         <td class="border_top">{$vo.umtype}</td>
-                        <td class="border_top">{$vo.introduce}</td>
+                        <td class="border_top">{$vo.mname}</td>
                         <td class="border_top border_right"><a href="__MODULE__/person/umcontent/mid/{$vo.matchid}">查看</a></td>
                     </tr>
                     </volist>
