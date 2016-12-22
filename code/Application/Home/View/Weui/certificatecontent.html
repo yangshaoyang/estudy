@@ -44,38 +44,35 @@
         <h1 class="demos-title" style="font-weight: bold">{$ccontent.cname}</h1>
         <span class="title">考证时间：{$ccontent.ctime}&nbsp;&nbsp;认证费用：{$ccontent.cfee}元</span>
         <section>
-          <p>
-            {$ccontent.ccontent}
-          </p>
+          <p>{$ccontent.ccontent}</p>
         </section>
       </article>
-            <!--WAP版-->
-<div id="SOHUCS" sid="{$ccontent.cid}" ></div>
-<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=cysJVl9Cb&conf=prod_49c81d0f91ec3cbce38e37a23f0ec3f4">
-</script>
+      <!--WAP版-->
+      <div id="SOHUCS" sid="{$ccontent.cid}" ></div>
+      <script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=cysJVl9Cb&conf=prod_49c81d0f91ec3cbce38e37a23f0ec3f4"></script>
 
-      <div class="weui_tabbar">
-        <a href="__PUBLIC__/index.html" class="weui_tabbar_item">
-          <div class="weui_tabbar_icon">
-            <img src="__PUBLIC__/images/home.jpg" alt=""></div>
-          <p class="weui_tabbar_label">主页</p>
-        </a>
-        <a href="__PUBLIC__/list.html" class="weui_tabbar_item">
-          <div class="weui_tabbar_icon">
-            <img src="__PUBLIC__/images/broadcast.jpg" alt=""></div>
-          <p class="weui_tabbar_label">通知</p>
-        </a>
-        <a href="__PUBLIC__/news.html" class="weui_tabbar_item ">
-          <div class="weui_tabbar_icon">
-            <img src="__PUBLIC__/images/news.jpg" alt=""></div>
-          <p class="weui_tabbar_label">新闻</p>
-        </a>
-        <a href="__PUBLIC__/list_fengcai.html" class="weui_tabbar_item">
-          <div class="weui_tabbar_icon">
-            <img src="__PUBLIC__/images/mien.png" alt=""></div>
-          <p class="weui_tabbar_label">风采</p>
-        </a>
-      </div>
+          <div class="weui_tabbar">
+      <a href="__MODULE__/weui/index" class="weui_tabbar_item">
+        <div class="weui_tabbar_icon">
+          <img src="__PUBLIC__/images/home.jpg" alt=""></div>
+        <p class="weui_tabbar_label">易学主页</p>
+      </a>
+      <a href="__MODULE__/weui/mclist" class="weui_tabbar_item  weui_bar_item_on">
+        <div class="weui_tabbar_icon">
+          <img src="__PUBLIC__/images/broadcast.jpg" alt=""></div>
+        <p class="weui_tabbar_label">比赛考证</p>
+      </a>
+      <a href="__MODULE__/weui/newslist" class="weui_tabbar_item">
+        <div class="weui_tabbar_icon">
+          <img src="__PUBLIC__/images/news.png" alt=""></div>
+        <p class="weui_tabbar_label">新闻资讯</p>
+      </a>
+      <a href="__MODULE__/weui/articlelist" class="weui_tabbar_item">
+        <div class="weui_tabbar_icon">
+          <img src="__PUBLIC__/images/mien.png" alt=""></div>
+        <p class="weui_tabbar_label">励志人生</p>
+      </a>
+    </div>
     </div>
 
   </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{$mcontent.mname}</title>
+  <title>{$newscontent.newstitle}</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -41,34 +41,39 @@
     <div class="weui_tab_bd">
 
       <article class="weui_article">
-        <h1 class="demos-title" style="font-weight: bold">{$mcontent.mname}</h1>
-        <span class="title">比赛时间：{$mcontent.mtime}</span>
+        <h1 class="demos-title" style="font-weight: bold">{$newscontent.newstitle}</h1>
+        <span class="title">
+          发布时间：{$newscontent.newstime}&nbsp;&nbsp;来源：{$newscontent.newssource}
+        </span>
         <section>
-          <p>
-            {$mcontent.mcontent}
-          </p>
+          <p>{$newscontent.newscontent}</p>
+          <img src="http://estudy.csbroswer.cn/{$newscontent.newsthumb}" alt="{$newscontent.newstitle}" />
         </section>
       </article>
+      <!--WAP版-->
+      <div id="SOHUCS" sid="{$newscontent.newsthumb}" ></div>
+      <script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=cysJVl9Cb&conf=prod_49c81d0f91ec3cbce38e37a23f0ec3f4"></script>
+
       <div class="weui_tabbar">
-        <a href="__PUBLIC__/index.html" class="weui_tabbar_item">
+        <a href="__MODULE__/weui/index" class="weui_tabbar_item">
           <div class="weui_tabbar_icon">
             <img src="__PUBLIC__/images/home.jpg" alt=""></div>
-          <p class="weui_tabbar_label">主页</p>
+          <p class="weui_tabbar_label">易学主页</p>
         </a>
-        <a href="__PUBLIC__/list.html" class="weui_tabbar_item">
+        <a href="__MODULE__/weui/mclist" class="weui_tabbar_item  weui_bar_item_on">
           <div class="weui_tabbar_icon">
             <img src="__PUBLIC__/images/broadcast.jpg" alt=""></div>
-          <p class="weui_tabbar_label">通知</p>
+          <p class="weui_tabbar_label">比赛考证</p>
         </a>
-        <a href="__PUBLIC__/news.html" class="weui_tabbar_item ">
+        <a href="__MODULE__/weui/newslist" class="weui_tabbar_item">
           <div class="weui_tabbar_icon">
-            <img src="__PUBLIC__/images/news.jpg" alt=""></div>
-          <p class="weui_tabbar_label">新闻</p>
+            <img src="__PUBLIC__/images/news.png" alt=""></div>
+          <p class="weui_tabbar_label">新闻资讯</p>
         </a>
-        <a href="__PUBLIC__/list_fengcai.html" class="weui_tabbar_item">
+        <a href="__MODULE__/weui/articlelist" class="weui_tabbar_item">
           <div class="weui_tabbar_icon">
             <img src="__PUBLIC__/images/mien.png" alt=""></div>
-          <p class="weui_tabbar_label">风采</p>
+          <p class="weui_tabbar_label">励志人生</p>
         </a>
       </div>
     </div>
