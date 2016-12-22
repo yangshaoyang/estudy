@@ -47,6 +47,7 @@ class CertificateController extends Controller {
 		if ($_SESSION['name'] == NULL) {
 			$this->redirect('home/login/login','请登录');
 		}else{
+			$_SESSION['cid'] = $cid;
 			$user = $_SESSION['name'];
 			$data=array(
 			    	'username'  =>$user,

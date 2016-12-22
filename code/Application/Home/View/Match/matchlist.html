@@ -27,8 +27,7 @@
                         <input type="text" placeholder="请输入比赛名称" class="searchtext" name="text">
                         <input type="submit" value="开始搜索" class="searchbutton"></form>
                 </div>
-                {$Think.session.mid}
-            </div>
+                            </div>
             <div class="content">
                 <ul class="contentul">
                     <volist name="match" id="vo">
@@ -54,7 +53,7 @@
                                 </div>
                                 <div class="listright">
                                     <form>
-                                        <if condition="'118' eq $vo.mid">
+                                        <if condition=" $Think.session.mid eq $vo.mid ">
                                             <input type="button" value="您已报名" disabled="disabled" style="cursor:default" class="button1 button3">
                                             <input type="button" value="查看详情" class="button1 button2" onclick="location.href='__CONTROLLER__/content/mid/{$vo.mid}'">
                                             <else />
