@@ -28,12 +28,13 @@
     -->
     <div class="flicker-example" data-block-text="false" style="position:absolute;z-index:-999">
         <ul>
-            <li data-background="__PUBLIC__/images/banner.jpg"></li>
+            <li data-background="__PUBLIC__/images/banner2.jpg"></li>
+            <li data-background="__PUBLIC__/images/banner6.jpg"></li>
             <li data-background="http://www.lanqiao.org/images/bg0.jpg"></li>
             <li data-background="__PUBLIC__/images/banner4.jpg"></li>
+            <li data-background="__PUBLIC__/images/banner.jpg"></li>
             <li data-background="__PUBLIC__/images/banner5.jpg"></li>
-            <li data-background="__PUBLIC__/images/banner6.jpg"></li>
-            <li data-background="__PUBLIC__/images/banner2.jpg"></li>
+
         </ul>
     </div>
     <div class="mybody">
@@ -267,7 +268,8 @@
                         $sql="select * from blogroll";
                         $sta = $pdo->query($sql);
                         $urls = $sta->fetchAll();
-                        for($i=0;$i<count($urls);$i++){    // 循环读取二维数组中的数据
+                        for($i=0;$i
+                    <count($urls);$i++){    // 循环读取二维数组中的数据
                 ?>
                         <li>
                             <a href="<?php echo $urls[$i]['url'];?>
@@ -282,64 +284,64 @@
         </div>
         <!-- 弹窗 -->
         <!-- <div class="box">
-            <div class="box1">
-                <div class="box2" id="boxclose">
-                    <div style="margin-left:75px;margin-top:50px;">
-                        <div class="box12" style="margin-bottom:10px;">
-                            <h2 style="font-size:25px;">考证提示</h2>
-                        </div>
-
-                        <div class="box11" style="margin-bottom:20px;">
-                            <ul>
-                                <li>
-                                    <a href="#" float: left;>中国创翼2016</a>
-                                    &emsp;&emsp;&emsp;&emsp;
-                                    <span>2016-11-30</span>
-                                </li>
-                                <li>
-                                    <a href="#" float: left;>中国创翼2016</a>
-                                    &emsp;&emsp;&emsp;&emsp;
-                                    <span>2016-11-30</span>
-                                </li>
-                                <li>
-                                    <a href="#" float: left;>中国创翼2016</a>
-                                    &emsp;&emsp;&emsp;&emsp;
-                                    <span>2016-11-30</span>
-                                </li>
-                                <li>
-                                    <a href="#" float: left;>中国创翼2016</a>
-                                    &emsp;&emsp;&emsp;&emsp;
-                                    <span>2016-11-30</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div  class="box12" style="margin-bottom:10px;">
-                            <h2 style="font-size:25px;">比赛提示</h2>
-                        </div>
-                        <div class="box11">
-                            <ul>
-                                <volist name="MTH" id="vo">
-                                    <li>
-                                        <a href="__MODULE__/match/content?mid={$vo.mid}" float: left;>{$vo.mname}</a>
-                                        <span>{$vo.mtime}</span>
-                                    </li>
-                                </volist>
-                            </ul>
-                        </div>
+        <div class="box1">
+            <div class="box2" id="boxclose">
+                <div style="margin-left:75px;margin-top:50px;">
+                    <div class="box12" style="margin-bottom:10px;">
+                        <h2 style="font-size:25px;">考证提示</h2>
                     </div>
-                    <div style="margin-top:50px;margin-left:140px" onclick="jQuery('.box').hide()">
-                        <button id="close">
-                            <p style="color:white;display: inline-block;padding:7px 20px;background-color: rgb(47,137,187);font-size:18px;">关闭</p>
-                        </button>
+
+                    <div class="box11" style="margin-bottom:20px;">
+                        <ul>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                            <li>
+                                <a href="#" float: left;>中国创翼2016</a>
+                                &emsp;&emsp;&emsp;&emsp;
+                                <span>2016-11-30</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div  class="box12" style="margin-bottom:10px;">
+                        <h2 style="font-size:25px;">比赛提示</h2>
+                    </div>
+                    <div class="box11">
+                        <ul>
+                            <volist name="MTH" id="vo">
+                                <li>
+                                    <a href="__MODULE__/match/content?mid={$vo.mid}" float: left;>{$vo.mname}</a>
+                                    <span>{$vo.mtime}</span>
+                                </li>
+                            </volist>
+                        </ul>
                     </div>
                 </div>
+                <div style="margin-top:50px;margin-left:140px" onclick="jQuery('.box').hide()">
+                    <button id="close">
+                        <p style="color:white;display: inline-block;padding:7px 20px;background-color: rgb(47,137,187);font-size:18px;">关闭</p>
+                    </button>
+                </div>
             </div>
-        </div> -->
-
-        <div class="box10" style="display:none" id="box1close">
-            <img src="__PUBLIC__/images/ewm.jpg" width="220" height="220"></div>
+        </div>
+    </div>
+    -->
+    <div class="box10" style="display:none" id="box1close">
+        <img src="__PUBLIC__/images/ewm.jpg" width="220" height="220"></div>
 </body>
-        <script type="text/javascript">
+    <script type="text/javascript">
             window.onload=function(){
                $(document).ready(function(){
                 $('#box1').mouseover(function(){
