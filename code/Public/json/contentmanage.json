@@ -17,9 +17,7 @@
     ]},
     {"name":"论坛管理", "children":[
         {"id":"forum", "name":"查看帖子", "target":"navtab", "url":"admin/forum/index.html"},
-        {"id":"forumm", "name":"查看评论", "target":"navtab", "url":"admin/forum/comment.html"},
-        {"id":"forummm", "name":"test", "target":"navtab", "url":"admin/forum/test.html"},
-        {"id":"forummn", "name":"datatest", "target":"navtab", "url":"admin/forum/demo.html"}
+        {"id":"forumm", "name":"查看评论", "target":"navtab", "url":"admin/forum/comment.html"}
     ]},
     {"name":"举报管理", "children":[
         {"id":"jubao", "name":"查看举报", "target":"navtab", "url":"admin/report/index.html"}
