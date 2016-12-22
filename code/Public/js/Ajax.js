@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
 
             $('#loginError').hide();
 
-            var postUrl="http://localhost/estudy/code/index.php/Home/login/validation";
+            var postUrl=appUrl+"/Home/login/validation";
 
             //通过前面定义的变量获取地址
 

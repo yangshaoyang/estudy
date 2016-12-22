@@ -54,12 +54,12 @@
                                 </div>
                                 <div class="listright">
                                     <form>
-                                        <if condition="116 neq $Think.session.mid">
-                                            <input type="button" value="我要参加" onclick="return alertMsg('确定要参加吗？',1,'__CONTROLLER__/user/mid/{$vo.mid}/mtime/{$vo.mtime}');" class="button1" id="{$vo.mid}">
-                                            <input type="button" value="查看详情" class="button1 button2"  onclick="location.href='__CONTROLLER__/content/mid/{$vo.mid}'">
-                                            <else />
+                                        <if condition="118 eq $vo.mid">
                                             <input type="button" value="您已报名" disabled="disabled" style="cursor:default" class="button1 button3">
-                                            <input type="button" value="查看详情" class="button1 button2" onclick="location.href='__CONTROLLER__/content/mid/{$vo.mid}'"></if>
+                                            <input type="button" value="查看详情" class="button1 button2" onclick="location.href='__CONTROLLER__/content/mid/{$vo.mid}'">
+                                            <else />
+                                            <input type="button" value="我要参加" onclick="return alertMsg('确定要参加吗？',1,'__CONTROLLER__/user/mid/{$vo.mid}/mtime/{$vo.mtime}');" class="button1" id="{$vo.mid}">
+                                            <input type="button" value="查看详情" class="button1 button2"  onclick="location.href='__CONTROLLER__/content/mid/{$vo.mid}'"></if>
                                     </form>
                                 </div>
                             </div>
