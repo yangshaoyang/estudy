@@ -42,13 +42,18 @@
 
       <article class="weui_article">
         <h1 class="demos-title" style="font-weight: bold">{$mcontent.mname}</h1>
-        <span class="title">比赛时间：{$mcontent.mtime}</span>
+        <span class="title">比赛时间：{$mcontent.mtime}&nbsp;&nbsp;要求：{$mcontent.mrequest}</span>
         <section>
           <p>
             {$mcontent.mcontent}
           </p>
         </section>
       </article>
+      <!--WAP版-->
+<div id="SOHUCS" sid="{$mcontent.mid}" ></div>
+<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=cysJVl9Cb&conf=prod_49c81d0f91ec3cbce38e37a23f0ec3f4">
+</script>
+
       <div class="weui_tabbar">
         <a href="__PUBLIC__/index.html" class="weui_tabbar_item">
           <div class="weui_tabbar_icon">
