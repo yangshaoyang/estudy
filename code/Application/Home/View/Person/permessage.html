@@ -52,8 +52,14 @@
                         <td><input type="text" readonly="" name="username" value="{$users.username}" /></td>
                     </tr>
                     <tr>
-                        <td>性别</td>
-                        <td><input type="text" name="sex" value="{$users.sex}" /></td>
+                        <td >性别</td>
+                        <td id="formss">
+                            <input type="radio" name="sex" value="男"  checked=""/>男
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="sex" value="女"/>女
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="sex" value="保密"/>保密
+                       </td>
                     </tr>
                     <tr>
                         <td>专业</td>
@@ -69,13 +75,15 @@
                     </tr>
                     <tr>
                         <td id="hobby">爱好</td>
-                        <td id="forms"><form >
+                        <td id="forms">
+                        <form  method='post'>
                             <input type="radio" name="hobby" value="移动互联网"  checked=""/>移动互联网
                             <input type="radio" name="hobby" value="软件开发"/>软件开发
                             <input type="radio" name="hobby" value="专业比赛"/>专业比赛
                             <input type="radio" name="hobby" value="专业考证"/>专业考证
                             <input type="radio" name="hobby" value="科技创新"/>科技创新
-                        </form></td>
+                        </form>
+                        </td>
                         <!-- <td>爱好</td>
                         <td><input type="text" name="hobby" value="{$users.hobby}" /></td> -->
                     </tr>
