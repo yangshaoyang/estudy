@@ -51,13 +51,13 @@
                 <h1 class="h11">未读消息<!-- <span>【7条】</span> --></h1>
                 <ul>
                     
-                    <volist name="user_certificate" id="vo">
-                    <li><a href="__MODULE__/person/uccontent/cid/{$vo.certificateid}">{$vo.uctype}</a><span>{$vo.time}</span></li>
+                    <volist name="certificate" id="vo">
+                    <li><a href="__MODULE__/person/uccontent/cid/{$vo.certificateid}">{$vo.cname}</a><span>{$vo.time}</span></li>
                     </volist>
                     </ul>
                     <ul>
-                    <volist name="user_match" id="vo">
-                    <li><a href="__MODULE__/person/umcontent/mid/{$vo.matchid}">{$vo.umtype}</a><span>{$vo.time}</span></li>
+                    <volist name="match" id="vo">
+                    <li><a href="__MODULE__/person/umcontent/mid/{$vo.matchid}">{$vo.mname}</a><span>{$vo.time}</span></li>
                     </volist>
                     </ul>
                 
