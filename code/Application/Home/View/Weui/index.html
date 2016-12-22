@@ -22,125 +22,96 @@
 
 </head>
 <body>
-<div class="weui_tab">
-  <div class="weui_tab_bd">
-  <!--顶部幻灯片-->
-	  <div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
-	  <div class="swiper-wrapper">
-	    <div class="swiper-slide"><img src="__PUBLIC__/images/a4.jpg" alt=""></div>
-	    <div class="swiper-slide"><img src="__PUBLIC__/images/a2.jpg" alt=""></div>
-	    <div class="swiper-slide"><img src="__PUBLIC__/images/a3.jpg" alt=""></div>
-	  </div>
-	 <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
+	<div class="weui_tab">
+		<div class="weui_tab_bd">
+			<!--顶部幻灯片-->
+			<div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="__PUBLIC__/images/a4.jpg" alt=""></div>
+					<div class="swiper-slide">
+						<img src="__PUBLIC__/images/a2.jpg" alt=""></div>
+					<div class="swiper-slide">
+						<img src="__PUBLIC__/images/a3.jpg" alt=""></div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+			<!--顶部幻灯片结束-->
+
+			<!-- 九宫格 -->
+			<div class="weui_grids">
+				<a href="__MODULE__/weui/matchlist" class="weui_grid js_grid" data-id="button">
+					<div class="weui_grid_icon">
+						<img src="__PUBLIC__/images/icon_nav_search_bar.png" alt=""></div>
+					<p class="weui_grid_label">比赛攻略</p>
+				</a>
+				<a href="__MODULE__/weui/mclist" class="weui_grid js_grid" data-id="cell">
+					<div class="weui_grid_icon">
+						<img src="__PUBLIC__/images/icon_nav_datetime.png" alt=""></div>
+					<p class="weui_grid_label">综合信息</p>
+				</a>
+				<a href="__MODULE__/weui/certificatelist" class="weui_grid js_grid" data-id="toast">
+					<div class="weui_grid_icon">
+						<img src="__PUBLIC__/images/icon_nav_toast.png" alt=""></div>
+					<p class="weui_grid_label">考证助手</p>
+				</a>
+				<a href="__MODULE__/weui/newslist" class="weui_grid js_grid" data-id="button">
+					<div class="weui_grid_icon">
+						<img src="__PUBLIC__/images/icon_nav_button.png" alt=""></div>
+					<p class="weui_grid_label">新闻资讯</p>
+				</a>
+				<a href="__MODULE__/weui/articlelist" class="weui_grid js_grid" data-id="cell">
+					<div class="weui_grid_icon">
+						<img src="__PUBLIC__/images/icon_nav_city.png" alt=""></div>
+					<p class="weui_grid_label">励志人生</p>
+				</a>
+				<a href="__MODULE__/weui/articlelist" class="weui_grid js_grid" data-id="toast">
+					<div class="weui_grid_icon">
+						<img src="__PUBLIC__/images/icon_nav_calendar.png" alt=""></div>
+					<p class="weui_grid_label">网站信息</p>
+				</a>
+				<a href="__MODULE__/weui/articlelist" class="weui_grid js_grid" data-id="button">
+					<div class="weui_grid_icon">
+						<img src="__PUBLIC__/images/icon_nav_select.png" alt=""></div>
+					<p class="weui_grid_label">提交建议</p>
+				</a>
+				<a href="__MODULE__/weui/articlelist" class="weui_grid js_grid" data-id="cell">
+					<div class="weui_grid_icon">
+						<img src="__PUBLIC__/images/icon_nav_cell.png" alt=""></div>
+					<p class="weui_grid_label">版本迭代</p>
+				</a>
+				<a href="__MODULE__/weui/articlelist" class="weui_grid js_grid" data-id="toast">
+					<div class="weui_grid_icon">
+						<img src="__PUBLIC__/images/icon_nav_panel.png" alt=""></div>
+					<p class="weui_grid_label">联系我们</p>
+				</a>
+			</div>
+			<!-- 九宫格结束 -->
+		</div>
+		<div class="weui_tabbar">
+			<a href="__MODULE__/weui/index" class="weui_tabbar_item weui_bar_item_on">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/home.jpg" alt=""></div>
+				<p class="weui_tabbar_label">易学主页</p>
+			</a>
+			<a href="__MODULE__/weui/mclist" class="weui_tabbar_item">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/broadcast.jpg" alt=""></div>
+				<p class="weui_tabbar_label">比赛考证</p>
+			</a>
+			<a href="__MODULE__/weui/newslist" class="weui_tabbar_item">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/news.png" alt=""></div>
+				<p class="weui_tabbar_label">新闻资讯</p>
+			</a>
+			<a href="__MODULE__/weui/articlelist" class="weui_tabbar_item">
+				<div class="weui_tabbar_icon">
+					<img src="__PUBLIC__/images/mien.png" alt=""></div>
+				<p class="weui_tabbar_label">励志人生</p>
+			</a>
+		</div>
 	</div>
-  <!--顶部幻灯片结束-->
-
-  <!-- 九宫格 -->
-	<div class="weui_grids">
-	  <a href="list.html" class="weui_grid js_grid" data-id="button">
-	    <div class="weui_grid_icon">
-	      <img src="__PUBLIC__/images/icon_nav_search_bar.png" alt="">
-	    </div>
-	    <p class="weui_grid_label">
-	      比赛攻略
-	    </p>
-	  </a>
-	  <a href="list.html" class="weui_grid js_grid" data-id="cell">
-	    <div class="weui_grid_icon">
-	      <img src="__PUBLIC__/images/icon_nav_datetime.png" alt="">
-	    </div>
-	    <p class="weui_grid_label">
-	      综合信息
-	    </p>
-	  </a>
-	  <a href="list.html" class="weui_grid js_grid" data-id="toast">
-	    <div class="weui_grid_icon">
-	      <img src="__PUBLIC__/images/icon_nav_toast.png" alt="">
-	    </div>
-	    <p class="weui_grid_label">
-	      考证助手
-	    </p>
-	  </a>
-	  <a href="list.html" class="weui_grid js_grid" data-id="button">
-	    <div class="weui_grid_icon">
-	      <img src="__PUBLIC__/images/icon_nav_button.png" alt="">
-	    </div>
-	    <p class="weui_grid_label">
-	      新闻资讯
-	    </p>
-	  </a>
-	  <a href="list.html" class="weui_grid js_grid" data-id="cell">
-	    <div class="weui_grid_icon">
-	      <img src="__PUBLIC__/images/icon_nav_city.png" alt="">
-	    </div>
-	    <p class="weui_grid_label">
-	      励志人生
-	    </p>
-	  </a>
-	  <a href="list.html" class="weui_grid js_grid" data-id="toast">
-	    <div class="weui_grid_icon">
-	      <img src="__PUBLIC__/images/icon_nav_calendar.png" alt="">
-	    </div>
-	    <p class="weui_grid_label">
-	      网站信息
-	    </p>
-	  </a><a href="list.html" class="weui_grid js_grid" data-id="button">
-	    <div class="weui_grid_icon">
-	      <img src="__PUBLIC__/images/icon_nav_select.png" alt="">
-	    </div>
-	    <p class="weui_grid_label">
-	      提交建议
-	    </p>
-	  </a>
-	  <a href="list.html" class="weui_grid js_grid" data-id="cell">
-	    <div class="weui_grid_icon">
-	      <img src="__PUBLIC__/images/icon_nav_cell.png" alt="">
-	    </div>
-	    <p class="weui_grid_label">
-	      版本迭代
-	    </p>
-	  </a>
-	  <a href="list.html" class="weui_grid js_grid" data-id="toast">
-	    <div class="weui_grid_icon">
-	      <img src="__PUBLIC__/images/icon_nav_panel.png" alt="">
-	    </div>
-	    <p class="weui_grid_label">
-	      联系我们
-	    </p>
-	  </a>
-	</div>
-<!-- 九宫格结束 -->
-  </div>
-  <div class="weui_tabbar">
-    <a href="__MODULE__/weui/index" class="weui_tabbar_item weui_bar_item_on">
-      <div class="weui_tabbar_icon">
-        <img src="__PUBLIC__/images/home.jpg" alt="">
-      </div>
-      <p class="weui_tabbar_label">易学主页</p>
-    </a>
-    <a href="__MODULE__/weui/mclist" class="weui_tabbar_item">
-      <div class="weui_tabbar_icon">
-        <img src="__PUBLIC__/images/broadcast.jpg" alt="">
-      </div>
-      <p class="weui_tabbar_label">比赛考证</p>
-    </a>
-    <a href="__MODULE__/weui/newslist" class="weui_tabbar_item">
-      <div class="weui_tabbar_icon">
-        <img src="__PUBLIC__/images/news.png" alt="">
-      </div>
-      <p class="weui_tabbar_label">新闻资讯</p>
-    </a>
-    <a href="__MODULE__/weui/articlelist" class="weui_tabbar_item">
-      <div class="weui_tabbar_icon">
-        <img src="__PUBLIC__/images/mien.png" alt="">
-      </div>
-      <p class="weui_tabbar_label">励志人生</p>
-    </a>
-  </div>
-</div>
-
-
 
 </body>
 	<script type="text/javascript" src="__PUBLIC__/lib/jquery-2.1.4.js"></script>
@@ -151,7 +122,6 @@
         loop: true,
         autoplay: 3000
       });
-
     </script>
 
 </html>
