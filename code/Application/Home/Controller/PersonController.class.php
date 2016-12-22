@@ -12,17 +12,21 @@ class PersonController extends Controller {
 
     public function homepage(){
        if ($_SESSION['name'] == NULL) {
-          $this->redirect('home/login/login','请登录');
+          $this->success('请先登录',U('home/login/login'));
         }else{
           
           //输出个人信息
           $map['username']=$_SESSION['name'];
           $users=M("users")->where($map)->select();
-          $user_certificate=M("user_certificate")->where('num=0')->order('time desc')->limit(4)->select();
-          $user_match=M("user_match")->where('num=0')->order('time desc')->limit(4)->select();
           $this->assign("users",$users[0]);
-          $this->assign("user_certificate",$user_certificate);
-          $this->assign("user_match",$user_match);
+          $certificate=M("certificate")->table(array('user_certificate'=>'a','certificate'=>'b'))
+                                       ->where(" a.certificateid=b.cid AND num=0") 
+                                       ->order('time desc')->limit(4)->select(); 
+          $match=M("match")->table(array('user_match'=>'a','match'=>'b'))
+                                       ->where(" a.matchid=b.mid AND num=0") 
+                                       ->order('time desc')->limit(4)->select();                             
+          $this->assign("certificate",$certificate);
+          $this->assign("match",$match);
           $this->display();
         
       }
@@ -35,17 +39,19 @@ class PersonController extends Controller {
           //消息获取
           $map['username']=$_SESSION['name'];
           $users=M("users")->where($map)->select();
-          $user_certificate=M("user_certificate")->order('time desc')->select();
-          $user_match=M("user_match")->order('time desc')->select();
+          $certificate=M("certificate")->table(array('user_certificate'=>'a','certificate'=>'b'))
+                                       ->where(" a.certificateid=b.cid ") ->select(); 
+          $match=M("match")->table(array('user_match'=>'a','match'=>'b'))
+                                       ->where(" a.matchid=b.mid ") ->select();                              
           $this->assign("users",$users[0]);
-          $this->assign("user_certificate",$user_certificate);
-          $this->assign("user_match",$user_match);
+          $this->assign("certificate",$certificate);
+          $this->assign("match",$match);
           $this->display();
         }
     }
     public function permessage(){
         if ($_SESSION['name'] == NULL) {
-          $this->redirect('home/login/login','请登录');
+          $this->success('请先登录',U('home/login/login'));
         }else{
           $map['username']=$_SESSION['name'];
           $users=M("users")->where($map)->select();
@@ -55,7 +61,7 @@ class PersonController extends Controller {
   }
     public function add($username){
         if ($_SESSION['name'] == NULL) {
-          $this->redirect('home/login/login','请登录');
+          $this->success('请先登录',U('home/login/login'));
         }else{
          $data=array(
           'username' =>I('post.username'),
@@ -96,7 +102,7 @@ class PersonController extends Controller {
 
     public function repassword(){
         if ($_SESSION['name'] == NULL) {
-          $this->redirect('home/login/login','请登录');
+          $this->success('请先登录',U('home/login/login'));
         }else{
           $map['username']=$_SESSION['name'];
           $users=M("users")->where($map)->select();
@@ -108,7 +114,7 @@ class PersonController extends Controller {
       public function changepswd($username){
         //先判断是否登录
        if($_SESSION['name'] == NULL){
-         $this->redirect('home/login/login');
+         $this->success('请先登录',U('home/login/login'));
        }else{
           $users=M("users");
           $password =$users->getFieldByusername($username,'password');
