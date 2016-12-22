@@ -6,7 +6,39 @@
 */
 namespace Admin\Controller;
 use Think\Controller;
+use \Library\Page;
 class ForumController extends Controller {
+  //论坛content页获取评论数据的方法
+    protected function _comment($id){
+      /*对应id的评论*/
+        $forum_comment=M("forum_comment")->where("forumid=$id");
+      /*分页码*/
+    // 1. 获取记录总条数
+        $count =$forum_comment->count();
+        // 2. 设置（获取）每一页显示的个数
+        $pageSize =3;
+        // 3. 创建分页类对象
+        $page = new Page($count, $pageSize);
+        // 4. 分页查询
+        $Model=M();
+        $forum_comment=$Model->field('username,avatar_url,createtime,forum_comment,forum_answerid')
+                ->table(array('users'=>'a','forum_comment'=>'b'))
+                ->where("a.userid=b.userid AND forumid=$id")->order('createtime')
+                ->limit($page->firstRow.','.$page->listRows)
+                  ->select();
+        // 5.定义分页样式
+        $page->setConfig('prev','上一页');
+        $page->setConfig('next','下一页');
+        // 6. 输出查询结果
+        $pages=$page->show();
+        // 7.构建返回结果
+        $res['id']=$id;
+        $res['pages']=$pages;
+        $res['count']=$count;
+        $res['forum_comment']=$forum_comment;
+        return $res;
+    }
+
 	//论坛管理帖子页
      public function index(){
      	$Model=M();
@@ -16,14 +48,13 @@ class ForumController extends Controller {
     		  			->order('readcount desc')->select();
 	   	$this->assign("forum",$forum);
 	   	$this->display();
-     }
+    }
 
-     //论坛管理评论页
-      public function questions($forumid){
-    	//找id对应的帖子内容
-    	$forum=M("forum");
-    	//阅读量
-    	$forum=$forum->find($forumid);
+    //论坛管理评论页
+    public function questions($forumid){
+  	//找id对应的帖子内容
+  	$forum=M("forum");
+  	$forum=$forum->find($forumid);
 		$this->assign("fcontent",$forum);
 
 		//分类名称
@@ -44,8 +75,15 @@ class ForumController extends Controller {
 		//dump($typename);
 		$this->assign("username",$username);
 
-        //输出结果
-        $this->display();
+    //评论数据
+    $res=$this->_comment($forumid);
+    $comment=$res['forum_comment'];
+    $this->assign('id', $res['id']);
+    $this->assign('pages', $res['pages']);
+    $this->assign('count_comment',$res['count']);
+    $this->assign('comment',$comment);
+    //输出结果
+    $this->display();
     }
     
     //论坛帖子删除函数
@@ -56,16 +94,14 @@ class ForumController extends Controller {
     }
 
     //论坛管理评论
-    public function commentt(){
+    public function comment(){
     	$Model=M();
         $forum_comment=$Model->field('username,forum_commentid,title,createtime,forum_comment,b.forumid')
     		  			->table(array('users'=>'a','forum_comment'=>'b','forum'=>'c'))
     		  			->where("a.userid=b.userid AND b.forumid=c.forumid")
     		  			->order('createtime desc')->select();
-        $forum_commentjson = $this->ajaxReturn($forum_comment,'JSON');
-        echo $forum_commentjson;
-	   	/*$this->assign("comment",$forum_comment);
-	   	$this->display();*/
+	   	  $this->assign("comment",$forum_comment);
+	   	  $this->display();
 	}
 
 	//论坛管理评论
@@ -73,13 +109,5 @@ class ForumController extends Controller {
 		if (M("forum_comment")->delete($forum_commentid)) {
             $this->success("删除成功！");
         }
-    }
-    public function test(){ 
-      	$forum= M('forum');
-      	$data = $forum->select();
-      	$datajson = $this->ajaxReturn($data,'JSON');
-      	//dump($data);
-
-      	echo $datajson;
     }
  }
