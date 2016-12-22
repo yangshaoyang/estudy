@@ -21,7 +21,4 @@ return array(
     'DB_SLAVE_NO'            => '', // 指定从服务器序号
 
     'DEFAULT_FILTER' =>false,
-
-
-
 );
