@@ -70,7 +70,8 @@
                   <ul class="topul">
                     <volist name="article" id="vo">
                       <li>
-                        <a href="__CONTROLLER__/article/articledetails/articleid/{$vo.articleid}">{$vo.articletitle}</a>
+                      <!--文章标题字符串截取-->
+                        <a href="__CONTROLLER__/article/articledetails/articleid/{$vo.articleid}">{$vo.articletitle|msubstr=0,15,'utf-8',true}</a>
                         <span>{$vo.articletime}</span>
                       </li>
                     </volist>
