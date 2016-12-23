@@ -43,9 +43,9 @@
                 <td align="center"> {$vo.newssource}</td>
                 <td align="center"> {$vo.newstime}</td>
                 <td align="center">
-                    <button type="button" class="btn-green" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/news/newsetails/newsid/{$vo.newsid}', title:'{$vo.newstitle}', max:true}">查看</button>&nbsp;
-                    <button type="button" class="btn-blue" data-toggle="dialog" data-options="{id:'', url:'__MODULE__/news/editnews/newsid/{$vo.newsid}', title:'修改文章：{$vo.newstitle}', max:true}">修改</button>&nbsp;
-                    <button type="button" class="btn-red" data-toggle="alertmsg" target="ajaxTodo" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/news/delete/newsid/{$vo.newsid}');window.close();}}">删除</button>
+                    <button type="button" class="btn-green" data-toggle="dialog" data-icon="sign-in" data-options="{id:'', url:'__MODULE__/news/newsetails/newsid/{$vo.newsid}', title:'{$vo.newstitle}', max:true}">查看</button>&nbsp;
+                    <button type="button" class="btn-blue" data-toggle="dialog" data-icon="edit" data-options="{id:'', url:'__MODULE__/news/editnews/newsid/{$vo.newsid}', title:'修改文章：{$vo.newstitle}', max:true}">修改</button>&nbsp;
+                    <button type="button" class="btn-red" data-toggle="alertmsg" data-icon="times" target="ajaxTodo" data-options="{type:'confirm', msg:'你确定要删除吗？', okCall:function(){window.open('__MODULE__/news/delete/newsid/{$vo.newsid}');window.close();}}">删除</button>
                 </td>
             </tr>
             </volist>
