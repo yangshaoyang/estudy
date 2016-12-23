@@ -11,7 +11,7 @@ code-代码目录；
 
 [前台URL](http://estudy.csbroswer.cn)
 
-[后台URL](http://houtai.csbroswer.cn)
+[后台URL](http://estudy.timeso.cc)
 
 [redmine地址](http://www.hostedredmine.com/projects/php)
 
