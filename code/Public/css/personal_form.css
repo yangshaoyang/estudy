@@ -39,9 +39,9 @@
 	margin:30px auto 15px;
 	text-align:center;
 	}
-.form1 form{
+/*.form1 form{
 	margin-left:170px;
-	}
+	}*/
 
 .form1 form table{
 	text-align:right;
@@ -327,7 +327,14 @@ textarea{resize: none;}
 	width: 42px;
 	height: 30px;
 }
+#hobbys{
+	width: 42px;
+	height: 30px;
+}
 #forms{
+	padding-left: 30px;
+}
+#formss{
 	padding-left: 30px;
 }
 .Button{
