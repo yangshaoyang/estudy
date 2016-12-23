@@ -14,37 +14,35 @@ class PersonController extends Controller {
        if ($_SESSION['name'] == NULL) {
           $this->success('请先登录',U('home/login/login'));
         }else{
-          
+
           //输出个人信息
           $map['username']=$_SESSION['name'];
           $username=$_SESSION['name'];
           $users=M("users")->where($map)->select();
           $this->assign("users",$users[0]);
           $certificate=M("certificate")->table(array('user_certificate'=>'a','certificate'=>'b'))
-                                       ->where(" a.certificateid=b.cid AND num=0 AND username='$username'") 
-                                       ->order('time desc')->limit(4)->select(); 
+                                       ->where(" a.certificateid=b.cid AND num=0 AND username='$username'")
+                                       ->order('time desc')->limit(4)->select();
           $match=M("match")->table(array('user_match'=>'a','match'=>'b'))
-                                       ->where(" a.matchid=b.mid AND num=0 AND username='$username'") 
-                                       ->order('time desc')->limit(4)->select();                             
+                                       ->where(" a.matchid=b.mid AND num=0 AND username='$username'")
+                                       ->order('time desc')->limit(4)->select();
           $this->assign("certificate",$certificate);
           $this->assign("match",$match);
           $this->display();
-        
       }
     }
     public function message(){
        if ($_SESSION['name'] == NULL) {
           $this->success('请先登录',U('home/login/login'));
         }else{
-          
           //消息获取
           $map['username']=$_SESSION['name'];
           $username=$_SESSION['name'];
           $users=M("users")->where($map)->select();
           $certificate=M("certificate")->table(array('user_certificate'=>'a','certificate'=>'b'))
-                                       ->where(" a.certificateid=b.cid AND username='$username'") ->select(); 
+                                       ->where(" a.certificateid=b.cid AND username='$username'") ->select();
           $match=M("match")->table(array('user_match'=>'a','match'=>'b'))
-                                       ->where(" a.matchid=b.mid AND username='$username' ") ->select();                              
+                                       ->where(" a.matchid=b.mid AND username='$username' ") ->select();
           $this->assign("users",$users[0]);
           $this->assign("certificate",$certificate);
           $this->assign("match",$match);
@@ -130,7 +128,7 @@ class PersonController extends Controller {
             );
           // dump($data);
          if(md5(I('post.oldpassword')) == $password && $data==$Data  ){
-            
+
             if(strlen(I('post.newpassword'))>=6){
              $map['username']=$username;
              $num=$users->where($map)->save($data);
@@ -159,7 +157,7 @@ class PersonController extends Controller {
       $user_certificate=M("user_certificate")->table(array('user_certificate'=>'a','certificate'=>'b'))
                              ->where("a.certificateid=b.cid AND cid=$cid")
                              ->setInc('num');
-      $this->assign("user_certificate",$user_certificate);                       
+      $this->assign("user_certificate",$user_certificate);
       $this->display();
     }
     public function umcontent($mid){
@@ -169,11 +167,11 @@ class PersonController extends Controller {
       $this->assign("tmatch",$tmatch);
       $news=M("news")->order("newsid desc")->limit(7)->select();//热门资讯获取
       $this->assign("news",$news);
-      //消息点击数量加1 
+      //消息点击数量加1
       $user_match=M("user_match")->table(array('user_match'=>'a','match'=>'b'))
                              ->where("a.matchid=b.mid AND mid=$mid")
                              ->setInc('num');
-      $this->assign("user_match",$user_match); 
+      $this->assign("user_match",$user_match);
       $this->display();
     }
     public function search(){
@@ -185,9 +183,9 @@ class PersonController extends Controller {
           $users=M("users")->where($map)->select();
           $this->assign("users",$users[0]);
           $certificate=M("certificate")->table(array('user_certificate'=>'a','certificate'=>'b'))
-                                       ->where(" a.certificateid=b.cid AND cname like '%$data%' AND username='$username'") ->select(); 
+                                       ->where(" a.certificateid=b.cid AND cname like '%$data%' AND username='$username'") ->select();
           $match=M("match")->table(array('user_match'=>'a','match'=>'b'))
-                                       ->where(" a.matchid=b.mid  AND mname like '%$data%' AND username='$username'") ->select();                              
+                                       ->where(" a.matchid=b.mid  AND mname like '%$data%' AND username='$username'") ->select();
           $this->assign("certificate",$certificate);
           $this->assign("match",$match);
           if ($match == NULL && $certificate == NULL) {
