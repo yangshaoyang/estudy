@@ -8,7 +8,7 @@ class NewsController extends Controller {
       $this->_db = M('news');
     }
     public function index(){
-    	$this->display();
+      $this->display();
     }
 
     public function newslist(){
@@ -45,11 +45,11 @@ class NewsController extends Controller {
 
     public function newscontent($newsid){
         //获取帖子文章内容
-        $match=M("match")->order("mid desc")order('time desc')->->limit(5)->select();
+        $match=M("match")->order("mid desc")->order('mtime desc')->limit(5)->select();
         $this->assign("match",$match);
-        $textual=M("certificate")->order("cid desc")order('time desc')->->limit(5)->select();
+        $textual=M("certificate")->order("cid desc")->order('ctime desc')->limit(5)->select();
         $this->assign("textual",$textual);
-        $new=M("news")->order("newsid desc")->order('time desc')->limit(5)->select();
+        $new=M("news")->order("newsid desc")->order('newstime desc')->limit(5)->select();
         $this->assign("news",$new);
         $news = M('news')->find($newsid);
         $this->assign('newscontent',$news);
@@ -57,19 +57,19 @@ class NewsController extends Controller {
 
     }
     public function pages (){
-    	//1.获取记录总条数
-    	$count = $this->_db->count();
-    	//2.设置（获取）每一页显示的个数
-    	$pageSize = C('PAGE_SIZE');
-    	//3.创建分类对象
-    	$page = new Page($count,$pageSize);
-    	$condition = array();
-    	$condition['newsid'] = 1;
-    	$results = $this->_db->limit($page->firstRow.','.$page->listRows)->select();
-    	//4.输出查询结果
-    	$this->assign('news',$results);
-    	//5.输出分页码
-    	$page->setConfig('prev','上一页');
+      //1.获取记录总条数
+      $count = $this->_db->count();
+      //2.设置（获取）每一页显示的个数
+      $pageSize = C('PAGE_SIZE');
+      //3.创建分类对象
+      $page = new Page($count,$pageSize);
+      $condition = array();
+      $condition['newsid'] = 1;
+      $results = $this->_db->limit($page->firstRow.','.$page->listRows)->select();
+      //4.输出查询结果
+      $this->assign('news',$results);
+      //5.输出分页码
+      $page->setConfig('prev','上一页');
      $page->setConfig('next','下一页');
      //6.显示视图文件
      $this->display();
