@@ -5,7 +5,7 @@
     <link href="__PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
     <link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="__PUBLIC__/assets/ico/favicon.ico">
-    <script src="__PUBLIC__/js/edit.js" type="text/javascript" ></script>
+    <!-- <script src="__PUBLIC__/js/edit.js" type="text/javascript" ></script> -->
     <script src="__PUBLIC__/js/min/flickerplate.min.js" type="text/javascript"></script>
     <!-- 百度CDN -->
     <script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js" type='text/javascript'></script>
@@ -47,11 +47,15 @@
                     <if condition="$Think.session.name neq null">
                         <a href="{:U('/home/person/homepage')}" class="log">{$Think.session.name}</a>
                         <a href="{:U('/home/login/exits')}" class="log sign">注销</a>
-                        <p>客服邮箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;estudy@csbroswer.cn</p>
+                        <p>
+                            <a href="mailto:estudy@csbroswer.cn?subject=联系易学助手&body=您想告诉我们什么？">客服邮箱&nbsp;&nbsp;&nbsp;estudy@csbroswer.cn</a>
+                        </p>
                         <else />
                         <a href="{:U('/home/login/login')}" class="log">登录</a>
                         <a href="{:U('/home/register')}" class="log sign">注册</a>
-                        <p>客服邮箱&nbsp;&nbsp;&nbsp;<a href="mailto:estudy@csbroswer.cn?subject=联系易学助手&body=您想告诉我们什么？">estudy@csbroswer.cn</a></p>
+                        <p>
+                            <a href="mailto:estudy@csbroswer.cn?subject=联系易学助手&body=您想告诉我们什么？">客服邮箱&nbsp;&nbsp;&nbsp;estudy@csbroswer.cn</a>
+                        </p>
                     </if>
                 </div>
                 <div class="line"></div>
@@ -141,26 +145,26 @@
         <div class="ctop">
             <div class="ctop1">
                 <a href="{:U('/home/article/article')}" class="bnfirst2">
-                <img src="__PUBLIC__/images/dtzf.png" width="90" height="90" alt="dtzf" />
-                <h1>励志人生</h1>
+                    <img src="__PUBLIC__/images/dtzf.png" width="90" height="90" alt="dtzf" />
+                    <h1>励志人生</h1>
                 </a>
             </div>
             <div class="ctop1 ctop2 ctop3">
                 <a href="{:U('/home/certificate/certificatelist')}" class="bnfirst2">
-                <img src="__PUBLIC__/images/yhfy.png" width="90" height="90" alt="dtzf" />
-                <h1>考证攻略</h1>
+                    <img src="__PUBLIC__/images/yhfy.png" width="90" height="90" alt="dtzf" />
+                    <h1>考证攻略</h1>
                 </a>
             </div>
             <div class="ctop1 ctop2">
                 <a href="{:U('/home/match/matchlist')}" class="bnfirst2">
-                <img src="__PUBLIC__/images/zcjd.png" width="90" height="90" alt="dtzf" />
-                <h1>比赛助手</h1>
+                    <img src="__PUBLIC__/images/zcjd.png" width="90" height="90" alt="dtzf" />
+                    <h1>比赛助手</h1>
                 </a>
             </div>
             <div class="ctop1 ctop2 ctop3">
                 <a href="{:U('/home/forum/index')}" class="bnfirst2">
-                <img src="__PUBLIC__/images/qyfw.png" width="90" height="90" alt="dtzf" />
-                <h1>论坛交流</h1>
+                    <img src="__PUBLIC__/images/qyfw.png" width="90" height="90" alt="dtzf" />
+                    <h1>论坛交流</h1>
                 </a>
             </div>
         </div>
@@ -256,7 +260,9 @@
                     </li>
                 </ul>
                 <p class="bq">版权所有 2016 易学助手项目组 保留一切权利 冀ICP备16024873号</p>
-                <p class="dh">联系邮箱：estudy@csbroswer.cn</p>
+                <p class="dh">
+                    联系邮箱：<a href="mailto:estudy@csbroswer.cn?subject=联系易学助手&body=您想告诉我们什么？" style="color: white;font-size: 12px;">&nbsp;estudy@csbroswer.cn</a>
+                </p>
             </div>
             <div class="footermiddle footerr">
                 <a href="#" class="footernav">友情链接</a>
@@ -267,8 +273,7 @@
                         $dbPswd='';
                         $pdo = new PDO($dsn,$dbUser, $dbPswd);
                         $sql = "set names utf8";
-                        $pdo->
-                    exec($sql);
+                        $pdo->exec($sql);
                         if(!$pdo){
                             echo '连接失败';
                         }
@@ -276,8 +281,7 @@
                         $sql="select * from blogroll";
                         $sta = $pdo->query($sql);
                         $urls = $sta->fetchAll();
-                        for($i=0;$i
-                    <count($urls);$i++){    // 循环读取二维数组中的数据
+                        for($i=0;$i<count($urls);$i++){    // 循环读取二维数组中的数据
                 ?>
                         <li>
                             <a href="<?php echo $urls[$i]['url'];?>

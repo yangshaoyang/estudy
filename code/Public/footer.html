@@ -17,11 +17,15 @@
                 </li>
             </ul>
             <p class="bq">版权所有 2016 易学助手项目组 保留一切权利 冀ICP备16024873号</p>
-            <p class="dh">联系邮箱：estudy@csbroswer.cn</p>
+            <p class="dh">
+                联系邮箱：
+                <a href="mailto:estudy@csbroswer.cn?subject=联系易学助手&body=您想告诉我们什么？" style="color: white;font-size: 12px;">&nbsp;estudy@csbroswer.cn</a>
+            </p>
         </div>
         <div class="footermiddle footerr">
             <a href="#" class="footernav">友情链接</a>
-            <ul><?php
+            <ul>
+                <?php
                         $dsn="mysql:host=localhost;dbname=estudy";
                         $dbUser='root';
                         $dbPswd='';
@@ -35,18 +39,16 @@
                         $sql="select * from blogroll";
                         $sta = $pdo->query($sql);
                         $urls = $sta->fetchAll();
-
                         for($i=0;$i<count($urls);$i++){    // 循环读取二维数组中的数据
                 ?>
-                <li>
-                     <a href="<?php echo $urls[$i]['url'];?>" class="yqlj yqlj2" target="_blank" ><?php echo $urls[$i]['name'];?></a>
-                </li>
-                <?php
+                    <li>
+                        <a href="<?php echo $urls[$i]['url'];?>
+                            " class="yqlj yqlj2" target="_blank" >
+                            <?php echo $urls[$i]['name'];?></a>
+                    </li>
+                    <?php
                 }
-                ?>
-            </ul>
+                ?></ul>
+            </div>
         </div>
     </div>
-</div>
-
-
