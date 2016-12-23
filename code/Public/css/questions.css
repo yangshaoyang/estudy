@@ -51,9 +51,10 @@
 .qcontent{
 	font-weight: normal;
 	margin-top: 14px;
-   }
+}
  .qcontent p{
- 	 font-size: 15px;
+ 	font-size: 14px;
+	line-height: 24px;
  }
 .question h2{
 	font-weight:normal;}
