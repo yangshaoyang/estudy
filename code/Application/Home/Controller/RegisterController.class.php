@@ -72,7 +72,7 @@ class RegisterController extends Controller {
 		//smtp登录的密码 这里填入“授权码” 
 		$mail->Password = 'uiukwkdvwtylebjd';
 		//设置发件人邮箱地址 这里填入上述提到的“发件人邮箱”
-		$mail->From = 'estudyid@csbroswer.cn';
+		$mail->From = 'estudy@csbroswer.cn';
 		//邮件正文是否为html编码 注意此处是一个方法 不再是属性 true或false
 		$mail->isHTML(true); 
 		//设置收件人邮箱地址 该方法有两个参数 第一个参数为收件人邮箱地址 第二参数为给该地址设置的昵称 不同的邮箱系统会自动进行处理变动 这里第二个参数的意义不大
