@@ -92,7 +92,7 @@ class RegisterController extends Controller {
 		//发送命令 返回布尔值 
 		//PS：经过测试，要是收件人不存在，若不出现错误依然返回true 也就是说在发送之前 自己需要些方法实现检测该邮箱是否真实有效
 		$status = $mail->send();
-	    $this->success('请接收邮件进行验证,没有验证的用户无法登陆',U('/'),10);
+	    $this->success('请接收邮件进行验证,没有验证的用户无法登陆',U('/'),6);
 		}
 	}
 	public function findpassword(){
