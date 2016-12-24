@@ -81,7 +81,7 @@
         	<volist name="forum" id="vo">
 	        	<li>
 	            	<div class="litop">
-	                	<h1><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title}</a></h1>
+	                	<h1><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title|msubstr=0,34,'utf-8',true}</a></h1>
 	                    <!--<h2>刚入学的小萌新求指导</h2>-->
 	                </div>
 	                <p><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.content|msubstr=0,163,'utf-8',true}</a></p>
