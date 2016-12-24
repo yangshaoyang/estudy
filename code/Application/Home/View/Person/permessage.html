@@ -8,10 +8,10 @@
 <link href="__PUBLIC__/css/personal_form.css" rel="stylesheet" type="text/css" />
 <title>个人信息管理</title>
 <script type="text/javascript">
-        function F_Open_dialog() 
-       { 
-            document.getElementById("btn_file").click(); 
-       } 
+        function F_Open_dialog()
+       {
+            document.getElementById("btn_file").click();
+       }
 </script>
 </head>
 <body>
@@ -24,7 +24,7 @@
         <!--个人中心left-->
         <div class="personal_left">
             <div class="user">
-               
+
                 <img src="__PUBLIC__/{$users.avatar_url}" width="150" height="150"   />
                 <input type="file" id="btn_file"   style="display:none" name='avatar_url' >
                 <p>欢迎您   {$_SESSION['name']}</p>
@@ -49,7 +49,7 @@
                 <table cellspacing="30">
                     <tr>
                         <td>用户名</td>
-                        <td><input type="text" readonly="" name="username" value="{$users.username}" /></td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$users.username}&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: gray">（注册后不可更改）</span></td>
                     </tr>
                     <tr>
                         <td >性别</td>
@@ -90,7 +90,7 @@
                     <tr>
                         <td>&nbsp;</td>
                     </tr>
-                   
+
                     <tr>
                         <td colspan="2" class="button"><input type="submit" value="提交" name="submit" /></td>
                     </tr>
