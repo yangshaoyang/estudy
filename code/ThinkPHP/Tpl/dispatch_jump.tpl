@@ -40,11 +40,17 @@
 					<if condition="$Think.session.name neq null">
 						<a href="{:U('/home/person/homepage')}" class="log">{$Think.session.name}</a>
 						<a href="{:U('/home/login/exits')}" class="log sign">注销</a>
-						<p>客服热线&nbsp;&nbsp;&nbsp;400&nbsp;-&nbsp;0000&nbsp;-&nbsp;000</p>
+						<p>
+							<a href="mailto:estudy@csbroswer.cn?subject=联系易学助手&body=您想告诉我们什么？">客服邮箱</a>
+							&nbsp;&nbsp;&nbsp;estudy@csbroswer.cn
+						</p>
 						<else />
 						<a href="{:U('/home/login/login')}" class="log">登录</a>
 						<a href="{:U('/home/register')}" class="log sign">注册</a>
-						<p>客服热线&nbsp;&nbsp;&nbsp;400&nbsp;-&nbsp;0000&nbsp;-&nbsp;000</p>
+						<p>
+							<a href="mailto:estudy@csbroswer.cn?subject=联系易学助手&body=您想告诉我们什么？">客服邮箱</a>
+							&nbsp;&nbsp;&nbsp;estudy@csbroswer.cn
+						</p>
 					</if>
 				</div>
 				<div class="line"></div>
@@ -74,16 +80,14 @@
 			<div class="system-message" style="position:absolute;text-align:center;padding-top:7%;left:35%;bottom:60%">
 				<?php if(isset($message)) {?>
 				<div style="position:absolute;text-align:center;left:-190%;top:40%">
-					<img src="__PUBLIC__/images/success.png" alt="success" width="220px">
-				</div>
+					<img src="__PUBLIC__/images/success.png" alt="success" width="220px"></div>
 				<div class="message" style="position:absolute;left:38%;bottom:-100%">
 					<h1>eStudy提醒您</h1>
 					<p class="success">
 						<?php echo($message); ?></p>
 					<?php }else{?>
 					<div style="position:absolute;text-align:center;left:-110%;top:40%">
-						<img src="__PUBLIC__/images/404.png" alt="success"  width="200px">
-					</div>
+						<img src="__PUBLIC__/images/404.png" alt="success"  width="200px"></div>
 					<div class="message" style="position:absolute;left:38%;bottom:-80%">
 						<h1>eStudy提醒您</h1>
 						<p class="error">
