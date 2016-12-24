@@ -7,6 +7,7 @@
 namespace Admin\Controller;
 use Think\Controller;
 use \Library\Page;
+
 class ForumController extends Controller {
   //论坛content页获取评论数据的方法
     protected function _comment($id){
@@ -16,7 +17,7 @@ class ForumController extends Controller {
     // 1. 获取记录总条数
         $count =$forum_comment->count();
         // 2. 设置（获取）每一页显示的个数
-        $pageSize =3;
+        $pageSize =10;
         // 3. 创建分页类对象
         $page = new Page($count, $pageSize);
         // 4. 分页查询
