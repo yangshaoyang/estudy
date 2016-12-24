@@ -3,7 +3,12 @@ namespace Home\Controller;
 use Think\Controller;
 class WeuiController extends Controller {
     public function index(){
-        $this->display();
+        $agent = $_SERVER['HTTP_USER_AGENT'];//获取设备
+        if(strpos($agent,"NetFront") || strpos($agent,"iPhone") || strpos($agent,"MIDP-2.0") || strpos($agent,"Opera Mini") || strpos($agent,"UCWEB") || strpos($agent,"Android") || strpos($agent,"Windows CE") || strpos($agent,"SymbianOS")){
+            $this->display();
+        }else{
+            header("Location:http://estudy.csbroswer.cn");
+        }
     }
 
     public function matchlist(){
