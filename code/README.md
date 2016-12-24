@@ -16,3 +16,6 @@ document-文档目录；
 [后台URL](http://estudy.timeso.cc)
 
 [redmine地址](http://www.hostedredmine.com/projects/php)
+
+![微信公众号](http://estudy.csbroswer.cn/public/images/ewms.jpg "微信公众号二维码")
+  公众号二维码
