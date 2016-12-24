@@ -14,10 +14,11 @@ class LoginController extends Controller {
         $result = $User->getFieldByEmail($email,'password');
         $username = $User->getFieldByEmail($email,'username');
         $id = $User->getFieldByEmail($email,'userid');
-
+        $num = count($username);
         $state = $User->getFieldByEmail($email,'state');
         $arr['flag']=1;
 
+        if($num == 1){
         if($state==1){  
   
             if($password==$result){  
@@ -36,6 +37,10 @@ class LoginController extends Controller {
   
                $this->ajaxReturn($arr,json);  
   
+        }
+        }else{
+            $arr['flag']=0; 
+            $this->ajaxReturn($arr,json); 
         }
     }
     public function logined(){

@@ -100,7 +100,7 @@ function chk_form(){
             <span>普通登录</span>
           </h1>
           <h1 id="loginSuccess" style="color:red">您的账号未激活，请收到邮件激活后登录</h1>
-          <h1 id="loginError" style="color:red">账号密码不正确</h1>
+          <h1 id="loginError" style="color:red">账号或密码不正确</h1>
           <form action="{:U('/home/login/logined')}" method="post" onsubmit="return chk_form();" id="form">
             <input type="text"  name="yourname" id="user" class="email" placeholder="请输入邮箱">
 
