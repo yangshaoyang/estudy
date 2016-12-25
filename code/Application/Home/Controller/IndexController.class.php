@@ -3,13 +3,13 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-    	$match=M("match")->order("mid desc")->limit(5)->select();
-    	$this->assign("match",$match);
+    		$match=M("match")->order("mid desc")->limit(5)->select();
+    		$this->assign("match",$match);
 
-    	$matchs=M("match")->order("mid desc")->limit(2)->select();
-    	$this->assign("matchs",$matchs);
+    		$matchs=M("match")->order("mid desc")->limit(2)->select();
+    		$this->assign("matchs",$matchs);
 
-    	$textual=M("certificate")->order("cid desc")->limit(5)->select();
+    		$textual=M("certificate")->order("cid desc")->limit(5)->select();
 		$this->assign("textual",$textual);
 
 		$textuals=M("certificate")->order("cid desc")->limit(2)->select();

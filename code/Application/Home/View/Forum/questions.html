@@ -47,10 +47,17 @@
                         </h1>
                         <if condition="$Think.session.name neq null">
                             <div class="sc" >
-                            	<span>
-                                	<img src="__PUBLIC__/images/report.png" width="16" height="16" alt="report" />
-                                    <a href="javascript:;" onclick="return alertMsg('确定要举报吗？',1,'__CONTROLLER__/report/username/{$Think.session.name}/forumid/{$fcontent.forumid}');">举报</a>
-                                </span>
+                                <eq name="Think.session.id" value="$fcontent.userid">
+                                    <!-- 相等删除 -->
+                                    <img src="__PUBLIC__/images/report.png" width="16" height="16" alt="report" />
+                                    <a href="javascript:;" onclick="return alertMsg('确定要删帖吗？',1,'【方法url】');">删除</a>
+                                    <else/>
+                                    <!-- 不相等举报 -->
+                                    <span>
+                                        <img src="__PUBLIC__/images/report.png" width="16" height="16" alt="report" />
+                                        <a href="javascript:;" onclick="return alertMsg('确定要举报吗？',1,'__CONTROLLER__/report/username/{$Think.session.name}/forumid/{$fcontent.forumid}');">举报</a>
+                                    </span>
+                                </eq>
                             </div>
                         </if>
                     </div>
@@ -91,7 +98,6 @@
                             <div class="liright">
                                 <div class="rtop">
                                     <h3>姓名：{$vo.username}</h3>
-                                    <!--<a>和TA交流</a>-->
                                     <div class="ssfl ssfl2 ssflul">
                                         <img src="__PUBLIC__/images/sj.gif" width="15" height="15" alt="sj" />
                                         <span>时间：{$vo.createtime}</span>
@@ -106,7 +112,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--<span class="hf">回复</span>-->
                         </li>
                     </volist>
                 </ul>
@@ -125,8 +130,8 @@
                             <script id="editor" type="text/plain" style="width:660px;height:500px;"></script>
 
                             <div>
-                            	<input hidden="hidden" id=session value="{$Think.session.name}" /> 
-                            	<input hidden="hidden" name="forumid" value="{$id}" /> 
+                                <input hidden="hidden" id=session value="{$Think.session.name}" />
+                                <input hidden="hidden" name="forumid" value="{$id}" />
                                 <input class="post_button" type="submit" value="发表" />
                             </div>
                         </div>
