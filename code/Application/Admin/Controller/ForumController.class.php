@@ -14,7 +14,7 @@ class ForumController extends Controller {
       /*对应id的评论*/
         $forum_comment=M("forum_comment")->where("forumid=$id");
       /*分页码*/
-    // 1. 获取记录总条数
+         // 1. 获取记录总条数
         $count =$forum_comment->count();
         // 2. 设置（获取）每一页显示的个数
         $pageSize =10;
@@ -42,7 +42,7 @@ class ForumController extends Controller {
 
 	//论坛管理帖子页
      public function index(){
-     	$Model=M();
+        $Model=M();
         $forum=$Model->field('typename,username,forumid,title,posttime,readcount')
     		  			->table(array('users'=>'a','forum'=>'b','forum_sort'=>'c'))
     		  			->where("a.userid=b.userid AND b.typeid=c.typeid")
@@ -56,37 +56,34 @@ class ForumController extends Controller {
   	//找id对应的帖子内容
   	$forum=M("forum");
   	$forum=$forum->find($forumid);
-		$this->assign("fcontent",$forum);
-
-		//分类名称
-		//1.构造查询条件
-		$condition=array();
-		$condition['typeid']=M("forum")->where("forumid=$forumid")->getField('typeid');
-		//2.查询分类名称
-		$typename=M("forum_sort")->where($condition)->getField('typename');
-		//dump($typename);
-		$this->assign("typename",$typename);
-
-		//发帖人名称
-		//1.构造查询条件
-		$condition=array();
-		$condition['userid']=M("forum")->where("forumid=$forumid")->getField('userid');
-		//2.查询分类名称
-		$username=M("users")->where($condition)->getField('username');
-		//dump($typename);
-		$this->assign("username",$username);
-
-    //评论数据
-    $res=$this->_comment($forumid);
-    $comment=$res['forum_comment'];
-    $this->assign('id', $res['id']);
-    $this->assign('pages', $res['pages']);
-    $this->assign('count_comment',$res['count']);
-    $this->assign('comment',$comment);
-    //输出结果
-    $this->display();
+	$this->assign("fcontent",$forum);
+	//分类名称
+	//1.构造查询条件
+	$condition=array();
+	$condition['typeid']=M("forum")->where("forumid=$forumid")->getField('typeid');
+	//2.查询分类名称
+	$typename=M("forum_sort")->where($condition)->getField('typename');
+	//dump($typename);
+	$this->assign("typename",$typename);
+	//发帖人名称
+	//1.构造查询条件
+	$condition=array();
+	$condition['userid']=M("forum")->where("forumid=$forumid")->getField('userid');
+	//2.查询分类名称
+	$username=M("users")->where($condition)->getField('username');
+	//dump($typename);
+	$this->assign("username",$username);
+          //评论数据
+          $res=$this->_comment($forumid);
+          $comment=$res['forum_comment'];
+          $this->assign('id', $res['id']);
+          $this->assign('pages', $res['pages']);
+          $this->assign('count_comment',$res['count']);
+          $this->assign('comment',$comment);
+          //输出结果
+          $this->display();
     }
-    
+
     //论坛帖子删除函数
      public function delete($forumid){
         if (M("forum")->delete($forumid)) {
@@ -96,18 +93,17 @@ class ForumController extends Controller {
 
     //论坛管理评论
     public function comment(){
-    	$Model=M();
+        $Model=M();
         $forum_comment=$Model->field('username,forum_commentid,title,createtime,forum_comment,b.forumid')
     		  			->table(array('users'=>'a','forum_comment'=>'b','forum'=>'c'))
     		  			->where("a.userid=b.userid AND b.forumid=c.forumid")
     		  			->order('createtime desc')->select();
-	   	  $this->assign("comment",$forum_comment);
-	   	  $this->display();
-	}
-
-	//论坛管理评论
-	public function deleteComment($forum_commentid){ 
-		if (M("forum_comment")->delete($forum_commentid)) {
+        $this->assign("comment",$forum_comment);
+        $this->display();
+    }
+    //论坛管理评论
+    public function deleteComment($forum_commentid){
+        if (M("forum_comment")->delete($forum_commentid)) {
             $this->success("删除成功！");
         }
     }

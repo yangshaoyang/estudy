@@ -4,7 +4,6 @@
 *开发功能：实现后台管理员对管理员的操作功能
 *修改时间：2016/12/09
 */
-
 namespace Admin\Controller;
 use Think\Controller;
 class AdminController extends Controller {

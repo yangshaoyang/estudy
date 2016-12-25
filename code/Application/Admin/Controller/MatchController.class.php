@@ -62,7 +62,6 @@ class MatchController extends Controller {
             'murl'   =>I('post.murl'),
             'mcontent'  =>I('post.content')
         );
-// dump($data);
         $Model=M("match");
         $num=$Model->where('mid='.$mid)->save($data);
         if($num>0){
@@ -73,7 +72,6 @@ class MatchController extends Controller {
         $this->display();
     }
     public function delete($mid){
-        $mid = $_GET['mid'];
         if (M("match")->delete($mid)) {
             $this->success("删除成功！");
     }

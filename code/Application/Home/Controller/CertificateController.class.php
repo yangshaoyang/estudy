@@ -59,7 +59,7 @@ class CertificateController extends Controller {
 		     $Model->create();
 		     $num=$Model->add($data);
 		     if($num>0){
-		     		$this->success("记录成功！将在证件考试开始前给您推送通知及注意事项，请尽快前往官网报名",U("certificatelist"),10);
+		     		$this->success("记录成功！将在证件考试开始前给您推送通知及注意事项，请尽快前往官网报名",U("certificatelist"),7);
 		     }else{
 		       	$this->error("添加失败 /(ㄒoㄒ)/~~，请重试",U("certificatelist"),4);
 		     }
