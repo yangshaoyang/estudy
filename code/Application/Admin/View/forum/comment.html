@@ -41,7 +41,7 @@
                 <tr id="pagination_test_ul1">
                     <td align="center">{$i}</td>
                     <td align="center">{$vo.username}</td>
-                    <td align="center">{$vo.forum_comment|msubstr=0,40,'utf-8',true}</td>
+                    <td align="center">{$vo.forum_comment|str_replace='<p>','',###|str_replace='<br/>','',###|str_replace='</p>','',###|msubstr=0,30,'utf-8',true}</td>
                     <td align="center">{$vo.createtime|substr=0,10}</td>
                     <td align="center">
                         <button type="button" class="btn-green" data-toggle="dialog" data-icon="sign-in" data-options="{id:'', url:'__MODULE__/forum/questions/forumid/{$vo.forumid}', title:'{$vo.title}', max:true}">查看</button>&nbsp;
