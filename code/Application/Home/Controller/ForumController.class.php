@@ -123,6 +123,23 @@ class ForumController extends Controller {
         $this->display('index');
     }
 
+    //论坛帖子删除函数
+    public function delete($forumid){
+        //删帖
+        $delforum=M("forum")->delete($forumid);
+        //删除帖子的评论
+        $comment=M("forum_comment")->where("forumid=$forumid");
+        $delcomment=$comment->delete();
+        if(!$comment->select){
+          $delcomment='1';
+        }
+        if($delforum&&$delcomment){
+            $this->success("删除成功！",U("index"));
+        }else{
+          $this->error("删除出错啦/(ㄒoㄒ)/~~");
+        }
+    }
+
     //处理论坛提交表单方法
     public function addForum(){
         if(IS_POST){
