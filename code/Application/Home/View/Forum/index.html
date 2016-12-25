@@ -22,132 +22,132 @@
 <!--首部导航栏-->
 <include file="Public/header.html"/>
 <div class="content">
-<div class="mybody">
-	<div class="bread">
-		<a href="{:U('/')}">易学助手</a> 
-		> 
-		<a href="{:U('/home/forum/')}">论坛</a>
-	</div>
-    <div class="left">
-    	<div class="search">
-            <form action="__CONTROLLER__/search?" method="get">
-                <input type="text" placeholder="请输入帖子名称" class="searchtext" name="text" value="{$_GET['text']}">
-                <input type="submit" value="开始搜索" class="searchbutton">
-                <a href="#sub"><input type="button" value="我要发帖" class="postbutton"></a>
-            </form>
+    <div class="mybody">
+    	<div class="bread">
+    		<a href="{:U('/')}">易学助手</a> 
+    		> 
+    		<a href="{:U('/home/forum/')}">论坛</a>
+    	</div>
+        <div class="left">
+        	<div class="search">
+                <form action="__CONTROLLER__/search?" method="get">
+                    <input type="text" placeholder="请输入帖子名称" class="searchtext" name="text" value="{$_GET['text']}">
+                    <input type="submit" value="开始搜索" class="searchbutton">
+                    <a href="#sub"><input type="button" value="我要发帖" class="postbutton"></a>
+                </form>
+            </div>
+            <div class="lp">
+        	<ul>
+        		<switch name="id">
+            		<case value="1">
+            			<li><a href="{:U('/home/forum/tag/id/1')}" class="lphover">考证</a></li>
+                		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
+            			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
+            			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
+            			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
+            		</case>
+            		<case value="2">
+            			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
+                		<li><a href="{:U('/home/forum/tag/id/2')}" class="lphover">比赛</a></li>
+            			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
+            			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
+            			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
+            		</case>
+            		<case value="3">
+            			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
+                		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
+            			<li><a href="{:U('/home/forum/tag/id/3')}" class="lphover">生活</a></li>
+            			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
+            			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
+            		</case>
+            		<case value="4">
+            			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
+                		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
+            			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
+            			<li><a href="{:U('/home/forum/tag/id/4')}" class="lphover">大杂烩</a></li>
+            			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
+            		</case>
+            		<default />
+            			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
+                		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
+            			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
+            			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
+            			<li><a href="{:U('/home/forum/suggestions')}" class="lphover">意见反馈</a></li>
+        		</switch>
+        	</ul>
+            </div>
+            <ul class="proul">
+            	<volist name="forum" id="vo">
+    	        	<li>
+    	            	<div class="litop">
+    	                	<h1><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title|msubstr=0,34,'utf-8',true}</a></h1>
+    	                    <!--<h2>刚入学的小萌新求指导</h2>-->
+    	                </div>
+    	                <p><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.content|msubstr=0,163,'utf-8',true}</a></p>
+    	                <div class="forum-footer">
+    	               	    	<img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/> 
+    	                        <span class="forum-time">时间：{$vo.posttime|substr=0,10}</span>
+    	                        <span class="read-count">阅读量：{$vo.readcount}</span>
+    	                </div>
+    	            </li>
+    	        </volist>
+            </ul>
+            <div class="page">{$pages}</div>
+            <div class="clear"></div>
+            <div class="post_forum">
+            	<a name="sub"></a>
+            	<form action="{:U('/home/forum/addForum')}" method="post" onsubmit="return getContent()"  >
+    	        	<div>
+    	        		<img src="__PUBLIC__/images/post_forum.png">
+    	        		<span>发表新帖</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	        		<span>新帖分类：</span>
+    	        		<select class="forumsort" name="typeid">         
+    	        			<option value="4">大杂烩</option>         
+    	        			<option value="2">比赛</option>         
+    	        			<option value="3">生活</option>         
+    	        			<option value="1">考证</option> 
+    	        		</select> 
+    	        	</div>
+    	        	<div>
+    	        		<input type="text" name="title" id="title" placeholder="请填写标题" class="post_title">
+    	        	</div>
+                	<div id="editForm" class="post_text" >
+                        <!-- 加载编辑器的容器 -->
+                        <script id="editor" type="text/plain" style="width:660px;height:500px;"></script>
+                        
+    		            <div>
+    		            	 <input hidden="hidden" id=session value="{$Think.session.name}" /> 
+    		            	 <input class="post_button" type="submit" value="发表" /> 
+    		            </div>
+    		        </div>
+                </form>
+             </div>
         </div>
-        <div class="lp">
-    	<ul>
-    		<switch name="id">
-        		<case value="1">
-        			<li><a href="{:U('/home/forum/tag/id/1')}" class="lphover">考证</a></li>
-            		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
-        			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
-        			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
-        			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
-        		</case>
-        		<case value="2">
-        			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
-            		<li><a href="{:U('/home/forum/tag/id/2')}" class="lphover">比赛</a></li>
-        			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
-        			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
-        			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
-        		</case>
-        		<case value="3">
-        			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
-            		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
-        			<li><a href="{:U('/home/forum/tag/id/3')}" class="lphover">生活</a></li>
-        			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
-        			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
-        		</case>
-        		<case value="4">
-        			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
-            		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
-        			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
-        			<li><a href="{:U('/home/forum/tag/id/4')}" class="lphover">大杂烩</a></li>
-        			<li><a href="{:U('/home/forum/suggestions')}" class="lpli">意见反馈</a></li>
-        		</case>
-        		<default />
-        			<li><a href="{:U('/home/forum/tag/id/1')}" class="lpli">考证</a></li>
-            		<li><a href="{:U('/home/forum/tag/id/2')}" class="lpli">比赛</a></li>
-        			<li><a href="{:U('/home/forum/tag/id/3')}" class="lpli">生活</a></li>
-        			<li><a href="{:U('/home/forum/tag/id/4')}" class="lpli">大杂烩</a></li>
-        			<li><a href="{:U('/home/forum/suggestions')}" class="lphover">意见反馈</a></li>
-    		</switch>
-    		
-    	</ul>
-        </div>
-        <ul class="proul">
-        	<volist name="forum" id="vo">
-	        	<li>
-	            	<div class="litop">
-	                	<h1><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title|msubstr=0,34,'utf-8',true}</a></h1>
-	                    <!--<h2>刚入学的小萌新求指导</h2>-->
-	                </div>
-	                <p><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.content|msubstr=0,163,'utf-8',true}</a></p>
-	                <div class="forum-footer">
-	               	    	<img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/> 
-	                        <span class="forum-time">时间：{$vo.posttime|substr=0,10}</span>
-	                        <span class="read-count">阅读量：{$vo.readcount}</span>
-	                </div>
-	            </li>
-	        </volist>
-        </ul>
-        <div class="page">{$pages}</div>
-        <div class="clear"></div>
-        <div class="post_forum">
-        	<a name="sub"></a>
-        	<form action="{:U('/home/forum/addForum')}" method="post" onsubmit="return getContent()"  >
-	        	<div>
-	        		<img src="__PUBLIC__/images/post_forum.png">
-	        		<span>发表新帖</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	        		<span>新帖分类：</span>
-	        		<select class="forumsort" name="typeid">         
-	        			<option value="4">大杂烩</option>         
-	        			<option value="2">比赛</option>         
-	        			<option value="3">生活</option>         
-	        			<option value="1">考证</option> 
-	        		</select> 
-	        	</div>
-	        	<div>
-	        		<input type="text" name="title" id="title" placeholder="请填写标题" class="post_title">
-	        	</div>
-            	<div id="editForm" class="post_text" >
-                    <!-- 加载编辑器的容器 -->
-                    <script id="editor" type="text/plain" style="width:660px;height:500px;"></script>
-                    
-		            <div>
-		            	 <input hidden="hidden" id=session value="{$Think.session.name}" /> 
-		            	 <input class="post_button" type="submit" value="发表" /> 
-		            </div>
-		        </div>
-            </form>
-         </div>
+        <div class="right">
+        	<div class="righttop">
+            	<h1 class="title">论坛热议榜<a href="{:U('/home/forum/')}" class="ckgd">更多&nbsp;>></a></h1>
+                <ul class="topul">
+                	<volist name="forum_hot" id="vo">
+    	        		<li><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title|msubstr=0,15,'utf-8',true}</a><span>{$vo.posttime|substr=0,10}</span></li>
+    	            </volist>
+            	</ul>
+            </div>
+           	<div class="righttop righttop2">
+            	<h1 class="title title2">公告板</h1>
+                <div class="lpimg"><a href="{:U('/home/forum/questions/forumid/57')}"><img src="__PUBLIC__/images/commitment001.jpg" width="220" height="100" alt="lp" /></a></div>
+         		 <ul class="topul">
+    	        	<li>
+    	        		<a href="{:U('/home/forum/suggestions')}">违规论坛举报反映通道</a>
+    	        		<span>2016-12-18</span>
+    	        	</li>
+    	        	<li>
+    	        		<a href="{:U('/home/forum/questions/forumid/57')}">跟帖评论自律管理承诺书</a>
+    	        		<span>2016-12-18</span>
+    	        	</li>
+            	</ul>
+          	</div>
+    	</div>
     </div>
-    <div class="right">
-    	<div class="righttop">
-        	<h1 class="title">论坛热议榜<a href="{:U('/home/forum/')}" class="ckgd">更多&nbsp;>></a></h1>
-            <ul class="topul">
-            	<volist name="forum_hot" id="vo">
-	        		<li><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title|msubstr=0,15,'utf-8',true}</a><span>{$vo.posttime|substr=0,10}</span></li>
-	            </volist>
-        	</ul>
-        </div>
-       	<div class="righttop righttop2">
-        	<h1 class="title title2">公告板</h1>
-            <div class="lpimg"><a href="{:U('/home/forum/questions/forumid/57')}"><img src="__PUBLIC__/images/commitment001.jpg" width="220" height="100" alt="lp" /></a></div>
-     		 <ul class="topul">
-	        	<li>
-	        		<a href="{:U('/home/forum/suggestions')}">违规论坛举报反映通道</a>
-	        		<span>2016-12-18</span>
-	        	</li>
-	        	<li>
-	        		<a href="{:U('/home/forum/questions/forumid/57')}">跟帖评论自律管理承诺书</a>
-	        		<span>2016-12-18</span>
-	        	</li>
-        	</ul>
-      	</div>
-	</div>
 </div>
 <!--底部footer-->
 <include file="Public/footer.html" />

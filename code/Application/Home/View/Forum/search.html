@@ -30,63 +30,64 @@
 <!--首部导航栏-->
 <include file="Public/header.html"/>
 <div class="content">
-<div class="mybody">
-	<div class="bread">
-		<a href="{:U('/')}">易学助手</a> 
-		> 
-		<a href="{:U('/home/forum/')}">论坛</a>
-		>
-		<a href="javascript:;">{$_GET['text']}的搜索结果</a>
-	</div>
-    <div class="left">
-    	<div class="search">
-            <form action="__CONTROLLER__/search?" method="get">
-                <input type="text" placeholder="请输入帖子名称" class="searchtext" style="width:675px;"name="text" value="{$_GET['text']}">
-                <input type="submit" value="开始搜索" class="searchbutton">
-            </form>
-        </div>
-        <ul class="proul">
-        	<volist name="forum_search" id="vo">
-	        	<li>
-	            	<div class="litop">
-	                	<h1><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title}</a></h1>
-	                    <!--<h2>刚入学的小萌新求指导</h2>-->
-	                </div>
-	                <p><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.content|msubstr=0,190,'utf-8',true}</a></p>
-	                <div class="forum-footer">
-	               	    	<img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/> 
-	                        <span class="forum-time">时间：{$vo.posttime|substr=0,10}</span>
-	                        <span class="read-count">阅读量：{$vo.readcount}</span>
-	                </div>
-	            </li>
-	        </volist>
-        </ul>
-        <div class="page">{$pages}</div>
-        <div class="clear"></div>
-    </div>
-    <div class="right">
-    	<div class="righttop">
-        	<h1 class="title">论坛热议榜<a href="{:U('/home/forum/')}" class="ckgd">更多&nbsp;>></a></h1>
-            <ul class="topul">
-            	<volist name="forum_hot" id="vo">
-	        		<li><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title|msubstr=0,15,'utf-8',true}</a><span>{$vo.posttime|substr=0,10}</span></li>
-	            </volist>
-        	</ul>
-        </div>
-       	<div class="righttop righttop2">
-        	<h1 class="title title2">公告板</h1>
-            <div class="lpimg"><a href="{:U('/home/forum/questions/forumid/57')}"><img src="__PUBLIC__/images/commitment001.jpg" width="220" height="100" alt="lp" /></a></div>
-     		 <ul class="topul">
-	        	<li>
-	        		<a href="{:U('/home/forum/suggestions')}">违规论坛举报反映通道</a>
-	        		<span>2016-12-18</span>
-	        	</li>
-	        	<li>
-	        		<a href="{:U('/home/forum/questions/forumid/57')}">跟帖评论自律管理承诺书</a>
-	        		<span>2016-12-18</span>
-	        	</li>
-        	</ul>
-      	</div>
+	<div class="mybody">
+		<div class="bread">
+			<a href="{:U('/')}">易学助手</a> 
+			> 
+			<a href="{:U('/home/forum/')}">论坛</a>
+			>
+			<a href="javascript:;">{$_GET['text']}的搜索结果</a>
+		</div>
+	    <div class="left">
+	    	<div class="search">
+	            <form action="__CONTROLLER__/search?" method="get">
+	                <input type="text" placeholder="请输入帖子名称" class="searchtext" style="width:675px;"name="text" value="{$_GET['text']}">
+	                <input type="submit" value="开始搜索" class="searchbutton">
+	            </form>
+	        </div>
+	        <ul class="proul">
+	        	<volist name="forum_search" id="vo">
+		        	<li>
+		            	<div class="litop">
+		                	<h1><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title}</a></h1>
+		                    <!--<h2>刚入学的小萌新求指导</h2>-->
+		                </div>
+		                <p><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.content|msubstr=0,190,'utf-8',true}</a></p>
+		                <div class="forum-footer">
+		               	    	<img src="__PUBLIC__/images/time.gif" width="13" height="16" alt="time"/> 
+		                        <span class="forum-time">时间：{$vo.posttime|substr=0,10}</span>
+		                        <span class="read-count">阅读量：{$vo.readcount}</span>
+		                </div>
+		            </li>
+		        </volist>
+	        </ul>
+	        <div class="page">{$pages}</div>
+	        <div class="clear"></div>
+	    </div>
+	    <div class="right">
+	    	<div class="righttop">
+	        	<h1 class="title">论坛热议榜<a href="{:U('/home/forum/')}" class="ckgd">更多&nbsp;>></a></h1>
+	            <ul class="topul">
+	            	<volist name="forum_hot" id="vo">
+		        		<li><a href="__CONTROLLER__/questions/forumid/{$vo.forumid}">{$vo.title|msubstr=0,15,'utf-8',true}</a><span>{$vo.posttime|substr=0,10}</span></li>
+		            </volist>
+	        	</ul>
+	        </div>
+	       	<div class="righttop righttop2">
+	        	<h1 class="title title2">公告板</h1>
+	            <div class="lpimg"><a href="{:U('/home/forum/questions/forumid/57')}"><img src="__PUBLIC__/images/commitment001.jpg" width="220" height="100" alt="lp" /></a></div>
+	     		 <ul class="topul">
+		        	<li>
+		        		<a href="{:U('/home/forum/suggestions')}">违规论坛举报反映通道</a>
+		        		<span>2016-12-18</span>
+		        	</li>
+		        	<li>
+		        		<a href="{:U('/home/forum/questions/forumid/57')}">跟帖评论自律管理承诺书</a>
+		        		<span>2016-12-18</span>
+		        	</li>
+	        	</ul>
+	      	</div>
+		</div>
 	</div>
 </div>
 <!--底部footer-->
