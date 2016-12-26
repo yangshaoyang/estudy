@@ -21,7 +21,7 @@ class NewsController extends Controller {
       // 1. 获取记录总条数
       $count =$newspage->count();
       // 2. 设置（获取）每一页显示的个数
-      $pageSize =8;
+      $pageSize =6;
       // 3. 创建分页类对象
       $page = new Page($count, $pageSize);
       // 4.构造查询条件
