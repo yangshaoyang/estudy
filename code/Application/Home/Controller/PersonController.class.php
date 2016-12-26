@@ -64,7 +64,7 @@ class PersonController extends Controller {
           $this->success('请先登录',U('home/login/login'));
         }else{
          $data=array(
-          'username' =>I('post.username'),
+          'username' =>session('name'),
           'sex'=>I('post.sex'),
           'major'=>I('post.major'),
           'colleage'=>I('post.colleage'),
