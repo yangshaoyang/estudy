@@ -41,6 +41,10 @@
 	        return false;
 	    }
        //判断标题和内容是否为空
+       if(title.length>=30){
+            alert("标题长度过长，不能超过30字！");
+            return false;
+        }
         if(!title){
 	        alert("标题不能为空！");
 	        return false;
@@ -49,9 +53,6 @@
 	    	alert("内容不能为空！");
 	        return false;
 	    }
-       /*arr.push(title);
-       arr.push(content);
-       alert(arr.join("\n"));*/
     }
     function getPlainTxt() {
         var arr = [];
