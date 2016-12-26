@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>系统发生错误</title>
+<title>系统报告了一个问题/(ㄒoㄒ)/~~</title>
 <style type="text/css">
 *{ padding: 0; margin: 0; }
 html{ overflow-y: scroll; }
@@ -26,7 +26,7 @@ h1{ font-size: 32px; line-height: 48px; }
 </head>
 <body>
 <div class="error">
-<p class="face">:(</p>
+<p class="face">/(ㄒoㄒ)/~~</p>
 <h1><?php echo strip_tags($e['message']);?></h1>
 <div class="content">
 <?php if(isset($e['file'])) {?>
@@ -52,7 +52,7 @@ h1{ font-size: 32px; line-height: 48px; }
 </div>
 </div>
 <div class="copyright">
-<p><a title="官方网站" href="http://www.thinkphp.cn">ThinkPHP</a><sup><?php echo THINK_VERSION ?></sup> { Fast & Simple OOP PHP Framework } -- [ WE CAN DO IT JUST THINK ]</p>
+<p><a title="官方网站" href="http://csbroswer.cn/">eStudy</a>  -- [ 易学助手·让学习考证更容易 ]</p>
 </div>
 </body>
 </html>
