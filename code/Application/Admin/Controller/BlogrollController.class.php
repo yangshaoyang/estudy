@@ -25,7 +25,6 @@ class BlogrollController extends Controller { //友情链接控制器
         }else{
             $this->error("添加失败！");
         }
-        $this->display();
     }
     public function editblogroll($id){
         $data=array(
