@@ -1,4 +1,9 @@
 <?php
+/*
+作者：徐稳越
+日期：2016.12.26  15:04
+描述：个人中心控制器
+*/
 namespace Home\Controller;
 use Think\Controller;
 use Think\Upload;
