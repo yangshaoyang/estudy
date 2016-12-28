@@ -48,16 +48,16 @@
                 
             </div>
             <div class="exper1 else_bg exper2">
-                <h1 class="h11">未读消息<!-- <span>【7条】</span> --></h1>
+                <h1 class="h11">未读消息</h1>
                 <ul>
                     
                     <volist name="certificate" id="vo">
-                    <li><a href="__MODULE__/person/uccontent/cid/{$vo.certificateid}">{$vo.cname}</a><span>{$vo.time}</span></li>
+                    <li><a href="__MODULE__/person/uccontent/cid/{$vo.certificateid}">{$vo.cname|msubstr=0,20,'utf-8',true}</a><span>{$vo.time}</span></li>
                     </volist>
                     </ul>
                     <ul>
                     <volist name="match" id="vo">
-                    <li><a href="__MODULE__/person/umcontent/mid/{$vo.matchid}">{$vo.mname}</a><span>{$vo.time}</span></li>
+                    <li><a href="__MODULE__/person/umcontent/mid/{$vo.matchid}">{$vo.mname|msubstr=0,20,'utf-8',true}</a><span>{$vo.time}</span></li>
                     </volist>
                     </ul>
                 
